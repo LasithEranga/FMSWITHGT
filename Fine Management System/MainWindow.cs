@@ -12,11 +12,11 @@ namespace Fine_Management_System
             InitializeComponent();
             for (int i = 0; i < 10; i++)
             {
-                chart1.Series["Series1"].Points.AddXY(i, i * 100);
+                chartWeekly.Series["Series1"].Points.AddXY(i, i * 100);
             }
             for (int i = 0; i < 10; i++)
             {
-                chart4.Series["Series1"].Points.AddXY(i, i * i + 50);
+                chartThisMonth.Series["Series1"].Points.AddXY(i, i * i + 50);
             }
             homePanel.SetBounds(0, 0, 930, 627);
             homePanel.Show();
@@ -44,11 +44,11 @@ namespace Fine_Management_System
         {
             for (int i = 0; i < 10; i++)
             {
-                chart1.Series["Series1"].Points.AddXY(i, i * 100);
+                chartWeekly.Series["Series1"].Points.AddXY(i, i * 100);
             }
             for (int i = 0; i < 10; i++)
             {
-                chart4.Series["Series1"].Points.AddXY(i, i * i + 50);
+                chartThisMonth.Series["Series1"].Points.AddXY(i, i * i + 50);
             }
         }
 
@@ -122,11 +122,6 @@ namespace Fine_Management_System
         }
 
         private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void windowPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
