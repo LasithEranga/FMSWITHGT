@@ -48,6 +48,11 @@ namespace Fine_Management_System
 
         private void ChartBtnClick(object sender, EventArgs e)
         {
+            for (int i = 0; i < 10; i++)
+            {
+                chartPanelChart.Series["Series1"].Points.AddXY(i, i * 100);
+            }
+
             chartPanel.SetBounds(0, 0, 930, 627);
             homePanel.Hide();
             chartPanel.Show();
@@ -89,6 +94,11 @@ namespace Fine_Management_System
         }
 
         private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void windowPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
