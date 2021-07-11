@@ -101,6 +101,14 @@
     <Content Include="MainWindowAssests\report.png" />
     <Content Include="MainWindowAssests\settings.png" />
     <Content Include="MainWindowAssests\users.png" />
+    <None Include="Resources\Group 84.png" />
+    <None Include="Resources\shape.png" />
+    <None Include="Resources\Group 781.png" />
+    <None Include="Resources\Group 87.png" />
+    <None Include="Resources\Group 78.png" />
+    <None Include="Resources\Group 77.png" />
+    <None Include="Resources\Group 76.png" />
+    <None Include="Resources\Group 75.png" />
     <None Include="Resources\chartBack.png" />
     <None Include="Resources\filterBtn.png" />
     <None Include="Resources\calendar1.png" />

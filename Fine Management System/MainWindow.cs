@@ -83,11 +83,6 @@ namespace Fine_Management_System
             settingsPanel.Hide();
         }
 
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label12_Click(object sender, EventArgs e)
         {
 
