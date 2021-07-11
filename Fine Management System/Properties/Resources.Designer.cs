@@ -93,6 +93,16 @@ namespace Fine_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap applyBtn {
+            get {
+                object obj = ResourceManager.GetObject("applyBtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calander {
             get {
                 object obj = ResourceManager.GetObject("calander", resourceCulture);
@@ -333,6 +343,16 @@ namespace Fine_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Move_button {
             get {
                 object obj = ResourceManager.GetObject("Move button", resourceCulture);
@@ -376,6 +396,16 @@ namespace Fine_Management_System.Properties {
         internal static System.Drawing.Bitmap Search_panel {
             get {
                 object obj = ResourceManager.GetObject("Search panel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search1 {
+            get {
+                object obj = ResourceManager.GetObject("search1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
