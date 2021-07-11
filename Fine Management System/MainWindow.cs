@@ -31,17 +31,12 @@ namespace Fine_Management_System
 
             InitializeComponent();
             FillCharts();
-            homePanel.SetBounds(0, 0, 930, 627);
-            homePanel.Show();
-            chartPanel.Hide();
-            reportPanel.Hide();
-            usersPanel.Hide();
-            settingsPanel.Hide();
+            ShowPanel(homePanel);
 
         }
 
         private void FillCharts()
-        {
+        {//fils chart with dummy data values
             for (int i = 0; i < 10; i++)
             {
                 chartWeekly.Series["Series1"].Points.AddXY(i, i * 100);
@@ -58,7 +53,7 @@ namespace Fine_Management_System
 
         }
 
-        private void pictureBox10_Click(object sender, EventArgs e)
+        private void closeBtnClick(object sender, EventArgs e)
         {
             this.Dispose();
         }
@@ -70,50 +65,38 @@ namespace Fine_Management_System
 
         private void HomeBtnClick(object sender, EventArgs e)
         {
-            homePanel.SetBounds(0, 0, 930, 627);
-            homePanel.Show();
-            chartPanel.Hide();
-            reportPanel.Hide();
-            usersPanel.Hide();
-            settingsPanel.Hide();
+           
+            ShowPanel(homePanel);
+            GrayAll();
             homeBtn.Image = Properties.Resources.homeBlue;
         }
 
         private void ChartBtnClick(object sender, EventArgs e)
         {
             for (int i = 0; i < 10; i++)
-            {
+            {//fils chart with dummy data values
                 chartPanelChart.Series["Series1"].Points.AddXY(i, i * 100);
             }
-
-            chartPanel.SetBounds(0, 0, 930, 627);
-            homePanel.Hide();
-            chartPanel.Show();
-            reportPanel.Hide();
-            usersPanel.Hide();
-            settingsPanel.Hide();
+            ShowPanel(chartPanel);
+            GrayAll();
+            chartBtn.Image = Properties.Resources.chart_blue;
 
         }
 
         private void SettingsBtnClick(object sender, EventArgs e)
         {
-            settingsPanel.SetBounds(0, 0, 930, 627);
-            homePanel.Hide();
-            chartPanel.Hide();
-            reportPanel.Hide();
-            usersPanel.Hide();
-            settingsPanel.Show();
+            
+            ShowPanel(settingsPanel);
+            GrayAll();
+            settingsBtn.Image = Properties.Resources.settings_blue;
 
         }
 
         private void reportBtnClick(object sender, EventArgs e)
         {
-            reportPanel.SetBounds(0, 0, 930, 627);
-            homePanel.Hide();
-            chartPanel.Hide();
-            reportPanel.Show();
-            usersPanel.Hide();
-            settingsPanel.Hide();
+            ShowPanel(reportPanel);
+            GrayAll();
+            reportBtn.Image = Properties.Resources.report_blue;
         }
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -128,13 +111,31 @@ namespace Fine_Management_System
 
         private void UserIconClick(object sender, MouseEventArgs e)
         {
-            usersPanel.SetBounds(0, 0, 930, 627);
+            ShowPanel(usersPanel);
+        }
+
+        private void ShowPanel(Panel panel) {
             homePanel.Hide();
             chartPanel.Hide();
             reportPanel.Hide();
-            usersPanel.Show();
+            usersPanel.Hide();
             settingsPanel.Hide();
+            panel.SetBounds(0, 0, 930, 627);
+            panel.Show();
             
         }
+        private void GrayAll()
+        {
+            homeBtn.Image = Properties.Resources.home_gray;
+            chartBtn.Image = Properties.Resources.chart_gray;
+            settingsBtn.Image = Properties.Resources.settings_gray;
+            reportBtn.Image = Properties.Resources.report_gray;
+        }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
     }
 }
