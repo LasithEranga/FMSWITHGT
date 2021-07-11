@@ -83,11 +83,6 @@ namespace Fine_Management_System
             settingsPanel.Hide();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
