@@ -130,5 +130,16 @@ namespace Fine_Management_System
         {
 
         }
+
+        private void UserIconClick(object sender, MouseEventArgs e)
+        {
+            usersPanel.SetBounds(0, 0, 930, 627);
+            homePanel.Hide();
+            chartPanel.Hide();
+            reportPanel.Hide();
+            usersPanel.Show();
+            settingsPanel.Hide();
+            
+        }
     }
 }
