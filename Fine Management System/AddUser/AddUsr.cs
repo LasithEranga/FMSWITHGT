@@ -45,6 +45,7 @@ namespace Fine_Management_System.AddUser
             policeId.Clear();
             dateTimePickerAddUsr.ResetText();
             usrImage.Image = null;
+            uploadBtn.Text = "Upload";
 
         }
 
