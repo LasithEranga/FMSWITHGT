@@ -30,21 +30,21 @@ namespace Fine_Management_System
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend17 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea19 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend19 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea20 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend20 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.navBarPanel = new System.Windows.Forms.Panel();
             this.logoutBtn = new System.Windows.Forms.PictureBox();
             this.settingsBtn = new System.Windows.Forms.PictureBox();
@@ -124,18 +124,35 @@ namespace Fine_Management_System
             this.language = new System.Windows.Forms.Panel();
             this.user = new System.Windows.Forms.Panel();
             this.chartPanel = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.menuStripPanel = new System.Windows.Forms.Panel();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.sortByToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.monthToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.revenueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.noCasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vehicleTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chartTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lineChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.barGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pieChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goBtn = new System.Windows.Forms.Panel();
             this.labelChartsTitle = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.chartCalenderIcon1 = new System.Windows.Forms.Panel();
+            this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
+            this.chartCalenderIcon2 = new System.Windows.Forms.Panel();
+            this.chartDateTimePickerTo = new System.Windows.Forms.DateTimePicker();
+            this.chartToLabel = new System.Windows.Forms.Label();
+            this.chartFromLabel = new System.Windows.Forms.Label();
             this.chartBackground = new System.Windows.Forms.Panel();
+            this.statLegendLabel = new System.Windows.Forms.Label();
             this.casesLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.chartPanelChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartCalenderIcon2 = new System.Windows.Forms.Panel();
-            this.chartCalenderIcon1 = new System.Windows.Forms.Panel();
-            this.goBtn = new System.Windows.Forms.Panel();
-            this.chartDateTimePickerTo = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
-            this.chartToLabel = new System.Windows.Forms.Label();
-            this.chartFromLabel = new System.Windows.Forms.Label();
             this.usersPanel = new System.Windows.Forms.Panel();
             this.usrsFilterSection = new System.Windows.Forms.Panel();
             this.applyBtn = new System.Windows.Forms.Panel();
@@ -163,23 +180,6 @@ namespace Fine_Management_System
             this.minimizeBtn = new System.Windows.Forms.PictureBox();
             this.usrImage = new System.Windows.Forms.PictureBox();
             this.closeBtn = new System.Windows.Forms.PictureBox();
-            this.statLegendLabel = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.menuStripPanel = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.sortByToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.monthToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.categoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.revenueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.noCasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vehicleTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chartTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lineChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.barGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pieChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.navBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingsBtn)).BeginInit();
@@ -207,6 +207,10 @@ namespace Fine_Management_System
             this.menuStrip1.SuspendLayout();
             this.settingsPanel.SuspendLayout();
             this.chartPanel.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.menuStripPanel.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.chartBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartPanelChart)).BeginInit();
             this.usersPanel.SuspendLayout();
@@ -220,10 +224,6 @@ namespace Fine_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.minimizeBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usrImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.menuStripPanel.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // navBarPanel
@@ -233,18 +233,20 @@ namespace Fine_Management_System
             this.navBarPanel.Controls.Add(this.reportBtn);
             this.navBarPanel.Controls.Add(this.chartBtn);
             this.navBarPanel.Controls.Add(this.homeBtn);
-            this.navBarPanel.Location = new System.Drawing.Point(3, 60);
+            this.navBarPanel.Location = new System.Drawing.Point(4, 74);
+            this.navBarPanel.Margin = new System.Windows.Forms.Padding(4);
             this.navBarPanel.Name = "navBarPanel";
-            this.navBarPanel.Size = new System.Drawing.Size(61, 626);
+            this.navBarPanel.Size = new System.Drawing.Size(81, 770);
             this.navBarPanel.TabIndex = 1;
             // 
             // logoutBtn
             // 
             this.logoutBtn.Image = global::Fine_Management_System.Properties.Resources.logout_gray;
-            this.logoutBtn.Location = new System.Drawing.Point(9, 567);
+            this.logoutBtn.Location = new System.Drawing.Point(12, 698);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(4);
             this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.logoutBtn.Size = new System.Drawing.Size(41, 38);
+            this.logoutBtn.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.logoutBtn.Size = new System.Drawing.Size(55, 47);
             this.logoutBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoutBtn.TabIndex = 7;
             this.logoutBtn.TabStop = false;
@@ -253,10 +255,11 @@ namespace Fine_Management_System
             // settingsBtn
             // 
             this.settingsBtn.Image = global::Fine_Management_System.Properties.Resources.settings_gray;
-            this.settingsBtn.Location = new System.Drawing.Point(12, 506);
+            this.settingsBtn.Location = new System.Drawing.Point(16, 623);
+            this.settingsBtn.Margin = new System.Windows.Forms.Padding(4);
             this.settingsBtn.Name = "settingsBtn";
-            this.settingsBtn.Padding = new System.Windows.Forms.Padding(2);
-            this.settingsBtn.Size = new System.Drawing.Size(36, 35);
+            this.settingsBtn.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.settingsBtn.Size = new System.Drawing.Size(48, 43);
             this.settingsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.settingsBtn.TabIndex = 3;
             this.settingsBtn.TabStop = false;
@@ -265,10 +268,11 @@ namespace Fine_Management_System
             // reportBtn
             // 
             this.reportBtn.Image = global::Fine_Management_System.Properties.Resources.report_gray;
-            this.reportBtn.Location = new System.Drawing.Point(12, 166);
+            this.reportBtn.Location = new System.Drawing.Point(16, 204);
+            this.reportBtn.Margin = new System.Windows.Forms.Padding(4);
             this.reportBtn.Name = "reportBtn";
-            this.reportBtn.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.reportBtn.Size = new System.Drawing.Size(34, 40);
+            this.reportBtn.Padding = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.reportBtn.Size = new System.Drawing.Size(45, 49);
             this.reportBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.reportBtn.TabIndex = 4;
             this.reportBtn.TabStop = false;
@@ -277,10 +281,11 @@ namespace Fine_Management_System
             // chartBtn
             // 
             this.chartBtn.Image = global::Fine_Management_System.Properties.Resources.chart_gray;
-            this.chartBtn.Location = new System.Drawing.Point(12, 94);
+            this.chartBtn.Location = new System.Drawing.Point(16, 116);
+            this.chartBtn.Margin = new System.Windows.Forms.Padding(4);
             this.chartBtn.Name = "chartBtn";
-            this.chartBtn.Padding = new System.Windows.Forms.Padding(2);
-            this.chartBtn.Size = new System.Drawing.Size(37, 37);
+            this.chartBtn.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartBtn.Size = new System.Drawing.Size(49, 46);
             this.chartBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.chartBtn.TabIndex = 5;
             this.chartBtn.TabStop = false;
@@ -290,9 +295,10 @@ namespace Fine_Management_System
             // 
             this.homeBtn.ErrorImage = ((System.Drawing.Image)(resources.GetObject("homeBtn.ErrorImage")));
             this.homeBtn.Image = global::Fine_Management_System.Properties.Resources.homeBlue;
-            this.homeBtn.Location = new System.Drawing.Point(13, 25);
+            this.homeBtn.Location = new System.Drawing.Point(17, 31);
+            this.homeBtn.Margin = new System.Windows.Forms.Padding(4);
             this.homeBtn.Name = "homeBtn";
-            this.homeBtn.Size = new System.Drawing.Size(33, 32);
+            this.homeBtn.Size = new System.Drawing.Size(44, 39);
             this.homeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.homeBtn.TabIndex = 6;
             this.homeBtn.TabStop = false;
@@ -306,9 +312,10 @@ namespace Fine_Management_System
             this.windowPanel.Controls.Add(this.settingsPanel);
             this.windowPanel.Controls.Add(this.chartPanel);
             this.windowPanel.Controls.Add(this.usersPanel);
-            this.windowPanel.Location = new System.Drawing.Point(70, 60);
+            this.windowPanel.Location = new System.Drawing.Point(93, 74);
+            this.windowPanel.Margin = new System.Windows.Forms.Padding(4);
             this.windowPanel.Name = "windowPanel";
-            this.windowPanel.Size = new System.Drawing.Size(930, 627);
+            this.windowPanel.Size = new System.Drawing.Size(1240, 772);
             this.windowPanel.TabIndex = 2;
             // 
             // homePanel
@@ -322,9 +329,10 @@ namespace Fine_Management_System
             this.homePanel.Controls.Add(this.homeItem3);
             this.homePanel.Controls.Add(this.homeItem2);
             this.homePanel.Controls.Add(this.homeItem1);
-            this.homePanel.Location = new System.Drawing.Point(233, 544);
+            this.homePanel.Location = new System.Drawing.Point(311, 670);
+            this.homePanel.Margin = new System.Windows.Forms.Padding(4);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(163, 47);
+            this.homePanel.Size = new System.Drawing.Size(217, 58);
             this.homePanel.TabIndex = 8;
             // 
             // homeItem8
@@ -333,9 +341,10 @@ namespace Fine_Management_System
             this.homeItem8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.homeItem8.Controls.Add(this.labelThisMonthIncome);
             this.homeItem8.Controls.Add(this.chartThisMonth);
-            this.homeItem8.Location = new System.Drawing.Point(615, 401);
+            this.homeItem8.Location = new System.Drawing.Point(820, 494);
+            this.homeItem8.Margin = new System.Windows.Forms.Padding(4);
             this.homeItem8.Name = "homeItem8";
-            this.homeItem8.Size = new System.Drawing.Size(251, 172);
+            this.homeItem8.Size = new System.Drawing.Size(335, 212);
             this.homeItem8.TabIndex = 13;
             // 
             // labelThisMonthIncome
@@ -344,9 +353,10 @@ namespace Fine_Management_System
             this.labelThisMonthIncome.BackColor = System.Drawing.Color.Transparent;
             this.labelThisMonthIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelThisMonthIncome.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelThisMonthIncome.Location = new System.Drawing.Point(25, 5);
+            this.labelThisMonthIncome.Location = new System.Drawing.Point(33, 6);
+            this.labelThisMonthIncome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelThisMonthIncome.Name = "labelThisMonthIncome";
-            this.labelThisMonthIncome.Size = new System.Drawing.Size(144, 20);
+            this.labelThisMonthIncome.Size = new System.Drawing.Size(179, 25);
             this.labelThisMonthIncome.TabIndex = 9;
             this.labelThisMonthIncome.Text = "This Month Income";
             // 
@@ -358,37 +368,38 @@ namespace Fine_Management_System
             this.chartThisMonth.BackImageTransparentColor = System.Drawing.Color.White;
             this.chartThisMonth.BackSecondaryColor = System.Drawing.Color.White;
             this.chartThisMonth.BorderlineColor = System.Drawing.Color.Black;
-            chartArea16.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea16.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea16.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea16.BorderColor = System.Drawing.Color.White;
-            chartArea16.Name = "ChartArea1";
-            this.chartThisMonth.ChartAreas.Add(chartArea16);
-            legend16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            legend16.Enabled = false;
-            legend16.ForeColor = System.Drawing.Color.WhiteSmoke;
-            legend16.Name = "Legend1";
-            this.chartThisMonth.Legends.Add(legend16);
-            this.chartThisMonth.Location = new System.Drawing.Point(10, 28);
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea1.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            chartArea1.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea1.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            chartArea1.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            chartArea1.BorderColor = System.Drawing.Color.White;
+            chartArea1.Name = "ChartArea1";
+            this.chartThisMonth.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            legend1.Enabled = false;
+            legend1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            legend1.Name = "Legend1";
+            this.chartThisMonth.Legends.Add(legend1);
+            this.chartThisMonth.Location = new System.Drawing.Point(13, 34);
+            this.chartThisMonth.Margin = new System.Windows.Forms.Padding(4);
             this.chartThisMonth.Name = "chartThisMonth";
             this.chartThisMonth.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartThisMonth.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(72)))))};
-            series16.ChartArea = "ChartArea1";
-            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series16.Color = System.Drawing.Color.Lime;
-            series16.LabelForeColor = System.Drawing.Color.White;
-            series16.Legend = "Legend1";
-            series16.Name = "Series1";
-            series16.YValuesPerPoint = 2;
-            this.chartThisMonth.Series.Add(series16);
-            this.chartThisMonth.Size = new System.Drawing.Size(233, 128);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.Lime;
+            series1.LabelForeColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.YValuesPerPoint = 2;
+            this.chartThisMonth.Series.Add(series1);
+            this.chartThisMonth.Size = new System.Drawing.Size(311, 158);
             this.chartThisMonth.TabIndex = 7;
             this.chartThisMonth.Text = "chart4";
             // 
@@ -398,18 +409,20 @@ namespace Fine_Management_System
             this.homeItem7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.homeItem7.Controls.Add(this.label11);
             this.homeItem7.Controls.Add(this.labelCasesByDate);
-            this.homeItem7.Location = new System.Drawing.Point(387, 401);
+            this.homeItem7.Location = new System.Drawing.Point(516, 494);
+            this.homeItem7.Margin = new System.Windows.Forms.Padding(4);
             this.homeItem7.Name = "homeItem7";
-            this.homeItem7.Size = new System.Drawing.Size(212, 172);
+            this.homeItem7.Size = new System.Drawing.Size(283, 212);
             this.homeItem7.TabIndex = 12;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label11.Location = new System.Drawing.Point(31, 43);
+            this.label11.Location = new System.Drawing.Point(41, 53);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 65);
+            this.label11.Size = new System.Drawing.Size(92, 85);
             this.label11.TabIndex = 11;
             this.label11.Text = "06/12      255\n \n06/13      565\n\n06/25      656";
             // 
@@ -419,9 +432,10 @@ namespace Fine_Management_System
             this.labelCasesByDate.BackColor = System.Drawing.Color.Transparent;
             this.labelCasesByDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCasesByDate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelCasesByDate.Location = new System.Drawing.Point(19, 5);
+            this.labelCasesByDate.Location = new System.Drawing.Point(25, 6);
+            this.labelCasesByDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCasesByDate.Name = "labelCasesByDate";
-            this.labelCasesByDate.Size = new System.Drawing.Size(115, 20);
+            this.labelCasesByDate.Size = new System.Drawing.Size(143, 25);
             this.labelCasesByDate.TabIndex = 10;
             this.labelCasesByDate.Text = "Cases By Date";
             // 
@@ -433,18 +447,20 @@ namespace Fine_Management_System
             this.homeItem6.Controls.Add(this.labelMonthlyCases);
             this.homeItem6.Controls.Add(this.legendColor2);
             this.homeItem6.Controls.Add(this.chartMonthlyCases);
-            this.homeItem6.Location = new System.Drawing.Point(26, 401);
+            this.homeItem6.Location = new System.Drawing.Point(35, 494);
+            this.homeItem6.Margin = new System.Windows.Forms.Padding(4);
             this.homeItem6.Name = "homeItem6";
-            this.homeItem6.Size = new System.Drawing.Size(343, 172);
+            this.homeItem6.Size = new System.Drawing.Size(457, 212);
             this.homeItem6.TabIndex = 11;
             // 
             // legendNoOfCases2
             // 
             this.legendNoOfCases2.AutoSize = true;
             this.legendNoOfCases2.ForeColor = System.Drawing.SystemColors.Control;
-            this.legendNoOfCases2.Location = new System.Drawing.Point(241, 4);
+            this.legendNoOfCases2.Location = new System.Drawing.Point(321, 5);
+            this.legendNoOfCases2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.legendNoOfCases2.Name = "legendNoOfCases2";
-            this.legendNoOfCases2.Size = new System.Drawing.Size(67, 13);
+            this.legendNoOfCases2.Size = new System.Drawing.Size(88, 17);
             this.legendNoOfCases2.TabIndex = 14;
             this.legendNoOfCases2.Text = "No Of Cases";
             // 
@@ -453,18 +469,20 @@ namespace Fine_Management_System
             this.labelMonthlyCases.AutoSize = true;
             this.labelMonthlyCases.BackColor = System.Drawing.Color.Transparent;
             this.labelMonthlyCases.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelMonthlyCases.Location = new System.Drawing.Point(139, 3);
+            this.labelMonthlyCases.Location = new System.Drawing.Point(185, 4);
+            this.labelMonthlyCases.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMonthlyCases.Name = "labelMonthlyCases";
-            this.labelMonthlyCases.Size = new System.Drawing.Size(76, 13);
+            this.labelMonthlyCases.Size = new System.Drawing.Size(100, 17);
             this.labelMonthlyCases.TabIndex = 8;
             this.labelMonthlyCases.Text = "Monthly Cases";
             // 
             // legendColor2
             // 
             this.legendColor2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.legendColor2.Location = new System.Drawing.Point(314, 10);
+            this.legendColor2.Location = new System.Drawing.Point(419, 12);
+            this.legendColor2.Margin = new System.Windows.Forms.Padding(4);
             this.legendColor2.Name = "legendColor2";
-            this.legendColor2.Size = new System.Drawing.Size(16, 5);
+            this.legendColor2.Size = new System.Drawing.Size(21, 6);
             this.legendColor2.TabIndex = 13;
             // 
             // chartMonthlyCases
@@ -475,33 +493,34 @@ namespace Fine_Management_System
             this.chartMonthlyCases.BackImageTransparentColor = System.Drawing.Color.White;
             this.chartMonthlyCases.BackSecondaryColor = System.Drawing.Color.White;
             this.chartMonthlyCases.BorderlineColor = System.Drawing.Color.Black;
-            chartArea17.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea17.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea17.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea17.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea17.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea17.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea17.BorderColor = System.Drawing.Color.White;
-            chartArea17.Name = "ChartArea1";
-            this.chartMonthlyCases.ChartAreas.Add(chartArea17);
-            legend17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            legend17.Enabled = false;
-            legend17.ForeColor = System.Drawing.Color.WhiteSmoke;
-            legend17.Name = "Legend1";
-            this.chartMonthlyCases.Legends.Add(legend17);
-            this.chartMonthlyCases.Location = new System.Drawing.Point(9, 10);
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea2.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea2.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            chartArea2.BorderColor = System.Drawing.Color.White;
+            chartArea2.Name = "ChartArea1";
+            this.chartMonthlyCases.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            legend2.Enabled = false;
+            legend2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            legend2.Name = "Legend1";
+            this.chartMonthlyCases.Legends.Add(legend2);
+            this.chartMonthlyCases.Location = new System.Drawing.Point(12, 12);
+            this.chartMonthlyCases.Margin = new System.Windows.Forms.Padding(4);
             this.chartMonthlyCases.Name = "chartMonthlyCases";
             this.chartMonthlyCases.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartMonthlyCases.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(72)))))};
-            series17.ChartArea = "ChartArea1";
-            series17.Color = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            series17.LabelForeColor = System.Drawing.Color.White;
-            series17.Legend = "Legend1";
-            series17.Name = "Series1";
-            this.chartMonthlyCases.Series.Add(series17);
-            this.chartMonthlyCases.Size = new System.Drawing.Size(321, 148);
+            series2.ChartArea = "ChartArea1";
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            series2.LabelForeColor = System.Drawing.Color.White;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartMonthlyCases.Series.Add(series2);
+            this.chartMonthlyCases.Size = new System.Drawing.Size(428, 182);
             this.chartMonthlyCases.TabIndex = 6;
             this.chartMonthlyCases.Text = "chart3";
             // 
@@ -511,9 +530,10 @@ namespace Fine_Management_System
             this.homeItem5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.homeItem5.Controls.Add(this.labelThisWeek);
             this.homeItem5.Controls.Add(this.chartThisWeek);
-            this.homeItem5.Location = new System.Drawing.Point(615, 169);
+            this.homeItem5.Location = new System.Drawing.Point(820, 208);
+            this.homeItem5.Margin = new System.Windows.Forms.Padding(4);
             this.homeItem5.Name = "homeItem5";
-            this.homeItem5.Size = new System.Drawing.Size(251, 206);
+            this.homeItem5.Size = new System.Drawing.Size(335, 254);
             this.homeItem5.TabIndex = 10;
             // 
             // labelThisWeek
@@ -521,30 +541,32 @@ namespace Fine_Management_System
             this.labelThisWeek.AutoSize = true;
             this.labelThisWeek.BackColor = System.Drawing.Color.Transparent;
             this.labelThisWeek.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelThisWeek.Location = new System.Drawing.Point(100, 7);
+            this.labelThisWeek.Location = new System.Drawing.Point(133, 9);
+            this.labelThisWeek.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelThisWeek.Name = "labelThisWeek";
-            this.labelThisWeek.Size = new System.Drawing.Size(59, 13);
+            this.labelThisWeek.Size = new System.Drawing.Size(75, 17);
             this.labelThisWeek.TabIndex = 7;
             this.labelThisWeek.Text = "This Week";
             // 
             // chartThisWeek
             // 
             this.chartThisWeek.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea18.Name = "ChartArea1";
-            this.chartThisWeek.ChartAreas.Add(chartArea18);
-            legend18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            legend18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            legend18.Name = "Legend1";
-            this.chartThisWeek.Legends.Add(legend18);
-            this.chartThisWeek.Location = new System.Drawing.Point(10, 24);
+            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            chartArea3.Name = "ChartArea1";
+            this.chartThisWeek.ChartAreas.Add(chartArea3);
+            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            legend3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            legend3.Name = "Legend1";
+            this.chartThisWeek.Legends.Add(legend3);
+            this.chartThisWeek.Location = new System.Drawing.Point(13, 30);
+            this.chartThisWeek.Margin = new System.Windows.Forms.Padding(4);
             this.chartThisWeek.Name = "chartThisWeek";
-            series18.ChartArea = "ChartArea1";
-            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series18.Legend = "Legend1";
-            series18.Name = "Series1";
-            this.chartThisWeek.Series.Add(series18);
-            this.chartThisWeek.Size = new System.Drawing.Size(224, 155);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartThisWeek.Series.Add(series3);
+            this.chartThisWeek.Size = new System.Drawing.Size(299, 191);
             this.chartThisWeek.TabIndex = 0;
             this.chartThisWeek.Text = "chart2";
             // 
@@ -556,27 +578,30 @@ namespace Fine_Management_System
             this.homeItem4.Controls.Add(this.legendColor1);
             this.homeItem4.Controls.Add(this.labelWeeklyCases);
             this.homeItem4.Controls.Add(this.chartWeekly);
-            this.homeItem4.Location = new System.Drawing.Point(26, 169);
+            this.homeItem4.Location = new System.Drawing.Point(35, 208);
+            this.homeItem4.Margin = new System.Windows.Forms.Padding(4);
             this.homeItem4.Name = "homeItem4";
-            this.homeItem4.Size = new System.Drawing.Size(573, 206);
+            this.homeItem4.Size = new System.Drawing.Size(764, 254);
             this.homeItem4.TabIndex = 9;
             // 
             // legendNoOfCases1
             // 
             this.legendNoOfCases1.AutoSize = true;
             this.legendNoOfCases1.ForeColor = System.Drawing.SystemColors.Control;
-            this.legendNoOfCases1.Location = new System.Drawing.Point(469, 3);
+            this.legendNoOfCases1.Location = new System.Drawing.Point(625, 4);
+            this.legendNoOfCases1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.legendNoOfCases1.Name = "legendNoOfCases1";
-            this.legendNoOfCases1.Size = new System.Drawing.Size(67, 13);
+            this.legendNoOfCases1.Size = new System.Drawing.Size(88, 17);
             this.legendNoOfCases1.TabIndex = 12;
             this.legendNoOfCases1.Text = "No Of Cases";
             // 
             // legendColor1
             // 
             this.legendColor1.BackColor = System.Drawing.Color.Lime;
-            this.legendColor1.Location = new System.Drawing.Point(542, 9);
+            this.legendColor1.Location = new System.Drawing.Point(723, 11);
+            this.legendColor1.Margin = new System.Windows.Forms.Padding(4);
             this.legendColor1.Name = "legendColor1";
-            this.legendColor1.Size = new System.Drawing.Size(16, 5);
+            this.legendColor1.Size = new System.Drawing.Size(21, 6);
             this.legendColor1.TabIndex = 11;
             // 
             // labelWeeklyCases
@@ -584,9 +609,10 @@ namespace Fine_Management_System
             this.labelWeeklyCases.AutoSize = true;
             this.labelWeeklyCases.BackColor = System.Drawing.Color.Transparent;
             this.labelWeeklyCases.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelWeeklyCases.Location = new System.Drawing.Point(239, 3);
+            this.labelWeeklyCases.Location = new System.Drawing.Point(319, 4);
+            this.labelWeeklyCases.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelWeeklyCases.Name = "labelWeeklyCases";
-            this.labelWeeklyCases.Size = new System.Drawing.Size(75, 13);
+            this.labelWeeklyCases.Size = new System.Drawing.Size(97, 17);
             this.labelWeeklyCases.TabIndex = 6;
             this.labelWeeklyCases.Text = "Weekly Cases";
             // 
@@ -598,43 +624,44 @@ namespace Fine_Management_System
             this.chartWeekly.BackImageTransparentColor = System.Drawing.Color.White;
             this.chartWeekly.BackSecondaryColor = System.Drawing.Color.White;
             this.chartWeekly.BorderlineColor = System.Drawing.Color.Black;
-            chartArea19.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea19.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea19.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea19.AxisX2.InterlacedColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea19.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea19.AxisX2.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea19.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea19.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea19.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea19.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea19.AxisY2.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea19.AxisY2.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea19.BorderColor = System.Drawing.Color.White;
-            chartArea19.Name = "ChartArea1";
-            this.chartWeekly.ChartAreas.Add(chartArea19);
-            legend19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            legend19.Enabled = false;
-            legend19.ForeColor = System.Drawing.Color.WhiteSmoke;
-            legend19.Name = "Legend1";
-            this.chartWeekly.Legends.Add(legend19);
-            this.chartWeekly.Location = new System.Drawing.Point(12, 10);
+            chartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisX2.InterlacedColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisX2.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisY2.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisY2.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            chartArea4.BorderColor = System.Drawing.Color.White;
+            chartArea4.Name = "ChartArea1";
+            this.chartWeekly.ChartAreas.Add(chartArea4);
+            legend4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            legend4.Enabled = false;
+            legend4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            legend4.Name = "Legend1";
+            this.chartWeekly.Legends.Add(legend4);
+            this.chartWeekly.Location = new System.Drawing.Point(16, 12);
+            this.chartWeekly.Margin = new System.Windows.Forms.Padding(4);
             this.chartWeekly.Name = "chartWeekly";
             this.chartWeekly.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartWeekly.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(72)))))};
-            series19.ChartArea = "ChartArea1";
-            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series19.Color = System.Drawing.Color.Lime;
-            series19.LabelForeColor = System.Drawing.Color.White;
-            series19.Legend = "Legend1";
-            series19.MarkerBorderColor = System.Drawing.Color.Lime;
-            series19.MarkerColor = System.Drawing.Color.White;
-            series19.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series19.Name = "Series1";
-            this.chartWeekly.Series.Add(series19);
-            this.chartWeekly.Size = new System.Drawing.Size(537, 183);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Color = System.Drawing.Color.Lime;
+            series4.LabelForeColor = System.Drawing.Color.White;
+            series4.Legend = "Legend1";
+            series4.MarkerBorderColor = System.Drawing.Color.Lime;
+            series4.MarkerColor = System.Drawing.Color.White;
+            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series4.Name = "Series1";
+            this.chartWeekly.Series.Add(series4);
+            this.chartWeekly.Size = new System.Drawing.Size(716, 225);
             this.chartWeekly.TabIndex = 5;
             this.chartWeekly.Text = "chart1";
             // 
@@ -644,9 +671,10 @@ namespace Fine_Management_System
             this.homeItem3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.homeItem3.Controls.Add(this.TodayIncomeText);
             this.homeItem3.Controls.Add(this.labelTodayIncome);
-            this.homeItem3.Location = new System.Drawing.Point(615, 15);
+            this.homeItem3.Location = new System.Drawing.Point(820, 18);
+            this.homeItem3.Margin = new System.Windows.Forms.Padding(4);
             this.homeItem3.Name = "homeItem3";
-            this.homeItem3.Size = new System.Drawing.Size(251, 137);
+            this.homeItem3.Size = new System.Drawing.Size(335, 169);
             this.homeItem3.TabIndex = 8;
             // 
             // TodayIncomeText
@@ -655,9 +683,10 @@ namespace Fine_Management_System
             this.TodayIncomeText.BackColor = System.Drawing.Color.Transparent;
             this.TodayIncomeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TodayIncomeText.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TodayIncomeText.Location = new System.Drawing.Point(98, 60);
+            this.TodayIncomeText.Location = new System.Drawing.Point(131, 74);
+            this.TodayIncomeText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TodayIncomeText.Name = "TodayIncomeText";
-            this.TodayIncomeText.Size = new System.Drawing.Size(109, 20);
+            this.TodayIncomeText.Size = new System.Drawing.Size(137, 25);
             this.TodayIncomeText.TabIndex = 7;
             this.TodayIncomeText.Text = "Today Income";
             // 
@@ -667,9 +696,10 @@ namespace Fine_Management_System
             this.labelTodayIncome.BackColor = System.Drawing.Color.Transparent;
             this.labelTodayIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTodayIncome.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelTodayIncome.Location = new System.Drawing.Point(98, 39);
+            this.labelTodayIncome.Location = new System.Drawing.Point(131, 48);
+            this.labelTodayIncome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTodayIncome.Name = "labelTodayIncome";
-            this.labelTodayIncome.Size = new System.Drawing.Size(54, 20);
+            this.labelTodayIncome.Size = new System.Drawing.Size(67, 25);
             this.labelTodayIncome.TabIndex = 6;
             this.labelTodayIncome.Text = "65465";
             // 
@@ -679,9 +709,10 @@ namespace Fine_Management_System
             this.homeItem2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.homeItem2.Controls.Add(this.dailyCasesText);
             this.homeItem2.Controls.Add(this.labelDailyCases);
-            this.homeItem2.Location = new System.Drawing.Point(340, 13);
+            this.homeItem2.Location = new System.Drawing.Point(453, 16);
+            this.homeItem2.Margin = new System.Windows.Forms.Padding(4);
             this.homeItem2.Name = "homeItem2";
-            this.homeItem2.Size = new System.Drawing.Size(259, 139);
+            this.homeItem2.Size = new System.Drawing.Size(345, 171);
             this.homeItem2.TabIndex = 7;
             // 
             // dailyCasesText
@@ -690,9 +721,10 @@ namespace Fine_Management_System
             this.dailyCasesText.BackColor = System.Drawing.Color.Transparent;
             this.dailyCasesText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dailyCasesText.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.dailyCasesText.Location = new System.Drawing.Point(96, 62);
+            this.dailyCasesText.Location = new System.Drawing.Point(128, 76);
+            this.dailyCasesText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dailyCasesText.Name = "dailyCasesText";
-            this.dailyCasesText.Size = new System.Drawing.Size(92, 20);
+            this.dailyCasesText.Size = new System.Drawing.Size(117, 25);
             this.dailyCasesText.TabIndex = 5;
             this.dailyCasesText.Text = "Daily Cases";
             // 
@@ -702,9 +734,10 @@ namespace Fine_Management_System
             this.labelDailyCases.BackColor = System.Drawing.Color.Transparent;
             this.labelDailyCases.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDailyCases.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelDailyCases.Location = new System.Drawing.Point(96, 41);
+            this.labelDailyCases.Location = new System.Drawing.Point(128, 50);
+            this.labelDailyCases.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDailyCases.Name = "labelDailyCases";
-            this.labelDailyCases.Size = new System.Drawing.Size(54, 20);
+            this.labelDailyCases.Size = new System.Drawing.Size(67, 25);
             this.labelDailyCases.TabIndex = 5;
             this.labelDailyCases.Text = "65465";
             // 
@@ -714,9 +747,10 @@ namespace Fine_Management_System
             this.homeItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.homeItem1.Controls.Add(this.totalCasesText);
             this.homeItem1.Controls.Add(this.labelTotalCases);
-            this.homeItem1.Location = new System.Drawing.Point(26, 12);
+            this.homeItem1.Location = new System.Drawing.Point(35, 15);
+            this.homeItem1.Margin = new System.Windows.Forms.Padding(4);
             this.homeItem1.Name = "homeItem1";
-            this.homeItem1.Size = new System.Drawing.Size(308, 142);
+            this.homeItem1.Size = new System.Drawing.Size(411, 175);
             this.homeItem1.TabIndex = 6;
             // 
             // totalCasesText
@@ -725,9 +759,10 @@ namespace Fine_Management_System
             this.totalCasesText.BackColor = System.Drawing.Color.Transparent;
             this.totalCasesText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalCasesText.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.totalCasesText.Location = new System.Drawing.Point(108, 67);
+            this.totalCasesText.Location = new System.Drawing.Point(144, 82);
+            this.totalCasesText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalCasesText.Name = "totalCasesText";
-            this.totalCasesText.Size = new System.Drawing.Size(93, 20);
+            this.totalCasesText.Size = new System.Drawing.Size(118, 25);
             this.totalCasesText.TabIndex = 4;
             this.totalCasesText.Text = "Total Cases";
             // 
@@ -737,9 +772,10 @@ namespace Fine_Management_System
             this.labelTotalCases.BackColor = System.Drawing.Color.Transparent;
             this.labelTotalCases.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalCases.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelTotalCases.Location = new System.Drawing.Point(108, 42);
+            this.labelTotalCases.Location = new System.Drawing.Point(144, 52);
+            this.labelTotalCases.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTotalCases.Name = "labelTotalCases";
-            this.labelTotalCases.Size = new System.Drawing.Size(54, 20);
+            this.labelTotalCases.Size = new System.Drawing.Size(67, 25);
             this.labelTotalCases.TabIndex = 3;
             this.labelTotalCases.Text = "65465";
             // 
@@ -760,9 +796,10 @@ namespace Fine_Management_System
             this.reportPanel.Controls.Add(this.reportTextBox);
             this.reportPanel.Controls.Add(this.saveAsPdfBtn);
             this.reportPanel.Controls.Add(this.shareBtn);
-            this.reportPanel.Location = new System.Drawing.Point(6, 220);
+            this.reportPanel.Location = new System.Drawing.Point(8, 271);
+            this.reportPanel.Margin = new System.Windows.Forms.Padding(4);
             this.reportPanel.Name = "reportPanel";
-            this.reportPanel.Size = new System.Drawing.Size(745, 54);
+            this.reportPanel.Size = new System.Drawing.Size(1228, 181);
             this.reportPanel.TabIndex = 4;
             // 
             // label1
@@ -770,9 +807,10 @@ namespace Fine_Management_System
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(3, 5);
+            this.label1.Location = new System.Drawing.Point(4, 6);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 25);
+            this.label1.Size = new System.Drawing.Size(146, 31);
             this.label1.TabIndex = 14;
             this.label1.Text = "REPORTS";
             // 
@@ -781,9 +819,10 @@ namespace Fine_Management_System
             this.rptSearchIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(41)))), ((int)(((byte)(44)))));
             this.rptSearchIcon.BackgroundImage = global::Fine_Management_System.Properties.Resources.search1;
             this.rptSearchIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.rptSearchIcon.Location = new System.Drawing.Point(623, 2);
+            this.rptSearchIcon.Location = new System.Drawing.Point(831, 2);
+            this.rptSearchIcon.Margin = new System.Windows.Forms.Padding(4);
             this.rptSearchIcon.Name = "rptSearchIcon";
-            this.rptSearchIcon.Size = new System.Drawing.Size(42, 35);
+            this.rptSearchIcon.Size = new System.Drawing.Size(56, 43);
             this.rptSearchIcon.TabIndex = 11;
             // 
             // rptNav
@@ -796,9 +835,10 @@ namespace Fine_Management_System
             this.rptNav.Controls.Add(this.rptPgNo);
             this.rptNav.Controls.Add(this.rptfLeft);
             this.rptNav.Controls.Add(this.rptffLeft);
-            this.rptNav.Location = new System.Drawing.Point(322, 1);
+            this.rptNav.Location = new System.Drawing.Point(429, 1);
+            this.rptNav.Margin = new System.Windows.Forms.Padding(4);
             this.rptNav.Name = "rptNav";
-            this.rptNav.Size = new System.Drawing.Size(302, 36);
+            this.rptNav.Size = new System.Drawing.Size(403, 44);
             this.rptNav.TabIndex = 11;
             // 
             // rptffRight
@@ -807,9 +847,10 @@ namespace Fine_Management_System
             this.rptffRight.FlatAppearance.BorderSize = 0;
             this.rptffRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rptffRight.ForeColor = System.Drawing.SystemColors.Control;
-            this.rptffRight.Location = new System.Drawing.Point(249, 5);
+            this.rptffRight.Location = new System.Drawing.Point(332, 6);
+            this.rptffRight.Margin = new System.Windows.Forms.Padding(4);
             this.rptffRight.Name = "rptffRight";
-            this.rptffRight.Size = new System.Drawing.Size(30, 23);
+            this.rptffRight.Size = new System.Drawing.Size(40, 28);
             this.rptffRight.TabIndex = 6;
             this.rptffRight.Text = ">>";
             this.rptffRight.UseVisualStyleBackColor = false;
@@ -820,9 +861,10 @@ namespace Fine_Management_System
             this.rptfRight.FlatAppearance.BorderSize = 0;
             this.rptfRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rptfRight.ForeColor = System.Drawing.SystemColors.Control;
-            this.rptfRight.Location = new System.Drawing.Point(204, 6);
+            this.rptfRight.Location = new System.Drawing.Point(272, 7);
+            this.rptfRight.Margin = new System.Windows.Forms.Padding(4);
             this.rptfRight.Name = "rptfRight";
-            this.rptfRight.Size = new System.Drawing.Size(30, 23);
+            this.rptfRight.Size = new System.Drawing.Size(40, 28);
             this.rptfRight.TabIndex = 5;
             this.rptfRight.Text = ">";
             this.rptfRight.UseVisualStyleBackColor = false;
@@ -831,9 +873,10 @@ namespace Fine_Management_System
             // 
             this.rptNoPg.AutoSize = true;
             this.rptNoPg.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.rptNoPg.Location = new System.Drawing.Point(159, 12);
+            this.rptNoPg.Location = new System.Drawing.Point(212, 15);
+            this.rptNoPg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.rptNoPg.Name = "rptNoPg";
-            this.rptNoPg.Size = new System.Drawing.Size(25, 13);
+            this.rptNoPg.Size = new System.Drawing.Size(32, 17);
             this.rptNoPg.TabIndex = 4;
             this.rptNoPg.Text = "564";
             // 
@@ -842,9 +885,10 @@ namespace Fine_Management_System
             this.labelOf.AutoSize = true;
             this.labelOf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.labelOf.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelOf.Location = new System.Drawing.Point(136, 12);
+            this.labelOf.Location = new System.Drawing.Point(181, 15);
+            this.labelOf.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelOf.Name = "labelOf";
-            this.labelOf.Size = new System.Drawing.Size(16, 13);
+            this.labelOf.Size = new System.Drawing.Size(20, 17);
             this.labelOf.TabIndex = 3;
             this.labelOf.Text = "of";
             // 
@@ -852,21 +896,24 @@ namespace Fine_Management_System
             // 
             this.rptPgNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.rptPgNo.ForeColor = System.Drawing.SystemColors.Control;
-            this.rptPgNo.Location = new System.Drawing.Point(90, 7);
+            this.rptPgNo.Location = new System.Drawing.Point(120, 9);
+            this.rptPgNo.Margin = new System.Windows.Forms.Padding(4);
             this.rptPgNo.Mask = "00000";
             this.rptPgNo.Name = "rptPgNo";
-            this.rptPgNo.Size = new System.Drawing.Size(37, 20);
+            this.rptPgNo.Size = new System.Drawing.Size(48, 22);
             this.rptPgNo.TabIndex = 2;
             this.rptPgNo.ValidatingType = typeof(int);
+            this.rptPgNo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rptPgNo_MouseClick);
             // 
             // rptfLeft
             // 
             this.rptfLeft.FlatAppearance.BorderSize = 0;
             this.rptfLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rptfLeft.ForeColor = System.Drawing.SystemColors.Control;
-            this.rptfLeft.Location = new System.Drawing.Point(51, 5);
+            this.rptfLeft.Location = new System.Drawing.Point(68, 6);
+            this.rptfLeft.Margin = new System.Windows.Forms.Padding(4);
             this.rptfLeft.Name = "rptfLeft";
-            this.rptfLeft.Size = new System.Drawing.Size(30, 23);
+            this.rptfLeft.Size = new System.Drawing.Size(40, 28);
             this.rptfLeft.TabIndex = 1;
             this.rptfLeft.Text = "<";
             this.rptfLeft.UseVisualStyleBackColor = true;
@@ -877,9 +924,10 @@ namespace Fine_Management_System
             this.rptffLeft.FlatAppearance.BorderSize = 0;
             this.rptffLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rptffLeft.ForeColor = System.Drawing.SystemColors.Control;
-            this.rptffLeft.Location = new System.Drawing.Point(6, 5);
+            this.rptffLeft.Location = new System.Drawing.Point(8, 6);
+            this.rptffLeft.Margin = new System.Windows.Forms.Padding(4);
             this.rptffLeft.Name = "rptffLeft";
-            this.rptffLeft.Size = new System.Drawing.Size(30, 23);
+            this.rptffLeft.Size = new System.Drawing.Size(40, 28);
             this.rptffLeft.TabIndex = 0;
             this.rptffLeft.Text = "<<";
             this.rptffLeft.UseVisualStyleBackColor = false;
@@ -888,27 +936,30 @@ namespace Fine_Management_System
             // 
             this.dpIcon2.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
             this.dpIcon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dpIcon2.Location = new System.Drawing.Point(540, 68);
+            this.dpIcon2.Location = new System.Drawing.Point(720, 84);
+            this.dpIcon2.Margin = new System.Windows.Forms.Padding(4);
             this.dpIcon2.Name = "dpIcon2";
-            this.dpIcon2.Size = new System.Drawing.Size(26, 26);
+            this.dpIcon2.Size = new System.Drawing.Size(35, 32);
             this.dpIcon2.TabIndex = 10;
             // 
             // dpIcon1
             // 
             this.dpIcon1.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
             this.dpIcon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dpIcon1.Location = new System.Drawing.Point(219, 68);
+            this.dpIcon1.Location = new System.Drawing.Point(292, 84);
+            this.dpIcon1.Margin = new System.Windows.Forms.Padding(4);
             this.dpIcon1.Name = "dpIcon1";
-            this.dpIcon1.Size = new System.Drawing.Size(26, 26);
+            this.dpIcon1.Size = new System.Drawing.Size(35, 32);
             this.dpIcon1.TabIndex = 9;
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(395, 68);
+            this.dateTimePicker2.Location = new System.Drawing.Point(527, 84);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(138, 26);
+            this.dateTimePicker2.Size = new System.Drawing.Size(183, 30);
             this.dateTimePicker2.TabIndex = 8;
             // 
             // labelTo
@@ -916,9 +967,10 @@ namespace Fine_Management_System
             this.labelTo.AutoSize = true;
             this.labelTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTo.ForeColor = System.Drawing.Color.White;
-            this.labelTo.Location = new System.Drawing.Point(349, 73);
+            this.labelTo.Location = new System.Drawing.Point(465, 90);
+            this.labelTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTo.Name = "labelTo";
-            this.labelTo.Size = new System.Drawing.Size(29, 20);
+            this.labelTo.Size = new System.Drawing.Size(38, 25);
             this.labelTo.TabIndex = 7;
             this.labelTo.Text = "To";
             // 
@@ -927,9 +979,10 @@ namespace Fine_Management_System
             this.labelFrom.AutoSize = true;
             this.labelFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFrom.ForeColor = System.Drawing.Color.White;
-            this.labelFrom.Location = new System.Drawing.Point(17, 73);
+            this.labelFrom.Location = new System.Drawing.Point(23, 90);
+            this.labelFrom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFrom.Name = "labelFrom";
-            this.labelFrom.Size = new System.Drawing.Size(50, 20);
+            this.labelFrom.Size = new System.Drawing.Size(61, 25);
             this.labelFrom.TabIndex = 6;
             this.labelFrom.Text = "From";
             this.labelFrom.Click += new System.EventHandler(this.label12_Click);
@@ -938,18 +991,20 @@ namespace Fine_Management_System
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(75, 68);
+            this.dateTimePicker1.Location = new System.Drawing.Point(100, 84);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(138, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(183, 30);
             this.dateTimePicker1.TabIndex = 5;
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(41)))), ((int)(((byte)(44)))));
             this.panel11.Controls.Add(this.rptSearch);
-            this.panel11.Location = new System.Drawing.Point(662, 2);
+            this.panel11.Location = new System.Drawing.Point(883, 2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(262, 35);
+            this.panel11.Size = new System.Drawing.Size(349, 43);
             this.panel11.TabIndex = 4;
             // 
             // rptSearch
@@ -958,32 +1013,36 @@ namespace Fine_Management_System
             this.rptSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rptSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rptSearch.ForeColor = System.Drawing.SystemColors.Control;
-            this.rptSearch.Location = new System.Drawing.Point(9, 6);
+            this.rptSearch.Location = new System.Drawing.Point(12, 7);
+            this.rptSearch.Margin = new System.Windows.Forms.Padding(4);
             this.rptSearch.Name = "rptSearch";
-            this.rptSearch.Size = new System.Drawing.Size(250, 22);
+            this.rptSearch.Size = new System.Drawing.Size(333, 27);
             this.rptSearch.TabIndex = 0;
             this.rptSearch.Text = "Search Here";
+            this.rptSearch.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rptSearch_MouseClick);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.menuStrip1);
-            this.panel1.Location = new System.Drawing.Point(122, 1);
+            this.panel1.Location = new System.Drawing.Point(163, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 36);
+            this.panel1.Size = new System.Drawing.Size(267, 44);
             this.panel1.TabIndex = 3;
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.exportToolStripMenuItem,
             this.filterByToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(200, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(267, 44);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -994,19 +1053,19 @@ namespace Fine_Management_System
             this.closeToolStripMenuItem});
             this.fileToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 32);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 40);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.saveAsToolStripMenuItem.Text = "&Save As...";
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.closeToolStripMenuItem.Text = "&Close";
             // 
             // exportToolStripMenuItem
@@ -1016,19 +1075,19 @@ namespace Fine_Management_System
             this.exportAsJpgToolStripMenuItem});
             this.exportToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(52, 32);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(66, 40);
             this.exportToolStripMenuItem.Text = "Export";
             // 
             // exportToPDFToolStripMenuItem
             // 
             this.exportToPDFToolStripMenuItem.Name = "exportToPDFToolStripMenuItem";
-            this.exportToPDFToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.exportToPDFToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.exportToPDFToolStripMenuItem.Text = "&Export as pdf";
             // 
             // exportAsJpgToolStripMenuItem
             // 
             this.exportAsJpgToolStripMenuItem.Name = "exportAsJpgToolStripMenuItem";
-            this.exportAsJpgToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.exportAsJpgToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.exportAsJpgToolStripMenuItem.Text = "&Export as jpg";
             // 
             // filterByToolStripMenuItem
@@ -1041,40 +1100,41 @@ namespace Fine_Management_System
             this.filterByToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.filterByToolStripMenuItem.Image = global::Fine_Management_System.Properties.Resources.filterBtn;
             this.filterByToolStripMenuItem.Name = "filterByToolStripMenuItem";
-            this.filterByToolStripMenuItem.Size = new System.Drawing.Size(77, 32);
+            this.filterByToolStripMenuItem.Size = new System.Drawing.Size(96, 40);
             this.filterByToolStripMenuItem.Text = "Filter by";
             // 
             // dateToolStripMenuItem
             // 
             this.dateToolStripMenuItem.Name = "dateToolStripMenuItem";
-            this.dateToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.dateToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.dateToolStripMenuItem.Text = "Date";
             // 
             // amountToolStripMenuItem
             // 
             this.amountToolStripMenuItem.Name = "amountToolStripMenuItem";
-            this.amountToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.amountToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.amountToolStripMenuItem.Text = "Amount";
             // 
             // nameToolStripMenuItem
             // 
             this.nameToolStripMenuItem.Name = "nameToolStripMenuItem";
-            this.nameToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.nameToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.nameToolStripMenuItem.Text = "Name";
             // 
             // venueToolStripMenuItem
             // 
             this.venueToolStripMenuItem.Name = "venueToolStripMenuItem";
-            this.venueToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.venueToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.venueToolStripMenuItem.Text = "Venue";
             // 
             // reportTextBox
             // 
             this.reportTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
             this.reportTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.reportTextBox.Location = new System.Drawing.Point(18, 121);
+            this.reportTextBox.Location = new System.Drawing.Point(24, 149);
+            this.reportTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.reportTextBox.Name = "reportTextBox";
-            this.reportTextBox.Size = new System.Drawing.Size(895, 481);
+            this.reportTextBox.Size = new System.Drawing.Size(1193, 592);
             this.reportTextBox.TabIndex = 2;
             this.reportTextBox.Text = "";
             // 
@@ -1082,18 +1142,20 @@ namespace Fine_Management_System
             // 
             this.saveAsPdfBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.save_as_pdf_new;
             this.saveAsPdfBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.saveAsPdfBtn.Location = new System.Drawing.Point(806, 68);
+            this.saveAsPdfBtn.Location = new System.Drawing.Point(1075, 84);
+            this.saveAsPdfBtn.Margin = new System.Windows.Forms.Padding(4);
             this.saveAsPdfBtn.Name = "saveAsPdfBtn";
-            this.saveAsPdfBtn.Size = new System.Drawing.Size(107, 34);
+            this.saveAsPdfBtn.Size = new System.Drawing.Size(143, 42);
             this.saveAsPdfBtn.TabIndex = 1;
             // 
             // shareBtn
             // 
             this.shareBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.share_new;
             this.shareBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.shareBtn.Location = new System.Drawing.Point(697, 68);
+            this.shareBtn.Location = new System.Drawing.Point(929, 84);
+            this.shareBtn.Margin = new System.Windows.Forms.Padding(4);
             this.shareBtn.Name = "shareBtn";
-            this.shareBtn.Size = new System.Drawing.Size(92, 34);
+            this.shareBtn.Size = new System.Drawing.Size(123, 42);
             this.shareBtn.TabIndex = 0;
             // 
             // settingsPanel
@@ -1105,9 +1167,10 @@ namespace Fine_Management_System
             this.settingsPanel.Controls.Add(this.notification);
             this.settingsPanel.Controls.Add(this.language);
             this.settingsPanel.Controls.Add(this.user);
-            this.settingsPanel.Location = new System.Drawing.Point(562, 477);
+            this.settingsPanel.Location = new System.Drawing.Point(749, 587);
+            this.settingsPanel.Margin = new System.Windows.Forms.Padding(4);
             this.settingsPanel.Name = "settingsPanel";
-            this.settingsPanel.Size = new System.Drawing.Size(129, 70);
+            this.settingsPanel.Size = new System.Drawing.Size(172, 86);
             this.settingsPanel.TabIndex = 7;
             // 
             // labelSettingsTitle
@@ -1115,9 +1178,10 @@ namespace Fine_Management_System
             this.labelSettingsTitle.AutoSize = true;
             this.labelSettingsTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSettingsTitle.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelSettingsTitle.Location = new System.Drawing.Point(21, 13);
+            this.labelSettingsTitle.Location = new System.Drawing.Point(28, 16);
+            this.labelSettingsTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSettingsTitle.Name = "labelSettingsTitle";
-            this.labelSettingsTitle.Size = new System.Drawing.Size(116, 25);
+            this.labelSettingsTitle.Size = new System.Drawing.Size(151, 31);
             this.labelSettingsTitle.TabIndex = 14;
             this.labelSettingsTitle.Text = "SETTINGS";
             // 
@@ -1125,45 +1189,50 @@ namespace Fine_Management_System
             // 
             this.help.BackgroundImage = global::Fine_Management_System.Properties.Resources.help;
             this.help.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.help.Location = new System.Drawing.Point(363, 279);
+            this.help.Location = new System.Drawing.Point(484, 343);
+            this.help.Margin = new System.Windows.Forms.Padding(4);
             this.help.Name = "help";
-            this.help.Size = new System.Drawing.Size(212, 170);
+            this.help.Size = new System.Drawing.Size(283, 209);
             this.help.TabIndex = 4;
             // 
             // theme
             // 
             this.theme.BackgroundImage = global::Fine_Management_System.Properties.Resources.theme;
             this.theme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.theme.Location = new System.Drawing.Point(55, 279);
+            this.theme.Location = new System.Drawing.Point(73, 343);
+            this.theme.Margin = new System.Windows.Forms.Padding(4);
             this.theme.Name = "theme";
-            this.theme.Size = new System.Drawing.Size(212, 170);
+            this.theme.Size = new System.Drawing.Size(283, 209);
             this.theme.TabIndex = 3;
             // 
             // notification
             // 
             this.notification.BackgroundImage = global::Fine_Management_System.Properties.Resources.notification;
             this.notification.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.notification.Location = new System.Drawing.Point(662, 56);
+            this.notification.Location = new System.Drawing.Point(883, 69);
+            this.notification.Margin = new System.Windows.Forms.Padding(4);
             this.notification.Name = "notification";
-            this.notification.Size = new System.Drawing.Size(212, 170);
+            this.notification.Size = new System.Drawing.Size(283, 209);
             this.notification.TabIndex = 2;
             // 
             // language
             // 
             this.language.BackgroundImage = global::Fine_Management_System.Properties.Resources.language;
             this.language.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.language.Location = new System.Drawing.Point(363, 56);
+            this.language.Location = new System.Drawing.Point(484, 69);
+            this.language.Margin = new System.Windows.Forms.Padding(4);
             this.language.Name = "language";
-            this.language.Size = new System.Drawing.Size(212, 170);
+            this.language.Size = new System.Drawing.Size(283, 209);
             this.language.TabIndex = 1;
             // 
             // user
             // 
             this.user.BackgroundImage = global::Fine_Management_System.Properties.Resources.user;
             this.user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.user.Location = new System.Drawing.Point(55, 56);
+            this.user.Location = new System.Drawing.Point(73, 69);
+            this.user.Margin = new System.Windows.Forms.Padding(4);
             this.user.Name = "user";
-            this.user.Size = new System.Drawing.Size(212, 170);
+            this.user.Size = new System.Drawing.Size(283, 209);
             this.user.TabIndex = 0;
             this.user.MouseClick += new System.Windows.Forms.MouseEventHandler(this.UserIconClick);
             // 
@@ -1172,21 +1241,241 @@ namespace Fine_Management_System
             this.chartPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.chartPanel.Controls.Add(this.panel5);
             this.chartPanel.Controls.Add(this.chartBackground);
-            this.chartPanel.Location = new System.Drawing.Point(38, 54);
+            this.chartPanel.Location = new System.Drawing.Point(51, 66);
+            this.chartPanel.Margin = new System.Windows.Forms.Padding(4);
             this.chartPanel.Name = "chartPanel";
-            this.chartPanel.Size = new System.Drawing.Size(189, 54);
+            this.chartPanel.Size = new System.Drawing.Size(252, 66);
             this.chartPanel.TabIndex = 9;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.menuStripPanel);
+            this.panel5.Controls.Add(this.goBtn);
+            this.panel5.Controls.Add(this.labelChartsTitle);
+            this.panel5.Controls.Add(this.panel3);
+            this.panel5.Location = new System.Drawing.Point(37, 5);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1152, 95);
+            this.panel5.TabIndex = 17;
+            // 
+            // menuStripPanel
+            // 
+            this.menuStripPanel.BackColor = System.Drawing.Color.Black;
+            this.menuStripPanel.Controls.Add(this.menuStrip2);
+            this.menuStripPanel.Location = new System.Drawing.Point(188, 4);
+            this.menuStripPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.menuStripPanel.Name = "menuStripPanel";
+            this.menuStripPanel.Size = new System.Drawing.Size(436, 31);
+            this.menuStripPanel.TabIndex = 17;
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sortByToolStripMenuItem,
+            this.categoryToolStripMenuItem,
+            this.chartTypeToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip2.Size = new System.Drawing.Size(436, 28);
+            this.menuStrip2.TabIndex = 0;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // sortByToolStripMenuItem
+            // 
+            this.sortByToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dayToolStripMenuItem,
+            this.monthToolStripMenuItem,
+            this.yearToolStripMenuItem});
+            this.sortByToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
+            this.sortByToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.sortByToolStripMenuItem.Name = "sortByToolStripMenuItem";
+            this.sortByToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.sortByToolStripMenuItem.Text = "&Sort by";
+            // 
+            // dayToolStripMenuItem
+            // 
+            this.dayToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dayToolStripMenuItem.Name = "dayToolStripMenuItem";
+            this.dayToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
+            this.dayToolStripMenuItem.Text = "&Day";
+            // 
+            // monthToolStripMenuItem
+            // 
+            this.monthToolStripMenuItem.Name = "monthToolStripMenuItem";
+            this.monthToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
+            this.monthToolStripMenuItem.Text = "&Month";
+            // 
+            // yearToolStripMenuItem
+            // 
+            this.yearToolStripMenuItem.Name = "yearToolStripMenuItem";
+            this.yearToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
+            this.yearToolStripMenuItem.Text = "&Year";
+            // 
+            // categoryToolStripMenuItem
+            // 
+            this.categoryToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.categoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.revenueToolStripMenuItem,
+            this.noCasesToolStripMenuItem,
+            this.vehicleTypeToolStripMenuItem});
+            this.categoryToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
+            this.categoryToolStripMenuItem.Name = "categoryToolStripMenuItem";
+            this.categoryToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.categoryToolStripMenuItem.Text = "&Category";
+            // 
+            // revenueToolStripMenuItem
+            // 
+            this.revenueToolStripMenuItem.Name = "revenueToolStripMenuItem";
+            this.revenueToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.revenueToolStripMenuItem.Text = "&Revenue";
+            // 
+            // noCasesToolStripMenuItem
+            // 
+            this.noCasesToolStripMenuItem.Name = "noCasesToolStripMenuItem";
+            this.noCasesToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.noCasesToolStripMenuItem.Text = "&No_Cases";
+            // 
+            // vehicleTypeToolStripMenuItem
+            // 
+            this.vehicleTypeToolStripMenuItem.Name = "vehicleTypeToolStripMenuItem";
+            this.vehicleTypeToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.vehicleTypeToolStripMenuItem.Text = "&Vehicle Type";
+            // 
+            // chartTypeToolStripMenuItem
+            // 
+            this.chartTypeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lineChartToolStripMenuItem,
+            this.barGraphToolStripMenuItem,
+            this.pieChartToolStripMenuItem});
+            this.chartTypeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
+            this.chartTypeToolStripMenuItem.Name = "chartTypeToolStripMenuItem";
+            this.chartTypeToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
+            this.chartTypeToolStripMenuItem.Text = "&Chart Type";
+            // 
+            // lineChartToolStripMenuItem
+            // 
+            this.lineChartToolStripMenuItem.Name = "lineChartToolStripMenuItem";
+            this.lineChartToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
+            this.lineChartToolStripMenuItem.Text = "&Line Chart";
+            // 
+            // barGraphToolStripMenuItem
+            // 
+            this.barGraphToolStripMenuItem.Name = "barGraphToolStripMenuItem";
+            this.barGraphToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
+            this.barGraphToolStripMenuItem.Text = "&Bar Graph";
+            // 
+            // pieChartToolStripMenuItem
+            // 
+            this.pieChartToolStripMenuItem.Name = "pieChartToolStripMenuItem";
+            this.pieChartToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
+            this.pieChartToolStripMenuItem.Text = "&Pie Chart";
+            // 
+            // goBtn
+            // 
+            this.goBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.Group_31;
+            this.goBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.goBtn.Location = new System.Drawing.Point(977, 43);
+            this.goBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.goBtn.Name = "goBtn";
+            this.goBtn.Size = new System.Drawing.Size(171, 48);
+            this.goBtn.TabIndex = 7;
             // 
             // labelChartsTitle
             // 
             this.labelChartsTitle.AutoSize = true;
             this.labelChartsTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelChartsTitle.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelChartsTitle.Location = new System.Drawing.Point(3, 3);
+            this.labelChartsTitle.Location = new System.Drawing.Point(4, 4);
+            this.labelChartsTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelChartsTitle.Name = "labelChartsTitle";
-            this.labelChartsTitle.Size = new System.Drawing.Size(132, 25);
+            this.labelChartsTitle.Size = new System.Drawing.Size(173, 31);
             this.labelChartsTitle.TabIndex = 13;
             this.labelChartsTitle.Text = "STATISTICS";
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.chartCalenderIcon1);
+            this.panel3.Controls.Add(this.dateTimePickerFrom);
+            this.panel3.Controls.Add(this.chartCalenderIcon2);
+            this.panel3.Controls.Add(this.chartDateTimePickerTo);
+            this.panel3.Controls.Add(this.chartToLabel);
+            this.panel3.Controls.Add(this.chartFromLabel);
+            this.panel3.Location = new System.Drawing.Point(4, 42);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(619, 49);
+            this.panel3.TabIndex = 16;
+            // 
+            // chartCalenderIcon1
+            // 
+            this.chartCalenderIcon1.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
+            this.chartCalenderIcon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.chartCalenderIcon1.Location = new System.Drawing.Point(240, 4);
+            this.chartCalenderIcon1.Margin = new System.Windows.Forms.Padding(4);
+            this.chartCalenderIcon1.Name = "chartCalenderIcon1";
+            this.chartCalenderIcon1.Size = new System.Drawing.Size(35, 32);
+            this.chartCalenderIcon1.TabIndex = 10;
+            // 
+            // dateTimePickerFrom
+            // 
+            this.dateTimePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerFrom.Location = new System.Drawing.Point(107, 10);
+            this.dateTimePickerFrom.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerFrom.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dateTimePickerFrom.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerFrom.Name = "dateTimePickerFrom";
+            this.dateTimePickerFrom.Size = new System.Drawing.Size(100, 22);
+            this.dateTimePickerFrom.TabIndex = 2;
+            // 
+            // chartCalenderIcon2
+            // 
+            this.chartCalenderIcon2.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
+            this.chartCalenderIcon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.chartCalenderIcon2.Location = new System.Drawing.Point(540, 4);
+            this.chartCalenderIcon2.Margin = new System.Windows.Forms.Padding(4);
+            this.chartCalenderIcon2.Name = "chartCalenderIcon2";
+            this.chartCalenderIcon2.Size = new System.Drawing.Size(35, 32);
+            this.chartCalenderIcon2.TabIndex = 11;
+            // 
+            // chartDateTimePickerTo
+            // 
+            this.chartDateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.chartDateTimePickerTo.Location = new System.Drawing.Point(412, 9);
+            this.chartDateTimePickerTo.Margin = new System.Windows.Forms.Padding(4);
+            this.chartDateTimePickerTo.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.chartDateTimePickerTo.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            this.chartDateTimePickerTo.Name = "chartDateTimePickerTo";
+            this.chartDateTimePickerTo.Size = new System.Drawing.Size(100, 22);
+            this.chartDateTimePickerTo.TabIndex = 4;
+            // 
+            // chartToLabel
+            // 
+            this.chartToLabel.AutoSize = true;
+            this.chartToLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chartToLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.chartToLabel.Location = new System.Drawing.Point(349, 7);
+            this.chartToLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.chartToLabel.Name = "chartToLabel";
+            this.chartToLabel.Size = new System.Drawing.Size(50, 25);
+            this.chartToLabel.TabIndex = 1;
+            this.chartToLabel.Text = "TO:";
+            // 
+            // chartFromLabel
+            // 
+            this.chartFromLabel.AutoSize = true;
+            this.chartFromLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chartFromLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.chartFromLabel.Location = new System.Drawing.Point(9, 11);
+            this.chartFromLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.chartFromLabel.Name = "chartFromLabel";
+            this.chartFromLabel.Size = new System.Drawing.Size(81, 25);
+            this.chartFromLabel.TabIndex = 0;
+            this.chartFromLabel.Text = "FROM:";
             // 
             // chartBackground
             // 
@@ -1195,27 +1484,42 @@ namespace Fine_Management_System
             this.chartBackground.Controls.Add(this.casesLabel);
             this.chartBackground.Controls.Add(this.panel2);
             this.chartBackground.Controls.Add(this.chartPanelChart);
-            this.chartBackground.Location = new System.Drawing.Point(28, 103);
+            this.chartBackground.Location = new System.Drawing.Point(37, 127);
+            this.chartBackground.Margin = new System.Windows.Forms.Padding(4);
             this.chartBackground.Name = "chartBackground";
-            this.chartBackground.Size = new System.Drawing.Size(864, 469);
+            this.chartBackground.Size = new System.Drawing.Size(1152, 577);
             this.chartBackground.TabIndex = 12;
+            // 
+            // statLegendLabel
+            // 
+            this.statLegendLabel.AutoSize = true;
+            this.statLegendLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statLegendLabel.ForeColor = System.Drawing.Color.White;
+            this.statLegendLabel.Location = new System.Drawing.Point(548, 22);
+            this.statLegendLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.statLegendLabel.Name = "statLegendLabel";
+            this.statLegendLabel.Size = new System.Drawing.Size(90, 25);
+            this.statLegendLabel.TabIndex = 14;
+            this.statLegendLabel.Text = "Revenue";
             // 
             // casesLabel
             // 
             this.casesLabel.AutoSize = true;
             this.casesLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.casesLabel.Location = new System.Drawing.Point(782, 18);
+            this.casesLabel.Location = new System.Drawing.Point(1043, 22);
+            this.casesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.casesLabel.Name = "casesLabel";
-            this.casesLabel.Size = new System.Drawing.Size(43, 13);
+            this.casesLabel.Size = new System.Drawing.Size(56, 17);
             this.casesLabel.TabIndex = 10;
             this.casesLabel.Text = "Amount";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Lime;
-            this.panel2.Location = new System.Drawing.Point(737, 23);
+            this.panel2.Location = new System.Drawing.Point(983, 28);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(43, 5);
+            this.panel2.Size = new System.Drawing.Size(57, 6);
             this.panel2.TabIndex = 9;
             // 
             // chartPanelChart
@@ -1226,121 +1530,53 @@ namespace Fine_Management_System
             this.chartPanelChart.BackImageTransparentColor = System.Drawing.Color.White;
             this.chartPanelChart.BackSecondaryColor = System.Drawing.Color.White;
             this.chartPanelChart.BorderlineColor = System.Drawing.Color.Black;
-            chartArea20.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea20.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea20.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea20.AxisX.TitleForeColor = System.Drawing.Color.White;
-            chartArea20.AxisX2.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea20.AxisX2.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea20.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea20.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea20.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea20.AxisY.MinorGrid.LineColor = System.Drawing.Color.White;
-            chartArea20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea20.BorderColor = System.Drawing.Color.White;
-            chartArea20.Name = "ChartArea1";
-            this.chartPanelChart.ChartAreas.Add(chartArea20);
-            legend20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            legend20.Enabled = false;
-            legend20.ForeColor = System.Drawing.Color.WhiteSmoke;
-            legend20.Name = "Legend1";
-            this.chartPanelChart.Legends.Add(legend20);
-            this.chartPanelChart.Location = new System.Drawing.Point(10, 37);
+            chartArea5.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea5.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea5.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea5.AxisX.TitleForeColor = System.Drawing.Color.White;
+            chartArea5.AxisX2.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea5.AxisX2.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea5.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea5.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea5.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea5.AxisY.MinorGrid.LineColor = System.Drawing.Color.White;
+            chartArea5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            chartArea5.BorderColor = System.Drawing.Color.White;
+            chartArea5.Name = "ChartArea1";
+            this.chartPanelChart.ChartAreas.Add(chartArea5);
+            legend5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            legend5.Enabled = false;
+            legend5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            legend5.Name = "Legend1";
+            this.chartPanelChart.Legends.Add(legend5);
+            this.chartPanelChart.Location = new System.Drawing.Point(13, 46);
+            this.chartPanelChart.Margin = new System.Windows.Forms.Padding(4);
             this.chartPanelChart.Name = "chartPanelChart";
             this.chartPanelChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartPanelChart.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(72)))))};
-            series20.ChartArea = "ChartArea1";
-            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series20.Color = System.Drawing.Color.Lime;
-            series20.LabelForeColor = System.Drawing.Color.White;
-            series20.Legend = "Legend1";
-            series20.MarkerBorderColor = System.Drawing.Color.White;
-            series20.MarkerSize = 10;
-            series20.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series20.Name = "Series1";
-            this.chartPanelChart.Series.Add(series20);
-            this.chartPanelChart.Size = new System.Drawing.Size(807, 383);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Color = System.Drawing.Color.Lime;
+            series5.LabelForeColor = System.Drawing.Color.White;
+            series5.Legend = "Legend1";
+            series5.MarkerBorderColor = System.Drawing.Color.White;
+            series5.MarkerSize = 10;
+            series5.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series5.Name = "Series1";
+            this.chartPanelChart.Series.Add(series5);
+            this.chartPanelChart.Size = new System.Drawing.Size(1076, 471);
             this.chartPanelChart.TabIndex = 8;
             this.chartPanelChart.Text = "chartNew";
-            // 
-            // chartCalenderIcon2
-            // 
-            this.chartCalenderIcon2.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
-            this.chartCalenderIcon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.chartCalenderIcon2.Location = new System.Drawing.Point(405, 3);
-            this.chartCalenderIcon2.Name = "chartCalenderIcon2";
-            this.chartCalenderIcon2.Size = new System.Drawing.Size(26, 26);
-            this.chartCalenderIcon2.TabIndex = 11;
-            // 
-            // chartCalenderIcon1
-            // 
-            this.chartCalenderIcon1.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
-            this.chartCalenderIcon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.chartCalenderIcon1.Location = new System.Drawing.Point(180, 3);
-            this.chartCalenderIcon1.Name = "chartCalenderIcon1";
-            this.chartCalenderIcon1.Size = new System.Drawing.Size(26, 26);
-            this.chartCalenderIcon1.TabIndex = 10;
-            // 
-            // goBtn
-            // 
-            this.goBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.Group_31;
-            this.goBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.goBtn.Location = new System.Drawing.Point(733, 35);
-            this.goBtn.Name = "goBtn";
-            this.goBtn.Size = new System.Drawing.Size(128, 39);
-            this.goBtn.TabIndex = 7;
-            // 
-            // chartDateTimePickerTo
-            // 
-            this.chartDateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.chartDateTimePickerTo.Location = new System.Drawing.Point(309, 7);
-            this.chartDateTimePickerTo.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.chartDateTimePickerTo.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
-            this.chartDateTimePickerTo.Name = "chartDateTimePickerTo";
-            this.chartDateTimePickerTo.Size = new System.Drawing.Size(76, 20);
-            this.chartDateTimePickerTo.TabIndex = 4;
-            // 
-            // dateTimePickerFrom
-            // 
-            this.dateTimePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFrom.Location = new System.Drawing.Point(80, 8);
-            this.dateTimePickerFrom.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.dateTimePickerFrom.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
-            this.dateTimePickerFrom.Name = "dateTimePickerFrom";
-            this.dateTimePickerFrom.Size = new System.Drawing.Size(76, 20);
-            this.dateTimePickerFrom.TabIndex = 2;
-            // 
-            // chartToLabel
-            // 
-            this.chartToLabel.AutoSize = true;
-            this.chartToLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chartToLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.chartToLabel.Location = new System.Drawing.Point(262, 6);
-            this.chartToLabel.Name = "chartToLabel";
-            this.chartToLabel.Size = new System.Drawing.Size(37, 20);
-            this.chartToLabel.TabIndex = 1;
-            this.chartToLabel.Text = "TO:";
-            // 
-            // chartFromLabel
-            // 
-            this.chartFromLabel.AutoSize = true;
-            this.chartFromLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chartFromLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.chartFromLabel.Location = new System.Drawing.Point(7, 9);
-            this.chartFromLabel.Name = "chartFromLabel";
-            this.chartFromLabel.Size = new System.Drawing.Size(65, 20);
-            this.chartFromLabel.TabIndex = 0;
-            this.chartFromLabel.Text = "FROM:";
             // 
             // usersPanel
             // 
             this.usersPanel.Controls.Add(this.usrsFilterSection);
             this.usersPanel.Controls.Add(this.panel22);
-            this.usersPanel.Location = new System.Drawing.Point(405, 415);
-            this.usersPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.usersPanel.Location = new System.Drawing.Point(540, 511);
+            this.usersPanel.Margin = new System.Windows.Forms.Padding(5);
             this.usersPanel.Name = "usersPanel";
-            this.usersPanel.Size = new System.Drawing.Size(113, 57);
+            this.usersPanel.Size = new System.Drawing.Size(151, 70);
             this.usersPanel.TabIndex = 11;
             // 
             // usrsFilterSection
@@ -1352,20 +1588,20 @@ namespace Fine_Management_System
             this.usrsFilterSection.Controls.Add(this.panel31);
             this.usrsFilterSection.Controls.Add(this.usrsLabelFrom);
             this.usrsFilterSection.Controls.Add(this.labelDateRange);
-            this.usrsFilterSection.Location = new System.Drawing.Point(12, 143);
-            this.usrsFilterSection.Margin = new System.Windows.Forms.Padding(4);
+            this.usrsFilterSection.Location = new System.Drawing.Point(16, 176);
+            this.usrsFilterSection.Margin = new System.Windows.Forms.Padding(5);
             this.usrsFilterSection.Name = "usrsFilterSection";
-            this.usrsFilterSection.Size = new System.Drawing.Size(909, 97);
+            this.usrsFilterSection.Size = new System.Drawing.Size(1212, 119);
             this.usrsFilterSection.TabIndex = 3;
             // 
             // applyBtn
             // 
             this.applyBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.applyBtn;
             this.applyBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.applyBtn.Location = new System.Drawing.Point(758, 47);
-            this.applyBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.applyBtn.Location = new System.Drawing.Point(1011, 58);
+            this.applyBtn.Margin = new System.Windows.Forms.Padding(5);
             this.applyBtn.Name = "applyBtn";
-            this.applyBtn.Size = new System.Drawing.Size(145, 44);
+            this.applyBtn.Size = new System.Drawing.Size(193, 54);
             this.applyBtn.TabIndex = 4;
             // 
             // usrsLabelTo
@@ -1373,10 +1609,10 @@ namespace Fine_Management_System
             this.usrsLabelTo.AutoSize = true;
             this.usrsLabelTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usrsLabelTo.ForeColor = System.Drawing.Color.White;
-            this.usrsLabelTo.Location = new System.Drawing.Point(334, 58);
-            this.usrsLabelTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.usrsLabelTo.Location = new System.Drawing.Point(445, 71);
+            this.usrsLabelTo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.usrsLabelTo.Name = "usrsLabelTo";
-            this.usrsLabelTo.Size = new System.Drawing.Size(30, 20);
+            this.usrsLabelTo.Size = new System.Drawing.Size(41, 25);
             this.usrsLabelTo.TabIndex = 10;
             this.usrsLabelTo.Text = "TO";
             // 
@@ -1384,38 +1620,38 @@ namespace Fine_Management_System
             // 
             this.panel32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel32.Controls.Add(this.usrsDateTimePickerTo);
-            this.panel32.Location = new System.Drawing.Point(372, 47);
-            this.panel32.Margin = new System.Windows.Forms.Padding(4);
+            this.panel32.Location = new System.Drawing.Point(496, 58);
+            this.panel32.Margin = new System.Windows.Forms.Padding(5);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(139, 44);
+            this.panel32.Size = new System.Drawing.Size(185, 54);
             this.panel32.TabIndex = 9;
             // 
             // usrsDateTimePickerTo
             // 
             this.usrsDateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.usrsDateTimePickerTo.Location = new System.Drawing.Point(13, 11);
-            this.usrsDateTimePickerTo.Margin = new System.Windows.Forms.Padding(4);
+            this.usrsDateTimePickerTo.Location = new System.Drawing.Point(17, 14);
+            this.usrsDateTimePickerTo.Margin = new System.Windows.Forms.Padding(5);
             this.usrsDateTimePickerTo.Name = "usrsDateTimePickerTo";
-            this.usrsDateTimePickerTo.Size = new System.Drawing.Size(109, 20);
+            this.usrsDateTimePickerTo.Size = new System.Drawing.Size(144, 22);
             this.usrsDateTimePickerTo.TabIndex = 4;
             // 
             // panel31
             // 
             this.panel31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel31.Controls.Add(this.usrsDateTimePicker);
-            this.panel31.Location = new System.Drawing.Point(132, 47);
-            this.panel31.Margin = new System.Windows.Forms.Padding(4);
+            this.panel31.Location = new System.Drawing.Point(176, 58);
+            this.panel31.Margin = new System.Windows.Forms.Padding(5);
             this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(139, 44);
+            this.panel31.Size = new System.Drawing.Size(185, 54);
             this.panel31.TabIndex = 4;
             // 
             // usrsDateTimePicker
             // 
             this.usrsDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.usrsDateTimePicker.Location = new System.Drawing.Point(13, 11);
-            this.usrsDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
+            this.usrsDateTimePicker.Location = new System.Drawing.Point(17, 14);
+            this.usrsDateTimePicker.Margin = new System.Windows.Forms.Padding(5);
             this.usrsDateTimePicker.Name = "usrsDateTimePicker";
-            this.usrsDateTimePicker.Size = new System.Drawing.Size(109, 20);
+            this.usrsDateTimePicker.Size = new System.Drawing.Size(144, 22);
             this.usrsDateTimePicker.TabIndex = 4;
             // 
             // usrsLabelFrom
@@ -1423,10 +1659,10 @@ namespace Fine_Management_System
             this.usrsLabelFrom.AutoSize = true;
             this.usrsLabelFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usrsLabelFrom.ForeColor = System.Drawing.Color.White;
-            this.usrsLabelFrom.Location = new System.Drawing.Point(68, 59);
-            this.usrsLabelFrom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.usrsLabelFrom.Location = new System.Drawing.Point(91, 73);
+            this.usrsLabelFrom.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.usrsLabelFrom.Name = "usrsLabelFrom";
-            this.usrsLabelFrom.Size = new System.Drawing.Size(56, 20);
+            this.usrsLabelFrom.Size = new System.Drawing.Size(70, 25);
             this.usrsLabelFrom.TabIndex = 8;
             this.usrsLabelFrom.Text = "FROM";
             // 
@@ -1435,10 +1671,10 @@ namespace Fine_Management_System
             this.labelDateRange.AutoSize = true;
             this.labelDateRange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDateRange.ForeColor = System.Drawing.Color.White;
-            this.labelDateRange.Location = new System.Drawing.Point(68, 19);
-            this.labelDateRange.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDateRange.Location = new System.Drawing.Point(91, 23);
+            this.labelDateRange.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelDateRange.Name = "labelDateRange";
-            this.labelDateRange.Size = new System.Drawing.Size(114, 20);
+            this.labelDateRange.Size = new System.Drawing.Size(140, 25);
             this.labelDateRange.TabIndex = 7;
             this.labelDateRange.Text = "DATE RANGE";
             // 
@@ -1454,21 +1690,21 @@ namespace Fine_Management_System
             this.panel22.Controls.Add(this.panel21);
             this.panel22.Controls.Add(this.labelUsrs);
             this.panel22.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.panel22.Location = new System.Drawing.Point(12, 7);
-            this.panel22.Margin = new System.Windows.Forms.Padding(4);
+            this.panel22.Location = new System.Drawing.Point(16, 9);
+            this.panel22.Margin = new System.Windows.Forms.Padding(5);
             this.panel22.Name = "panel22";
             this.panel22.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panel22.Size = new System.Drawing.Size(909, 128);
+            this.panel22.Size = new System.Drawing.Size(1212, 158);
             this.panel22.TabIndex = 2;
             // 
             // addNewBtn
             // 
             this.addNewBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.ADD_NEW;
             this.addNewBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.addNewBtn.Location = new System.Drawing.Point(758, 85);
-            this.addNewBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.addNewBtn.Location = new System.Drawing.Point(1011, 105);
+            this.addNewBtn.Margin = new System.Windows.Forms.Padding(5);
             this.addNewBtn.Name = "addNewBtn";
-            this.addNewBtn.Size = new System.Drawing.Size(145, 38);
+            this.addNewBtn.Size = new System.Drawing.Size(193, 47);
             this.addNewBtn.TabIndex = 3;
             this.addNewBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.NewUserBtnClick);
             // 
@@ -1476,19 +1712,19 @@ namespace Fine_Management_System
             // 
             this.filterBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.filter_button;
             this.filterBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.filterBtn.Location = new System.Drawing.Point(708, 85);
-            this.filterBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.filterBtn.Location = new System.Drawing.Point(944, 105);
+            this.filterBtn.Margin = new System.Windows.Forms.Padding(5);
             this.filterBtn.Name = "filterBtn";
-            this.filterBtn.Size = new System.Drawing.Size(38, 38);
+            this.filterBtn.Size = new System.Drawing.Size(51, 47);
             this.filterBtn.TabIndex = 3;
             // 
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(198)))), ((int)(((byte)(143)))));
-            this.panel23.Location = new System.Drawing.Point(72, 122);
-            this.panel23.Margin = new System.Windows.Forms.Padding(4);
+            this.panel23.Location = new System.Drawing.Point(96, 150);
+            this.panel23.Margin = new System.Windows.Forms.Padding(5);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(100, 5);
+            this.panel23.Size = new System.Drawing.Size(133, 6);
             this.panel23.TabIndex = 3;
             // 
             // labelDrivers
@@ -1496,10 +1732,10 @@ namespace Fine_Management_System
             this.labelDrivers.AutoSize = true;
             this.labelDrivers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDrivers.ForeColor = System.Drawing.Color.White;
-            this.labelDrivers.Location = new System.Drawing.Point(417, 99);
-            this.labelDrivers.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDrivers.Location = new System.Drawing.Point(556, 122);
+            this.labelDrivers.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelDrivers.Name = "labelDrivers";
-            this.labelDrivers.Size = new System.Drawing.Size(83, 20);
+            this.labelDrivers.Size = new System.Drawing.Size(98, 25);
             this.labelDrivers.TabIndex = 4;
             this.labelDrivers.Text = "DRIVERS";
             // 
@@ -1508,10 +1744,10 @@ namespace Fine_Management_System
             this.labelOfficers.AutoSize = true;
             this.labelOfficers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOfficers.ForeColor = System.Drawing.Color.White;
-            this.labelOfficers.Location = new System.Drawing.Point(231, 99);
-            this.labelOfficers.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelOfficers.Location = new System.Drawing.Point(308, 122);
+            this.labelOfficers.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelOfficers.Name = "labelOfficers";
-            this.labelOfficers.Size = new System.Drawing.Size(91, 20);
+            this.labelOfficers.Size = new System.Drawing.Size(112, 25);
             this.labelOfficers.TabIndex = 3;
             this.labelOfficers.Text = "OFFICERS";
             // 
@@ -1520,10 +1756,10 @@ namespace Fine_Management_System
             this.labelAllusrs.AutoSize = true;
             this.labelAllusrs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAllusrs.ForeColor = System.Drawing.Color.White;
-            this.labelAllusrs.Location = new System.Drawing.Point(72, 99);
-            this.labelAllusrs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAllusrs.Location = new System.Drawing.Point(96, 122);
+            this.labelAllusrs.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelAllusrs.Name = "labelAllusrs";
-            this.labelAllusrs.Size = new System.Drawing.Size(99, 20);
+            this.labelAllusrs.Size = new System.Drawing.Size(121, 25);
             this.labelAllusrs.TabIndex = 2;
             this.labelAllusrs.Text = "ALL USERS";
             // 
@@ -1532,18 +1768,19 @@ namespace Fine_Management_System
             this.panel21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel21.Controls.Add(this.usrsSearchIcon);
             this.panel21.Controls.Add(this.usrsSearchInput);
-            this.panel21.Location = new System.Drawing.Point(155, 27);
-            this.panel21.Margin = new System.Windows.Forms.Padding(4);
+            this.panel21.Location = new System.Drawing.Point(207, 33);
+            this.panel21.Margin = new System.Windows.Forms.Padding(5);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(185, 33);
+            this.panel21.Size = new System.Drawing.Size(247, 41);
             this.panel21.TabIndex = 1;
             // 
             // usrsSearchIcon
             // 
             this.usrsSearchIcon.Image = global::Fine_Management_System.Properties.Resources.search1;
-            this.usrsSearchIcon.Location = new System.Drawing.Point(5, 7);
+            this.usrsSearchIcon.Location = new System.Drawing.Point(7, 9);
+            this.usrsSearchIcon.Margin = new System.Windows.Forms.Padding(4);
             this.usrsSearchIcon.Name = "usrsSearchIcon";
-            this.usrsSearchIcon.Size = new System.Drawing.Size(20, 19);
+            this.usrsSearchIcon.Size = new System.Drawing.Size(27, 23);
             this.usrsSearchIcon.TabIndex = 5;
             this.usrsSearchIcon.TabStop = false;
             // 
@@ -1553,10 +1790,10 @@ namespace Fine_Management_System
             this.usrsSearchInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.usrsSearchInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usrsSearchInput.ForeColor = System.Drawing.SystemColors.Control;
-            this.usrsSearchInput.Location = new System.Drawing.Point(32, 7);
-            this.usrsSearchInput.Margin = new System.Windows.Forms.Padding(4);
+            this.usrsSearchInput.Location = new System.Drawing.Point(43, 9);
+            this.usrsSearchInput.Margin = new System.Windows.Forms.Padding(5);
             this.usrsSearchInput.Name = "usrsSearchInput";
-            this.usrsSearchInput.Size = new System.Drawing.Size(149, 19);
+            this.usrsSearchInput.Size = new System.Drawing.Size(199, 23);
             this.usrsSearchInput.TabIndex = 2;
             this.usrsSearchInput.Text = "Search Here";
             this.usrsSearchInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1566,10 +1803,10 @@ namespace Fine_Management_System
             this.labelUsrs.AutoSize = true;
             this.labelUsrs.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsrs.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelUsrs.Location = new System.Drawing.Point(39, 27);
-            this.labelUsrs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelUsrs.Location = new System.Drawing.Point(52, 33);
+            this.labelUsrs.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelUsrs.Name = "labelUsrs";
-            this.labelUsrs.Size = new System.Drawing.Size(108, 31);
+            this.labelUsrs.Size = new System.Drawing.Size(136, 39);
             this.labelUsrs.TabIndex = 0;
             this.labelUsrs.Text = "USERS";
             // 
@@ -1579,9 +1816,10 @@ namespace Fine_Management_System
             this.usrNameTop.BackColor = System.Drawing.Color.Transparent;
             this.usrNameTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usrNameTop.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.usrNameTop.Location = new System.Drawing.Point(829, 22);
+            this.usrNameTop.Location = new System.Drawing.Point(1105, 27);
+            this.usrNameTop.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usrNameTop.Name = "usrNameTop";
-            this.usrNameTop.Size = new System.Drawing.Size(52, 20);
+            this.usrNameTop.Size = new System.Drawing.Size(64, 25);
             this.usrNameTop.TabIndex = 8;
             this.usrNameTop.Text = "Lasith";
             // 
@@ -1590,18 +1828,20 @@ namespace Fine_Management_System
             this.lableSysName.AutoSize = true;
             this.lableSysName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lableSysName.ForeColor = System.Drawing.Color.White;
-            this.lableSysName.Location = new System.Drawing.Point(72, 21);
+            this.lableSysName.Location = new System.Drawing.Point(96, 26);
+            this.lableSysName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lableSysName.Name = "lableSysName";
-            this.lableSysName.Size = new System.Drawing.Size(314, 20);
+            this.lableSysName.Size = new System.Drawing.Size(396, 25);
             this.lableSysName.TabIndex = 13;
             this.lableSysName.Text = "FINE PAYMENT MANAGEMENT SYSTEM";
             // 
             // sysIcon
             // 
             this.sysIcon.Image = global::Fine_Management_System.Properties.Resources.logo;
-            this.sysIcon.Location = new System.Drawing.Point(3, 4);
+            this.sysIcon.Location = new System.Drawing.Point(4, 5);
+            this.sysIcon.Margin = new System.Windows.Forms.Padding(4);
             this.sysIcon.Name = "sysIcon";
-            this.sysIcon.Size = new System.Drawing.Size(61, 50);
+            this.sysIcon.Size = new System.Drawing.Size(81, 62);
             this.sysIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.sysIcon.TabIndex = 14;
             this.sysIcon.TabStop = false;
@@ -1609,9 +1849,10 @@ namespace Fine_Management_System
             // minimizeBtn
             // 
             this.minimizeBtn.Image = ((System.Drawing.Image)(resources.GetObject("minimizeBtn.Image")));
-            this.minimizeBtn.Location = new System.Drawing.Point(935, 24);
+            this.minimizeBtn.Location = new System.Drawing.Point(1247, 30);
+            this.minimizeBtn.Margin = new System.Windows.Forms.Padding(4);
             this.minimizeBtn.Name = "minimizeBtn";
-            this.minimizeBtn.Size = new System.Drawing.Size(26, 10);
+            this.minimizeBtn.Size = new System.Drawing.Size(35, 12);
             this.minimizeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.minimizeBtn.TabIndex = 10;
             this.minimizeBtn.TabStop = false;
@@ -1619,9 +1860,10 @@ namespace Fine_Management_System
             // usrImage
             // 
             this.usrImage.Image = global::Fine_Management_System.Properties.Resources.officer1;
-            this.usrImage.Location = new System.Drawing.Point(795, 19);
+            this.usrImage.Location = new System.Drawing.Point(1060, 23);
+            this.usrImage.Margin = new System.Windows.Forms.Padding(4);
             this.usrImage.Name = "usrImage";
-            this.usrImage.Size = new System.Drawing.Size(26, 24);
+            this.usrImage.Size = new System.Drawing.Size(35, 30);
             this.usrImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.usrImage.TabIndex = 8;
             this.usrImage.TabStop = false;
@@ -1629,169 +1871,21 @@ namespace Fine_Management_System
             // closeBtn
             // 
             this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
-            this.closeBtn.Location = new System.Drawing.Point(975, 19);
+            this.closeBtn.Location = new System.Drawing.Point(1300, 23);
+            this.closeBtn.Margin = new System.Windows.Forms.Padding(4);
             this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(21, 19);
+            this.closeBtn.Size = new System.Drawing.Size(28, 23);
             this.closeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.closeBtn.TabIndex = 12;
             this.closeBtn.TabStop = false;
             this.closeBtn.Click += new System.EventHandler(this.closeBtnClick);
             // 
-            // statLegendLabel
-            // 
-            this.statLegendLabel.AutoSize = true;
-            this.statLegendLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statLegendLabel.ForeColor = System.Drawing.Color.White;
-            this.statLegendLabel.Location = new System.Drawing.Point(411, 18);
-            this.statLegendLabel.Name = "statLegendLabel";
-            this.statLegendLabel.Size = new System.Drawing.Size(73, 20);
-            this.statLegendLabel.TabIndex = 14;
-            this.statLegendLabel.Text = "Revenue";
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.chartCalenderIcon1);
-            this.panel3.Controls.Add(this.dateTimePickerFrom);
-            this.panel3.Controls.Add(this.chartCalenderIcon2);
-            this.panel3.Controls.Add(this.chartDateTimePickerTo);
-            this.panel3.Controls.Add(this.chartToLabel);
-            this.panel3.Controls.Add(this.chartFromLabel);
-            this.panel3.Location = new System.Drawing.Point(3, 34);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(465, 40);
-            this.panel3.TabIndex = 16;
-            // 
-            // menuStripPanel
-            // 
-            this.menuStripPanel.BackColor = System.Drawing.Color.Black;
-            this.menuStripPanel.Controls.Add(this.menuStrip2);
-            this.menuStripPanel.Location = new System.Drawing.Point(141, 3);
-            this.menuStripPanel.Name = "menuStripPanel";
-            this.menuStripPanel.Size = new System.Drawing.Size(327, 25);
-            this.menuStripPanel.TabIndex = 17;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.menuStripPanel);
-            this.panel5.Controls.Add(this.goBtn);
-            this.panel5.Controls.Add(this.labelChartsTitle);
-            this.panel5.Controls.Add(this.panel3);
-            this.panel5.Location = new System.Drawing.Point(28, 4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(864, 77);
-            this.panel5.TabIndex = 17;
-            // 
-            // menuStrip2
-            // 
-            this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sortByToolStripMenuItem,
-            this.categoryToolStripMenuItem,
-            this.chartTypeToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip2.Size = new System.Drawing.Size(327, 24);
-            this.menuStrip2.TabIndex = 0;
-            this.menuStrip2.Text = "menuStrip2";
-            // 
-            // sortByToolStripMenuItem
-            // 
-            this.sortByToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dayToolStripMenuItem,
-            this.monthToolStripMenuItem,
-            this.yearToolStripMenuItem});
-            this.sortByToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
-            this.sortByToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
-            this.sortByToolStripMenuItem.Name = "sortByToolStripMenuItem";
-            this.sortByToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.sortByToolStripMenuItem.Text = "&Sort by";
-            // 
-            // dayToolStripMenuItem
-            // 
-            this.dayToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dayToolStripMenuItem.Name = "dayToolStripMenuItem";
-            this.dayToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.dayToolStripMenuItem.Text = "&Day";
-            // 
-            // monthToolStripMenuItem
-            // 
-            this.monthToolStripMenuItem.Name = "monthToolStripMenuItem";
-            this.monthToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.monthToolStripMenuItem.Text = "&Month";
-            // 
-            // yearToolStripMenuItem
-            // 
-            this.yearToolStripMenuItem.Name = "yearToolStripMenuItem";
-            this.yearToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.yearToolStripMenuItem.Text = "&Year";
-            // 
-            // categoryToolStripMenuItem
-            // 
-            this.categoryToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.categoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.revenueToolStripMenuItem,
-            this.noCasesToolStripMenuItem,
-            this.vehicleTypeToolStripMenuItem});
-            this.categoryToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
-            this.categoryToolStripMenuItem.Name = "categoryToolStripMenuItem";
-            this.categoryToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.categoryToolStripMenuItem.Text = "&Category";
-            // 
-            // revenueToolStripMenuItem
-            // 
-            this.revenueToolStripMenuItem.Name = "revenueToolStripMenuItem";
-            this.revenueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.revenueToolStripMenuItem.Text = "&Revenue";
-            // 
-            // noCasesToolStripMenuItem
-            // 
-            this.noCasesToolStripMenuItem.Name = "noCasesToolStripMenuItem";
-            this.noCasesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.noCasesToolStripMenuItem.Text = "&No_Cases";
-            // 
-            // vehicleTypeToolStripMenuItem
-            // 
-            this.vehicleTypeToolStripMenuItem.Name = "vehicleTypeToolStripMenuItem";
-            this.vehicleTypeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.vehicleTypeToolStripMenuItem.Text = "&Vehicle Type";
-            // 
-            // chartTypeToolStripMenuItem
-            // 
-            this.chartTypeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lineChartToolStripMenuItem,
-            this.barGraphToolStripMenuItem,
-            this.pieChartToolStripMenuItem});
-            this.chartTypeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
-            this.chartTypeToolStripMenuItem.Name = "chartTypeToolStripMenuItem";
-            this.chartTypeToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.chartTypeToolStripMenuItem.Text = "&Chart Type";
-            // 
-            // lineChartToolStripMenuItem
-            // 
-            this.lineChartToolStripMenuItem.Name = "lineChartToolStripMenuItem";
-            this.lineChartToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.lineChartToolStripMenuItem.Text = "&Line Chart";
-            // 
-            // barGraphToolStripMenuItem
-            // 
-            this.barGraphToolStripMenuItem.Name = "barGraphToolStripMenuItem";
-            this.barGraphToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.barGraphToolStripMenuItem.Text = "&Bar Graph";
-            // 
-            // pieChartToolStripMenuItem
-            // 
-            this.pieChartToolStripMenuItem.Name = "pieChartToolStripMenuItem";
-            this.pieChartToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pieChartToolStripMenuItem.Text = "&Pie Chart";
-            // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.ClientSize = new System.Drawing.Size(1010, 697);
+            this.ClientSize = new System.Drawing.Size(1347, 858);
             this.ControlBox = false;
             this.Controls.Add(this.sysIcon);
             this.Controls.Add(this.lableSysName);
@@ -1803,6 +1897,7 @@ namespace Fine_Management_System
             this.Controls.Add(this.navBarPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fine Payment Management System";
@@ -1848,6 +1943,14 @@ namespace Fine_Management_System
             this.settingsPanel.ResumeLayout(false);
             this.settingsPanel.PerformLayout();
             this.chartPanel.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.menuStripPanel.ResumeLayout(false);
+            this.menuStripPanel.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.chartBackground.ResumeLayout(false);
             this.chartBackground.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartPanelChart)).EndInit();
@@ -1865,14 +1968,6 @@ namespace Fine_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.minimizeBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usrImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.menuStripPanel.ResumeLayout(false);
-            this.menuStripPanel.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
