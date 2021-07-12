@@ -65,7 +65,7 @@ namespace Fine_Management_System
 
         private void HomeBtnClick(object sender, EventArgs e)
         {
-           
+
             ShowPanel(homePanel);
             GrayAll();
             homeBtn.Image = Properties.Resources.homeBlue;
@@ -85,7 +85,7 @@ namespace Fine_Management_System
 
         private void SettingsBtnClick(object sender, EventArgs e)
         {
-            
+
             ShowPanel(settingsPanel);
             GrayAll();
             settingsBtn.Image = Properties.Resources.settings_blue;
@@ -114,7 +114,8 @@ namespace Fine_Management_System
             ShowPanel(usersPanel);
         }
 
-        private void ShowPanel(Panel panel) {
+        private void ShowPanel(Panel panel)
+        {
             homePanel.Hide();
             chartPanel.Hide();
             reportPanel.Hide();
@@ -122,7 +123,7 @@ namespace Fine_Management_System
             settingsPanel.Hide();
             panel.SetBounds(0, 0, 930, 627);
             panel.Show();
-            
+
         }
         private void GrayAll()
         {
@@ -141,6 +142,34 @@ namespace Fine_Management_System
         {
             AddUser.AddUsr addNew = new AddUser.AddUsr();
             addNew.Show();
+        }
+
+        private void rptPgNo_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (rptPgNo.Text == "")
+            {
+                rptPgNo.Select(rptPgNo.Text.Length, 0);
+            }
+
+        }
+
+        private void rptSearch_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (rptSearch.Text == "Search Here")
+            {
+                rptSearch.Clear();
+            }
+        }
+
+        SaveFileDialog fileSave = new SaveFileDialog();
+        
+        private void savePdfClick(object sender, MouseEventArgs e)
+        {
+            fileSave.Filter = "PdfFiles(*.pdf;)|*.pdf";
+            if (fileSave.ShowDialog() == DialogResult.OK)
+            {
+                reportTextBox.SaveFile(fileSave.FileName);
+            }
         }
     }
 }
