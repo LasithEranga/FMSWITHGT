@@ -137,5 +137,10 @@ namespace Fine_Management_System
             this.Dispose();
         }
 
+        private void NewUserBtnClick(object sender, MouseEventArgs e)
+        {
+            AddUser.AddUsr addNew = new AddUser.AddUsr();
+            addNew.Show();
+        }
     }
 }
