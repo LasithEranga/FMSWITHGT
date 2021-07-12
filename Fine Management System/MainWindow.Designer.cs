@@ -240,7 +240,7 @@ namespace Fine_Management_System
             // 
             // logoutBtn
             // 
-            this.logoutBtn.Image = global::Fine_Management_System.Properties.Resources.logout_gray;
+            this.logoutBtn.Image = global::Fine_Management_System.Properties.Resources.logout_new;
             this.logoutBtn.Location = new System.Drawing.Point(9, 567);
             this.logoutBtn.Name = "logoutBtn";
             this.logoutBtn.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
@@ -252,10 +252,10 @@ namespace Fine_Management_System
             // 
             // settingsBtn
             // 
-            this.settingsBtn.Image = global::Fine_Management_System.Properties.Resources.settings_gray;
+            this.settingsBtn.Image = global::Fine_Management_System.Properties.Resources.settings_new;
             this.settingsBtn.Location = new System.Drawing.Point(12, 506);
             this.settingsBtn.Name = "settingsBtn";
-            this.settingsBtn.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.settingsBtn.Padding = new System.Windows.Forms.Padding(2);
             this.settingsBtn.Size = new System.Drawing.Size(36, 35);
             this.settingsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.settingsBtn.TabIndex = 3;
@@ -264,7 +264,7 @@ namespace Fine_Management_System
             // 
             // reportBtn
             // 
-            this.reportBtn.Image = global::Fine_Management_System.Properties.Resources.report_gray;
+            this.reportBtn.Image = global::Fine_Management_System.Properties.Resources.report_new;
             this.reportBtn.Location = new System.Drawing.Point(12, 166);
             this.reportBtn.Name = "reportBtn";
             this.reportBtn.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -276,10 +276,10 @@ namespace Fine_Management_System
             // 
             // chartBtn
             // 
-            this.chartBtn.Image = global::Fine_Management_System.Properties.Resources.chart_gray;
+            this.chartBtn.Image = global::Fine_Management_System.Properties.Resources.chart_new;
             this.chartBtn.Location = new System.Drawing.Point(12, 94);
             this.chartBtn.Name = "chartBtn";
-            this.chartBtn.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chartBtn.Padding = new System.Windows.Forms.Padding(2);
             this.chartBtn.Size = new System.Drawing.Size(37, 37);
             this.chartBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.chartBtn.TabIndex = 5;
@@ -302,10 +302,10 @@ namespace Fine_Management_System
             // 
             this.windowPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
             this.windowPanel.Controls.Add(this.homePanel);
-            this.windowPanel.Controls.Add(this.reportPanel);
-            this.windowPanel.Controls.Add(this.settingsPanel);
             this.windowPanel.Controls.Add(this.chartPanel);
             this.windowPanel.Controls.Add(this.usersPanel);
+            this.windowPanel.Controls.Add(this.reportPanel);
+            this.windowPanel.Controls.Add(this.settingsPanel);
             this.windowPanel.Location = new System.Drawing.Point(70, 60);
             this.windowPanel.Name = "windowPanel";
             this.windowPanel.Size = new System.Drawing.Size(930, 627);
@@ -322,9 +322,9 @@ namespace Fine_Management_System
             this.homePanel.Controls.Add(this.homeItem3);
             this.homePanel.Controls.Add(this.homeItem2);
             this.homePanel.Controls.Add(this.homeItem1);
-            this.homePanel.Location = new System.Drawing.Point(233, 544);
+            this.homePanel.Location = new System.Drawing.Point(556, 3);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(163, 47);
+            this.homePanel.Size = new System.Drawing.Size(322, 249);
             this.homePanel.TabIndex = 8;
             // 
             // homeItem8
@@ -543,6 +543,7 @@ namespace Fine_Management_System
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series3.Legend = "Legend1";
             series3.Name = "Series1";
+            series3.SmartLabelStyle.Enabled = false;
             this.chartThisWeek.Series.Add(series3);
             this.chartThisWeek.Size = new System.Drawing.Size(224, 155);
             this.chartThisWeek.TabIndex = 0;
@@ -760,9 +761,9 @@ namespace Fine_Management_System
             this.reportPanel.Controls.Add(this.reportTextBox);
             this.reportPanel.Controls.Add(this.saveAsPdfBtn);
             this.reportPanel.Controls.Add(this.shareBtn);
-            this.reportPanel.Location = new System.Drawing.Point(233, 276);
+            this.reportPanel.Location = new System.Drawing.Point(348, 439);
             this.reportPanel.Name = "reportPanel";
-            this.reportPanel.Size = new System.Drawing.Size(259, 81);
+            this.reportPanel.Size = new System.Drawing.Size(142, 50);
             this.reportPanel.TabIndex = 4;
             // 
             // label1
@@ -1004,13 +1005,13 @@ namespace Fine_Management_System
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.saveAsToolStripMenuItem.Text = "&Save As...";
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.closeToolStripMenuItem.Text = "&Close";
             // 
             // exportToolStripMenuItem
@@ -1076,6 +1077,7 @@ namespace Fine_Management_System
             // 
             this.reportTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
             this.reportTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.reportTextBox.ForeColor = System.Drawing.SystemColors.Control;
             this.reportTextBox.Location = new System.Drawing.Point(18, 121);
             this.reportTextBox.Name = "reportTextBox";
             this.reportTextBox.Size = new System.Drawing.Size(895, 481);
@@ -1110,7 +1112,7 @@ namespace Fine_Management_System
             this.settingsPanel.Controls.Add(this.notification);
             this.settingsPanel.Controls.Add(this.language);
             this.settingsPanel.Controls.Add(this.user);
-            this.settingsPanel.Location = new System.Drawing.Point(562, 477);
+            this.settingsPanel.Location = new System.Drawing.Point(176, 432);
             this.settingsPanel.Name = "settingsPanel";
             this.settingsPanel.Size = new System.Drawing.Size(129, 70);
             this.settingsPanel.TabIndex = 7;
@@ -1177,9 +1179,9 @@ namespace Fine_Management_System
             this.chartPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.chartPanel.Controls.Add(this.panel5);
             this.chartPanel.Controls.Add(this.chartBackground);
-            this.chartPanel.Location = new System.Drawing.Point(38, 54);
+            this.chartPanel.Location = new System.Drawing.Point(650, 435);
             this.chartPanel.Name = "chartPanel";
-            this.chartPanel.Size = new System.Drawing.Size(189, 54);
+            this.chartPanel.Size = new System.Drawing.Size(140, 57);
             this.chartPanel.TabIndex = 9;
             // 
             // panel5
@@ -1493,8 +1495,8 @@ namespace Fine_Management_System
             // 
             this.usersPanel.Controls.Add(this.usrsFilterSection);
             this.usersPanel.Controls.Add(this.panel22);
-            this.usersPanel.Location = new System.Drawing.Point(405, 415);
-            this.usersPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usersPanel.Location = new System.Drawing.Point(32, 432);
+            this.usersPanel.Margin = new System.Windows.Forms.Padding(4);
             this.usersPanel.Name = "usersPanel";
             this.usersPanel.Size = new System.Drawing.Size(113, 57);
             this.usersPanel.TabIndex = 11;
@@ -1509,7 +1511,7 @@ namespace Fine_Management_System
             this.usrsFilterSection.Controls.Add(this.usrsLabelFrom);
             this.usrsFilterSection.Controls.Add(this.labelDateRange);
             this.usrsFilterSection.Location = new System.Drawing.Point(12, 143);
-            this.usrsFilterSection.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usrsFilterSection.Margin = new System.Windows.Forms.Padding(4);
             this.usrsFilterSection.Name = "usrsFilterSection";
             this.usrsFilterSection.Size = new System.Drawing.Size(909, 97);
             this.usrsFilterSection.TabIndex = 3;
@@ -1519,7 +1521,7 @@ namespace Fine_Management_System
             this.applyBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.applyBtn;
             this.applyBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.applyBtn.Location = new System.Drawing.Point(758, 47);
-            this.applyBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applyBtn.Margin = new System.Windows.Forms.Padding(4);
             this.applyBtn.Name = "applyBtn";
             this.applyBtn.Size = new System.Drawing.Size(145, 44);
             this.applyBtn.TabIndex = 4;
@@ -1541,7 +1543,7 @@ namespace Fine_Management_System
             this.panel32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel32.Controls.Add(this.usrsDateTimePickerTo);
             this.panel32.Location = new System.Drawing.Point(372, 47);
-            this.panel32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel32.Margin = new System.Windows.Forms.Padding(4);
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(139, 44);
             this.panel32.TabIndex = 9;
@@ -1550,7 +1552,7 @@ namespace Fine_Management_System
             // 
             this.usrsDateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.usrsDateTimePickerTo.Location = new System.Drawing.Point(13, 11);
-            this.usrsDateTimePickerTo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usrsDateTimePickerTo.Margin = new System.Windows.Forms.Padding(4);
             this.usrsDateTimePickerTo.Name = "usrsDateTimePickerTo";
             this.usrsDateTimePickerTo.Size = new System.Drawing.Size(109, 20);
             this.usrsDateTimePickerTo.TabIndex = 4;
@@ -1560,7 +1562,7 @@ namespace Fine_Management_System
             this.panel31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel31.Controls.Add(this.usrsDateTimePicker);
             this.panel31.Location = new System.Drawing.Point(132, 47);
-            this.panel31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel31.Margin = new System.Windows.Forms.Padding(4);
             this.panel31.Name = "panel31";
             this.panel31.Size = new System.Drawing.Size(139, 44);
             this.panel31.TabIndex = 4;
@@ -1569,7 +1571,7 @@ namespace Fine_Management_System
             // 
             this.usrsDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.usrsDateTimePicker.Location = new System.Drawing.Point(13, 11);
-            this.usrsDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usrsDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.usrsDateTimePicker.Name = "usrsDateTimePicker";
             this.usrsDateTimePicker.Size = new System.Drawing.Size(109, 20);
             this.usrsDateTimePicker.TabIndex = 4;
@@ -1611,7 +1613,7 @@ namespace Fine_Management_System
             this.panel22.Controls.Add(this.labelUsrs);
             this.panel22.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.panel22.Location = new System.Drawing.Point(12, 7);
-            this.panel22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel22.Margin = new System.Windows.Forms.Padding(4);
             this.panel22.Name = "panel22";
             this.panel22.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.panel22.Size = new System.Drawing.Size(909, 128);
@@ -1622,7 +1624,7 @@ namespace Fine_Management_System
             this.addNewBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.ADD_NEW;
             this.addNewBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.addNewBtn.Location = new System.Drawing.Point(758, 85);
-            this.addNewBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addNewBtn.Margin = new System.Windows.Forms.Padding(4);
             this.addNewBtn.Name = "addNewBtn";
             this.addNewBtn.Size = new System.Drawing.Size(145, 38);
             this.addNewBtn.TabIndex = 3;
@@ -1633,7 +1635,7 @@ namespace Fine_Management_System
             this.filterBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.filter_button;
             this.filterBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.filterBtn.Location = new System.Drawing.Point(708, 85);
-            this.filterBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterBtn.Margin = new System.Windows.Forms.Padding(4);
             this.filterBtn.Name = "filterBtn";
             this.filterBtn.Size = new System.Drawing.Size(38, 38);
             this.filterBtn.TabIndex = 3;
@@ -1642,7 +1644,7 @@ namespace Fine_Management_System
             // 
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(198)))), ((int)(((byte)(143)))));
             this.panel23.Location = new System.Drawing.Point(72, 122);
-            this.panel23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel23.Margin = new System.Windows.Forms.Padding(4);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(100, 5);
             this.panel23.TabIndex = 3;
@@ -1689,7 +1691,7 @@ namespace Fine_Management_System
             this.panel21.Controls.Add(this.usrsSearchIcon);
             this.panel21.Controls.Add(this.usrsSearchInput);
             this.panel21.Location = new System.Drawing.Point(155, 27);
-            this.panel21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel21.Margin = new System.Windows.Forms.Padding(4);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(185, 33);
             this.panel21.TabIndex = 1;
@@ -1710,7 +1712,7 @@ namespace Fine_Management_System
             this.usrsSearchInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usrsSearchInput.ForeColor = System.Drawing.SystemColors.Control;
             this.usrsSearchInput.Location = new System.Drawing.Point(32, 7);
-            this.usrsSearchInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usrsSearchInput.Margin = new System.Windows.Forms.Padding(4);
             this.usrsSearchInput.Name = "usrsSearchInput";
             this.usrsSearchInput.Size = new System.Drawing.Size(149, 19);
             this.usrsSearchInput.TabIndex = 2;

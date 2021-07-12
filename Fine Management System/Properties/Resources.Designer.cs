@@ -153,6 +153,16 @@ namespace Fine_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chart_new {
+            get {
+                object obj = ResourceManager.GetObject("chart_new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chartBack {
             get {
                 object obj = ResourceManager.GetObject("chartBack", resourceCulture);
@@ -363,6 +373,16 @@ namespace Fine_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home_new {
+            get {
+                object obj = ResourceManager.GetObject("home_new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap homeBlue {
             get {
                 object obj = ResourceManager.GetObject("homeBlue", resourceCulture);
@@ -396,6 +416,16 @@ namespace Fine_Management_System.Properties {
         internal static System.Drawing.Bitmap logout_gray {
             get {
                 object obj = ResourceManager.GetObject("logout_gray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout_new {
+            get {
+                object obj = ResourceManager.GetObject("logout_new", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -463,6 +493,16 @@ namespace Fine_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap report_new {
+            get {
+                object obj = ResourceManager.GetObject("report_new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap save_as_pdf_new {
             get {
                 object obj = ResourceManager.GetObject("save as pdf new", resourceCulture);
@@ -516,6 +556,16 @@ namespace Fine_Management_System.Properties {
         internal static System.Drawing.Bitmap settings_gray {
             get {
                 object obj = ResourceManager.GetObject("settings_gray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings_new {
+            get {
+                object obj = ResourceManager.GetObject("settings_new", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
