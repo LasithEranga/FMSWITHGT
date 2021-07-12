@@ -42,6 +42,7 @@ namespace Fine_Management_System.AddUser
             emailAddress.Clear();
             fullName.Clear();
             post.Clear();
+            policeId.Clear();
             dateTimePickerAddUsr.ResetText();
             usrImage.Image = null;
 
@@ -55,6 +56,26 @@ namespace Fine_Management_System.AddUser
             file.ShowDialog();
             usrImage.Image = new Bitmap(file.FileName);
             uploadBtn.Text = "Change";
+        }
+
+        private void PoliceIDClick(object sender, EventArgs e)
+        {
+            if (policeId.Text == "")
+            {
+                policeId.Select(policeId.Text.Length, 0);
+            }
+            
+        }
+
+        private void ContactNoClick(object sender, MouseEventArgs e)
+        {
+
+            if (contactNo.Text == "(+94)    -     - ")
+            {
+
+                contactNo.Select(policeId.Text.Length, 5);
+
+            }
         }
     }
 }
