@@ -167,6 +167,7 @@ namespace Fine_Management_System.AddUser
             this.policeId.Name = "policeId";
             this.policeId.Size = new System.Drawing.Size(114, 25);
             this.policeId.TabIndex = 8;
+            this.policeId.Click += new System.EventHandler(this.PoliceIDClick);
             // 
             // post
             // 
@@ -272,6 +273,7 @@ namespace Fine_Management_System.AddUser
             this.contactNo.Size = new System.Drawing.Size(211, 25);
             this.contactNo.TabIndex = 3;
             this.contactNo.ValidatingType = typeof(System.DateTime);
+            this.contactNo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ContactNoClick);
             // 
             // label11
             // 
