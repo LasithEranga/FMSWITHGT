@@ -161,5 +161,15 @@ namespace Fine_Management_System
             }
         }
 
+        SaveFileDialog fileSave = new SaveFileDialog();
+        
+        private void savePdfClick(object sender, MouseEventArgs e)
+        {
+            fileSave.Filter = "PdfFiles(*.pdf;)|*.pdf";
+            if (fileSave.ShowDialog() == DialogResult.OK)
+            {
+                reportTextBox.SaveFile(fileSave.FileName);
+            }
+        }
     }
 }
