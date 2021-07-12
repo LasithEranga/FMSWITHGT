@@ -57,6 +57,12 @@
     <Compile Include="AddUser\AddUsr.Designer.cs">
       <DependentUpon>AddUsr.cs</DependentUpon>
     </Compile>
+    <Compile Include="Error messages\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Error messages\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddUser\AddUsr.resx">
       <DependentUpon>AddUsr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Error messages\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -163,5 +172,6 @@
     <None Include="Resources\homeGray.bmp" />
     <None Include="Resources\Image1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

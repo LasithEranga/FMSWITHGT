@@ -77,5 +77,10 @@ namespace Fine_Management_System.AddUser
 
             }
         }
+
+        private void policeId_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }
