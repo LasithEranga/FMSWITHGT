@@ -119,6 +119,11 @@
     <Content Include="MainWindowAssests\report.png" />
     <Content Include="MainWindowAssests\settings.png" />
     <Content Include="MainWindowAssests\users.png" />
+    <None Include="Resources\settings_new.png" />
+    <None Include="Resources\report_new.png" />
+    <None Include="Resources\logout_new.png" />
+    <None Include="Resources\home_new.png" />
+    <None Include="Resources\chart_new.png" />
     <None Include="Resources\logout_gray.png" />
     <None Include="Resources\settings_gray.png" />
     <None Include="Resources\report_gray.png" />

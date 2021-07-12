@@ -6,7 +6,6 @@ namespace Fine_Management_System
 {
     public partial class MainWindow : Form
     {
-        Panel[] panels;
         public MainWindow()
         {
             InitializeComponent();
@@ -127,10 +126,10 @@ namespace Fine_Management_System
         }
         private void GrayAll()
         {
-            homeBtn.Image = Properties.Resources.home_gray;
-            chartBtn.Image = Properties.Resources.chart_gray;
-            settingsBtn.Image = Properties.Resources.settings_gray;
-            reportBtn.Image = Properties.Resources.report_gray;
+            homeBtn.Image = Properties.Resources.home_new;
+            chartBtn.Image = Properties.Resources.chart_new;
+            settingsBtn.Image = Properties.Resources.settings_new;
+            reportBtn.Image = Properties.Resources.report_new;
         }
 
         private void logoutBtn_Click(object sender, EventArgs e)
