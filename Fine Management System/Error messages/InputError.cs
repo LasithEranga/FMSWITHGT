@@ -12,12 +12,21 @@ namespace Fine_Management_System.Error_messages
 {
     public partial class InputError : Form
     {
+        
         public InputError()
         {
             InitializeComponent();
         }
+        public InputError(String title, String msg)
+        {
+            InitializeComponent();
+            Title.Text = title;
+            this.msg.Text = msg;
 
-        private void button1_Click(object sender, EventArgs e)
+        }
+
+
+        private void closeBtnClick(object sender, EventArgs e)
         {
             this.Dispose();
         }

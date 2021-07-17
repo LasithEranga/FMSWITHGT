@@ -105,6 +105,7 @@
     <Compile Include="MainWindowItems\Users.Designer.cs">
       <DependentUpon>Users.cs</DependentUpon>
     </Compile>
+    <Compile Include="MD5Hashing.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddUser\AddUsr.resx">

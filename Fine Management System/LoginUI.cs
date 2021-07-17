@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fine_Management_System
@@ -15,6 +8,7 @@ namespace Fine_Management_System
     {
         private bool pass = true;
         LoginForm form;
+        string md5password = "13926153831969718150168391712481961204215";
         public LoginForm()
         {
             InitializeComponent();
@@ -28,16 +22,20 @@ namespace Fine_Management_System
 
         private void LOGIN_Click(object sender, EventArgs e)
         {
-            MainWindow logged = new MainWindow();
 
-            if (pass)
+            //check password with MD5 encryption 
+
+            
+            if (MD5Hashing.Encryption(password.Text) == md5password)
             {
+                MainWindow logged = new MainWindow();
                 //after verification of the the password 
                 //textFields will be cleared!
                 usrName.Clear();
                 password.Clear();
+                logged.Show();
             }
-            logged.Show();
+            
         }
 
 
