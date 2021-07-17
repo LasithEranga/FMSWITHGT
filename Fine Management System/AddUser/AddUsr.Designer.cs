@@ -136,6 +136,7 @@ namespace Fine_Management_System.AddUser
             this.address.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.address.ForeColor = System.Drawing.SystemColors.Control;
             this.address.Location = new System.Drawing.Point(-2, -1);
+            this.address.MaxLength = 200;
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(208, 77);
             this.address.TabIndex = 0;
@@ -244,6 +245,7 @@ namespace Fine_Management_System.AddUser
             this.nicNo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nicNo.ForeColor = System.Drawing.SystemColors.Control;
             this.nicNo.Location = new System.Drawing.Point(278, 94);
+            this.nicNo.MaxLength = 12;
             this.nicNo.Name = "nicNo";
             this.nicNo.Size = new System.Drawing.Size(177, 25);
             this.nicNo.TabIndex = 7;
@@ -256,6 +258,7 @@ namespace Fine_Management_System.AddUser
             this.emailAddress.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailAddress.ForeColor = System.Drawing.SystemColors.Control;
             this.emailAddress.Location = new System.Drawing.Point(278, 38);
+            this.emailAddress.MaxLength = 50;
             this.emailAddress.Name = "emailAddress";
             this.emailAddress.Size = new System.Drawing.Size(177, 25);
             this.emailAddress.TabIndex = 6;
@@ -307,6 +310,7 @@ namespace Fine_Management_System.AddUser
             this.fullName.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fullName.ForeColor = System.Drawing.SystemColors.Control;
             this.fullName.Location = new System.Drawing.Point(20, 94);
+            this.fullName.MaxLength = 200;
             this.fullName.Name = "fullName";
             this.fullName.Size = new System.Drawing.Size(211, 25);
             this.fullName.TabIndex = 2;
@@ -319,6 +323,7 @@ namespace Fine_Management_System.AddUser
             this.lName.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lName.ForeColor = System.Drawing.SystemColors.Control;
             this.lName.Location = new System.Drawing.Point(131, 38);
+            this.lName.MaxLength = 100;
             this.lName.Name = "lName";
             this.lName.Size = new System.Drawing.Size(100, 25);
             this.lName.TabIndex = 1;
@@ -331,6 +336,7 @@ namespace Fine_Management_System.AddUser
             this.fName.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fName.ForeColor = System.Drawing.SystemColors.Control;
             this.fName.Location = new System.Drawing.Point(19, 38);
+            this.fName.MaxLength = 100;
             this.fName.Name = "fName";
             this.fName.Size = new System.Drawing.Size(100, 25);
             this.fName.TabIndex = 0;
