@@ -96,13 +96,13 @@ namespace Fine_Management_System.AddUser
                 }
                 catch (FormatException b)
                 {
-                    MessageBox.Show(b.Message);
+                    new Error_messages.InputError("Invalid Email Address", "Please check Email Address").Show();
                 }
 
             }
             else
             {
-                //empty
+                new Error_messages.InputError("Email Address Required", "Please Insert an Email Address").Show();
             }
         }
 
@@ -115,11 +115,11 @@ namespace Fine_Management_System.AddUser
                 Regex rgx = new Regex(@"^\d{9}[vxVX]{1}$");
                 if (rgx.IsMatch(nicNo.Text))
                 {
-                    MessageBox.Show("correct");
+                    
                 }
                 else
                 {
-                    MessageBox.Show("Error");
+                    new Error_messages.InputError("Invalid ID", "Please check ID Number").Show();
                 }
 
             }
@@ -134,14 +134,14 @@ namespace Fine_Management_System.AddUser
                 }
                 else
                 {
-                    MessageBox.Show("Error");
+                    new Error_messages.InputError("Invalid ID", "Please check ID Number").Show();
                 }
                 
             }
             else
             {
                 //empty
-                MessageBox.Show("Invalid");
+                new Error_messages.InputError("Invalid ID", "Please check ID Number").Show();
             }
             
        
