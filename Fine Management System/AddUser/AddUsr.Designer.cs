@@ -32,6 +32,7 @@ namespace Fine_Management_System.AddUser
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddUsr));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.usrImage = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.address = new System.Windows.Forms.RichTextBox();
             this.uploadBtn = new System.Windows.Forms.Button();
@@ -60,11 +61,10 @@ namespace Fine_Management_System.AddUser
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.line = new System.Windows.Forms.Panel();
-            this.usrImage = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usrImage)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -110,6 +110,15 @@ namespace Fine_Management_System.AddUser
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(103, 83);
             this.panel3.TabIndex = 28;
+            // 
+            // usrImage
+            // 
+            this.usrImage.Location = new System.Drawing.Point(-1, -1);
+            this.usrImage.Name = "usrImage";
+            this.usrImage.Size = new System.Drawing.Size(103, 83);
+            this.usrImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.usrImage.TabIndex = 9;
+            this.usrImage.TabStop = false;
             // 
             // panel1
             // 
@@ -158,7 +167,6 @@ namespace Fine_Management_System.AddUser
             this.policeId.Name = "policeId";
             this.policeId.Size = new System.Drawing.Size(114, 25);
             this.policeId.TabIndex = 8;
-            this.policeId.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.policeId_MaskInputRejected);
             this.policeId.Click += new System.EventHandler(this.PoliceIDClick);
             // 
             // post
@@ -447,15 +455,6 @@ namespace Fine_Management_System.AddUser
             this.line.Size = new System.Drawing.Size(599, 5);
             this.line.TabIndex = 0;
             // 
-            // usrImage
-            // 
-            this.usrImage.Location = new System.Drawing.Point(-1, -1);
-            this.usrImage.Name = "usrImage";
-            this.usrImage.Size = new System.Drawing.Size(103, 83);
-            this.usrImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.usrImage.TabIndex = 9;
-            this.usrImage.TabStop = false;
-            // 
             // AddUsr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -473,8 +472,8 @@ namespace Fine_Management_System.AddUser
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.usrImage)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
