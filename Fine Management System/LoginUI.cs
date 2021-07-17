@@ -6,9 +6,10 @@ namespace Fine_Management_System
 
     public partial class LoginForm : Form
     {
-        private bool pass = true;
         LoginForm form;
+        //tempory username and password for development purposes 
         string md5password = "13926153831969718150168391712481961204215";
+        string userName = "Lasith";
         public LoginForm()
         {
             InitializeComponent();
@@ -24,16 +25,17 @@ namespace Fine_Management_System
         {
 
             //check password with MD5 encryption 
-
-            
-            if (MD5Hashing.Encryption(password.Text) == md5password)
+            if (MD5Hashing.Encryption(password.Text) == md5password && userName ==usrName.Text)
             {
                 MainWindow logged = new MainWindow();
-                //after verification of the the password 
-                //textFields will be cleared!
+                //textFields will be cleared after verification of the the password 
                 usrName.Clear();
                 password.Clear();
                 logged.Show();
+            }
+            else
+            {
+                new Error_messages.InputError("Login Failed", "Username or Password is incorrect").Show();
             }
             
         }
