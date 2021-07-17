@@ -84,9 +84,6 @@ namespace Fine_Management_System.AddUser
             }
         }
 
-       
-
-
 
         private void Validate_Email()
         {
@@ -126,6 +123,7 @@ namespace Fine_Management_System.AddUser
                 }
 
             }
+
             else if(len == 12)
             {
                 //pattern 2
