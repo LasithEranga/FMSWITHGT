@@ -25,6 +25,8 @@ namespace Fine_Management_System.AddUser
             //this.Dispose();
             Validate_Email();
             Validate_NIC();
+            string query = "INSERT INTO `traffic_police_officer`(`police_id`, `fname`, `lname`, `full_name`, `email`, `nic`, `contact_no`, `post`, `address`) VALUES (3,'lasith','eranda','lasith eranda','lasith@gmail.com','156456','0770543422','mokakhri','ushfuih')";
+            DBConnection.db.Write(query);
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -147,5 +149,9 @@ namespace Fine_Management_System.AddUser
        
         }
 
+        private void usrImage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

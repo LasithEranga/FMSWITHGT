@@ -119,6 +119,7 @@ namespace Fine_Management_System.AddUser
             this.usrImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.usrImage.TabIndex = 9;
             this.usrImage.TabStop = false;
+            this.usrImage.Click += new System.EventHandler(this.usrImage_Click);
             // 
             // panel1
             // 
