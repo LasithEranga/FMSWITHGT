@@ -13,20 +13,22 @@ namespace Fine_Management_System.DBConnection
     {
         public static MySqlDataReader Read(string query)
         {
+            MySqlDataReader dr = null;
             string connStr = "server=localhost;user=root;database=fmsdb;port=3306;password=;SSL Mode=None;";
-            MySqlDataReader rdr = null;
             MySqlConnection conn = new MySqlConnection(connStr);
             try
             {
+                MessageBox.Show("ENter");
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(query, conn);
-                rdr = cmd.ExecuteReader();
+                dr = cmd.ExecuteReader();
+                MessageBox.Show("Success!");
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
             }
-            conn.Close();
-            return rdr;
+            return dr;
         }
 
         public static void Write(string query)
