@@ -31,33 +31,33 @@ namespace Fine_Management_System
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.navBarPanel = new System.Windows.Forms.Panel();
+            this.logoutBtn = new System.Windows.Forms.PictureBox();
+            this.settingsBtn = new System.Windows.Forms.PictureBox();
+            this.reportBtn = new System.Windows.Forms.PictureBox();
+            this.chartBtn = new System.Windows.Forms.PictureBox();
+            this.homeBtn = new System.Windows.Forms.PictureBox();
             this.windowPanel = new System.Windows.Forms.Panel();
+            this.statisticsPanel = new Fine_Management_System.MainWindowItems.Statistics();
+            this.settingsPanel = new Fine_Management_System.MainWindowItems.Settings();
+            this.reportPanel = new Fine_Management_System.MainWindowItems.Report();
+            this.homePanel = new Fine_Management_System.Home();
             this.usrNameTop = new System.Windows.Forms.Label();
             this.lableSysName = new System.Windows.Forms.Label();
             this.sysIcon = new System.Windows.Forms.PictureBox();
             this.minimizeBtn = new System.Windows.Forms.PictureBox();
             this.usrImage = new System.Windows.Forms.PictureBox();
             this.closeBtn = new System.Windows.Forms.PictureBox();
-            this.logoutBtn = new System.Windows.Forms.PictureBox();
-            this.settingsBtn = new System.Windows.Forms.PictureBox();
-            this.reportBtn = new System.Windows.Forms.PictureBox();
-            this.chartBtn = new System.Windows.Forms.PictureBox();
-            this.homeBtn = new System.Windows.Forms.PictureBox();
-            this.statisticsPanel = new Fine_Management_System.MainWindowItems.Statistics();
-            this.settingsPanel = new Fine_Management_System.MainWindowItems.Settings();
-            this.reportPanel = new Fine_Management_System.MainWindowItems.Report();
-            this.homePanel = new Fine_Management_System.Home();
             this.navBarPanel.SuspendLayout();
-            this.windowPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sysIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimizeBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usrImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoutBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingsBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeBtn)).BeginInit();
+            this.windowPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sysIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizeBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usrImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // navBarPanel
@@ -72,6 +72,66 @@ namespace Fine_Management_System
             this.navBarPanel.Size = new System.Drawing.Size(61, 626);
             this.navBarPanel.TabIndex = 1;
             // 
+            // logoutBtn
+            // 
+            this.logoutBtn.Image = global::Fine_Management_System.Properties.Resources.logout_new;
+            this.logoutBtn.Location = new System.Drawing.Point(9, 567);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.logoutBtn.Size = new System.Drawing.Size(41, 38);
+            this.logoutBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoutBtn.TabIndex = 7;
+            this.logoutBtn.TabStop = false;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
+            // settingsBtn
+            // 
+            this.settingsBtn.Image = global::Fine_Management_System.Properties.Resources.settings_new;
+            this.settingsBtn.Location = new System.Drawing.Point(12, 506);
+            this.settingsBtn.Name = "settingsBtn";
+            this.settingsBtn.Padding = new System.Windows.Forms.Padding(2);
+            this.settingsBtn.Size = new System.Drawing.Size(36, 35);
+            this.settingsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.settingsBtn.TabIndex = 3;
+            this.settingsBtn.TabStop = false;
+            this.settingsBtn.Click += new System.EventHandler(this.SettingsBtnClick);
+            // 
+            // reportBtn
+            // 
+            this.reportBtn.Image = global::Fine_Management_System.Properties.Resources.report_new;
+            this.reportBtn.Location = new System.Drawing.Point(12, 166);
+            this.reportBtn.Name = "reportBtn";
+            this.reportBtn.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.reportBtn.Size = new System.Drawing.Size(34, 40);
+            this.reportBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.reportBtn.TabIndex = 4;
+            this.reportBtn.TabStop = false;
+            this.reportBtn.Click += new System.EventHandler(this.reportBtnClick);
+            // 
+            // chartBtn
+            // 
+            this.chartBtn.Image = global::Fine_Management_System.Properties.Resources.chart_new;
+            this.chartBtn.Location = new System.Drawing.Point(12, 94);
+            this.chartBtn.Name = "chartBtn";
+            this.chartBtn.Padding = new System.Windows.Forms.Padding(2);
+            this.chartBtn.Size = new System.Drawing.Size(37, 37);
+            this.chartBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.chartBtn.TabIndex = 5;
+            this.chartBtn.TabStop = false;
+            this.chartBtn.Click += new System.EventHandler(this.ChartBtnClick);
+            // 
+            // homeBtn
+            // 
+            this.homeBtn.ErrorImage = ((System.Drawing.Image)(resources.GetObject("homeBtn.ErrorImage")));
+            this.homeBtn.Image = global::Fine_Management_System.Properties.Resources.homeBlue;
+            this.homeBtn.Location = new System.Drawing.Point(13, 25);
+            this.homeBtn.Name = "homeBtn";
+            this.homeBtn.Size = new System.Drawing.Size(33, 32);
+            this.homeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.homeBtn.TabIndex = 6;
+            this.homeBtn.TabStop = false;
+            this.homeBtn.Click += new System.EventHandler(this.HomeBtnClick);
+            // 
             // windowPanel
             // 
             this.windowPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
@@ -83,6 +143,34 @@ namespace Fine_Management_System
             this.windowPanel.Name = "windowPanel";
             this.windowPanel.Size = new System.Drawing.Size(930, 627);
             this.windowPanel.TabIndex = 2;
+            // 
+            // statisticsPanel
+            // 
+            this.statisticsPanel.Location = new System.Drawing.Point(299, 197);
+            this.statisticsPanel.Name = "statisticsPanel";
+            this.statisticsPanel.Size = new System.Drawing.Size(266, 183);
+            this.statisticsPanel.TabIndex = 16;
+            // 
+            // settingsPanel
+            // 
+            this.settingsPanel.Location = new System.Drawing.Point(3, 197);
+            this.settingsPanel.Name = "settingsPanel";
+            this.settingsPanel.Size = new System.Drawing.Size(256, 183);
+            this.settingsPanel.TabIndex = 14;
+            // 
+            // reportPanel
+            // 
+            this.reportPanel.Location = new System.Drawing.Point(299, 25);
+            this.reportPanel.Name = "reportPanel";
+            this.reportPanel.Size = new System.Drawing.Size(293, 132);
+            this.reportPanel.TabIndex = 13;
+            // 
+            // homePanel
+            // 
+            this.homePanel.Location = new System.Drawing.Point(3, 3);
+            this.homePanel.Name = "homePanel";
+            this.homePanel.Size = new System.Drawing.Size(256, 154);
+            this.homePanel.TabIndex = 12;
             // 
             // usrNameTop
             // 
@@ -148,94 +236,6 @@ namespace Fine_Management_System
             this.closeBtn.TabStop = false;
             this.closeBtn.Click += new System.EventHandler(this.closeBtnClick);
             // 
-            // logoutBtn
-            // 
-            this.logoutBtn.Image = global::Fine_Management_System.Properties.Resources.logout_new;
-            this.logoutBtn.Location = new System.Drawing.Point(9, 567);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.logoutBtn.Size = new System.Drawing.Size(41, 38);
-            this.logoutBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logoutBtn.TabIndex = 7;
-            this.logoutBtn.TabStop = false;
-            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
-            // 
-            // settingsBtn
-            // 
-            this.settingsBtn.Image = global::Fine_Management_System.Properties.Resources.settings_new;
-            this.settingsBtn.Location = new System.Drawing.Point(12, 506);
-            this.settingsBtn.Name = "settingsBtn";
-            this.settingsBtn.Padding = new System.Windows.Forms.Padding(2);
-            this.settingsBtn.Size = new System.Drawing.Size(36, 35);
-            this.settingsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.settingsBtn.TabIndex = 3;
-            this.settingsBtn.TabStop = false;
-            this.settingsBtn.Click += new System.EventHandler(this.SettingsBtnClick);
-            // 
-            // reportBtn
-            // 
-            this.reportBtn.Image = global::Fine_Management_System.Properties.Resources.report_new;
-            this.reportBtn.Location = new System.Drawing.Point(12, 166);
-            this.reportBtn.Name = "reportBtn";
-            this.reportBtn.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.reportBtn.Size = new System.Drawing.Size(34, 40);
-            this.reportBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.reportBtn.TabIndex = 4;
-            this.reportBtn.TabStop = false;
-            this.reportBtn.Click += new System.EventHandler(this.reportBtnClick);
-            // 
-            // chartBtn
-            // 
-            this.chartBtn.Image = global::Fine_Management_System.Properties.Resources.chart_new;
-            this.chartBtn.Location = new System.Drawing.Point(12, 94);
-            this.chartBtn.Name = "chartBtn";
-            this.chartBtn.Padding = new System.Windows.Forms.Padding(2);
-            this.chartBtn.Size = new System.Drawing.Size(37, 37);
-            this.chartBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.chartBtn.TabIndex = 5;
-            this.chartBtn.TabStop = false;
-            this.chartBtn.Click += new System.EventHandler(this.ChartBtnClick);
-            // 
-            // homeBtn
-            // 
-            this.homeBtn.ErrorImage = ((System.Drawing.Image)(resources.GetObject("homeBtn.ErrorImage")));
-            this.homeBtn.Image = global::Fine_Management_System.Properties.Resources.homeBlue;
-            this.homeBtn.Location = new System.Drawing.Point(13, 25);
-            this.homeBtn.Name = "homeBtn";
-            this.homeBtn.Size = new System.Drawing.Size(33, 32);
-            this.homeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.homeBtn.TabIndex = 6;
-            this.homeBtn.TabStop = false;
-            this.homeBtn.Click += new System.EventHandler(this.HomeBtnClick);
-            // 
-            // statisticsPanel
-            // 
-            this.statisticsPanel.Location = new System.Drawing.Point(284, 197);
-            this.statisticsPanel.Name = "statisticsPanel";
-            this.statisticsPanel.Size = new System.Drawing.Size(266, 183);
-            this.statisticsPanel.TabIndex = 16;
-            // 
-            // settingsPanel
-            // 
-            this.settingsPanel.Location = new System.Drawing.Point(3, 197);
-            this.settingsPanel.Name = "settingsPanel";
-            this.settingsPanel.Size = new System.Drawing.Size(256, 183);
-            this.settingsPanel.TabIndex = 14;
-            // 
-            // reportPanel
-            // 
-            this.reportPanel.Location = new System.Drawing.Point(284, 25);
-            this.reportPanel.Name = "reportPanel";
-            this.reportPanel.Size = new System.Drawing.Size(296, 132);
-            this.reportPanel.TabIndex = 13;
-            // 
-            // homePanel
-            // 
-            this.homePanel.Location = new System.Drawing.Point(3, 3);
-            this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(256, 154);
-            this.homePanel.TabIndex = 12;
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,16 +258,16 @@ namespace Fine_Management_System
             this.Text = "Fine Payment Management System";
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.navBarPanel.ResumeLayout(false);
-            this.windowPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sysIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimizeBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usrImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoutBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingsBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeBtn)).EndInit();
+            this.windowPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sysIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizeBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usrImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

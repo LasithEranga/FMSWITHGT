@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,11 @@ namespace Fine_Management_System
         {
             InitializeComponent();
             FillCharts();
-            
+            setYearlyCases();
+            setDailyCases();
+            setIncome();
+
+
         }
 
         private void a(object sender, PaintEventArgs e)
@@ -49,5 +54,40 @@ namespace Fine_Management_System
             chartThisWeek.Series["Series1"].Points.AddXY("Sun", "95");
 
         }
+
+        private void chartThisWeek_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void homePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        private void setYearlyCases() {
+            string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE date >= '2021-01-01' ";
+            MySqlDataReader dr = DBConnection.db.Read(query);
+            dr.Read();
+            labelTotalCases.Text = dr.GetString("count")+" Cases";
+
+        }
+
+        private void setDailyCases()
+        {
+            string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE date >= '2021-01-01' ";
+            MySqlDataReader dr = DBConnection.db.Read(query);
+            dr.Read();
+            labelDailyCases.Text = dr.GetString("count") + " Cases";
+        }
+        private void setIncome()
+        {
+            string query = "SELECT SUM(amount) AS sum FROM payment WHERE date = CURRENT_DATE";
+            MySqlDataReader dr = DBConnection.db.Read(query);
+            dr.Read();
+            labelTodayIncome.Text = "Rs:" +dr.GetString("sum") + ".00";
+        }
     }
+
 }
