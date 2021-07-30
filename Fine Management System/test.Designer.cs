@@ -29,22 +29,22 @@ namespace Fine_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.fineReceipt1 = new Fine_Management_System.ReportItems.FineReceipt();
+            this.showReceipt1 = new Fine_Management_System.ReportItems.ShowReceipt();
             this.SuspendLayout();
             // 
-            // fineReceipt1
+            // showReceipt1
             // 
-            this.fineReceipt1.Location = new System.Drawing.Point(12, 12);
-            this.fineReceipt1.Name = "fineReceipt1";
-            this.fineReceipt1.Size = new System.Drawing.Size(734, 417);
-            this.fineReceipt1.TabIndex = 0;
+            this.showReceipt1.Location = new System.Drawing.Point(12, 12);
+            this.showReceipt1.Name = "showReceipt1";
+            this.showReceipt1.Size = new System.Drawing.Size(776, 426);
+            this.showReceipt1.TabIndex = 0;
             // 
             // test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.fineReceipt1);
+            this.Controls.Add(this.showReceipt1);
             this.Name = "test";
             this.Text = "test";
             this.ResumeLayout(false);
@@ -53,6 +53,6 @@ namespace Fine_Management_System
 
         #endregion
 
-        private ReportItems.FineReceipt fineReceipt1;
+        private ReportItems.ShowReceipt showReceipt1;
     }
 }

@@ -45,5 +45,10 @@ namespace Fine_Management_System
         {
             this.Dispose();
         }
+
+        private void closeBtn_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
