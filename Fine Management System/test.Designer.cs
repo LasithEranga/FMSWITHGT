@@ -1,7 +1,7 @@
 ﻿
-namespace Fine_Management_System.Error_messages
+namespace Fine_Management_System
 {
-    partial class Form1
+    partial class test
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,30 @@ namespace Fine_Management_System.Error_messages
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.showReceipt1 = new Fine_Management_System.ReportItems.ShowReceipt();
+            this.SuspendLayout();
+            // 
+            // showReceipt1
+            // 
+            this.showReceipt1.Location = new System.Drawing.Point(12, 12);
+            this.showReceipt1.Name = "showReceipt1";
+            this.showReceipt1.Size = new System.Drawing.Size(776, 426);
+            this.showReceipt1.TabIndex = 0;
+            // 
+            // test
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.showReceipt1);
+            this.Name = "test";
+            this.Text = "test";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private ReportItems.ShowReceipt showReceipt1;
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fine_Management_System
@@ -13,8 +6,10 @@ namespace Fine_Management_System
 
     public partial class LoginForm : Form
     {
-        private bool pass = true;
         LoginForm form;
+        //tempory username and password for development purposes 
+        string md5password = "13926153831969718150168391712481961204215";
+        string userName = "Lasith";
         public LoginForm()
         {
             InitializeComponent();
@@ -28,22 +23,32 @@ namespace Fine_Management_System
 
         private void LOGIN_Click(object sender, EventArgs e)
         {
-            MainWindow logged = new MainWindow();
 
-            if (pass)
+            //check password with MD5 encryption 
+            if (MD5Hashing.Encryption(password.Text) == md5password && userName ==usrName.Text)
             {
-                //after verification of the the password 
-                //textFields will be cleared!
+                MainWindow logged = new MainWindow();
+                //textFields will be cleared after verification of the the password 
                 usrName.Clear();
                 password.Clear();
+                logged.Show();
             }
-            logged.Show();
+            else
+            {
+                new Error_messages.InputError("Login Failed", "Username or Password is incorrect").Show();
+            }
+            
         }
 
 
         private void closeBtn_Click(object sender, MouseEventArgs e)
         {
             this.Dispose();
+        }
+
+        private void closeBtn_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

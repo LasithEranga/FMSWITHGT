@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail;
+using System.Text.RegularExpressions;
 
 namespace Fine_Management_System.AddUser
 {
     public partial class AddUsr : Form
     {
+        
         public AddUsr()
         {
             InitializeComponent();
@@ -19,7 +22,11 @@ namespace Fine_Management_System.AddUser
 
         private void addUsrBtn_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            //this.Dispose();
+            Validate_Email();
+            Validate_NIC();
+            string query = "INSERT INTO `traffic_police_officer`(`police_id`, `fname`, `lname`, `full_name`, `email`, `nic`, `contact_no`, `post`, `address`) VALUES (3,'lasith','eranda','lasith eranda','lasith@gmail.com','156456','0770543422','mokakhri','ushfuih')";
+            DBConnection.db.Write(query);
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -79,7 +86,70 @@ namespace Fine_Management_System.AddUser
             }
         }
 
-        private void policeId_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+
+        private void Validate_Email()
+        {
+            if (emailAddress.TextLength > 0)
+            {
+                try
+                {
+                   var email= new MailAddress(emailAddress.Text);
+
+                }
+                catch (FormatException b)
+                {
+                    new Error_messages.InputError("Invalid Email Address", "Please check Email Address").Show();
+                }
+
+            }
+            else
+            {
+                new Error_messages.InputError("Email Address Required", "Please Insert an Email Address").Show();
+            }
+        }
+
+        private void Validate_NIC()
+        {
+            int len = nicNo.TextLength;
+            if (len == 10)
+            {
+                //pattern1
+                Regex rgx = new Regex(@"^\d{9}[vxVX]{1}$");
+                if (rgx.IsMatch(nicNo.Text))
+                {
+                    
+                }
+                else
+                {
+                    new Error_messages.InputError("Invalid ID", "Please check ID Number").Show();
+                }
+
+            }
+
+            else if(len == 12)
+            {
+                //pattern 2
+                Regex rgx = new Regex(@"^\d{12}$");
+                if (rgx.IsMatch(nicNo.Text))
+                {
+                    MessageBox.Show("correct");
+                }
+                else
+                {
+                    new Error_messages.InputError("Invalid ID", "Please check ID Number").Show();
+                }
+                
+            }
+            else
+            {
+                //empty
+                new Error_messages.InputError("Invalid ID", "Please check ID Number").Show();
+            }
+            
+       
+        }
+
+        private void usrImage_Click(object sender, EventArgs e)
         {
 
         }

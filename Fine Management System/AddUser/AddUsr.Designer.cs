@@ -32,6 +32,7 @@ namespace Fine_Management_System.AddUser
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddUsr));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.usrImage = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.address = new System.Windows.Forms.RichTextBox();
             this.uploadBtn = new System.Windows.Forms.Button();
@@ -60,11 +61,10 @@ namespace Fine_Management_System.AddUser
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.line = new System.Windows.Forms.Panel();
-            this.usrImage = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usrImage)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -111,6 +111,16 @@ namespace Fine_Management_System.AddUser
             this.panel3.Size = new System.Drawing.Size(103, 83);
             this.panel3.TabIndex = 28;
             // 
+            // usrImage
+            // 
+            this.usrImage.Location = new System.Drawing.Point(-1, -1);
+            this.usrImage.Name = "usrImage";
+            this.usrImage.Size = new System.Drawing.Size(103, 83);
+            this.usrImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.usrImage.TabIndex = 9;
+            this.usrImage.TabStop = false;
+            this.usrImage.Click += new System.EventHandler(this.usrImage_Click);
+            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -127,6 +137,7 @@ namespace Fine_Management_System.AddUser
             this.address.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.address.ForeColor = System.Drawing.SystemColors.Control;
             this.address.Location = new System.Drawing.Point(-2, -1);
+            this.address.MaxLength = 200;
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(208, 77);
             this.address.TabIndex = 0;
@@ -158,7 +169,6 @@ namespace Fine_Management_System.AddUser
             this.policeId.Name = "policeId";
             this.policeId.Size = new System.Drawing.Size(114, 25);
             this.policeId.TabIndex = 8;
-            this.policeId.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.policeId_MaskInputRejected);
             this.policeId.Click += new System.EventHandler(this.PoliceIDClick);
             // 
             // post
@@ -236,6 +246,7 @@ namespace Fine_Management_System.AddUser
             this.nicNo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nicNo.ForeColor = System.Drawing.SystemColors.Control;
             this.nicNo.Location = new System.Drawing.Point(278, 94);
+            this.nicNo.MaxLength = 12;
             this.nicNo.Name = "nicNo";
             this.nicNo.Size = new System.Drawing.Size(177, 25);
             this.nicNo.TabIndex = 7;
@@ -248,6 +259,7 @@ namespace Fine_Management_System.AddUser
             this.emailAddress.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailAddress.ForeColor = System.Drawing.SystemColors.Control;
             this.emailAddress.Location = new System.Drawing.Point(278, 38);
+            this.emailAddress.MaxLength = 50;
             this.emailAddress.Name = "emailAddress";
             this.emailAddress.Size = new System.Drawing.Size(177, 25);
             this.emailAddress.TabIndex = 6;
@@ -299,6 +311,7 @@ namespace Fine_Management_System.AddUser
             this.fullName.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fullName.ForeColor = System.Drawing.SystemColors.Control;
             this.fullName.Location = new System.Drawing.Point(20, 94);
+            this.fullName.MaxLength = 200;
             this.fullName.Name = "fullName";
             this.fullName.Size = new System.Drawing.Size(211, 25);
             this.fullName.TabIndex = 2;
@@ -311,6 +324,7 @@ namespace Fine_Management_System.AddUser
             this.lName.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lName.ForeColor = System.Drawing.SystemColors.Control;
             this.lName.Location = new System.Drawing.Point(131, 38);
+            this.lName.MaxLength = 100;
             this.lName.Name = "lName";
             this.lName.Size = new System.Drawing.Size(100, 25);
             this.lName.TabIndex = 1;
@@ -323,6 +337,7 @@ namespace Fine_Management_System.AddUser
             this.fName.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fName.ForeColor = System.Drawing.SystemColors.Control;
             this.fName.Location = new System.Drawing.Point(19, 38);
+            this.fName.MaxLength = 100;
             this.fName.Name = "fName";
             this.fName.Size = new System.Drawing.Size(100, 25);
             this.fName.TabIndex = 0;
@@ -447,15 +462,6 @@ namespace Fine_Management_System.AddUser
             this.line.Size = new System.Drawing.Size(599, 5);
             this.line.TabIndex = 0;
             // 
-            // usrImage
-            // 
-            this.usrImage.Location = new System.Drawing.Point(-1, -1);
-            this.usrImage.Name = "usrImage";
-            this.usrImage.Size = new System.Drawing.Size(103, 83);
-            this.usrImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.usrImage.TabIndex = 9;
-            this.usrImage.TabStop = false;
-            // 
             // AddUsr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -473,8 +479,8 @@ namespace Fine_Management_System.AddUser
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.usrImage)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Fine_Management_System.Error_messages
+namespace Fine_Management_System
 {
-    public partial class Form1 : Form
+    public partial class test : Form
     {
-        public Form1()
+        public test()
         {
             InitializeComponent();
         }
