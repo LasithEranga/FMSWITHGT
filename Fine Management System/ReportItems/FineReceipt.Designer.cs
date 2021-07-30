@@ -32,6 +32,7 @@ namespace Fine_Management_System.ReportItems
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.table = new System.Windows.Forms.DataGridView();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.showReceipt = new Fine_Management_System.ReportItems.ShowReceipt();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +63,16 @@ namespace Fine_Management_System.ReportItems
             this.table.TabIndex = 0;
             this.table.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.row_selected);
             // 
+            // buttonBack
+            // 
+            this.buttonBack.Location = new System.Drawing.Point(776, 434);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonBack.TabIndex = 2;
+            this.buttonBack.Text = "Back";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.button1_Click);
+            // 
             // showReceipt
             // 
             this.showReceipt.Location = new System.Drawing.Point(3, 3);
@@ -73,6 +84,7 @@ namespace Fine_Management_System.ReportItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.showReceipt);
             this.Controls.Add(this.table);
             this.Name = "FineReceipt";
@@ -86,5 +98,6 @@ namespace Fine_Management_System.ReportItems
 
         private System.Windows.Forms.DataGridView table;
         private ShowReceipt showReceipt;
+        private System.Windows.Forms.Button buttonBack;
     }
 }

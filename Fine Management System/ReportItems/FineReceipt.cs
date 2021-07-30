@@ -21,6 +21,7 @@ namespace Fine_Management_System.ReportItems
         {
             InitializeComponent();
             showReceipt.Hide();
+            buttonBack.Hide();
             string connStr = "server=localhost;user=root;database=fmsdb;port=3306;password=;SSL Mode=None;";
             MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from fine_receipt", connStr);
             DataTable dtbl = new DataTable();
@@ -109,11 +110,17 @@ namespace Fine_Management_System.ReportItems
             DataGridViewRow selectedRow = table.Rows[rowindex];
             string cellValue = Convert.ToString(selectedRow.Cells["Ref_No"].Value);
             table.Hide();
+            buttonBack.Show();
             showReceipt.setData(cellValue);
             showReceipt.SetBounds(0, 0, 895, 481);
             showReceipt.Show();
-            MessageBox.Show(cellValue);
-            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            table.Show();
+            buttonBack.Hide();
+            showReceipt.Hide();
         }
     }
 }
