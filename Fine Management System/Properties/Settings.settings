@@ -1,9 +1,0 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Fine_Management_System.Properties" GeneratedClassName="Settings">
-  <Profiles />
-  <Settings>
-    <Setting Name="bgBlack" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">22, 21, 25</Value>
-    </Setting>
-  </Settings>
-</SettingsFile>
