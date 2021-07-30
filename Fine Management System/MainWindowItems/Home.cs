@@ -69,7 +69,13 @@ namespace Fine_Management_System
         private void setYearlyCases() {
             string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE date >= '2021-01-01' ";
             MySqlDataReader dr = DBConnection.db.Read(query);
-            dr.Read();
+            try { dr.Read();
+                labelTodayIncome.Text = "Rs:" + dr.GetString("sum") + ".00";
+            }
+            catch (Exception nl)
+            {
+
+            }
             labelTotalCases.Text = dr.GetString("count")+" Cases";
 
         }
@@ -78,15 +84,27 @@ namespace Fine_Management_System
         {
             string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE date >= '2021-01-01' ";
             MySqlDataReader dr = DBConnection.db.Read(query);
-            dr.Read();
+            try { dr.Read();
+                labelTodayIncome.Text = "Rs:" + dr.GetString("sum") + ".00";
+            }
+            catch (Exception nl)
+            {
+
+            }
             labelDailyCases.Text = dr.GetString("count") + " Cases";
         }
         private void setIncome()
         {
             string query = "SELECT SUM(amount) AS sum FROM payment WHERE date = CURRENT_DATE";
             MySqlDataReader dr = DBConnection.db.Read(query);
-            dr.Read();
-            labelTodayIncome.Text = "Rs:" +dr.GetString("sum") + ".00";
+            try { dr.Read();
+                labelTodayIncome.Text = "Rs:" + dr.GetString("sum") + ".00";
+            }
+            catch (Exception nl)
+            {
+
+            }
+            
         }
     }
 

@@ -18,11 +18,11 @@ namespace Fine_Management_System.DBConnection
             MySqlConnection conn = new MySqlConnection(connStr);
             try
             {
-                MessageBox.Show("ENter");
+               // MessageBox.Show("ENter");
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 dr = cmd.ExecuteReader();
-                MessageBox.Show("Success!");
+                //MessageBox.Show("Success!");
             }
             catch (Exception ex)
             {

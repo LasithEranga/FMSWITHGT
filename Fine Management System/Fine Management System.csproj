@@ -161,6 +161,12 @@
     <Compile Include="ReportItems\FineReceipt.Designer.cs">
       <DependentUpon>FineReceipt.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportItems\ShowReceipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportItems\ShowReceipt.Designer.cs">
+      <DependentUpon>ShowReceipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="test.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </Compile>
     <EmbeddedResource Include="ReportItems\FineReceipt.resx">
       <DependentUpon>FineReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportItems\ShowReceipt.resx">
+      <DependentUpon>ShowReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.cs</DependentUpon>

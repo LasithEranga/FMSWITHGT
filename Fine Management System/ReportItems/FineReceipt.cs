@@ -20,10 +20,12 @@ namespace Fine_Management_System.ReportItems
         public FineReceipt()
         {
             InitializeComponent();
+            showReceipt.Hide();
             string connStr = "server=localhost;user=root;database=fmsdb;port=3306;password=;SSL Mode=None;";
             MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from fine_receipt", connStr);
             DataTable dtbl = new DataTable();
             sqlda.Fill(dtbl);
+
 
             table.DataSource = dtbl;
         }
@@ -99,6 +101,19 @@ namespace Fine_Management_System.ReportItems
             {
                 MessageBox.Show("No Record To Export !!!", "Info");
             }
+        }
+
+        private void row_selected(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int rowindex = table.CurrentRow.Index;
+            DataGridViewRow selectedRow = table.Rows[rowindex];
+            string cellValue = Convert.ToString(selectedRow.Cells["Ref_No"].Value);
+            table.Hide();
+            showReceipt.setData(cellValue);
+            showReceipt.SetBounds(0, 0, 895, 481);
+            showReceipt.Show();
+            MessageBox.Show(cellValue);
+            
         }
     }
 }

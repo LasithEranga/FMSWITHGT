@@ -366,13 +366,13 @@ namespace Fine_Management_System.MainWindowItems
             // exportToPDFToolStripMenuItem
             // 
             this.exportToPDFToolStripMenuItem.Name = "exportToPDFToolStripMenuItem";
-            this.exportToPDFToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.exportToPDFToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportToPDFToolStripMenuItem.Text = "&Export as pdf";
             // 
             // exportAsJpgToolStripMenuItem
             // 
             this.exportAsJpgToolStripMenuItem.Name = "exportAsJpgToolStripMenuItem";
-            this.exportAsJpgToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.exportAsJpgToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportAsJpgToolStripMenuItem.Text = "&Export as jpg";
             // 
             // filterByToolStripMenuItem
