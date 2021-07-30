@@ -58,7 +58,7 @@ namespace Fine_Management_System
         private void MonthlyChart()
         {
                 MySqlDataReader dr = null;
-                dr = DBConnection.db.Read("SELECT MONTH(Date) AS Month, COUNT(Ref_No) as count FROM fine_receipt WHERE Date >= CURDATE() - INTERVAL 2 YEAR GROUP BY MONTH(Date); ");
+                dr = DBConnection.db.Read("SELECT MONTH(Date) AS Month, COUNT(Ref_No) as count FROM fine_receipt WHERE Date >= CURDATE() - INTERVAL 1 YEAR GROUP BY MONTH(Date); ");
                 try
                 {
                     while (dr.Read())
@@ -104,31 +104,30 @@ namespace Fine_Management_System
 
 
         private void setYearlyCases() {
-            string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE date >= '2021-01-01' ";
+            string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE Date >= CURDATE() - INTERVAL 1 YEAR ";
             MySqlDataReader dr = DBConnection.db.Read(query);
             try { dr.Read();
-                labelTodayIncome.Text = "Rs:" + dr.GetString("sum") + ".00";
+                labelTotalCases.Text = dr.GetString("count") + " Cases";
             }
             catch (Exception nl)
             {
 
             }
-            labelTotalCases.Text = dr.GetString("count")+" Cases";
 
         }
 
         private void setDailyCases()
         {
-            string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE date >= '2021-01-01' ";
+            string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE date = CURRENT_DATE";
             MySqlDataReader dr = DBConnection.db.Read(query);
             try { dr.Read();
-                labelTodayIncome.Text = "Rs:" + dr.GetString("sum") + ".00";
+                labelDailyCases.Text = dr.GetString("count") + " Cases";
             }
             catch (Exception nl)
             {
 
             }
-            labelDailyCases.Text = dr.GetString("count") + " Cases";
+            
         }
         private void setIncome()
         {
@@ -139,7 +138,7 @@ namespace Fine_Management_System
             }
             catch (Exception nl)
             {
-
+                labelTodayIncome.Text = "Rs: 0.00";
             }
             
         }
