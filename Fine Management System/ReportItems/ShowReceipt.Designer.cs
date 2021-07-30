@@ -30,11 +30,11 @@ namespace Fine_Management_System.ReportItems
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelRef = new System.Windows.Forms.Label();
+            this.labelDriverName = new System.Windows.Forms.Label();
+            this.labelDate = new System.Windows.Forms.Label();
+            this.labelPoliceOfficer = new System.Windows.Forms.Label();
+            this.labelFineAmount = new System.Windows.Forms.Label();
             this.table = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -43,71 +43,75 @@ namespace Fine_Management_System.ReportItems
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Controls.Add(this.labelRef);
+            this.panel1.Location = new System.Drawing.Point(34, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(883, 65);
+            this.panel1.Size = new System.Drawing.Size(787, 65);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // labelRef
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(241, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 40);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ref_No";
+            this.labelRef.AutoSize = true;
+            this.labelRef.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRef.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelRef.Location = new System.Drawing.Point(291, 14);
+            this.labelRef.Name = "labelRef";
+            this.labelRef.Size = new System.Drawing.Size(144, 40);
+            this.labelRef.TabIndex = 0;
+            this.labelRef.Text = "Ref_No :";
             // 
-            // label2
+            // labelDriverName
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(31, 95);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.labelDriverName.AutoSize = true;
+            this.labelDriverName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDriverName.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelDriverName.Location = new System.Drawing.Point(64, 95);
+            this.labelDriverName.Name = "labelDriverName";
+            this.labelDriverName.Size = new System.Drawing.Size(108, 20);
+            this.labelDriverName.TabIndex = 1;
+            this.labelDriverName.Text = "Driver Name : ";
             // 
-            // label3
+            // labelDate
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(31, 134);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.labelDate.AutoSize = true;
+            this.labelDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDate.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelDate.Location = new System.Drawing.Point(64, 134);
+            this.labelDate.Name = "labelDate";
+            this.labelDate.Size = new System.Drawing.Size(56, 20);
+            this.labelDate.TabIndex = 2;
+            this.labelDate.Text = "Date : ";
             // 
-            // label4
+            // labelPoliceOfficer
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(489, 134);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
+            this.labelPoliceOfficer.AutoSize = true;
+            this.labelPoliceOfficer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPoliceOfficer.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelPoliceOfficer.Location = new System.Drawing.Point(489, 134);
+            this.labelPoliceOfficer.Name = "labelPoliceOfficer";
+            this.labelPoliceOfficer.Size = new System.Drawing.Size(110, 20);
+            this.labelPoliceOfficer.TabIndex = 3;
+            this.labelPoliceOfficer.Text = "Police Officer :";
             // 
-            // label5
+            // labelFineAmount
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(489, 95);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "label5";
+            this.labelFineAmount.AutoSize = true;
+            this.labelFineAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFineAmount.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelFineAmount.Location = new System.Drawing.Point(489, 95);
+            this.labelFineAmount.Name = "labelFineAmount";
+            this.labelFineAmount.Size = new System.Drawing.Size(108, 20);
+            this.labelFineAmount.TabIndex = 4;
+            this.labelFineAmount.Text = "Fine Amount :";
             // 
             // table
             // 
             this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.table.Location = new System.Drawing.Point(34, 216);
+            this.table.Location = new System.Drawing.Point(34, 214);
             this.table.Name = "table";
             this.table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.table.Size = new System.Drawing.Size(787, 224);
+            this.table.Size = new System.Drawing.Size(787, 209);
             this.table.TabIndex = 5;
             // 
             // label6
@@ -115,7 +119,7 @@ namespace Fine_Management_System.ReportItems
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(30, 189);
+            this.label6.Location = new System.Drawing.Point(30, 187);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 24);
             this.label6.TabIndex = 6;
@@ -127,10 +131,10 @@ namespace Fine_Management_System.ReportItems
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label6);
             this.Controls.Add(this.table);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelFineAmount);
+            this.Controls.Add(this.labelPoliceOfficer);
+            this.Controls.Add(this.labelDate);
+            this.Controls.Add(this.labelDriverName);
             this.Controls.Add(this.panel1);
             this.Name = "ShowReceipt";
             this.Size = new System.Drawing.Size(895, 481);
@@ -146,11 +150,11 @@ namespace Fine_Management_System.ReportItems
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelRef;
+        private System.Windows.Forms.Label labelDriverName;
+        private System.Windows.Forms.Label labelDate;
+        private System.Windows.Forms.Label labelPoliceOfficer;
+        private System.Windows.Forms.Label labelFineAmount;
         private System.Windows.Forms.DataGridView table;
         private System.Windows.Forms.Label label6;
     }
