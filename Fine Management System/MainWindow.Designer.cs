@@ -167,7 +167,7 @@ namespace Fine_Management_System
             // 
             // homePanel
             // 
-            this.homePanel.Location = new System.Drawing.Point(3, 3);
+            this.homePanel.Location = new System.Drawing.Point(20, 14);
             this.homePanel.Name = "homePanel";
             this.homePanel.Size = new System.Drawing.Size(256, 154);
             this.homePanel.TabIndex = 12;

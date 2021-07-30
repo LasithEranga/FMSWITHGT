@@ -20,6 +20,8 @@ namespace Fine_Management_System
             setYearlyCases();
             setDailyCases();
             setIncome();
+            WeeklyChart();
+            MonthlyChart();
 
 
         }
@@ -28,22 +30,57 @@ namespace Fine_Management_System
         {
 
         }
+
+        private void WeeklyChart() {
+
+            
+            for (int i=7; i>0; i--)
+            {
+                MySqlDataReader dr = null;
+                dr = DBConnection.db.Read("SELECT COUNT(Ref_No) AS count FROM fine_receipt WHERE YEARWEEK(Date) = YEARWEEK(NOW() - INTERVAL " + i + " WEEK) ");
+                try
+                {
+                    while (dr.Read())
+                    {
+                        chartWeekly.Series["Series1"].Points.AddXY("24-31", dr.GetString("count"));
+                    }
+                }
+                catch (Exception) { 
+                
+                }
+
+            }
+
+
+        }
+
+
+        private void MonthlyChart()
+        {
+                MySqlDataReader dr = null;
+                dr = DBConnection.db.Read("SELECT MONTH(Date) AS Month, COUNT(Ref_No) as count FROM fine_receipt WHERE Date >= CURDATE() - INTERVAL 2 YEAR GROUP BY MONTH(Date); ");
+                try
+                {
+                    while (dr.Read())
+                    {
+                        chartMonthlyCases.Series["Series1"].Points.AddXY(dr.GetString("Month"), dr.GetString("count"));
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
+
+        }
+
         private void FillCharts()
         {//fils chart with dummy data values
-            for (int i = 0; i < 10; i++)
-            {
-                chartWeekly.Series["Series1"].Points.AddXY(i, i * 100);
-            }
             for (int i = 0; i < 10; i++)
             {
                 chartThisMonth.Series["Series1"].Points.AddXY(i, i * i + 50);
 
             }
 
-            for (int i = 0; i < 10; i++)
-            {
-                chartMonthlyCases.Series["Series1"].Points.AddXY(i, i * i + 50);
-            }
 
             chartThisWeek.Series["Series1"].Points.AddXY("Mon", "22");
             chartThisWeek.Series["Series1"].Points.AddXY("Tue", "56");
