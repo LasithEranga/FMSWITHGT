@@ -102,7 +102,6 @@ namespace Fine_Management_System
             this.homePanel.Name = "homePanel";
             this.homePanel.Size = new System.Drawing.Size(930, 627);
             this.homePanel.TabIndex = 9;
-            this.homePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.homePanel_Paint);
             // 
             // label2
             // 
@@ -336,7 +335,6 @@ namespace Fine_Management_System
             this.chartThisWeek.Size = new System.Drawing.Size(224, 155);
             this.chartThisWeek.TabIndex = 0;
             this.chartThisWeek.Text = "chart2";
-            this.chartThisWeek.Click += new System.EventHandler(this.chartThisWeek_Click);
             // 
             // homeItem4
             // 

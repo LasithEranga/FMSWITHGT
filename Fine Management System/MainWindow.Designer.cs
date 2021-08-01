@@ -153,16 +153,16 @@ namespace Fine_Management_System
             // 
             // settingsPanel
             // 
-            this.settingsPanel.Location = new System.Drawing.Point(3, 197);
+            this.settingsPanel.Location = new System.Drawing.Point(20, 197);
             this.settingsPanel.Name = "settingsPanel";
             this.settingsPanel.Size = new System.Drawing.Size(256, 183);
             this.settingsPanel.TabIndex = 14;
             // 
             // reportPanel
             // 
-            this.reportPanel.Location = new System.Drawing.Point(299, 25);
+            this.reportPanel.Location = new System.Drawing.Point(299, 3);
             this.reportPanel.Name = "reportPanel";
-            this.reportPanel.Size = new System.Drawing.Size(293, 132);
+            this.reportPanel.Size = new System.Drawing.Size(266, 165);
             this.reportPanel.TabIndex = 13;
             // 
             // homePanel

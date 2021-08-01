@@ -173,6 +173,12 @@
     <Compile Include="test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsersItems\UserTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsersItems\UserTable.Designer.cs">
+      <DependentUpon>UserTable.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddUser\AddUsr.resx">
       <DependentUpon>AddUsr.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersItems\UserTable.resx">
+      <DependentUpon>UserTable.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
