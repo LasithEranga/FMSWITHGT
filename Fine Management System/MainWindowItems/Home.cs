@@ -17,11 +17,13 @@ namespace Fine_Management_System
         {
             InitializeComponent();
             FillCharts();
+            SetThisMonthChart();
             setYearlyCases();
             setDailyCases();
             setIncome();
             WeeklyChart();
             MonthlyChart();
+            setCasesByDate();
 
 
         }
@@ -84,19 +86,16 @@ namespace Fine_Management_System
 
         private void FillCharts()
         {//fils chart with dummy data values
-            for (int i = 0; i < 10; i++)
-            {
-                chartThisMonth.Series["Series1"].Points.AddXY(i, i * i + 50);
-
-            }
 
             MySqlDataReader weekData = DBConnection.db.Read("SELECT COUNT(Ref_No) as count, DAYNAME(Date) as date FROM fine_receipt WHERE Date >= DATE(NOW()) - INTERVAL 7 DAY GROUP BY DAY(Date)");
             while (weekData.Read())
             {
                 chartThisWeek.Series["Series1"].Points.AddXY(weekData.GetString("Date").Substring(0,3), weekData.GetString("count"));
+               
             }
 
         }
+
 
 
         private void setYearlyCases() {
@@ -139,7 +138,44 @@ namespace Fine_Management_System
             
         }
 
+        private void SetThisMonthChart() {
+            string query = "SELECT SUM(amount) as sum, DAY(date) as date FROM payment WHERE date >= DATE(NOW())-INTERVAL 30 Day";
+            MySqlDataReader dr = DBConnection.db.Read(query);
 
+            while (dr.Read()) {
+                chartThisMonth.Series["Series1"].Points.AddXY(dr.GetString("date"), dr.GetInt32("sum")/1000);
+            }
+        }
+
+        private void chartThisWeek_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void setCasesByDate() {
+
+            Label[]  dates= { date1, date2, date3, date4, date5 };
+            Label[] values = { value1, value2, value3, value4, value5 };
+            for (int i=0; i<6; i++)
+            {
+                string query = "SELECT DATE_FORMAT((DATE(NOW()) - INTERVAL "+ i +" Day),'%Y-%m-%d') as date ,COUNT(Ref_No) count FROM fine_receipt WHERE Date = DATE(NOW()) - INTERVAL " + i + " Day;";
+                MySqlDataReader dr = DBConnection.db.Read(query);
+                while (dr.Read())
+                {
+                    try {
+                        dates[i].Text = dr.GetString("date");
+                        //values[i].Text = dr.GetString("count");
+                        values[i].Text = (i*(i+50)).ToString();
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                    
+                }
+            }
+            
+        }
     }
 
 }
