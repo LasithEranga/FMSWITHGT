@@ -36,17 +36,26 @@ namespace Fine_Management_System
             
             for (int i=7; i>0; i--)
             {
+                string count = "0"; ;
                 MySqlDataReader dr = null;
-                dr = DBConnection.db.Read("SELECT COUNT(Ref_No) AS count FROM fine_receipt WHERE YEARWEEK(Date) = YEARWEEK(NOW() - INTERVAL " + i + " WEEK) ");
+                dr = DBConnection.db.Read("SELECT COUNT(Ref_No) AS count FROM fine_receipt WHERE YEARWEEK(Date) = YEARWEEK(NOW() - INTERVAL " + i + " WEEK);SELECT DAY(NOW() - INTERVAL "+ i + " WEEK + INTERVAL 7 Day) as ed, DAY(NOW() - INTERVAL " + i + " WEEK) as st");
                 try
                 {
                     while (dr.Read())
                     {
-                        chartWeekly.Series["Series1"].Points.AddXY("24-31", dr.GetString("count"));
+                        count = dr.GetString("count");
+                    }
+
+                    if (dr.NextResult())
+                    {
+                        while (dr.Read())
+                        {
+                            chartWeekly.Series["Series1"].Points.AddXY(dr.GetString("st") + "-" + dr.GetString("ed") , count);
+                        }
                     }
                 }
-                catch (Exception) { 
-                
+                catch (Exception error) {
+                    MessageBox.Show(error.Message);
                 }
 
             }
@@ -58,7 +67,7 @@ namespace Fine_Management_System
         private void MonthlyChart()
         {
                 MySqlDataReader dr = null;
-                dr = DBConnection.db.Read("SELECT MONTH(Date) AS Month, COUNT(Ref_No) as count FROM fine_receipt WHERE Date >= CURDATE() - INTERVAL 2 YEAR GROUP BY MONTH(Date); ");
+                dr = DBConnection.db.Read("SELECT MONTH(Date) AS Month, COUNT(Ref_No) as count FROM fine_receipt WHERE Date >= CURDATE() - INTERVAL 1 YEAR GROUP BY MONTH(Date); ");
                 try
                 {
                     while (dr.Read())
@@ -81,54 +90,40 @@ namespace Fine_Management_System
 
             }
 
-
-            chartThisWeek.Series["Series1"].Points.AddXY("Mon", "22");
-            chartThisWeek.Series["Series1"].Points.AddXY("Tue", "56");
-            chartThisWeek.Series["Series1"].Points.AddXY("Wed", "45");
-            chartThisWeek.Series["Series1"].Points.AddXY("Thur", "78");
-            chartThisWeek.Series["Series1"].Points.AddXY("Fri", "12");
-            chartThisWeek.Series["Series1"].Points.AddXY("Sat", "58");
-            chartThisWeek.Series["Series1"].Points.AddXY("Sun", "95");
-
-        }
-
-        private void chartThisWeek_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void homePanel_Paint(object sender, PaintEventArgs e)
-        {
+            MySqlDataReader weekData = DBConnection.db.Read("SELECT COUNT(Ref_No) as count, DAYNAME(Date) as date FROM fine_receipt WHERE Date >= DATE(NOW()) - INTERVAL 7 DAY GROUP BY DAY(Date)");
+            while (weekData.Read())
+            {
+                chartThisWeek.Series["Series1"].Points.AddXY(weekData.GetString("Date").Substring(0,3), weekData.GetString("count"));
+            }
 
         }
 
 
         private void setYearlyCases() {
-            string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE date >= '2021-01-01' ";
+            string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE Date >= CURDATE() - INTERVAL 1 YEAR ";
             MySqlDataReader dr = DBConnection.db.Read(query);
             try { dr.Read();
-                labelTodayIncome.Text = "Rs:" + dr.GetString("sum") + ".00";
+                labelTotalCases.Text = dr.GetString("count") + " Cases";
             }
-            catch (Exception nl)
+            catch (Exception)
             {
 
             }
-            labelTotalCases.Text = dr.GetString("count")+" Cases";
 
         }
 
         private void setDailyCases()
         {
-            string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE date >= '2021-01-01' ";
+            string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE date = CURRENT_DATE";
             MySqlDataReader dr = DBConnection.db.Read(query);
             try { dr.Read();
-                labelTodayIncome.Text = "Rs:" + dr.GetString("sum") + ".00";
+                labelDailyCases.Text = dr.GetString("count") + " Cases";
             }
-            catch (Exception nl)
+            catch (Exception)
             {
 
             }
-            labelDailyCases.Text = dr.GetString("count") + " Cases";
+            
         }
         private void setIncome()
         {
@@ -137,9 +132,9 @@ namespace Fine_Management_System
             try { dr.Read();
                 labelTodayIncome.Text = "Rs:" + dr.GetString("sum") + ".00";
             }
-            catch (Exception nl)
+            catch (Exception)
             {
-
+                labelTodayIncome.Text = "Rs: 0.00";
             }
             
         }
