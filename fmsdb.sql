@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jul 30, 2021 at 04:56 PM
+-- Generation Time: Aug 03, 2021 at 10:34 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -63,14 +63,30 @@ CREATE TABLE IF NOT EXISTS `fine_receipt` (
   PRIMARY KEY (`Ref_No`),
   KEY `driver_nic` (`driver_nic`),
   KEY `officer_id` (`officer_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `fine_receipt`
 --
 
 INSERT INTO `fine_receipt` (`Ref_No`, `Date`, `Amount`, `State`, `driver_nic`, `officer_id`) VALUES
-(2, '2021-07-30', 200, 3, '1', 2);
+(2, '2021-07-30', 200, 3, '1', 2),
+(3, '2021-07-24', 545, 5, '1', 2),
+(4, '2021-07-25', 54, 5, '1', 2),
+(5, '2021-07-20', 458, 5, '1', 2),
+(6, '2021-07-12', 218, 2, '1', 2),
+(7, '2020-03-19', 545, 5, '1', 2),
+(8, '2021-07-31', 654, 5, '1', 2),
+(9, '2021-07-30', 654, 5, '1', 2),
+(10, '2021-07-29', 654, 5, '1', 2),
+(11, '2021-07-28', 654, 5, '1', 2),
+(12, '2021-07-27', 654, 5, '1', 2),
+(13, '2021-07-26', 654, 5, '1', 2),
+(14, '2021-07-25', 654, 5, '1', 2),
+(15, '2021-07-24', 654, 5, '1', 2),
+(16, '2021-07-23', 654, 5, '1', 2),
+(17, '2021-07-23', 654, 5, '1', 2),
+(18, '2021-07-23', 658, 5, '1', 2);
 
 -- --------------------------------------------------------
 
