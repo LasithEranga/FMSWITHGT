@@ -29,24 +29,34 @@ namespace Fine_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.homePanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.homeItem8 = new System.Windows.Forms.Panel();
             this.labelThisMonthIncome = new System.Windows.Forms.Label();
             this.chartThisMonth = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.homeItem7 = new System.Windows.Forms.Panel();
+            this.value5 = new System.Windows.Forms.Label();
+            this.date5 = new System.Windows.Forms.Label();
+            this.value4 = new System.Windows.Forms.Label();
+            this.date4 = new System.Windows.Forms.Label();
+            this.value3 = new System.Windows.Forms.Label();
+            this.date3 = new System.Windows.Forms.Label();
+            this.value2 = new System.Windows.Forms.Label();
+            this.date2 = new System.Windows.Forms.Label();
+            this.value1 = new System.Windows.Forms.Label();
+            this.date1 = new System.Windows.Forms.Label();
             this.labelCasesByDate = new System.Windows.Forms.Label();
             this.homeItem6 = new System.Windows.Forms.Panel();
             this.legendNoOfCases2 = new System.Windows.Forms.Label();
@@ -70,16 +80,6 @@ namespace Fine_Management_System
             this.homeItem1 = new System.Windows.Forms.Panel();
             this.totalCasesText = new System.Windows.Forms.Label();
             this.labelTotalCases = new System.Windows.Forms.Label();
-            this.date1 = new System.Windows.Forms.Label();
-            this.value1 = new System.Windows.Forms.Label();
-            this.value2 = new System.Windows.Forms.Label();
-            this.date2 = new System.Windows.Forms.Label();
-            this.value3 = new System.Windows.Forms.Label();
-            this.date3 = new System.Windows.Forms.Label();
-            this.value4 = new System.Windows.Forms.Label();
-            this.date4 = new System.Windows.Forms.Label();
-            this.value5 = new System.Windows.Forms.Label();
-            this.date5 = new System.Windows.Forms.Label();
             this.homePanel.SuspendLayout();
             this.homeItem8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartThisMonth)).BeginInit();
@@ -111,6 +111,7 @@ namespace Fine_Management_System
             this.homePanel.Name = "homePanel";
             this.homePanel.Size = new System.Drawing.Size(930, 627);
             this.homePanel.TabIndex = 9;
+            this.homePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.homePanel_Paint);
             // 
             // label2
             // 
@@ -154,36 +155,36 @@ namespace Fine_Management_System
             this.chartThisMonth.BackImageTransparentColor = System.Drawing.Color.White;
             this.chartThisMonth.BackSecondaryColor = System.Drawing.Color.White;
             this.chartThisMonth.BorderlineColor = System.Drawing.Color.Black;
-            chartArea13.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea13.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea13.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea13.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea13.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea13.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea13.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea13.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea13.BorderColor = System.Drawing.Color.White;
-            chartArea13.Name = "ChartArea1";
-            this.chartThisMonth.ChartAreas.Add(chartArea13);
-            legend13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            legend13.Enabled = false;
-            legend13.ForeColor = System.Drawing.Color.WhiteSmoke;
-            legend13.Name = "Legend1";
-            this.chartThisMonth.Legends.Add(legend13);
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea1.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            chartArea1.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea1.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            chartArea1.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            chartArea1.BorderColor = System.Drawing.Color.White;
+            chartArea1.Name = "ChartArea1";
+            this.chartThisMonth.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            legend1.Enabled = false;
+            legend1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            legend1.Name = "Legend1";
+            this.chartThisMonth.Legends.Add(legend1);
             this.chartThisMonth.Location = new System.Drawing.Point(10, 28);
             this.chartThisMonth.Name = "chartThisMonth";
             this.chartThisMonth.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartThisMonth.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(72)))))};
-            series13.ChartArea = "ChartArea1";
-            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series13.Color = System.Drawing.Color.Lime;
-            series13.LabelForeColor = System.Drawing.Color.White;
-            series13.Legend = "Legend1";
-            series13.Name = "Series1";
-            series13.YValuesPerPoint = 2;
-            this.chartThisMonth.Series.Add(series13);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.Lime;
+            series1.LabelForeColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.YValuesPerPoint = 2;
+            this.chartThisMonth.Series.Add(series1);
             this.chartThisMonth.Size = new System.Drawing.Size(233, 128);
             this.chartThisMonth.TabIndex = 7;
             this.chartThisMonth.Text = "chart4";
@@ -207,6 +208,122 @@ namespace Fine_Management_System
             this.homeItem7.Name = "homeItem7";
             this.homeItem7.Size = new System.Drawing.Size(212, 172);
             this.homeItem7.TabIndex = 12;
+            // 
+            // value5
+            // 
+            this.value5.AutoSize = true;
+            this.value5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.value5.ForeColor = System.Drawing.Color.LightGray;
+            this.value5.Location = new System.Drawing.Point(155, 134);
+            this.value5.Name = "value5";
+            this.value5.Size = new System.Drawing.Size(42, 16);
+            this.value5.TabIndex = 20;
+            this.value5.Text = "Count";
+            this.value5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // date5
+            // 
+            this.date5.AutoSize = true;
+            this.date5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date5.ForeColor = System.Drawing.Color.LightGray;
+            this.date5.Location = new System.Drawing.Point(20, 134);
+            this.date5.Name = "date5";
+            this.date5.Size = new System.Drawing.Size(33, 16);
+            this.date5.TabIndex = 19;
+            this.date5.Text = "Day";
+            // 
+            // value4
+            // 
+            this.value4.AutoSize = true;
+            this.value4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.value4.ForeColor = System.Drawing.Color.LightGray;
+            this.value4.Location = new System.Drawing.Point(155, 112);
+            this.value4.Name = "value4";
+            this.value4.Size = new System.Drawing.Size(42, 16);
+            this.value4.TabIndex = 18;
+            this.value4.Text = "Count";
+            this.value4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // date4
+            // 
+            this.date4.AutoSize = true;
+            this.date4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date4.ForeColor = System.Drawing.Color.LightGray;
+            this.date4.Location = new System.Drawing.Point(20, 112);
+            this.date4.Name = "date4";
+            this.date4.Size = new System.Drawing.Size(33, 16);
+            this.date4.TabIndex = 17;
+            this.date4.Text = "Day";
+            // 
+            // value3
+            // 
+            this.value3.AutoSize = true;
+            this.value3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.value3.ForeColor = System.Drawing.Color.LightGray;
+            this.value3.Location = new System.Drawing.Point(155, 89);
+            this.value3.Name = "value3";
+            this.value3.Size = new System.Drawing.Size(42, 16);
+            this.value3.TabIndex = 16;
+            this.value3.Text = "Count";
+            this.value3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // date3
+            // 
+            this.date3.AutoSize = true;
+            this.date3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date3.ForeColor = System.Drawing.Color.LightGray;
+            this.date3.Location = new System.Drawing.Point(20, 89);
+            this.date3.Name = "date3";
+            this.date3.Size = new System.Drawing.Size(33, 16);
+            this.date3.TabIndex = 15;
+            this.date3.Text = "Day";
+            // 
+            // value2
+            // 
+            this.value2.AutoSize = true;
+            this.value2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.value2.ForeColor = System.Drawing.Color.LightGray;
+            this.value2.Location = new System.Drawing.Point(155, 63);
+            this.value2.Name = "value2";
+            this.value2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.value2.Size = new System.Drawing.Size(42, 16);
+            this.value2.TabIndex = 14;
+            this.value2.Text = "Count";
+            this.value2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // date2
+            // 
+            this.date2.AutoSize = true;
+            this.date2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date2.ForeColor = System.Drawing.Color.LightGray;
+            this.date2.Location = new System.Drawing.Point(20, 63);
+            this.date2.Name = "date2";
+            this.date2.Size = new System.Drawing.Size(33, 16);
+            this.date2.TabIndex = 13;
+            this.date2.Text = "Day";
+            // 
+            // value1
+            // 
+            this.value1.AutoSize = true;
+            this.value1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.value1.ForeColor = System.Drawing.Color.LightGray;
+            this.value1.Location = new System.Drawing.Point(155, 38);
+            this.value1.Name = "value1";
+            this.value1.Size = new System.Drawing.Size(42, 16);
+            this.value1.TabIndex = 12;
+            this.value1.Text = "Count";
+            this.value1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // date1
+            // 
+            this.date1.AutoSize = true;
+            this.date1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date1.ForeColor = System.Drawing.Color.LightGray;
+            this.date1.Location = new System.Drawing.Point(20, 38);
+            this.date1.Name = "date1";
+            this.date1.Size = new System.Drawing.Size(33, 16);
+            this.date1.TabIndex = 11;
+            this.date1.Text = "Day";
             // 
             // labelCasesByDate
             // 
@@ -270,32 +387,32 @@ namespace Fine_Management_System
             this.chartMonthlyCases.BackImageTransparentColor = System.Drawing.Color.White;
             this.chartMonthlyCases.BackSecondaryColor = System.Drawing.Color.White;
             this.chartMonthlyCases.BorderlineColor = System.Drawing.Color.Black;
-            chartArea14.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea14.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea14.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea14.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea14.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea14.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea14.BorderColor = System.Drawing.Color.White;
-            chartArea14.Name = "ChartArea1";
-            this.chartMonthlyCases.ChartAreas.Add(chartArea14);
-            legend14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            legend14.Enabled = false;
-            legend14.ForeColor = System.Drawing.Color.WhiteSmoke;
-            legend14.Name = "Legend1";
-            this.chartMonthlyCases.Legends.Add(legend14);
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea2.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea2.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            chartArea2.BorderColor = System.Drawing.Color.White;
+            chartArea2.Name = "ChartArea1";
+            this.chartMonthlyCases.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            legend2.Enabled = false;
+            legend2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            legend2.Name = "Legend1";
+            this.chartMonthlyCases.Legends.Add(legend2);
             this.chartMonthlyCases.Location = new System.Drawing.Point(9, 10);
             this.chartMonthlyCases.Name = "chartMonthlyCases";
             this.chartMonthlyCases.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartMonthlyCases.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(72)))))};
-            series14.ChartArea = "ChartArea1";
-            series14.Color = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            series14.LabelForeColor = System.Drawing.Color.White;
-            series14.Legend = "Legend1";
-            series14.Name = "Series1";
-            this.chartMonthlyCases.Series.Add(series14);
+            series2.ChartArea = "ChartArea1";
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            series2.LabelForeColor = System.Drawing.Color.White;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartMonthlyCases.Series.Add(series2);
             this.chartMonthlyCases.Size = new System.Drawing.Size(321, 148);
             this.chartMonthlyCases.TabIndex = 6;
             this.chartMonthlyCases.Text = "chart3";
@@ -325,23 +442,23 @@ namespace Fine_Management_System
             // chartThisWeek
             // 
             this.chartThisWeek.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea15.Name = "ChartArea1";
-            this.chartThisWeek.ChartAreas.Add(chartArea15);
-            legend15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            legend15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            legend15.Name = "Legend1";
-            this.chartThisWeek.Legends.Add(legend15);
+            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            chartArea3.Name = "ChartArea1";
+            this.chartThisWeek.ChartAreas.Add(chartArea3);
+            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            legend3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            legend3.Name = "Legend1";
+            this.chartThisWeek.Legends.Add(legend3);
             this.chartThisWeek.Location = new System.Drawing.Point(10, 24);
             this.chartThisWeek.Name = "chartThisWeek";
-            series15.ChartArea = "ChartArea1";
-            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series15.IsValueShownAsLabel = true;
-            series15.LabelForeColor = System.Drawing.Color.White;
-            series15.Legend = "Legend1";
-            series15.Name = "Series1";
-            series15.SmartLabelStyle.Enabled = false;
-            this.chartThisWeek.Series.Add(series15);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.IsValueShownAsLabel = true;
+            series3.LabelForeColor = System.Drawing.Color.White;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            series3.SmartLabelStyle.Enabled = false;
+            this.chartThisWeek.Series.Add(series3);
             this.chartThisWeek.Size = new System.Drawing.Size(233, 155);
             this.chartThisWeek.TabIndex = 0;
             this.chartThisWeek.TabStop = false;
@@ -398,42 +515,42 @@ namespace Fine_Management_System
             this.chartWeekly.BackImageTransparentColor = System.Drawing.Color.White;
             this.chartWeekly.BackSecondaryColor = System.Drawing.Color.White;
             this.chartWeekly.BorderlineColor = System.Drawing.Color.Black;
-            chartArea16.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.AxisX2.InterlacedColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.AxisX2.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.AxisY2.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.AxisY2.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea16.BorderColor = System.Drawing.Color.White;
-            chartArea16.Name = "ChartArea1";
-            this.chartWeekly.ChartAreas.Add(chartArea16);
-            legend16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            legend16.Enabled = false;
-            legend16.ForeColor = System.Drawing.Color.WhiteSmoke;
-            legend16.Name = "Legend1";
-            this.chartWeekly.Legends.Add(legend16);
+            chartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisX2.InterlacedColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisX2.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisY2.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.AxisY2.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            chartArea4.BorderColor = System.Drawing.Color.White;
+            chartArea4.Name = "ChartArea1";
+            this.chartWeekly.ChartAreas.Add(chartArea4);
+            legend4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            legend4.Enabled = false;
+            legend4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            legend4.Name = "Legend1";
+            this.chartWeekly.Legends.Add(legend4);
             this.chartWeekly.Location = new System.Drawing.Point(12, 10);
             this.chartWeekly.Name = "chartWeekly";
             this.chartWeekly.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartWeekly.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(72)))))};
-            series16.ChartArea = "ChartArea1";
-            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series16.Color = System.Drawing.Color.Lime;
-            series16.LabelForeColor = System.Drawing.Color.White;
-            series16.Legend = "Legend1";
-            series16.MarkerBorderColor = System.Drawing.Color.Lime;
-            series16.MarkerColor = System.Drawing.Color.White;
-            series16.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series16.Name = "Series1";
-            this.chartWeekly.Series.Add(series16);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Color = System.Drawing.Color.Lime;
+            series4.LabelForeColor = System.Drawing.Color.White;
+            series4.Legend = "Legend1";
+            series4.MarkerBorderColor = System.Drawing.Color.Lime;
+            series4.MarkerColor = System.Drawing.Color.White;
+            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series4.Name = "Series1";
+            this.chartWeekly.Series.Add(series4);
             this.chartWeekly.Size = new System.Drawing.Size(537, 183);
             this.chartWeekly.TabIndex = 5;
             this.chartWeekly.Text = "chart1";
@@ -448,7 +565,6 @@ namespace Fine_Management_System
             this.homeItem3.Name = "homeItem3";
             this.homeItem3.Size = new System.Drawing.Size(251, 137);
             this.homeItem3.TabIndex = 8;
-            this.homeItem3.Paint += new System.Windows.Forms.PaintEventHandler(this.a);
             // 
             // TodayIncomeText
             // 
@@ -543,122 +659,6 @@ namespace Fine_Management_System
             this.labelTotalCases.Size = new System.Drawing.Size(54, 20);
             this.labelTotalCases.TabIndex = 3;
             this.labelTotalCases.Text = "65465";
-            // 
-            // date1
-            // 
-            this.date1.AutoSize = true;
-            this.date1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date1.ForeColor = System.Drawing.Color.LightGray;
-            this.date1.Location = new System.Drawing.Point(20, 38);
-            this.date1.Name = "date1";
-            this.date1.Size = new System.Drawing.Size(33, 16);
-            this.date1.TabIndex = 11;
-            this.date1.Text = "Day";
-            // 
-            // value1
-            // 
-            this.value1.AutoSize = true;
-            this.value1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.value1.ForeColor = System.Drawing.Color.LightGray;
-            this.value1.Location = new System.Drawing.Point(155, 38);
-            this.value1.Name = "value1";
-            this.value1.Size = new System.Drawing.Size(42, 16);
-            this.value1.TabIndex = 12;
-            this.value1.Text = "Count";
-            this.value1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // value2
-            // 
-            this.value2.AutoSize = true;
-            this.value2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.value2.ForeColor = System.Drawing.Color.LightGray;
-            this.value2.Location = new System.Drawing.Point(155, 63);
-            this.value2.Name = "value2";
-            this.value2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.value2.Size = new System.Drawing.Size(42, 16);
-            this.value2.TabIndex = 14;
-            this.value2.Text = "Count";
-            this.value2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // date2
-            // 
-            this.date2.AutoSize = true;
-            this.date2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date2.ForeColor = System.Drawing.Color.LightGray;
-            this.date2.Location = new System.Drawing.Point(20, 63);
-            this.date2.Name = "date2";
-            this.date2.Size = new System.Drawing.Size(33, 16);
-            this.date2.TabIndex = 13;
-            this.date2.Text = "Day";
-            // 
-            // value3
-            // 
-            this.value3.AutoSize = true;
-            this.value3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.value3.ForeColor = System.Drawing.Color.LightGray;
-            this.value3.Location = new System.Drawing.Point(155, 89);
-            this.value3.Name = "value3";
-            this.value3.Size = new System.Drawing.Size(42, 16);
-            this.value3.TabIndex = 16;
-            this.value3.Text = "Count";
-            this.value3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // date3
-            // 
-            this.date3.AutoSize = true;
-            this.date3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date3.ForeColor = System.Drawing.Color.LightGray;
-            this.date3.Location = new System.Drawing.Point(20, 89);
-            this.date3.Name = "date3";
-            this.date3.Size = new System.Drawing.Size(33, 16);
-            this.date3.TabIndex = 15;
-            this.date3.Text = "Day";
-            // 
-            // value4
-            // 
-            this.value4.AutoSize = true;
-            this.value4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.value4.ForeColor = System.Drawing.Color.LightGray;
-            this.value4.Location = new System.Drawing.Point(155, 112);
-            this.value4.Name = "value4";
-            this.value4.Size = new System.Drawing.Size(42, 16);
-            this.value4.TabIndex = 18;
-            this.value4.Text = "Count";
-            this.value4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // date4
-            // 
-            this.date4.AutoSize = true;
-            this.date4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date4.ForeColor = System.Drawing.Color.LightGray;
-            this.date4.Location = new System.Drawing.Point(20, 112);
-            this.date4.Name = "date4";
-            this.date4.Size = new System.Drawing.Size(33, 16);
-            this.date4.TabIndex = 17;
-            this.date4.Text = "Day";
-            // 
-            // value5
-            // 
-            this.value5.AutoSize = true;
-            this.value5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.value5.ForeColor = System.Drawing.Color.LightGray;
-            this.value5.Location = new System.Drawing.Point(155, 134);
-            this.value5.Name = "value5";
-            this.value5.Size = new System.Drawing.Size(42, 16);
-            this.value5.TabIndex = 20;
-            this.value5.Text = "Count";
-            this.value5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // date5
-            // 
-            this.date5.AutoSize = true;
-            this.date5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date5.ForeColor = System.Drawing.Color.LightGray;
-            this.date5.Location = new System.Drawing.Point(20, 134);
-            this.date5.Name = "date5";
-            this.date5.Size = new System.Drawing.Size(33, 16);
-            this.date5.TabIndex = 19;
-            this.date5.Text = "Day";
             // 
             // Home
             // 

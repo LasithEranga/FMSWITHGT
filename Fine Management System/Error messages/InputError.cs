@@ -30,5 +30,10 @@ namespace Fine_Management_System.Error_messages
         {
             this.Dispose();
         }
+
+        private void InputError_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
