@@ -91,6 +91,7 @@ namespace Fine_Management_System.Error_messages
             this.Name = "InputError";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InputError";
+            this.Load += new System.EventHandler(this.InputError_Load);
             this.ResumeLayout(false);
 
         }

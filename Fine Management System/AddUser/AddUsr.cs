@@ -153,5 +153,10 @@ namespace Fine_Management_System.AddUser
         {
 
         }
+
+        private void AddUsr_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -10,6 +10,12 @@ namespace Fine_Management_System
         {
             InitializeComponent();
             ShowPanel(homePanel);
+            if (!homePanel.getState())
+            {
+                this.Hide();
+                new Error_messages.InputError("Db", "jkdsfjkds").Show();
+                
+            }
 
         }
 

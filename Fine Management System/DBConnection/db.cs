@@ -16,17 +16,17 @@ namespace Fine_Management_System.DBConnection
             MySqlDataReader dr = null;
             string connStr = "server=localhost;user=root;database=fmsdb;port=3306;password=;SSL Mode=None;";
             MySqlConnection conn = new MySqlConnection(connStr);
-            try
-            {
-               // MessageBox.Show("ENter");
+
+            try{
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 dr = cmd.ExecuteReader();
-                //MessageBox.Show("Success!");
+
             }
+                
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                new Error_messages.InputError("DB Connection Failed", "Could't establish the database connection").Show();
             }
             return dr;
         }
@@ -37,15 +37,13 @@ namespace Fine_Management_System.DBConnection
             MySqlConnection conn = new MySqlConnection(connStr);
             try
             {
-                MessageBox.Show("ENter");
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Success!");
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                MessageBox.Show(ex.Message);
+                
             }
             conn.Close();
         }
@@ -60,7 +58,7 @@ namespace Fine_Management_System.DBConnection
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
             }
             conn.Close();
@@ -75,7 +73,7 @@ namespace Fine_Management_System.DBConnection
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
             conn.Close();
