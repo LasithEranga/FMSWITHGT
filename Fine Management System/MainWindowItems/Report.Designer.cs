@@ -30,7 +30,9 @@ namespace Fine_Management_System.MainWindowItems
         private void InitializeComponent()
         {
             this.reportPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.rptSearchIcon = new System.Windows.Forms.Panel();
             this.rptNav = new System.Windows.Forms.Panel();
             this.rptffRight = new System.Windows.Forms.Button();
             this.rptfRight = new System.Windows.Forms.Button();
@@ -39,6 +41,8 @@ namespace Fine_Management_System.MainWindowItems
             this.rptPgNo = new System.Windows.Forms.MaskedTextBox();
             this.rptfLeft = new System.Windows.Forms.Button();
             this.rptffLeft = new System.Windows.Forms.Button();
+            this.dpIcon2 = new System.Windows.Forms.Panel();
+            this.dpIcon1 = new System.Windows.Forms.Panel();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.labelTo = new System.Windows.Forms.Label();
             this.labelFrom = new System.Windows.Forms.Label();
@@ -53,17 +57,15 @@ namespace Fine_Management_System.MainWindowItems
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportAsJpgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportTextBox = new System.Windows.Forms.RichTextBox();
-            this.rptSearchIcon = new System.Windows.Forms.Panel();
-            this.dpIcon2 = new System.Windows.Forms.Panel();
-            this.dpIcon1 = new System.Windows.Forms.Panel();
             this.filterByToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.amountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.venueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportTextBox = new System.Windows.Forms.RichTextBox();
             this.saveAsPdfBtn = new System.Windows.Forms.Panel();
             this.shareBtn = new System.Windows.Forms.Panel();
+            this.fineReceipt1 = new Fine_Management_System.ReportItems.FineReceipt();
             this.reportPanel.SuspendLayout();
             this.rptNav.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -74,6 +76,8 @@ namespace Fine_Management_System.MainWindowItems
             // reportPanel
             // 
             this.reportPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.reportPanel.Controls.Add(this.fineReceipt1);
+            this.reportPanel.Controls.Add(this.button1);
             this.reportPanel.Controls.Add(this.label1);
             this.reportPanel.Controls.Add(this.rptSearchIcon);
             this.reportPanel.Controls.Add(this.rptNav);
@@ -93,6 +97,15 @@ namespace Fine_Management_System.MainWindowItems
             this.reportPanel.Size = new System.Drawing.Size(927, 624);
             this.reportPanel.TabIndex = 5;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(558, 67);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 35);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Go";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -103,6 +116,16 @@ namespace Fine_Management_System.MainWindowItems
             this.label1.Size = new System.Drawing.Size(113, 25);
             this.label1.TabIndex = 14;
             this.label1.Text = "REPORTS";
+            // 
+            // rptSearchIcon
+            // 
+            this.rptSearchIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(41)))), ((int)(((byte)(44)))));
+            this.rptSearchIcon.BackgroundImage = global::Fine_Management_System.Properties.Resources.search1;
+            this.rptSearchIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.rptSearchIcon.Location = new System.Drawing.Point(623, 2);
+            this.rptSearchIcon.Name = "rptSearchIcon";
+            this.rptSearchIcon.Size = new System.Drawing.Size(42, 35);
+            this.rptSearchIcon.TabIndex = 11;
             // 
             // rptNav
             // 
@@ -203,11 +226,29 @@ namespace Fine_Management_System.MainWindowItems
             this.rptffLeft.Text = "<<";
             this.rptffLeft.UseVisualStyleBackColor = false;
             // 
+            // dpIcon2
+            // 
+            this.dpIcon2.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
+            this.dpIcon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dpIcon2.Location = new System.Drawing.Point(489, 67);
+            this.dpIcon2.Name = "dpIcon2";
+            this.dpIcon2.Size = new System.Drawing.Size(26, 26);
+            this.dpIcon2.TabIndex = 10;
+            // 
+            // dpIcon1
+            // 
+            this.dpIcon1.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
+            this.dpIcon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dpIcon1.Location = new System.Drawing.Point(219, 68);
+            this.dpIcon1.Name = "dpIcon1";
+            this.dpIcon1.Size = new System.Drawing.Size(26, 26);
+            this.dpIcon1.TabIndex = 9;
+            // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(395, 68);
+            this.dateTimePicker2.Location = new System.Drawing.Point(345, 67);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(138, 26);
             this.dateTimePicker2.TabIndex = 8;
@@ -217,7 +258,7 @@ namespace Fine_Management_System.MainWindowItems
             this.labelTo.AutoSize = true;
             this.labelTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTo.ForeColor = System.Drawing.Color.White;
-            this.labelTo.Location = new System.Drawing.Point(349, 73);
+            this.labelTo.Location = new System.Drawing.Point(293, 73);
             this.labelTo.Name = "labelTo";
             this.labelTo.Size = new System.Drawing.Size(29, 20);
             this.labelTo.TabIndex = 7;
@@ -325,53 +366,14 @@ namespace Fine_Management_System.MainWindowItems
             // exportToPDFToolStripMenuItem
             // 
             this.exportToPDFToolStripMenuItem.Name = "exportToPDFToolStripMenuItem";
-            this.exportToPDFToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.exportToPDFToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportToPDFToolStripMenuItem.Text = "&Export as pdf";
             // 
             // exportAsJpgToolStripMenuItem
             // 
             this.exportAsJpgToolStripMenuItem.Name = "exportAsJpgToolStripMenuItem";
-            this.exportAsJpgToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.exportAsJpgToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportAsJpgToolStripMenuItem.Text = "&Export as jpg";
-            // 
-            // reportTextBox
-            // 
-            this.reportTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.reportTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.reportTextBox.ForeColor = System.Drawing.SystemColors.Control;
-            this.reportTextBox.Location = new System.Drawing.Point(18, 121);
-            this.reportTextBox.Name = "reportTextBox";
-            this.reportTextBox.Size = new System.Drawing.Size(895, 481);
-            this.reportTextBox.TabIndex = 2;
-            this.reportTextBox.Text = "";
-            // 
-            // rptSearchIcon
-            // 
-            this.rptSearchIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(41)))), ((int)(((byte)(44)))));
-            this.rptSearchIcon.BackgroundImage = global::Fine_Management_System.Properties.Resources.search1;
-            this.rptSearchIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.rptSearchIcon.Location = new System.Drawing.Point(623, 2);
-            this.rptSearchIcon.Name = "rptSearchIcon";
-            this.rptSearchIcon.Size = new System.Drawing.Size(42, 35);
-            this.rptSearchIcon.TabIndex = 11;
-            // 
-            // dpIcon2
-            // 
-            this.dpIcon2.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
-            this.dpIcon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dpIcon2.Location = new System.Drawing.Point(540, 68);
-            this.dpIcon2.Name = "dpIcon2";
-            this.dpIcon2.Size = new System.Drawing.Size(26, 26);
-            this.dpIcon2.TabIndex = 10;
-            // 
-            // dpIcon1
-            // 
-            this.dpIcon1.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
-            this.dpIcon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dpIcon1.Location = new System.Drawing.Point(219, 68);
-            this.dpIcon1.Name = "dpIcon1";
-            this.dpIcon1.Size = new System.Drawing.Size(26, 26);
-            this.dpIcon1.TabIndex = 9;
             // 
             // filterByToolStripMenuItem
             // 
@@ -410,6 +412,17 @@ namespace Fine_Management_System.MainWindowItems
             this.venueToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.venueToolStripMenuItem.Text = "Venue";
             // 
+            // reportTextBox
+            // 
+            this.reportTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.reportTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.reportTextBox.ForeColor = System.Drawing.SystemColors.Control;
+            this.reportTextBox.Location = new System.Drawing.Point(18, 121);
+            this.reportTextBox.Name = "reportTextBox";
+            this.reportTextBox.Size = new System.Drawing.Size(895, 481);
+            this.reportTextBox.TabIndex = 2;
+            this.reportTextBox.Text = "";
+            // 
             // saveAsPdfBtn
             // 
             this.saveAsPdfBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.save_as_pdf_new;
@@ -419,6 +432,7 @@ namespace Fine_Management_System.MainWindowItems
             this.saveAsPdfBtn.Size = new System.Drawing.Size(107, 34);
             this.saveAsPdfBtn.TabIndex = 1;
             this.saveAsPdfBtn.Click += new System.EventHandler(this.SaveAsPdf);
+            this.saveAsPdfBtn.Paint += new System.Windows.Forms.PaintEventHandler(this.saveAsPdfBtn_Paint);
             // 
             // shareBtn
             // 
@@ -428,6 +442,13 @@ namespace Fine_Management_System.MainWindowItems
             this.shareBtn.Name = "shareBtn";
             this.shareBtn.Size = new System.Drawing.Size(92, 34);
             this.shareBtn.TabIndex = 0;
+            // 
+            // fineReceipt1
+            // 
+            this.fineReceipt1.Location = new System.Drawing.Point(18, 121);
+            this.fineReceipt1.Name = "fineReceipt1";
+            this.fineReceipt1.Size = new System.Drawing.Size(895, 481);
+            this.fineReceipt1.TabIndex = 16;
             // 
             // Report
             // 
@@ -487,5 +508,7 @@ namespace Fine_Management_System.MainWindowItems
         private System.Windows.Forms.RichTextBox reportTextBox;
         private System.Windows.Forms.Panel saveAsPdfBtn;
         private System.Windows.Forms.Panel shareBtn;
+        private System.Windows.Forms.Button button1;
+        private ReportItems.FineReceipt fineReceipt1;
     }
 }

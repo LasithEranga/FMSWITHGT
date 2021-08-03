@@ -30,13 +30,13 @@ namespace Fine_Management_System.MainWindowItems
         private void InitializeComponent()
         {
             this.settingsPanel = new System.Windows.Forms.Panel();
+            this.usersPanel = new Fine_Management_System.MainWindowItems.Users();
             this.labelSettingsTitle = new System.Windows.Forms.Label();
             this.help = new System.Windows.Forms.Panel();
             this.theme = new System.Windows.Forms.Panel();
             this.notification = new System.Windows.Forms.Panel();
             this.language = new System.Windows.Forms.Panel();
             this.user = new System.Windows.Forms.Panel();
-            this.usersPanel = new Fine_Management_System.MainWindowItems.Users();
             this.settingsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,13 @@ namespace Fine_Management_System.MainWindowItems
             this.settingsPanel.Name = "settingsPanel";
             this.settingsPanel.Size = new System.Drawing.Size(927, 624);
             this.settingsPanel.TabIndex = 8;
+            // 
+            // usersPanel
+            // 
+            this.usersPanel.Location = new System.Drawing.Point(55, 499);
+            this.usersPanel.Name = "usersPanel";
+            this.usersPanel.Size = new System.Drawing.Size(311, 79);
+            this.usersPanel.TabIndex = 15;
             // 
             // labelSettingsTitle
             // 
@@ -111,13 +118,6 @@ namespace Fine_Management_System.MainWindowItems
             this.user.Size = new System.Drawing.Size(212, 170);
             this.user.TabIndex = 0;
             this.user.Click += new System.EventHandler(this.userClick);
-            // 
-            // usersPanel
-            // 
-            this.usersPanel.Location = new System.Drawing.Point(55, 507);
-            this.usersPanel.Name = "usersPanel";
-            this.usersPanel.Size = new System.Drawing.Size(311, 79);
-            this.usersPanel.TabIndex = 15;
             // 
             // Settings
             // 
