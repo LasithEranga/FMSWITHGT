@@ -30,6 +30,7 @@ namespace Fine_Management_System.MainWindowItems
         private void InitializeComponent()
         {
             this.reportPanel = new System.Windows.Forms.Panel();
+            this.fineReceipt1 = new Fine_Management_System.ReportItems.FineReceipt();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.rptSearchIcon = new System.Windows.Forms.Panel();
@@ -65,7 +66,6 @@ namespace Fine_Management_System.MainWindowItems
             this.reportTextBox = new System.Windows.Forms.RichTextBox();
             this.saveAsPdfBtn = new System.Windows.Forms.Panel();
             this.shareBtn = new System.Windows.Forms.Panel();
-            this.fineReceipt1 = new Fine_Management_System.ReportItems.FineReceipt();
             this.reportPanel.SuspendLayout();
             this.rptNav.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -96,6 +96,14 @@ namespace Fine_Management_System.MainWindowItems
             this.reportPanel.Name = "reportPanel";
             this.reportPanel.Size = new System.Drawing.Size(927, 624);
             this.reportPanel.TabIndex = 5;
+            this.reportPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.reportPanel_Paint);
+            // 
+            // fineReceipt1
+            // 
+            this.fineReceipt1.Location = new System.Drawing.Point(18, 121);
+            this.fineReceipt1.Name = "fineReceipt1";
+            this.fineReceipt1.Size = new System.Drawing.Size(895, 481);
+            this.fineReceipt1.TabIndex = 16;
             // 
             // button1
             // 
@@ -366,13 +374,13 @@ namespace Fine_Management_System.MainWindowItems
             // exportToPDFToolStripMenuItem
             // 
             this.exportToPDFToolStripMenuItem.Name = "exportToPDFToolStripMenuItem";
-            this.exportToPDFToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportToPDFToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.exportToPDFToolStripMenuItem.Text = "&Export as pdf";
             // 
             // exportAsJpgToolStripMenuItem
             // 
             this.exportAsJpgToolStripMenuItem.Name = "exportAsJpgToolStripMenuItem";
-            this.exportAsJpgToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportAsJpgToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.exportAsJpgToolStripMenuItem.Text = "&Export as jpg";
             // 
             // filterByToolStripMenuItem
@@ -442,13 +450,6 @@ namespace Fine_Management_System.MainWindowItems
             this.shareBtn.Name = "shareBtn";
             this.shareBtn.Size = new System.Drawing.Size(92, 34);
             this.shareBtn.TabIndex = 0;
-            // 
-            // fineReceipt1
-            // 
-            this.fineReceipt1.Location = new System.Drawing.Point(18, 121);
-            this.fineReceipt1.Name = "fineReceipt1";
-            this.fineReceipt1.Size = new System.Drawing.Size(895, 481);
-            this.fineReceipt1.TabIndex = 16;
             // 
             // Report
             // 
