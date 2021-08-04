@@ -16,7 +16,6 @@ namespace Fine_Management_System.DBConnection
             MySqlDataReader dr = null;
             string connStr = "server=localhost;user=root;database=fmsdb;port=3306;password=;SSL Mode=None;";
             MySqlConnection conn = new MySqlConnection(connStr);
-
             try{
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -24,9 +23,9 @@ namespace Fine_Management_System.DBConnection
 
             }
                 
-            catch (Exception ex)
+            catch (MySqlException ex)
             {
-                new Error_messages.InputError("DB Connection Failed", "Could't establish the database connection").Show();
+                throw ex;
             }
             return dr;
         }
@@ -63,6 +62,7 @@ namespace Fine_Management_System.DBConnection
             }
             conn.Close();
         }
+
         public static void Update(string query)
         {
             string connStr = "server=localhost;user=root;database=fmsdb;port=3306;password=;SSL Mode=None;";

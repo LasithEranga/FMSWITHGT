@@ -14,10 +14,11 @@ namespace Fine_Management_System
 {
     public partial class Home : UserControl
     {
-        private bool DBConnectionHealth = true;
+       
         public Home()
         {
             InitializeComponent();
+            MainWindow.DBConnectionHelath = true;
             WeeklyChart();
             MonthlyChart();
             SetCasesByDate();
@@ -29,14 +30,8 @@ namespace Fine_Management_System
             
         }
 
-        public bool getState() {
-            return DBConnectionHealth;
-        }
-
-
-
         private void WeeklyChart() {
-            if (DBConnectionHealth)
+            if (Convert.ToBoolean(MainWindow.DBConnectionHelath ))
             {
                 
                 try
@@ -60,21 +55,18 @@ namespace Fine_Management_System
                         }
                     }
                 }
-                catch (Exception)
+                catch (MySqlException)
                 {
-                    DBConnectionHealth = false;
-                   
+                    MainWindow.DBConnectionHelath = false;
                 }
-              }
-            
+             }
         } 
 
 
         private void MonthlyChart()
         {
-                if (DBConnectionHealth)
+                if (Convert.ToBoolean(MainWindow.DBConnectionHelath ))
                 {
-               
                 try
                 {
                     MySqlDataReader dr = null;
@@ -84,9 +76,9 @@ namespace Fine_Management_System
                         chartMonthlyCases.Series["Series1"].Points.AddXY(dr.GetString("Month"), dr.GetString("count"));
                     }
                 }
-                catch (Exception)
+                catch (MySqlException)
                 {
-                    DBConnectionHealth = false;
+                    MainWindow.DBConnectionHelath = false;
                 }
             }
         }
@@ -94,7 +86,7 @@ namespace Fine_Management_System
 
         private void PieChart()
         {
-            if (DBConnectionHealth)
+            if (Convert.ToBoolean(MainWindow.DBConnectionHelath ))
             {
             try
             {
@@ -106,11 +98,11 @@ namespace Fine_Management_System
 
                 }
             }
-            catch (NullReferenceException ex)
-            {
-                DBConnectionHealth = false;
-                
-            }
+            catch (MySqlException)
+                {
+                    MainWindow.DBConnectionHelath = false;
+
+                }
 
             }
 
@@ -122,7 +114,7 @@ namespace Fine_Management_System
             string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE Date >= CURDATE() - INTERVAL 1 YEAR ";
             MySqlDataReader dr = null;
             
-                if (DBConnectionHealth)
+                if (Convert.ToBoolean(MainWindow.DBConnectionHelath ))
                 {
                     try
                     {
@@ -130,10 +122,10 @@ namespace Fine_Management_System
                         dr.Read();
                         labelTotalCases.Text = dr.GetString("count") + " Cases";
                     }
-                    catch (Exception)
+                    catch (MySqlException)
                     {
-                        DBConnectionHealth = false;
-                    }
+                        MainWindow.DBConnectionHelath = false;
+                }
                 } 
         }
 
@@ -142,7 +134,7 @@ namespace Fine_Management_System
             string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE date = CURRENT_DATE";
             MySqlDataReader dr = null;
             
-                if (DBConnectionHealth)
+                if (Convert.ToBoolean(MainWindow.DBConnectionHelath ))
                 {
                     try
                     {
@@ -150,10 +142,10 @@ namespace Fine_Management_System
                         dr.Read();
                         labelDailyCases.Text = dr.GetString("count") + " Cases";
                     }
-                    catch
+                    catch(MySqlException)
                     {
-                        DBConnectionHealth = false;
-                    }
+                         MainWindow.DBConnectionHelath = false;
+                }
             }
         }
 
@@ -163,7 +155,7 @@ namespace Fine_Management_System
             string query = "SELECT SUM(amount) AS sum FROM payment WHERE date = CURRENT_DATE";
             MySqlDataReader dr = null;
             
-                if (DBConnectionHealth)
+                if (Convert.ToBoolean(MainWindow.DBConnectionHelath ))
                 {
                     try
                     {
@@ -171,9 +163,14 @@ namespace Fine_Management_System
                         dr.Read();
                         labelTodayIncome.Text = "Rs:" + dr.GetString("sum") + ".00";
                     }
+                    catch (MySqlException)
+                    {
+
+                        MainWindow.DBConnectionHelath = false;
+                }
                     catch (Exception)
                     {
-                        DBConnectionHealth = false;
+
                     }
                     finally
                     {
@@ -188,7 +185,7 @@ namespace Fine_Management_System
             MySqlDataReader dr = null;
             try
             {
-                if (DBConnectionHealth)
+                if (Convert.ToBoolean(MainWindow.DBConnectionHelath ))
                 {
                     dr = DBConnection.db.Read(query);
                     while (dr.Read())
@@ -198,9 +195,8 @@ namespace Fine_Management_System
                 } 
                 
             }
-            catch (Exception ex ) {
-                
-                DBConnectionHealth = false;
+            catch (MySqlException) {
+                MainWindow.DBConnectionHelath = false;
             }
             
         }
@@ -213,7 +209,7 @@ namespace Fine_Management_System
         private void SetCasesByDate() {
             try
             {
-                if (DBConnectionHealth)
+                if (Convert.ToBoolean(MainWindow.DBConnectionHelath ))
                 {
                     Label[] dates = { date1, date2, date3, date4, date5 };
                     Label[] values = { value1, value2, value3, value4, value5 };
@@ -232,10 +228,8 @@ namespace Fine_Management_System
 
                 }
             }
-            catch (Exception ex)
+            catch (MySqlException)
             {
-                MessageBox.Show(ex.Message);
-                
             }
 
         }

@@ -17,6 +17,7 @@ namespace Fine_Management_System.ReportItems
 {
     public partial class FineReceipt : UserControl
     {
+        bool DBConnectionHealth = true;
         public FineReceipt()
         {
             try
@@ -30,10 +31,15 @@ namespace Fine_Management_System.ReportItems
                 sqlda.Fill(dtbl);
                 table.DataSource = dtbl;
             }
-            catch (Exception) {
-                new Error_messages.InputError("sjkdn", "sdfs");
+            catch (MySqlException) {
+                MainWindow.DBConnectionHelath = false;
             }
+
             
+        }
+
+        public bool getState() {
+            return DBConnectionHealth;
         }
 
         public void Save() {
