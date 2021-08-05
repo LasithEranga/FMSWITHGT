@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using MySql.Data.MySqlClient;
 namespace Fine_Management_System
 {
 
@@ -8,8 +8,6 @@ namespace Fine_Management_System
     {
         LoginForm form;
         //tempory username and password for development purposes 
-        string md5password = "13926153831969718150168391712481961204215";
-        string userName = "Lasith";
         public LoginForm()
         {
             InitializeComponent();
@@ -24,20 +22,50 @@ namespace Fine_Management_System
         private void LOGIN_Click(object sender, EventArgs e)
         {
 
-            //check password with MD5 encryption 
-            if (MD5Hashing.Encryption(password.Text) == md5password && userName ==usrName.Text)
+            try
             {
-                MainWindow logged = new MainWindow();
-                //textFields will be cleared after verification of the the password 
-                usrName.Clear();
-                password.Clear();
-                logged.Show();
+                //check password with MD5 encryption 
+                MySqlDataReader dr = null;
+                dr = DBConnection.db.Read("SELECT user_name FROM user WHERE password = " + MD5Hashing.Encryption(password.Text) + " AND user_name = '" + usrName.Text + "';");
+                dr.Read();
+                if (dr.GetString("user_name").Equals(usrName.Text))
+                {
+                    MainWindow logged = new MainWindow();
+                    //textFields will be cleared after verification of the the password 
+                    usrName.Clear();
+                    password.Clear();
+                    logged.Show();
+                }
+                else
+                {
+                    new Error_messages.InputError("Login Failed", "Username or Password is incorrect").Show();
+                }
+                
+                
             }
-            else
+            catch (NullReferenceException)
             {
                 new Error_messages.InputError("Login Failed", "Username or Password is incorrect").Show();
             }
-            
+            catch (MySqlException ex)
+            {
+                if (ex.Message.Equals("Invalid attempt to access a field before calling Read()"))
+                {
+                    new Error_messages.InputError("Login Failed", "Username or Password is incorrect").Show();
+                    usrName.Clear();
+                    password.Clear();
+                }
+                else
+                {
+                   
+                    new Error_messages.DBError("Database Error", "Cannot establish the database connectivity", this).Show();
+
+                }
+
+            }
+
+
+
         }
 
 
