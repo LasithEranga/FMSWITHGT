@@ -29,9 +29,9 @@ namespace Fine_Management_System.MainWindowItems
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartPanel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.menuStripPanel = new System.Windows.Forms.Panel();
@@ -48,15 +48,15 @@ namespace Fine_Management_System.MainWindowItems
             this.lineChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pieChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goBtn = new System.Windows.Forms.Panel();
             this.labelChartsTitle = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
-            this.chartDateTimePickerTo = new System.Windows.Forms.DateTimePicker();
+            this.chartCalenderIcon1 = new System.Windows.Forms.Panel();
+            this.dtpicker1 = new System.Windows.Forms.DateTimePicker();
+            this.chartCalenderIcon2 = new System.Windows.Forms.Panel();
+            this.dtpicker2 = new System.Windows.Forms.DateTimePicker();
             this.chartToLabel = new System.Windows.Forms.Label();
             this.chartFromLabel = new System.Windows.Forms.Label();
-            this.goBtn = new System.Windows.Forms.Panel();
-            this.chartCalenderIcon1 = new System.Windows.Forms.Panel();
-            this.chartCalenderIcon2 = new System.Windows.Forms.Panel();
             this.chartBackground = new System.Windows.Forms.Panel();
             this.statLegendLabel = new System.Windows.Forms.Label();
             this.casesLabel = new System.Windows.Forms.Label();
@@ -163,20 +163,23 @@ namespace Fine_Management_System.MainWindowItems
             // revenueToolStripMenuItem
             // 
             this.revenueToolStripMenuItem.Name = "revenueToolStripMenuItem";
-            this.revenueToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.revenueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.revenueToolStripMenuItem.Text = "&Revenue";
+            this.revenueToolStripMenuItem.Click += new System.EventHandler(this.revenueToolStripMenuItem_Click);
             // 
             // noCasesToolStripMenuItem
             // 
             this.noCasesToolStripMenuItem.Name = "noCasesToolStripMenuItem";
-            this.noCasesToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.noCasesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.noCasesToolStripMenuItem.Text = "&No_Cases";
+            this.noCasesToolStripMenuItem.Click += new System.EventHandler(this.NoCasesToolStripMenuItem_Click);
             // 
             // vehicleTypeToolStripMenuItem
             // 
             this.vehicleTypeToolStripMenuItem.Name = "vehicleTypeToolStripMenuItem";
-            this.vehicleTypeToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.vehicleTypeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vehicleTypeToolStripMenuItem.Text = "&Vehicle Type";
+            this.vehicleTypeToolStripMenuItem.Click += new System.EventHandler(this.vehicleTypeToolStripMenuItem_Click);
             // 
             // chartTypeToolStripMenuItem
             // 
@@ -207,6 +210,16 @@ namespace Fine_Management_System.MainWindowItems
             this.pieChartToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.pieChartToolStripMenuItem.Text = "&Pie Chart";
             // 
+            // goBtn
+            // 
+            this.goBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.Group_31;
+            this.goBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.goBtn.Location = new System.Drawing.Point(733, 35);
+            this.goBtn.Name = "goBtn";
+            this.goBtn.Size = new System.Drawing.Size(128, 39);
+            this.goBtn.TabIndex = 7;
+            this.goBtn.Click += new System.EventHandler(this.GoBtnClick);
+            // 
             // labelChartsTitle
             // 
             this.labelChartsTitle.AutoSize = true;
@@ -222,9 +235,9 @@ namespace Fine_Management_System.MainWindowItems
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.chartCalenderIcon1);
-            this.panel3.Controls.Add(this.dateTimePickerFrom);
+            this.panel3.Controls.Add(this.dtpicker1);
             this.panel3.Controls.Add(this.chartCalenderIcon2);
-            this.panel3.Controls.Add(this.chartDateTimePickerTo);
+            this.panel3.Controls.Add(this.dtpicker2);
             this.panel3.Controls.Add(this.chartToLabel);
             this.panel3.Controls.Add(this.chartFromLabel);
             this.panel3.Location = new System.Drawing.Point(3, 34);
@@ -232,25 +245,43 @@ namespace Fine_Management_System.MainWindowItems
             this.panel3.Size = new System.Drawing.Size(465, 40);
             this.panel3.TabIndex = 16;
             // 
-            // dateTimePickerFrom
+            // chartCalenderIcon1
             // 
-            this.dateTimePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFrom.Location = new System.Drawing.Point(80, 8);
-            this.dateTimePickerFrom.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.dateTimePickerFrom.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
-            this.dateTimePickerFrom.Name = "dateTimePickerFrom";
-            this.dateTimePickerFrom.Size = new System.Drawing.Size(76, 20);
-            this.dateTimePickerFrom.TabIndex = 2;
+            this.chartCalenderIcon1.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
+            this.chartCalenderIcon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.chartCalenderIcon1.Location = new System.Drawing.Point(180, 3);
+            this.chartCalenderIcon1.Name = "chartCalenderIcon1";
+            this.chartCalenderIcon1.Size = new System.Drawing.Size(26, 26);
+            this.chartCalenderIcon1.TabIndex = 10;
             // 
-            // chartDateTimePickerTo
+            // dtpicker1
             // 
-            this.chartDateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.chartDateTimePickerTo.Location = new System.Drawing.Point(309, 7);
-            this.chartDateTimePickerTo.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.chartDateTimePickerTo.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
-            this.chartDateTimePickerTo.Name = "chartDateTimePickerTo";
-            this.chartDateTimePickerTo.Size = new System.Drawing.Size(76, 20);
-            this.chartDateTimePickerTo.TabIndex = 4;
+            this.dtpicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpicker1.Location = new System.Drawing.Point(80, 8);
+            this.dtpicker1.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dtpicker1.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            this.dtpicker1.Name = "dtpicker1";
+            this.dtpicker1.Size = new System.Drawing.Size(76, 20);
+            this.dtpicker1.TabIndex = 2;
+            // 
+            // chartCalenderIcon2
+            // 
+            this.chartCalenderIcon2.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
+            this.chartCalenderIcon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.chartCalenderIcon2.Location = new System.Drawing.Point(405, 3);
+            this.chartCalenderIcon2.Name = "chartCalenderIcon2";
+            this.chartCalenderIcon2.Size = new System.Drawing.Size(26, 26);
+            this.chartCalenderIcon2.TabIndex = 11;
+            // 
+            // dtpicker2
+            // 
+            this.dtpicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpicker2.Location = new System.Drawing.Point(309, 7);
+            this.dtpicker2.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dtpicker2.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            this.dtpicker2.Name = "dtpicker2";
+            this.dtpicker2.Size = new System.Drawing.Size(76, 20);
+            this.dtpicker2.TabIndex = 4;
             // 
             // chartToLabel
             // 
@@ -273,34 +304,6 @@ namespace Fine_Management_System.MainWindowItems
             this.chartFromLabel.Size = new System.Drawing.Size(65, 20);
             this.chartFromLabel.TabIndex = 0;
             this.chartFromLabel.Text = "FROM:";
-            // 
-            // goBtn
-            // 
-            this.goBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.Group_31;
-            this.goBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.goBtn.Location = new System.Drawing.Point(733, 35);
-            this.goBtn.Name = "goBtn";
-            this.goBtn.Size = new System.Drawing.Size(128, 39);
-            this.goBtn.TabIndex = 7;
-            this.goBtn.Paint += new System.Windows.Forms.PaintEventHandler(this.a);
-            // 
-            // chartCalenderIcon1
-            // 
-            this.chartCalenderIcon1.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
-            this.chartCalenderIcon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.chartCalenderIcon1.Location = new System.Drawing.Point(180, 3);
-            this.chartCalenderIcon1.Name = "chartCalenderIcon1";
-            this.chartCalenderIcon1.Size = new System.Drawing.Size(26, 26);
-            this.chartCalenderIcon1.TabIndex = 10;
-            // 
-            // chartCalenderIcon2
-            // 
-            this.chartCalenderIcon2.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
-            this.chartCalenderIcon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.chartCalenderIcon2.Location = new System.Drawing.Point(405, 3);
-            this.chartCalenderIcon2.Name = "chartCalenderIcon2";
-            this.chartCalenderIcon2.Size = new System.Drawing.Size(26, 26);
-            this.chartCalenderIcon2.TabIndex = 11;
             // 
             // chartBackground
             // 
@@ -351,40 +354,40 @@ namespace Fine_Management_System.MainWindowItems
             this.chartPanelChart.BackImageTransparentColor = System.Drawing.Color.White;
             this.chartPanelChart.BackSecondaryColor = System.Drawing.Color.White;
             this.chartPanelChart.BorderlineColor = System.Drawing.Color.Black;
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX2.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX2.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.White;
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea1.BorderColor = System.Drawing.Color.White;
-            chartArea1.Name = "ChartArea1";
-            this.chartPanelChart.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            legend1.Enabled = false;
-            legend1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            legend1.Name = "Legend1";
-            this.chartPanelChart.Legends.Add(legend1);
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisX.TitleForeColor = System.Drawing.Color.White;
+            chartArea2.AxisX2.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisX2.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisY.MinorGrid.LineColor = System.Drawing.Color.White;
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            chartArea2.BorderColor = System.Drawing.Color.White;
+            chartArea2.Name = "ChartArea1";
+            this.chartPanelChart.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            legend2.Enabled = false;
+            legend2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            legend2.Name = "Legend1";
+            this.chartPanelChart.Legends.Add(legend2);
             this.chartPanelChart.Location = new System.Drawing.Point(10, 37);
             this.chartPanelChart.Name = "chartPanelChart";
             this.chartPanelChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartPanelChart.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(72)))))};
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Color = System.Drawing.Color.Lime;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.MarkerBorderColor = System.Drawing.Color.White;
-            series1.MarkerSize = 10;
-            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series1.Name = "Series1";
-            this.chartPanelChart.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.Lime;
+            series2.LabelForeColor = System.Drawing.Color.White;
+            series2.Legend = "Legend1";
+            series2.MarkerBorderColor = System.Drawing.Color.White;
+            series2.MarkerSize = 10;
+            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series2.Name = "Series1";
+            this.chartPanelChart.Series.Add(series2);
             this.chartPanelChart.Size = new System.Drawing.Size(807, 383);
             this.chartPanelChart.TabIndex = 8;
             this.chartPanelChart.Text = "chartNew";
@@ -434,9 +437,9 @@ namespace Fine_Management_System.MainWindowItems
         private System.Windows.Forms.Label labelChartsTitle;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel chartCalenderIcon1;
-        private System.Windows.Forms.DateTimePicker dateTimePickerFrom;
+        private System.Windows.Forms.DateTimePicker dtpicker1;
         private System.Windows.Forms.Panel chartCalenderIcon2;
-        private System.Windows.Forms.DateTimePicker chartDateTimePickerTo;
+        private System.Windows.Forms.DateTimePicker dtpicker2;
         private System.Windows.Forms.Label chartToLabel;
         private System.Windows.Forms.Label chartFromLabel;
         private System.Windows.Forms.Panel chartBackground;
