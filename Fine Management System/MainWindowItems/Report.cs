@@ -39,11 +39,6 @@ namespace Fine_Management_System.MainWindowItems
 
         private void SaveAsPdf(object sender, EventArgs e)
         {
-            fileSave.Filter = "PdfFiles(*.pdf)|*.pdf";
-            if (fileSave.ShowDialog() == DialogResult.OK)
-            {
-                reportTextBox.SaveFile(fileSave.FileName);
-            }
             fineReceipt1.Save();
         }
 
