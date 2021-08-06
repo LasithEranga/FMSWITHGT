@@ -17,18 +17,29 @@ namespace Fine_Management_System.ReportItems
 {
     public partial class FineReceipt : UserControl
     {
+        bool DBConnectionHealth = true;
         public FineReceipt()
         {
-            InitializeComponent();
-            showReceipt.Hide();
-            buttonBack.Hide();
-            string connStr = "server=localhost;user=root;database=fmsdb;port=3306;password=;SSL Mode=None;";
-            MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from fine_receipt", connStr);
-            DataTable dtbl = new DataTable();
-            sqlda.Fill(dtbl);
+            try
+            {
+                InitializeComponent();
+                showReceipt.Hide();
+                buttonBack.Hide();
+                string connStr = "server=localhost;user=root;database=fmsdb;port=3306;password=;SSL Mode=None;";
+                MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from fine_receipt", connStr);
+                DataTable dtbl = new DataTable();
+                sqlda.Fill(dtbl);
+                table.DataSource = dtbl;
+            }
+            catch (MySqlException) {
+                MainWindow.DBConnectionHelath = false;
+            }
 
+            
+        }
 
-            table.DataSource = dtbl;
+        public bool getState() {
+            return DBConnectionHealth;
         }
 
         public void Save() {

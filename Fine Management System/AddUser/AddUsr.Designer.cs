@@ -476,6 +476,7 @@ namespace Fine_Management_System.AddUser
             this.Name = "AddUsr";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add User";
+            this.Load += new System.EventHandler(this.AddUsr_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
