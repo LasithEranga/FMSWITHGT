@@ -16,12 +16,23 @@ namespace Fine_Management_System.MainWindowItems
         {
             InitializeComponent();
             usersPanel.Hide();
+            backBtn.Hide();
         }
 
         private void userClick(object sender, EventArgs e)
         {
+            backBtn.Show();
             usersPanel.SetBounds(0, 0, 930, 627);
             usersPanel.Show();
+            
         }
+
+        private void BackBtnClick(object sender, EventArgs e)
+        {
+            usersPanel.Hide();
+            settingsPanel.Show();
+            backBtn.Hide();
+        }
+
     }
 }

@@ -47,7 +47,16 @@ namespace Fine_Management_System
             this.labelThisMonthIncome = new System.Windows.Forms.Label();
             this.chartThisMonth = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.homeItem7 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
+            this.value5 = new System.Windows.Forms.Label();
+            this.date5 = new System.Windows.Forms.Label();
+            this.value4 = new System.Windows.Forms.Label();
+            this.date4 = new System.Windows.Forms.Label();
+            this.value3 = new System.Windows.Forms.Label();
+            this.date3 = new System.Windows.Forms.Label();
+            this.value2 = new System.Windows.Forms.Label();
+            this.date2 = new System.Windows.Forms.Label();
+            this.value1 = new System.Windows.Forms.Label();
+            this.date1 = new System.Windows.Forms.Label();
             this.labelCasesByDate = new System.Windows.Forms.Label();
             this.homeItem6 = new System.Windows.Forms.Panel();
             this.legendNoOfCases2 = new System.Windows.Forms.Label();
@@ -184,22 +193,137 @@ namespace Fine_Management_System
             // 
             this.homeItem7.BackgroundImage = global::Fine_Management_System.Properties.Resources.Home_7;
             this.homeItem7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.homeItem7.Controls.Add(this.label11);
+            this.homeItem7.Controls.Add(this.value5);
+            this.homeItem7.Controls.Add(this.date5);
+            this.homeItem7.Controls.Add(this.value4);
+            this.homeItem7.Controls.Add(this.date4);
+            this.homeItem7.Controls.Add(this.value3);
+            this.homeItem7.Controls.Add(this.date3);
+            this.homeItem7.Controls.Add(this.value2);
+            this.homeItem7.Controls.Add(this.date2);
+            this.homeItem7.Controls.Add(this.value1);
+            this.homeItem7.Controls.Add(this.date1);
             this.homeItem7.Controls.Add(this.labelCasesByDate);
             this.homeItem7.Location = new System.Drawing.Point(399, 443);
             this.homeItem7.Name = "homeItem7";
             this.homeItem7.Size = new System.Drawing.Size(212, 172);
             this.homeItem7.TabIndex = 12;
             // 
-            // label11
+            // value5
             // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label11.Location = new System.Drawing.Point(31, 43);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 65);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "06/12      255\n \n06/13      565\n\n06/25      656";
+            this.value5.AutoSize = true;
+            this.value5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.value5.ForeColor = System.Drawing.Color.LightGray;
+            this.value5.Location = new System.Drawing.Point(155, 134);
+            this.value5.Name = "value5";
+            this.value5.Size = new System.Drawing.Size(42, 16);
+            this.value5.TabIndex = 20;
+            this.value5.Text = "Count";
+            this.value5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // date5
+            // 
+            this.date5.AutoSize = true;
+            this.date5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date5.ForeColor = System.Drawing.Color.LightGray;
+            this.date5.Location = new System.Drawing.Point(20, 134);
+            this.date5.Name = "date5";
+            this.date5.Size = new System.Drawing.Size(33, 16);
+            this.date5.TabIndex = 19;
+            this.date5.Text = "Day";
+            // 
+            // value4
+            // 
+            this.value4.AutoSize = true;
+            this.value4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.value4.ForeColor = System.Drawing.Color.LightGray;
+            this.value4.Location = new System.Drawing.Point(155, 112);
+            this.value4.Name = "value4";
+            this.value4.Size = new System.Drawing.Size(42, 16);
+            this.value4.TabIndex = 18;
+            this.value4.Text = "Count";
+            this.value4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // date4
+            // 
+            this.date4.AutoSize = true;
+            this.date4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date4.ForeColor = System.Drawing.Color.LightGray;
+            this.date4.Location = new System.Drawing.Point(20, 112);
+            this.date4.Name = "date4";
+            this.date4.Size = new System.Drawing.Size(33, 16);
+            this.date4.TabIndex = 17;
+            this.date4.Text = "Day";
+            // 
+            // value3
+            // 
+            this.value3.AutoSize = true;
+            this.value3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.value3.ForeColor = System.Drawing.Color.LightGray;
+            this.value3.Location = new System.Drawing.Point(155, 89);
+            this.value3.Name = "value3";
+            this.value3.Size = new System.Drawing.Size(42, 16);
+            this.value3.TabIndex = 16;
+            this.value3.Text = "Count";
+            this.value3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // date3
+            // 
+            this.date3.AutoSize = true;
+            this.date3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date3.ForeColor = System.Drawing.Color.LightGray;
+            this.date3.Location = new System.Drawing.Point(20, 89);
+            this.date3.Name = "date3";
+            this.date3.Size = new System.Drawing.Size(33, 16);
+            this.date3.TabIndex = 15;
+            this.date3.Text = "Day";
+            // 
+            // value2
+            // 
+            this.value2.AutoSize = true;
+            this.value2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.value2.ForeColor = System.Drawing.Color.LightGray;
+            this.value2.Location = new System.Drawing.Point(155, 63);
+            this.value2.Name = "value2";
+            this.value2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.value2.Size = new System.Drawing.Size(42, 16);
+            this.value2.TabIndex = 14;
+            this.value2.Text = "Count";
+            this.value2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // date2
+            // 
+            this.date2.AutoSize = true;
+            this.date2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date2.ForeColor = System.Drawing.Color.LightGray;
+            this.date2.Location = new System.Drawing.Point(20, 63);
+            this.date2.Name = "date2";
+            this.date2.Size = new System.Drawing.Size(33, 16);
+            this.date2.TabIndex = 13;
+            this.date2.Text = "Day";
+            // 
+            // value1
+            // 
+            this.value1.AutoSize = true;
+            this.value1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.value1.ForeColor = System.Drawing.Color.LightGray;
+            this.value1.Location = new System.Drawing.Point(155, 38);
+            this.value1.Name = "value1";
+            this.value1.Size = new System.Drawing.Size(42, 16);
+            this.value1.TabIndex = 12;
+            this.value1.Text = "Count";
+            this.value1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // date1
+            // 
+            this.date1.AutoSize = true;
+            this.date1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date1.ForeColor = System.Drawing.Color.LightGray;
+            this.date1.Location = new System.Drawing.Point(20, 38);
+            this.date1.Name = "date1";
+            this.date1.Size = new System.Drawing.Size(33, 16);
+            this.date1.TabIndex = 11;
+            this.date1.Text = "Day";
             // 
             // labelCasesByDate
             // 
@@ -329,12 +453,15 @@ namespace Fine_Management_System
             this.chartThisWeek.Name = "chartThisWeek";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.IsValueShownAsLabel = true;
+            series3.LabelForeColor = System.Drawing.Color.White;
             series3.Legend = "Legend1";
             series3.Name = "Series1";
             series3.SmartLabelStyle.Enabled = false;
             this.chartThisWeek.Series.Add(series3);
-            this.chartThisWeek.Size = new System.Drawing.Size(224, 155);
+            this.chartThisWeek.Size = new System.Drawing.Size(233, 155);
             this.chartThisWeek.TabIndex = 0;
+            this.chartThisWeek.TabStop = false;
             this.chartThisWeek.Text = "chart2";
             this.chartThisWeek.Click += new System.EventHandler(this.chartThisWeek_Click);
             // 
@@ -438,7 +565,6 @@ namespace Fine_Management_System
             this.homeItem3.Name = "homeItem3";
             this.homeItem3.Size = new System.Drawing.Size(251, 137);
             this.homeItem3.TabIndex = 8;
-            this.homeItem3.Paint += new System.Windows.Forms.PaintEventHandler(this.a);
             // 
             // TodayIncomeText
             // 
@@ -575,7 +701,6 @@ namespace Fine_Management_System
         private System.Windows.Forms.Label labelThisMonthIncome;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartThisMonth;
         private System.Windows.Forms.Panel homeItem7;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label labelCasesByDate;
         private System.Windows.Forms.Panel homeItem6;
         private System.Windows.Forms.Label legendNoOfCases2;
@@ -599,5 +724,15 @@ namespace Fine_Management_System
         private System.Windows.Forms.Panel homeItem1;
         private System.Windows.Forms.Label totalCasesText;
         private System.Windows.Forms.Label labelTotalCases;
+        private System.Windows.Forms.Label value5;
+        private System.Windows.Forms.Label date5;
+        private System.Windows.Forms.Label value4;
+        private System.Windows.Forms.Label date4;
+        private System.Windows.Forms.Label value3;
+        private System.Windows.Forms.Label date3;
+        private System.Windows.Forms.Label value2;
+        private System.Windows.Forms.Label date2;
+        private System.Windows.Forms.Label value1;
+        private System.Windows.Forms.Label date1;
     }
 }

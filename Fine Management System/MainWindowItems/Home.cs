@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,46 +14,191 @@ namespace Fine_Management_System
 {
     public partial class Home : UserControl
     {
+       
         public Home()
         {
             InitializeComponent();
-            FillCharts();
+            MainWindow.DBConnectionHelath = true;
+            WeeklyChart();
+            MonthlyChart();
+            SetCasesByDate();
+            PieChart();
+            SetThisMonthChart();
             setYearlyCases();
             setDailyCases();
             setIncome();
-
-
+            
         }
 
-        private void a(object sender, PaintEventArgs e)
+        private void WeeklyChart() {
+            if (Convert.ToBoolean(MainWindow.DBConnectionHelath ))
+            {
+                
+                try
+                {
+                    for (int i = 7; i > 0; i--)
+                    {
+                        string count = "0";
+                        MySqlDataReader dr = null;
+                        dr = DBConnection.db.Read("SELECT COUNT(Ref_No) AS count FROM fine_receipt WHERE YEARWEEK(Date) = YEARWEEK(NOW() - INTERVAL " + i + " WEEK);SELECT DAY(NOW() - INTERVAL " + i + " WEEK + INTERVAL 7 Day) as ed, DAY(NOW() - INTERVAL " + i + " WEEK) as st");
+                        while (dr.Read())
+                        {
+                            count = dr.GetString("count");
+                        }
+
+                        if (dr.NextResult())
+                        {
+                            while (dr.Read())
+                            {
+                                chartWeekly.Series["Series1"].Points.AddXY(dr.GetString("st") + "-" + dr.GetString("ed"), count);
+                            }
+                        }
+                    }
+                }
+                catch (MySqlException)
+                {
+                    MainWindow.DBConnectionHelath = false;
+                }
+             }
+        } 
+
+
+        private void MonthlyChart()
         {
+                if (Convert.ToBoolean(MainWindow.DBConnectionHelath ))
+                {
+                try
+                {
+                    MySqlDataReader dr = null;
+                    dr = DBConnection.db.Read("SELECT MONTHNAME(Date) AS Month, COUNT(Ref_No) as count FROM fine_receipt WHERE Date >= CURDATE() - INTERVAL 1 YEAR GROUP BY MONTH(Date); ");
+                    while (dr.Read())
+                    {
+                        chartMonthlyCases.Series["Series1"].Points.AddXY(dr.GetString("Month"), dr.GetString("count"));
+                    }
+                }
+                catch (MySqlException)
+                {
+                    MainWindow.DBConnectionHelath = false;
+                }
+            }
+        }
+
+
+        private void PieChart()
+        {
+            if (Convert.ToBoolean(MainWindow.DBConnectionHelath ))
+            {
+            try
+            {
+                MySqlDataReader weekData = null;
+                weekData = DBConnection.db.Read("SELECT COUNT(Ref_No) as count, DAYNAME(Date) as date FROM fine_receipt WHERE Date >= DATE(NOW()) - INTERVAL 7 DAY GROUP BY DAY(Date)");
+                while (weekData.Read())
+                {
+                    chartThisWeek.Series["Series1"].Points.AddXY(weekData.GetString("Date").Substring(0, 3), weekData.GetString("count"));
+
+                }
+            }
+            catch (MySqlException)
+                {
+                    MainWindow.DBConnectionHelath = false;
+
+                }
+
+            }
 
         }
-        private void FillCharts()
-        {//fils chart with dummy data values
-            for (int i = 0; i < 10; i++)
-            {
-                chartWeekly.Series["Series1"].Points.AddXY(i, i * 100);
+
+
+
+        private void setYearlyCases() {
+            string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE Date >= CURDATE() - INTERVAL 1 YEAR ";
+            MySqlDataReader dr = null;
+            
+                if (Convert.ToBoolean(MainWindow.DBConnectionHelath ))
+                {
+                    try
+                    {
+                        dr = DBConnection.db.Read(query);
+                        dr.Read();
+                        labelTotalCases.Text = dr.GetString("count") + " Cases";
+                    }
+                    catch (MySqlException)
+                    {
+                        MainWindow.DBConnectionHelath = false;
+                }
+                } 
+        }
+
+        private void setDailyCases()
+        {
+            string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE date = CURRENT_DATE";
+            MySqlDataReader dr = null;
+            
+                if (Convert.ToBoolean(MainWindow.DBConnectionHelath ))
+                {
+                    try
+                    {
+                        dr = DBConnection.db.Read(query);
+                        dr.Read();
+                        labelDailyCases.Text = dr.GetString("count") + " Cases";
+                    }
+                    catch(MySqlException)
+                    {
+                         MainWindow.DBConnectionHelath = false;
+                }
             }
-            for (int i = 0; i < 10; i++)
+        }
+
+
+        private void setIncome()
+        {
+            string query = "SELECT SUM(amount) AS sum FROM payment WHERE date = CURRENT_DATE";
+            MySqlDataReader dr = null;
+            
+                if (Convert.ToBoolean(MainWindow.DBConnectionHelath ))
+                {
+                    try
+                    {
+                        dr = DBConnection.db.Read(query);
+                        dr.Read();
+                        labelTodayIncome.Text = "Rs:" + dr.GetString("sum") + ".00";
+                    }
+                    catch (MySqlException)
+                    {
+
+                        MainWindow.DBConnectionHelath = false;
+                }
+                    catch (Exception)
+                    {
+
+                    }
+                    finally
+                    {
+                        labelTodayIncome.Text = "Rs: 0.00";
+                    }
+                } 
+
+        }
+
+        private void SetThisMonthChart() {
+            string query = "SELECT SUM(amount) as sum, DAY(date) as date FROM payment WHERE date >= DATE(NOW())-INTERVAL 30 Day Group by DATE(date)";
+            MySqlDataReader dr = null;
+            try
             {
-                chartThisMonth.Series["Series1"].Points.AddXY(i, i * i + 50);
-
+                if (Convert.ToBoolean(MainWindow.DBConnectionHelath ))
+                {
+                    dr = DBConnection.db.Read(query);
+                    while (dr.Read())
+                    {
+                        chartThisMonth.Series["Series1"].Points.AddXY(dr.GetString("date"), dr.GetInt32("sum") / 1000);
+                    }
+                } 
+                
             }
-
-            for (int i = 0; i < 10; i++)
-            {
-                chartMonthlyCases.Series["Series1"].Points.AddXY(i, i * i + 50);
+            catch (MySqlException) {
+                MainWindow.DBConnectionHelath = false;
             }
-
-            chartThisWeek.Series["Series1"].Points.AddXY("Mon", "22");
-            chartThisWeek.Series["Series1"].Points.AddXY("Tue", "56");
-            chartThisWeek.Series["Series1"].Points.AddXY("Wed", "45");
-            chartThisWeek.Series["Series1"].Points.AddXY("Thur", "78");
-            chartThisWeek.Series["Series1"].Points.AddXY("Fri", "12");
-            chartThisWeek.Series["Series1"].Points.AddXY("Sat", "58");
-            chartThisWeek.Series["Series1"].Points.AddXY("Sun", "95");
-
+            
         }
 
         private void chartThisWeek_Click(object sender, EventArgs e)
@@ -60,54 +206,39 @@ namespace Fine_Management_System
 
         }
 
+        private void SetCasesByDate() {
+            try
+            {
+                if (Convert.ToBoolean(MainWindow.DBConnectionHelath ))
+                {
+                    Label[] dates = { date1, date2, date3, date4, date5 };
+                    Label[] values = { value1, value2, value3, value4, value5 };
+                    MySqlDataReader dr = null;
+                    for (int i = 0; i < 5; i++)
+                    {
+                        string query = "SELECT DATE_FORMAT((DATE(NOW()) - INTERVAL " + i + " Day),'%Y-%m-%d') as date ,COUNT(Ref_No) count FROM fine_receipt WHERE Date = DATE(NOW()) - INTERVAL " + i + " Day;";
+                        dr = DBConnection.db.Read(query);
+                        while (dr.Read())
+                        {
+                            dates[i].Text = dr.GetString("date");
+                            values[i].Text = dr.GetString("count");
+                        }
+                        
+                    }
+
+                }
+            }
+            catch (MySqlException)
+            {
+            }
+
+        }
+
         private void homePanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-
-        private void setYearlyCases() {
-            string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE date >= '2021-01-01' ";
-            MySqlDataReader dr = DBConnection.db.Read(query);
-            try { dr.Read();
-                labelTodayIncome.Text = "Rs:" + dr.GetString("sum") + ".00";
-            }
-            catch (Exception nl)
-            {
-
-            }
-            labelTotalCases.Text = dr.GetString("count")+" Cases";
-
-        }
-
-        private void setDailyCases()
-        {
-            string query = "SELECT COUNT(Ref_No) As count FROM fine_receipt WHERE date >= '2021-01-01' ";
-            MySqlDataReader dr = DBConnection.db.Read(query);
-            try { dr.Read();
-                labelTodayIncome.Text = "Rs:" + dr.GetString("sum") + ".00";
-            }
-            catch (Exception nl)
-            {
-
-            }
-            labelDailyCases.Text = dr.GetString("count") + " Cases";
-        }
-        private void setIncome()
-        {
-            string query = "SELECT SUM(amount) AS sum FROM payment WHERE date = CURRENT_DATE";
-            MySqlDataReader dr = DBConnection.db.Read(query);
-            try { dr.Read();
-                labelTodayIncome.Text = "Rs:" + dr.GetString("sum") + ".00";
-            }
-            catch (Exception nl)
-            {
-
-            }
-            
-        }
-
-
+    }
     }
 
-}
+

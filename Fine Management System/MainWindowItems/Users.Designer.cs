@@ -31,6 +31,7 @@ namespace Fine_Management_System.MainWindowItems
         {
             this.usersPanel = new System.Windows.Forms.Panel();
             this.usrsFilterSection = new System.Windows.Forms.Panel();
+            this.applyBtn = new System.Windows.Forms.Panel();
             this.usrsLabelTo = new System.Windows.Forms.Label();
             this.panel32 = new System.Windows.Forms.Panel();
             this.usrsDateTimePickerTo = new System.Windows.Forms.DateTimePicker();
@@ -39,17 +40,19 @@ namespace Fine_Management_System.MainWindowItems
             this.usrsLabelFrom = new System.Windows.Forms.Label();
             this.labelDateRange = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.panel23 = new System.Windows.Forms.Panel();
+            this.driversLine = new System.Windows.Forms.Panel();
+            this.officersLine = new System.Windows.Forms.Panel();
+            this.addNewBtn = new System.Windows.Forms.Panel();
+            this.filterBtn = new System.Windows.Forms.Panel();
+            this.allUsersLine = new System.Windows.Forms.Panel();
             this.labelDrivers = new System.Windows.Forms.Label();
             this.labelOfficers = new System.Windows.Forms.Label();
             this.labelAllusrs = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
+            this.usrsSearchIcon = new System.Windows.Forms.PictureBox();
             this.usrsSearchInput = new System.Windows.Forms.TextBox();
             this.labelUsrs = new System.Windows.Forms.Label();
-            this.applyBtn = new System.Windows.Forms.Panel();
-            this.addNewBtn = new System.Windows.Forms.Panel();
-            this.filterBtn = new System.Windows.Forms.Panel();
-            this.usrsSearchIcon = new System.Windows.Forms.PictureBox();
+            this.table = new Fine_Management_System.UsersItems.UserTable();
             this.usersPanel.SuspendLayout();
             this.usrsFilterSection.SuspendLayout();
             this.panel32.SuspendLayout();
@@ -62,6 +65,7 @@ namespace Fine_Management_System.MainWindowItems
             // usersPanel
             // 
             this.usersPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.usersPanel.Controls.Add(this.table);
             this.usersPanel.Controls.Add(this.usrsFilterSection);
             this.usersPanel.Controls.Add(this.panel22);
             this.usersPanel.Location = new System.Drawing.Point(0, 0);
@@ -84,6 +88,16 @@ namespace Fine_Management_System.MainWindowItems
             this.usrsFilterSection.Name = "usrsFilterSection";
             this.usrsFilterSection.Size = new System.Drawing.Size(909, 97);
             this.usrsFilterSection.TabIndex = 3;
+            // 
+            // applyBtn
+            // 
+            this.applyBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.applyBtn;
+            this.applyBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.applyBtn.Location = new System.Drawing.Point(758, 47);
+            this.applyBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.applyBtn.Name = "applyBtn";
+            this.applyBtn.Size = new System.Drawing.Size(145, 44);
+            this.applyBtn.TabIndex = 4;
             // 
             // usrsLabelTo
             // 
@@ -162,9 +176,11 @@ namespace Fine_Management_System.MainWindowItems
             // panel22
             // 
             this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(41)))), ((int)(((byte)(44)))));
+            this.panel22.Controls.Add(this.driversLine);
+            this.panel22.Controls.Add(this.officersLine);
             this.panel22.Controls.Add(this.addNewBtn);
             this.panel22.Controls.Add(this.filterBtn);
-            this.panel22.Controls.Add(this.panel23);
+            this.panel22.Controls.Add(this.allUsersLine);
             this.panel22.Controls.Add(this.labelDrivers);
             this.panel22.Controls.Add(this.labelOfficers);
             this.panel22.Controls.Add(this.labelAllusrs);
@@ -177,15 +193,55 @@ namespace Fine_Management_System.MainWindowItems
             this.panel22.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.panel22.Size = new System.Drawing.Size(909, 128);
             this.panel22.TabIndex = 2;
+            this.panel22.Paint += new System.Windows.Forms.PaintEventHandler(this.panel22_Paint);
             // 
-            // panel23
+            // driversLine
             // 
-            this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(198)))), ((int)(((byte)(143)))));
-            this.panel23.Location = new System.Drawing.Point(72, 122);
-            this.panel23.Margin = new System.Windows.Forms.Padding(4);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(100, 5);
-            this.panel23.TabIndex = 3;
+            this.driversLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(198)))), ((int)(((byte)(143)))));
+            this.driversLine.Location = new System.Drawing.Point(410, 122);
+            this.driversLine.Margin = new System.Windows.Forms.Padding(4);
+            this.driversLine.Name = "driversLine";
+            this.driversLine.Size = new System.Drawing.Size(100, 5);
+            this.driversLine.TabIndex = 4;
+            // 
+            // officersLine
+            // 
+            this.officersLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(198)))), ((int)(((byte)(143)))));
+            this.officersLine.Location = new System.Drawing.Point(223, 123);
+            this.officersLine.Margin = new System.Windows.Forms.Padding(4);
+            this.officersLine.Name = "officersLine";
+            this.officersLine.Size = new System.Drawing.Size(100, 5);
+            this.officersLine.TabIndex = 4;
+            // 
+            // addNewBtn
+            // 
+            this.addNewBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.ADD_NEW;
+            this.addNewBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.addNewBtn.Location = new System.Drawing.Point(758, 85);
+            this.addNewBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.addNewBtn.Name = "addNewBtn";
+            this.addNewBtn.Size = new System.Drawing.Size(145, 38);
+            this.addNewBtn.TabIndex = 3;
+            this.addNewBtn.Click += new System.EventHandler(this.addUsrBtnClick);
+            // 
+            // filterBtn
+            // 
+            this.filterBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.filter_button;
+            this.filterBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.filterBtn.Location = new System.Drawing.Point(708, 85);
+            this.filterBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.filterBtn.Name = "filterBtn";
+            this.filterBtn.Size = new System.Drawing.Size(38, 38);
+            this.filterBtn.TabIndex = 3;
+            // 
+            // allUsersLine
+            // 
+            this.allUsersLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(198)))), ((int)(((byte)(143)))));
+            this.allUsersLine.Location = new System.Drawing.Point(72, 122);
+            this.allUsersLine.Margin = new System.Windows.Forms.Padding(4);
+            this.allUsersLine.Name = "allUsersLine";
+            this.allUsersLine.Size = new System.Drawing.Size(100, 5);
+            this.allUsersLine.TabIndex = 3;
             // 
             // labelDrivers
             // 
@@ -198,6 +254,7 @@ namespace Fine_Management_System.MainWindowItems
             this.labelDrivers.Size = new System.Drawing.Size(83, 20);
             this.labelDrivers.TabIndex = 4;
             this.labelDrivers.Text = "DRIVERS";
+            this.labelDrivers.Click += new System.EventHandler(this.labelDrivers_Click);
             // 
             // labelOfficers
             // 
@@ -210,6 +267,7 @@ namespace Fine_Management_System.MainWindowItems
             this.labelOfficers.Size = new System.Drawing.Size(91, 20);
             this.labelOfficers.TabIndex = 3;
             this.labelOfficers.Text = "OFFICERS";
+            this.labelOfficers.Click += new System.EventHandler(this.labelOfficers_Click);
             // 
             // labelAllusrs
             // 
@@ -222,6 +280,7 @@ namespace Fine_Management_System.MainWindowItems
             this.labelAllusrs.Size = new System.Drawing.Size(99, 20);
             this.labelAllusrs.TabIndex = 2;
             this.labelAllusrs.Text = "ALL USERS";
+            this.labelAllusrs.Click += new System.EventHandler(this.labelAllusrs_Click);
             // 
             // panel21
             // 
@@ -233,6 +292,15 @@ namespace Fine_Management_System.MainWindowItems
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(185, 33);
             this.panel21.TabIndex = 1;
+            // 
+            // usrsSearchIcon
+            // 
+            this.usrsSearchIcon.Image = global::Fine_Management_System.Properties.Resources.search1;
+            this.usrsSearchIcon.Location = new System.Drawing.Point(5, 7);
+            this.usrsSearchIcon.Name = "usrsSearchIcon";
+            this.usrsSearchIcon.Size = new System.Drawing.Size(20, 19);
+            this.usrsSearchIcon.TabIndex = 5;
+            this.usrsSearchIcon.TabStop = false;
             // 
             // usrsSearchInput
             // 
@@ -261,45 +329,12 @@ namespace Fine_Management_System.MainWindowItems
             this.labelUsrs.TabIndex = 0;
             this.labelUsrs.Text = "USERS";
             // 
-            // applyBtn
+            // table
             // 
-            this.applyBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.applyBtn;
-            this.applyBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.applyBtn.Location = new System.Drawing.Point(758, 47);
-            this.applyBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.applyBtn.Name = "applyBtn";
-            this.applyBtn.Size = new System.Drawing.Size(145, 44);
-            this.applyBtn.TabIndex = 4;
-            // 
-            // addNewBtn
-            // 
-            this.addNewBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.ADD_NEW;
-            this.addNewBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.addNewBtn.Location = new System.Drawing.Point(758, 85);
-            this.addNewBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.addNewBtn.Name = "addNewBtn";
-            this.addNewBtn.Size = new System.Drawing.Size(145, 38);
-            this.addNewBtn.TabIndex = 3;
-            this.addNewBtn.Click += new System.EventHandler(this.addUsrBtnClick);
-            // 
-            // filterBtn
-            // 
-            this.filterBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.filter_button;
-            this.filterBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.filterBtn.Location = new System.Drawing.Point(708, 85);
-            this.filterBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.filterBtn.Name = "filterBtn";
-            this.filterBtn.Size = new System.Drawing.Size(38, 38);
-            this.filterBtn.TabIndex = 3;
-            // 
-            // usrsSearchIcon
-            // 
-            this.usrsSearchIcon.Image = global::Fine_Management_System.Properties.Resources.search1;
-            this.usrsSearchIcon.Location = new System.Drawing.Point(5, 7);
-            this.usrsSearchIcon.Name = "usrsSearchIcon";
-            this.usrsSearchIcon.Size = new System.Drawing.Size(20, 19);
-            this.usrsSearchIcon.TabIndex = 5;
-            this.usrsSearchIcon.TabStop = false;
+            this.table.Location = new System.Drawing.Point(12, 247);
+            this.table.Name = "table";
+            this.table.Size = new System.Drawing.Size(909, 366);
+            this.table.TabIndex = 4;
             // 
             // Users
             // 
@@ -337,7 +372,7 @@ namespace Fine_Management_System.MainWindowItems
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Panel addNewBtn;
         private System.Windows.Forms.Panel filterBtn;
-        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Panel allUsersLine;
         private System.Windows.Forms.Label labelDrivers;
         private System.Windows.Forms.Label labelOfficers;
         private System.Windows.Forms.Label labelAllusrs;
@@ -345,5 +380,8 @@ namespace Fine_Management_System.MainWindowItems
         private System.Windows.Forms.PictureBox usrsSearchIcon;
         private System.Windows.Forms.TextBox usrsSearchInput;
         private System.Windows.Forms.Label labelUsrs;
+        private UsersItems.UserTable table;
+        private System.Windows.Forms.Panel driversLine;
+        private System.Windows.Forms.Panel officersLine;
     }
 }
