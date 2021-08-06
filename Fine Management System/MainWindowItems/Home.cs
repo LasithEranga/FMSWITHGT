@@ -70,7 +70,7 @@ namespace Fine_Management_System
                 try
                 {
                     MySqlDataReader dr = null;
-                    dr = DBConnection.db.Read("SELECT MONTH(Date) AS Month, COUNT(Ref_No) as count FROM fine_receipt WHERE Date >= CURDATE() - INTERVAL 1 YEAR GROUP BY MONTH(Date); ");
+                    dr = DBConnection.db.Read("SELECT MONTHNAME(Date) AS Month, COUNT(Ref_No) as count FROM fine_receipt WHERE Date >= CURDATE() - INTERVAL 1 YEAR GROUP BY MONTH(Date); ");
                     while (dr.Read())
                     {
                         chartMonthlyCases.Series["Series1"].Points.AddXY(dr.GetString("Month"), dr.GetString("count"));
@@ -181,7 +181,7 @@ namespace Fine_Management_System
         }
 
         private void SetThisMonthChart() {
-            string query = "SELECT SUM(amount) as sum, DAY(date) as date FROM payment WHERE date >= DATE(NOW())-INTERVAL 30 Day";
+            string query = "SELECT SUM(amount) as sum, DAY(date) as date FROM payment WHERE date >= DATE(NOW())-INTERVAL 30 Day Group by DATE(date)";
             MySqlDataReader dr = null;
             try
             {

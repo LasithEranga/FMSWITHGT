@@ -77,7 +77,8 @@ namespace Fine_Management_System.MainWindowItems
                     dr = DBConnection.db.Read(query);
                     while (dr.Read())
                     {
-                        chartPanelChart.Series["Series1"].Points.AddXY(dr.GetString(x), dr.GetString(y));
+                        
+                        chartPanelChart.ResetAutoValues();chartPanelChart.Series["Series1"].Points.AddXY(dr.GetString(x), dr.GetString(y));
                     }
                 }
 
@@ -87,6 +88,10 @@ namespace Fine_Management_System.MainWindowItems
                 MainWindow.DBConnectionHelath = false;
             }
         }
-      
+
+        private void goBtn_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
