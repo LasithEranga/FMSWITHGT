@@ -11,8 +11,10 @@ using System.Windows.Forms;
 
 namespace Fine_Management_System.MainWindowItems
 {
+
     public partial class Statistics : UserControl
     {
+       
         private string query = "SELECT SUM(amount) as yaxis, DATE_FORMAT(date,'%Y-%m-%d') as xaxis FROM payment";
         private int selection = 0;
         private string viewBy = "DATE_FORMAT(date,'%d')";
@@ -77,20 +79,27 @@ namespace Fine_Management_System.MainWindowItems
                 textBox1.Text = query;
                 if (Convert.ToBoolean(MainWindow.DBConnectionHelath))
                 {
-                    dr = DBConnection.db.Read(query);
+                    dr = DBConnection.DB.Read(query);
                     chartPanelChart.Series["Series1"].Points.Clear();
                     while (dr.Read())
                     {
-
-                        
                         chartPanelChart.Series["Series1"].Points.AddXY(dr.GetString(x), dr.GetString(y));
                     }
+                    dr.Close();
                 }
 
             }
             catch (MySqlException)
             {
                 MainWindow.DBConnectionHelath = false;
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                
             }
         }
 

@@ -57,5 +57,10 @@ namespace Fine_Management_System.UsersItems
             sqlda.Fill(dtbl);
             table.DataSource = dtbl;
         }
+
+        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

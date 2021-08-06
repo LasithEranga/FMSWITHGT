@@ -103,7 +103,7 @@
     <Compile Include="AddUser\AddUsr.Designer.cs">
       <DependentUpon>AddUsr.cs</DependentUpon>
     </Compile>
-    <Compile Include="DBConnection\db.cs" />
+    <Compile Include="DBConnection\DB.cs" />
     <Compile Include="Error messages\DBError.cs">
       <SubType>Form</SubType>
     </Compile>

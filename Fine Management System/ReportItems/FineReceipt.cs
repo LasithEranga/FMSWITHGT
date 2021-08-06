@@ -25,7 +25,7 @@ namespace Fine_Management_System.ReportItems
                 InitializeComponent();
                 showReceipt.Hide();
                 buttonBack.Hide();
-                string connStr = "server=localhost;user=root;database=fmsdb;port=3306;password=;SSL Mode=None;";
+                string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
                 MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from fine_receipt", connStr);
                 DataTable dtbl = new DataTable();
                 sqlda.Fill(dtbl);
@@ -37,6 +37,8 @@ namespace Fine_Management_System.ReportItems
 
             
         }
+
+           
 
         public bool getState() {
             return DBConnectionHealth;
