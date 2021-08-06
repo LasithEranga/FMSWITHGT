@@ -6,11 +6,17 @@ namespace Fine_Management_System
 {
     public partial class MainWindow : Form
     {
+        public static object DBConnectionHelath { get; internal set; }
+
         public MainWindow()
         {
             InitializeComponent();
             ShowPanel(homePanel);
-
+            if (!(Convert.ToBoolean(DBConnectionHelath)))
+            {
+                new Error_messages.DBError("Database Error", "Cannot establish the database connectivity",this).Show();
+                
+            }
         }
 
         private void closeBtnClick(object sender, EventArgs e)

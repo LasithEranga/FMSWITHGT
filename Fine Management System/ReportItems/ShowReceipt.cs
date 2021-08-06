@@ -15,13 +15,20 @@ namespace Fine_Management_System.ReportItems
     {
         public ShowReceipt()
         {
-            InitializeComponent();
-            string connStr = "server=localhost;user=root;database=fmsdb;port=3306;password=;SSL Mode=None;";
-            MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from fine_receipt", connStr);
-            DataTable dtbl = new DataTable();
-            sqlda.Fill(dtbl);
+            try
+            {
+                InitializeComponent();
+                string connStr = "server=localhost;user=root;database=fmsdb;port=3306;password=;SSL Mode=None;";
+                MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from fine_receipt", connStr);
+                DataTable dtbl = new DataTable();
+                sqlda.Fill(dtbl);
 
-            table.DataSource = dtbl;
+                table.DataSource = dtbl;
+            }
+            catch (Exception)
+            {
+                new Error_messages.InputError("sdn","sjkdbf");
+            }
         }
 
 

@@ -10,30 +10,32 @@ using System.Windows.Forms;
 
 namespace Fine_Management_System.Error_messages
 {
-    public partial class InputError : Form
+    public partial class DBError : Form
     {
-        
-        public InputError()
+        Form form;
+        public DBError()
         {
             InitializeComponent();
         }
-        public InputError(String title, String msg)
+
+        public DBError(String title, String msg, Form form)
         {
             InitializeComponent();
             Title.Text = title;
             this.msg.Text = msg;
+            this.form = form;
+            this.TopMost = true;
+            form.WindowState = FormWindowState.Minimized;
+        }
+
+        private void DBError_Load(object sender, EventArgs e)
+        {
 
         }
 
-
-        private void closeBtnClick(object sender, EventArgs e)
+        private void closeBtn_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-        }
-
-        private void InputError_Load(object sender, EventArgs e)
-        {
-
+            form.Dispose();
         }
     }
 }

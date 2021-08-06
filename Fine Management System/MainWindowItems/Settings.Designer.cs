@@ -30,19 +30,21 @@ namespace Fine_Management_System.MainWindowItems
         private void InitializeComponent()
         {
             this.settingsPanel = new System.Windows.Forms.Panel();
-            this.usersPanel = new Fine_Management_System.MainWindowItems.Users();
             this.labelSettingsTitle = new System.Windows.Forms.Label();
             this.help = new System.Windows.Forms.Panel();
             this.theme = new System.Windows.Forms.Panel();
             this.notification = new System.Windows.Forms.Panel();
             this.language = new System.Windows.Forms.Panel();
             this.user = new System.Windows.Forms.Panel();
+            this.backBtn = new System.Windows.Forms.Button();
+            this.usersPanel = new Fine_Management_System.MainWindowItems.Users();
             this.settingsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // settingsPanel
             // 
             this.settingsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.settingsPanel.Controls.Add(this.backBtn);
             this.settingsPanel.Controls.Add(this.usersPanel);
             this.settingsPanel.Controls.Add(this.labelSettingsTitle);
             this.settingsPanel.Controls.Add(this.help);
@@ -54,13 +56,6 @@ namespace Fine_Management_System.MainWindowItems
             this.settingsPanel.Name = "settingsPanel";
             this.settingsPanel.Size = new System.Drawing.Size(927, 624);
             this.settingsPanel.TabIndex = 8;
-            // 
-            // usersPanel
-            // 
-            this.usersPanel.Location = new System.Drawing.Point(55, 499);
-            this.usersPanel.Name = "usersPanel";
-            this.usersPanel.Size = new System.Drawing.Size(311, 79);
-            this.usersPanel.TabIndex = 15;
             // 
             // labelSettingsTitle
             // 
@@ -119,6 +114,23 @@ namespace Fine_Management_System.MainWindowItems
             this.user.TabIndex = 0;
             this.user.Click += new System.EventHandler(this.userClick);
             // 
+            // backBtn
+            // 
+            this.backBtn.Location = new System.Drawing.Point(799, 571);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(75, 23);
+            this.backBtn.TabIndex = 16;
+            this.backBtn.Text = "Back";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.BackBtnClick);
+            // 
+            // usersPanel
+            // 
+            this.usersPanel.Location = new System.Drawing.Point(55, 499);
+            this.usersPanel.Name = "usersPanel";
+            this.usersPanel.Size = new System.Drawing.Size(311, 79);
+            this.usersPanel.TabIndex = 15;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,5 +154,6 @@ namespace Fine_Management_System.MainWindowItems
         private System.Windows.Forms.Panel language;
         private System.Windows.Forms.Panel user;
         private Users usersPanel;
+        private System.Windows.Forms.Button backBtn;
     }
 }
