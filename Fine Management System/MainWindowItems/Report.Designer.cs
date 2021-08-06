@@ -303,6 +303,8 @@ namespace Fine_Management_System.MainWindowItems
             // 
             // rptSearch
             // 
+            this.rptSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.rptSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.rptSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(41)))), ((int)(((byte)(44)))));
             this.rptSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rptSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -312,6 +314,7 @@ namespace Fine_Management_System.MainWindowItems
             this.rptSearch.Size = new System.Drawing.Size(250, 22);
             this.rptSearch.TabIndex = 0;
             this.rptSearch.Text = "Search Here";
+            this.rptSearch.TextChanged += new System.EventHandler(this.rptSearch_TextChanged);
             this.rptSearch.Enter += new System.EventHandler(this.Focus_Search);
             // 
             // panel1

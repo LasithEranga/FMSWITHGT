@@ -59,6 +59,7 @@ namespace Fine_Management_System.ReportItems
             this.labelRef.Size = new System.Drawing.Size(144, 40);
             this.labelRef.TabIndex = 0;
             this.labelRef.Text = "Ref_No :";
+            this.labelRef.Click += new System.EventHandler(this.labelRef_Click);
             // 
             // labelDriverName
             // 
@@ -138,7 +139,6 @@ namespace Fine_Management_System.ReportItems
             this.Controls.Add(this.panel1);
             this.Name = "ShowReceipt";
             this.Size = new System.Drawing.Size(895, 481);
-            this.Load += new System.EventHandler(this.ShowReceipt_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();

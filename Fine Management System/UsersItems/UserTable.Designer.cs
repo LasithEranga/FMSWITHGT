@@ -65,6 +65,7 @@ namespace Fine_Management_System.UsersItems
             this.table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.table.Size = new System.Drawing.Size(900, 360);
             this.table.TabIndex = 0;
+            this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
             // 
             // UserTable
             // 
