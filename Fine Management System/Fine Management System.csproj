@@ -97,6 +97,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddUser\AddUsr.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     <Compile Include="UsersItems\UserTable.Designer.cs">
       <DependentUpon>UserTable.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="About\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddUser\AddUsr.resx">
       <DependentUpon>AddUsr.cs</DependentUpon>
     </EmbeddedResource>

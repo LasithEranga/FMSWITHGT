@@ -96,7 +96,6 @@ namespace Fine_Management_System.MainWindowItems
             this.reportPanel.Name = "reportPanel";
             this.reportPanel.Size = new System.Drawing.Size(927, 624);
             this.reportPanel.TabIndex = 5;
-            this.reportPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.reportPanel_Paint);
             // 
             // fineReceipt1
             // 
