@@ -49,10 +49,7 @@ namespace Fine_Management_System.MainWindowItems
 
         }
 
-        private void reportPanel_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
 
         private void rptSearch_TextChanged(object sender, EventArgs e)
