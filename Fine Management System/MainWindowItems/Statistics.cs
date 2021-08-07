@@ -22,15 +22,19 @@ namespace Fine_Management_System.MainWindowItems
         public Statistics()
         {
             InitializeComponent();
+            loading.Hide();
             FillChart(query +" where date >= '" + dtpicker1.Text + "' OR date < '" + dtpicker2.Text + "';", "xaxis", "yaxis");
         }
 
         private void GoBtnClick(object sender, EventArgs e)
         {
             dtpicker1.Format = DateTimePickerFormat.Custom;
-            dtpicker1.CustomFormat = "d-M-yyyy";
+            dtpicker1.CustomFormat = "yyyy-MM-dd";
             dtpicker2.Format = DateTimePickerFormat.Custom;
-            dtpicker2.CustomFormat = "d-M-yyyy";
+            dtpicker2.CustomFormat = "yyyy-MM-dd";
+            //loading
+            loading.Text = "Loading....";
+            loading.Show();
             switch (selection)
             {
                 case 0:
@@ -48,8 +52,8 @@ namespace Fine_Management_System.MainWindowItems
 
 
             }
-
-
+            //loading hide
+            loading.Hide();
         }
 
         private void NoCasesToolStripMenuItem_Click(object sender, EventArgs e)
