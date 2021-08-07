@@ -38,14 +38,15 @@ namespace Fine_Management_System
                 }
                 else
                 {
-                    new Error_messages.InputError("Login Failed", "Username or Password is incorrect").Show();
+
+                    new Error_messages.InputError("Login Failed!", "Username or Password is incorrect").Show();
                 }
                 
                 
             }
             catch (NullReferenceException)
             {
-                new Error_messages.InputError("Login Failed", "Username or Password is incorrect").Show();
+                new Error_messages.InputError("Login Failed!", "Username or Password is incorrect").Show();
             }
             catch (MySqlException ex)
             {
