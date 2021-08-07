@@ -27,7 +27,7 @@ namespace Fine_Management_System.AddUser
             Validate_NIC();
             string query = "INSERT INTO `traffic_police_officer`(`police_id`, `fname`, `lname`, `full_name`, `email`, `nic`, `contact_no`, `post`, `address`) VALUES ("+policeId.Text+",'"+fName.Text+"','"+ lName.Text + "','"+ fullName.Text + "','"+ emailAddress.Text + "','"+nicNo.Text+"','"+contactNo.Text+"','"+post.Text+"','"+address.Text+"')";
             address.Text = query;
-            DBConnection.db.Write(query);
+            DBConnection.DB.Write(query);
         }
 
         private void backBtn_Click(object sender, EventArgs e)
