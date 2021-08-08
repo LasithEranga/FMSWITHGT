@@ -29,6 +29,7 @@ namespace Fine_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.navBarPanel = new System.Windows.Forms.Panel();
             this.logoutBtn = new System.Windows.Forms.PictureBox();
@@ -47,6 +48,7 @@ namespace Fine_Management_System
             this.minimizeBtn = new System.Windows.Forms.PictureBox();
             this.usrImage = new System.Windows.Forms.PictureBox();
             this.closeBtn = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.navBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingsBtn)).BeginInit();
@@ -83,18 +85,20 @@ namespace Fine_Management_System
             this.logoutBtn.TabIndex = 7;
             this.logoutBtn.TabStop = false;
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            this.logoutBtn.MouseHover += new System.EventHandler(this.logout_tip);
             // 
             // settingsBtn
             // 
             this.settingsBtn.Image = global::Fine_Management_System.Properties.Resources.settings_new;
             this.settingsBtn.Location = new System.Drawing.Point(12, 506);
             this.settingsBtn.Name = "settingsBtn";
-            this.settingsBtn.Padding = new System.Windows.Forms.Padding(2);
+            this.settingsBtn.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.settingsBtn.Size = new System.Drawing.Size(36, 35);
             this.settingsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.settingsBtn.TabIndex = 3;
             this.settingsBtn.TabStop = false;
             this.settingsBtn.Click += new System.EventHandler(this.SettingsBtnClick);
+            this.settingsBtn.MouseHover += new System.EventHandler(this.setting_tip);
             // 
             // reportBtn
             // 
@@ -107,18 +111,20 @@ namespace Fine_Management_System
             this.reportBtn.TabIndex = 4;
             this.reportBtn.TabStop = false;
             this.reportBtn.Click += new System.EventHandler(this.reportBtnClick);
+            this.reportBtn.MouseHover += new System.EventHandler(this.report_tip);
             // 
             // chartBtn
             // 
             this.chartBtn.Image = global::Fine_Management_System.Properties.Resources.chart_new;
             this.chartBtn.Location = new System.Drawing.Point(12, 94);
             this.chartBtn.Name = "chartBtn";
-            this.chartBtn.Padding = new System.Windows.Forms.Padding(2);
+            this.chartBtn.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chartBtn.Size = new System.Drawing.Size(37, 37);
             this.chartBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.chartBtn.TabIndex = 5;
             this.chartBtn.TabStop = false;
             this.chartBtn.Click += new System.EventHandler(this.ChartBtnClick);
+            this.chartBtn.MouseHover += new System.EventHandler(this.chart_tip);
             // 
             // homeBtn
             // 
@@ -131,6 +137,7 @@ namespace Fine_Management_System
             this.homeBtn.TabIndex = 6;
             this.homeBtn.TabStop = false;
             this.homeBtn.Click += new System.EventHandler(this.HomeBtnClick);
+            this.homeBtn.MouseHover += new System.EventHandler(this.Tooltip_hover);
             // 
             // windowPanel
             // 
@@ -146,30 +153,34 @@ namespace Fine_Management_System
             // 
             // statisticsPanel
             // 
-            this.statisticsPanel.Location = new System.Drawing.Point(299, 197);
+            this.statisticsPanel.Location = new System.Drawing.Point(284, 25);
+            this.statisticsPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.statisticsPanel.Name = "statisticsPanel";
-            this.statisticsPanel.Size = new System.Drawing.Size(266, 183);
+            this.statisticsPanel.Size = new System.Drawing.Size(145, 63);
             this.statisticsPanel.TabIndex = 16;
             // 
             // settingsPanel
             // 
-            this.settingsPanel.Location = new System.Drawing.Point(20, 197);
+            this.settingsPanel.Location = new System.Drawing.Point(44, 201);
+            this.settingsPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.settingsPanel.Name = "settingsPanel";
-            this.settingsPanel.Size = new System.Drawing.Size(256, 183);
+            this.settingsPanel.Size = new System.Drawing.Size(220, 168);
             this.settingsPanel.TabIndex = 14;
             // 
             // reportPanel
             // 
-            this.reportPanel.Location = new System.Drawing.Point(299, 3);
+            this.reportPanel.Location = new System.Drawing.Point(148, 25);
+            this.reportPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportPanel.Name = "reportPanel";
-            this.reportPanel.Size = new System.Drawing.Size(266, 165);
+            this.reportPanel.Size = new System.Drawing.Size(128, 63);
             this.reportPanel.TabIndex = 13;
             // 
             // homePanel
             // 
             this.homePanel.Location = new System.Drawing.Point(20, 14);
+            this.homePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(256, 154);
+            this.homePanel.Size = new System.Drawing.Size(77, 65);
             this.homePanel.TabIndex = 12;
             // 
             // usrNameTop
@@ -292,5 +303,6 @@ namespace Fine_Management_System
         private MainWindowItems.Statistics statisticsPanel;
         private MainWindowItems.Settings settingsPanel;
         private MainWindowItems.Report reportPanel;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

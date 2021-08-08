@@ -129,5 +129,10 @@ namespace Fine_Management_System.MainWindowItems
             viewBy = "YEAR(date)";
             group = " Group by Year(date)";
         }
+
+        private void go_tip(object sender, EventArgs e)
+        {
+            toolTip4.Show("Go", goBtn);
+        }
     }
 }
