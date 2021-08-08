@@ -115,6 +115,7 @@
     <Compile Include="Aletrs\DataSaved.Designer.cs">
       <DependentUpon>DataSaved.cs</DependentUpon>
     </Compile>
+    <Compile Include="RandomGen.cs" />
     <Compile Include="DBConnection\DB.cs" />
     <Compile Include="Error messages\DBError.cs">
       <SubType>Form</SubType>
@@ -183,6 +184,12 @@
     <Compile Include="Popup\Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Popup\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportItems\FineReceipt.cs">
@@ -250,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Popup\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
