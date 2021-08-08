@@ -29,6 +29,7 @@ namespace Fine_Management_System
             setIncome();
             SetCasesByDate();
             SetThisMonthChart();
+            
             conn.Close();
         }
 
@@ -143,6 +144,8 @@ namespace Fine_Management_System
             }
 
         }
+
+        
 
 
 
