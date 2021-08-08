@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
+using System.Net;
 
 namespace Fine_Management_System.AddUser
 {
@@ -39,7 +40,29 @@ namespace Fine_Management_System.AddUser
                 
 
             }
-            
+                try
+                {
+                    SmtpClient clientDetail = new SmtpClient();
+                    clientDetail.Host = "smtp.gmail.com";
+                    clientDetail.Port = 587;
+                    clientDetail.EnableSsl = true;
+                    clientDetail.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    clientDetail.UseDefaultCredentials = false;
+                    clientDetail.Credentials = new NetworkCredential("finexpayment@gmail.com", "Sinerugroup9");
+                    MailMessage mailDetails = new MailMessage();
+                    mailDetails.From = new MailAddress("finexpayment@gmail.com");
+                    mailDetails.To.Add(emailAddress.Text);
+                    mailDetails.Subject = "Account Password";
+                    mailDetails.Body = RandomGen.password();
+
+                    clientDetail.Send(mailDetails);
+                    MessageBox.Show("Your mail has been sent");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -50,6 +73,7 @@ namespace Fine_Management_System.AddUser
         private void clearAllBtn_Click(object sender, EventArgs e)
         {
             ClearAll();
+            
         }
 
         private void ClearAll()
@@ -267,5 +291,6 @@ namespace Fine_Management_System.AddUser
         {
 
         }
+        
     }
 }

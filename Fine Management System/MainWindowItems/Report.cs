@@ -182,5 +182,20 @@ namespace Fine_Management_System.MainWindowItems
 
 
         }
+
+        private void go_tip(object sender, EventArgs e)
+        {
+            toolTip3.Show("Go", gobtn);
+        }
+
+        private void share_tip(object sender, EventArgs e)
+        {
+            toolTip3.Show("Share", shareBtn);
+        }
+
+        private void saveas_tip(object sender, EventArgs e)
+        {
+            toolTip3.Show("Save_as", saveAsPdfBtn);
+        }
     }
 }
