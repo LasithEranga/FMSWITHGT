@@ -50,6 +50,7 @@ namespace Fine_Management_System.AddUser
         private void clearAllBtn_Click(object sender, EventArgs e)
         {
             ClearAll();
+            MessageBox.Show(Class1.password());
         }
 
         private void ClearAll()
