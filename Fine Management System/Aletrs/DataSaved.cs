@@ -26,5 +26,10 @@ namespace Fine_Management_System.Aletrs
         {
             this.Dispose();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

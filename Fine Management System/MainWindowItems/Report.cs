@@ -19,15 +19,9 @@ namespace Fine_Management_System.MainWindowItems
         public Report()
         {
             InitializeComponent();
+            list.SelectedIndex = 0;
         }
 
-        private void RptInput(object sender, EventArgs e)
-        {
-            if (rptPgNo.Text == "")
-            {
-                rptPgNo.Select(rptPgNo.Text.Length, 0);
-            }
-        }
 
         private void Focus_Search(object sender, EventArgs e)
         {
@@ -73,5 +67,120 @@ namespace Fine_Management_System.MainWindowItems
            
         }
 
+        private void IndexChanged(object sender, EventArgs e)
+        {
+            string query = "";
+            switch (list.SelectedIndex)
+            {
+                /*Expired
+                Sued List
+                Pending
+                Paid
+                All Records*/
+                case 0:
+                    {
+                        //Expired
+                        query = "SELECT `Ref_No`, `Date`, `Amount`, `vehicle`, `State`, `driver_nic` FROM fine_receipt WHERE Date <= CURDATE() - INTERVAL 2 WEEK AND State = 0";
+                        fineReceipt1.FineReceiptWithQuery(query);
+                        fineReceipt1.UnselectAll();
+                        
+                        break;
+                    }
+
+                case 1:
+                    {
+                        //Sued List
+                        query = "SELECT `Ref_No`, `Date`, `Amount`, `vehicle`, `State`, `driver_nic` FROM fine_receipt WHERE State = 9 ";
+                        fineReceipt1.FineReceiptWithQuery(query);
+                        fineReceipt1.UnselectAll();
+                        
+                        break;
+                    }
+
+                case 2:
+                    {
+                        //Pending
+                        query = "SELECT `Ref_No`, `Date`, `Amount`, `vehicle`, `State`, `driver_nic` FROM fine_receipt WHERE Date >= CURDATE() - INTERVAL 2 WEEK AND State = 0";
+                        fineReceipt1.FineReceiptWithQuery(query);
+                        fineReceipt1.UnselectAll();
+                        
+                        break;
+                    }
+
+                case 3:
+                    {
+                        //Paid
+                        query = "SELECT `Ref_No`, `Date`, `Amount`, `vehicle`, `State`, `driver_nic` FROM fine_receipt WHERE State = 1 ";
+                        fineReceipt1.FineReceiptWithQuery(query);
+                        fineReceipt1.UnselectAll();
+                        break;
+                    }
+                case 4:
+                    {
+                        //All Records
+                        query = "SELECT `Ref_No`, `Date`, `Amount`, `vehicle`, `State`, `driver_nic` FROM fine_receipt WHERE 1 " ;
+                        fineReceipt1.FineReceiptWithQuery(query);
+                        fineReceipt1.UnselectAll();
+                        break;
+                    }
+            }
+        }
+
+        private void GoBtnClick(object sender, EventArgs e)
+        {
+            string query = "";
+            string dateFilter = "";
+            if(list.SelectedIndex == 0 || list.SelectedIndex == 2)
+            {
+                //report error
+            }
+            else
+            {
+                dateTimePicker1.Format = DateTimePickerFormat.Custom;
+                dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+                dateTimePicker2.Format = DateTimePickerFormat.Custom;
+                dateTimePicker2.CustomFormat = "yyyy-MM-dd";
+                dateFilter = "date >= '" + dateTimePicker1.Text + "' AND date< '" + dateTimePicker2.Text+"'";
+
+                switch (list.SelectedIndex)
+                {
+                    /*Expired
+                    Sued List
+                    Pending
+                    Paid
+                    All Records*/
+                   
+                    case 1:
+                        {
+                            //Sued List
+                            query = "SELECT `Ref_No`, `Date`, `Amount`, `vehicle`, `State`, `driver_nic` FROM fine_receipt WHERE State = 9 AND" + dateFilter;
+                            fineReceipt1.FineReceiptWithQuery(query);
+                            fineReceipt1.UnselectAll();
+                            break;
+                        }
+
+                    case 3:
+                        {
+                            //Paid
+                            query = "SELECT `Ref_No`, `Date`, `Amount`, `vehicle`, `State`, `driver_nic` FROM fine_receipt WHERE State = 1 AND" + dateFilter;
+                            fineReceipt1.FineReceiptWithQuery(query);
+                            fineReceipt1.UnselectAll();
+                            
+                            break;
+                        }
+                    case 4:
+                        {
+                            //All Records
+                            query = "SELECT `Ref_No`, `Date`, `Amount`, `vehicle`, `State`, `driver_nic` FROM fine_receipt WHERE " + dateFilter;
+                            fineReceipt1.FineReceiptWithQuery(query);
+                            fineReceipt1.UnselectAll();
+                            
+                            break;
+                        }
+                }
+            }
+
+
+        }
     }
 }

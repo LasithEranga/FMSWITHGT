@@ -229,8 +229,8 @@ namespace Fine_Management_System.AddUser
         }
         private bool ValidatePhoneNo()
         {
-            
-            if (contactNo.Text.Length == 21)
+            Regex rgx = new Regex(@"^\d{10}$");
+            if (rgx.IsMatch(GetPhoneNo()))
             {
                 return true;
             }
@@ -240,12 +240,22 @@ namespace Fine_Management_System.AddUser
                 return false;
             }
         }
+
         private string GetPhoneNo()
         {
             string phoneNo = "";
-            phoneNo = contactNo.Text.Substring(6, 2)+ contactNo.Text.Substring(10, 4) + contactNo.Text.Substring(16, 5);
-            phoneNo = "0"+phoneNo.Replace(" ", "");
-            return phoneNo;
+            try
+            {
+                phoneNo = contactNo.Text.Substring(6, 2) + contactNo.Text.Substring(10, 4) + contactNo.Text.Substring(16, 5);
+                phoneNo = "0" + phoneNo.Replace(" ", "");
+                return phoneNo;
+            }
+            catch
+            {
+                return phoneNo;
+
+            }
+            
         }
 
         private void usrImage_Click(object sender, EventArgs e)
