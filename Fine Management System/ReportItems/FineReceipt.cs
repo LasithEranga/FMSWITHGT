@@ -38,7 +38,24 @@ namespace Fine_Management_System.ReportItems
             
         }
 
-           
+        public void FineReceiptWithQuery(string query)
+        {
+            try
+            {
+                string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
+                MySqlDataAdapter sqlda = new MySqlDataAdapter(query, connStr);
+                DataTable dtbl = new DataTable();
+                sqlda.Fill(dtbl);
+                table.DataSource = dtbl;
+            }
+            catch (MySqlException)
+            {
+                MainWindow.DBConnectionHelath = false;
+            }
+
+
+        }
+
 
         public bool getState() {
             return DBConnectionHealth;
