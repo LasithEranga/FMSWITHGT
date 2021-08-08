@@ -30,18 +30,11 @@ namespace Fine_Management_System.MainWindowItems
         private void InitializeComponent()
         {
             this.reportPanel = new System.Windows.Forms.Panel();
-            this.fineReceipt1 = new Fine_Management_System.ReportItems.FineReceipt();
             this.gobtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.rptSearchIcon = new System.Windows.Forms.Panel();
             this.rptNav = new System.Windows.Forms.Panel();
-            this.rptffRight = new System.Windows.Forms.Button();
-            this.rptfRight = new System.Windows.Forms.Button();
-            this.rptNoPg = new System.Windows.Forms.Label();
-            this.labelOf = new System.Windows.Forms.Label();
-            this.rptPgNo = new System.Windows.Forms.MaskedTextBox();
-            this.rptfLeft = new System.Windows.Forms.Button();
-            this.rptffLeft = new System.Windows.Forms.Button();
+            this.list = new System.Windows.Forms.ComboBox();
             this.dpIcon2 = new System.Windows.Forms.Panel();
             this.dpIcon1 = new System.Windows.Forms.Panel();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -50,27 +43,13 @@ namespace Fine_Management_System.MainWindowItems
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel11 = new System.Windows.Forms.Panel();
             this.rptSearch = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportToPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportAsJpgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.filterByToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.amountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.venueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportTextBox = new System.Windows.Forms.RichTextBox();
             this.saveAsPdfBtn = new System.Windows.Forms.Panel();
             this.shareBtn = new System.Windows.Forms.Panel();
+            this.fineReceipt1 = new Fine_Management_System.ReportItems.FineReceipt();
             this.reportPanel.SuspendLayout();
             this.rptNav.SuspendLayout();
             this.panel11.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // reportPanel
@@ -88,7 +67,6 @@ namespace Fine_Management_System.MainWindowItems
             this.reportPanel.Controls.Add(this.labelFrom);
             this.reportPanel.Controls.Add(this.dateTimePicker1);
             this.reportPanel.Controls.Add(this.panel11);
-            this.reportPanel.Controls.Add(this.panel1);
             this.reportPanel.Controls.Add(this.reportTextBox);
             this.reportPanel.Controls.Add(this.saveAsPdfBtn);
             this.reportPanel.Controls.Add(this.shareBtn);
@@ -96,13 +74,6 @@ namespace Fine_Management_System.MainWindowItems
             this.reportPanel.Name = "reportPanel";
             this.reportPanel.Size = new System.Drawing.Size(927, 624);
             this.reportPanel.TabIndex = 5;
-            // 
-            // fineReceipt1
-            // 
-            this.fineReceipt1.Location = new System.Drawing.Point(18, 121);
-            this.fineReceipt1.Name = "fineReceipt1";
-            this.fineReceipt1.Size = new System.Drawing.Size(895, 481);
-            this.fineReceipt1.TabIndex = 16;
             // 
             // gobtn
             // 
@@ -116,6 +87,7 @@ namespace Fine_Management_System.MainWindowItems
             this.gobtn.TabIndex = 15;
             this.gobtn.Text = "Go";
             this.gobtn.UseVisualStyleBackColor = false;
+            this.gobtn.Click += new System.EventHandler(this.GoBtnClick);
             // 
             // label1
             // 
@@ -141,101 +113,33 @@ namespace Fine_Management_System.MainWindowItems
             // rptNav
             // 
             this.rptNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.rptNav.Controls.Add(this.rptffRight);
-            this.rptNav.Controls.Add(this.rptfRight);
-            this.rptNav.Controls.Add(this.rptNoPg);
-            this.rptNav.Controls.Add(this.labelOf);
-            this.rptNav.Controls.Add(this.rptPgNo);
-            this.rptNav.Controls.Add(this.rptfLeft);
-            this.rptNav.Controls.Add(this.rptffLeft);
-            this.rptNav.Location = new System.Drawing.Point(322, 1);
+            this.rptNav.Controls.Add(this.list);
+            this.rptNav.Location = new System.Drawing.Point(297, 1);
             this.rptNav.Name = "rptNav";
-            this.rptNav.Size = new System.Drawing.Size(302, 36);
+            this.rptNav.Size = new System.Drawing.Size(327, 36);
             this.rptNav.TabIndex = 11;
             // 
-            // rptffRight
+            // list
             // 
-            this.rptffRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.rptffRight.FlatAppearance.BorderSize = 0;
-            this.rptffRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rptffRight.ForeColor = System.Drawing.SystemColors.Control;
-            this.rptffRight.Location = new System.Drawing.Point(249, 5);
-            this.rptffRight.Name = "rptffRight";
-            this.rptffRight.Size = new System.Drawing.Size(30, 23);
-            this.rptffRight.TabIndex = 6;
-            this.rptffRight.Text = ">>";
-            this.rptffRight.UseVisualStyleBackColor = false;
-            // 
-            // rptfRight
-            // 
-            this.rptfRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.rptfRight.FlatAppearance.BorderSize = 0;
-            this.rptfRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rptfRight.ForeColor = System.Drawing.SystemColors.Control;
-            this.rptfRight.Location = new System.Drawing.Point(204, 6);
-            this.rptfRight.Name = "rptfRight";
-            this.rptfRight.Size = new System.Drawing.Size(30, 23);
-            this.rptfRight.TabIndex = 5;
-            this.rptfRight.Text = ">";
-            this.rptfRight.UseVisualStyleBackColor = false;
-            // 
-            // rptNoPg
-            // 
-            this.rptNoPg.AutoSize = true;
-            this.rptNoPg.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.rptNoPg.Location = new System.Drawing.Point(159, 12);
-            this.rptNoPg.Name = "rptNoPg";
-            this.rptNoPg.Size = new System.Drawing.Size(25, 13);
-            this.rptNoPg.TabIndex = 4;
-            this.rptNoPg.Text = "564";
-            // 
-            // labelOf
-            // 
-            this.labelOf.AutoSize = true;
-            this.labelOf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.labelOf.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelOf.Location = new System.Drawing.Point(136, 12);
-            this.labelOf.Name = "labelOf";
-            this.labelOf.Size = new System.Drawing.Size(16, 13);
-            this.labelOf.TabIndex = 3;
-            this.labelOf.Text = "of";
-            // 
-            // rptPgNo
-            // 
-            this.rptPgNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.rptPgNo.ForeColor = System.Drawing.SystemColors.Control;
-            this.rptPgNo.Location = new System.Drawing.Point(90, 7);
-            this.rptPgNo.Mask = "00000";
-            this.rptPgNo.Name = "rptPgNo";
-            this.rptPgNo.Size = new System.Drawing.Size(37, 20);
-            this.rptPgNo.TabIndex = 2;
-            this.rptPgNo.ValidatingType = typeof(int);
-            this.rptPgNo.Click += new System.EventHandler(this.RptInput);
-            // 
-            // rptfLeft
-            // 
-            this.rptfLeft.FlatAppearance.BorderSize = 0;
-            this.rptfLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rptfLeft.ForeColor = System.Drawing.SystemColors.Control;
-            this.rptfLeft.Location = new System.Drawing.Point(51, 5);
-            this.rptfLeft.Name = "rptfLeft";
-            this.rptfLeft.Size = new System.Drawing.Size(30, 23);
-            this.rptfLeft.TabIndex = 1;
-            this.rptfLeft.Text = "<";
-            this.rptfLeft.UseVisualStyleBackColor = true;
-            // 
-            // rptffLeft
-            // 
-            this.rptffLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.rptffLeft.FlatAppearance.BorderSize = 0;
-            this.rptffLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rptffLeft.ForeColor = System.Drawing.SystemColors.Control;
-            this.rptffLeft.Location = new System.Drawing.Point(6, 5);
-            this.rptffLeft.Name = "rptffLeft";
-            this.rptffLeft.Size = new System.Drawing.Size(30, 23);
-            this.rptffLeft.TabIndex = 0;
-            this.rptffLeft.Text = "<<";
-            this.rptffLeft.UseVisualStyleBackColor = false;
+            this.list.AllowDrop = true;
+            this.list.AutoCompleteCustomSource.AddRange(new string[] {
+            "Expired"});
+            this.list.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.list.BackColor = System.Drawing.SystemColors.InfoText;
+            this.list.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.list.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.list.FormattingEnabled = true;
+            this.list.Items.AddRange(new object[] {
+            "Expired",
+            "Sued List",
+            "Pending",
+            "Paid",
+            "All Records"});
+            this.list.Location = new System.Drawing.Point(192, 6);
+            this.list.Name = "list";
+            this.list.Size = new System.Drawing.Size(121, 21);
+            this.list.TabIndex = 6;
+            this.list.SelectedIndexChanged += new System.EventHandler(this.IndexChanged);
             // 
             // dpIcon2
             // 
@@ -320,112 +224,6 @@ namespace Fine_Management_System.MainWindowItems
             this.rptSearch.TextChanged += new System.EventHandler(this.rptSearch_TextChanged);
             this.rptSearch.Enter += new System.EventHandler(this.Focus_Search);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.menuStrip1);
-            this.panel1.Location = new System.Drawing.Point(122, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 36);
-            this.panel1.TabIndex = 3;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.exportToolStripMenuItem,
-            this.filterByToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(200, 36);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saveAsToolStripMenuItem,
-            this.closeToolStripMenuItem});
-            this.fileToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 32);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // saveAsToolStripMenuItem
-            // 
-            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.saveAsToolStripMenuItem.Text = "&Save As...";
-            // 
-            // closeToolStripMenuItem
-            // 
-            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.closeToolStripMenuItem.Text = "&Close";
-            // 
-            // exportToolStripMenuItem
-            // 
-            this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exportToPDFToolStripMenuItem,
-            this.exportAsJpgToolStripMenuItem});
-            this.exportToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(52, 32);
-            this.exportToolStripMenuItem.Text = "Export";
-            // 
-            // exportToPDFToolStripMenuItem
-            // 
-            this.exportToPDFToolStripMenuItem.Name = "exportToPDFToolStripMenuItem";
-            this.exportToPDFToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.exportToPDFToolStripMenuItem.Text = "&Export as pdf";
-            // 
-            // exportAsJpgToolStripMenuItem
-            // 
-            this.exportAsJpgToolStripMenuItem.Name = "exportAsJpgToolStripMenuItem";
-            this.exportAsJpgToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.exportAsJpgToolStripMenuItem.Text = "&Export as jpg";
-            // 
-            // filterByToolStripMenuItem
-            // 
-            this.filterByToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dateToolStripMenuItem,
-            this.amountToolStripMenuItem,
-            this.nameToolStripMenuItem,
-            this.venueToolStripMenuItem});
-            this.filterByToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
-            this.filterByToolStripMenuItem.Image = global::Fine_Management_System.Properties.Resources.filterBtn;
-            this.filterByToolStripMenuItem.Name = "filterByToolStripMenuItem";
-            this.filterByToolStripMenuItem.Size = new System.Drawing.Size(81, 32);
-            this.filterByToolStripMenuItem.Text = "Filter by";
-            // 
-            // dateToolStripMenuItem
-            // 
-            this.dateToolStripMenuItem.Name = "dateToolStripMenuItem";
-            this.dateToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.dateToolStripMenuItem.Text = "Date";
-            // 
-            // amountToolStripMenuItem
-            // 
-            this.amountToolStripMenuItem.Name = "amountToolStripMenuItem";
-            this.amountToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.amountToolStripMenuItem.Text = "Amount";
-            // 
-            // nameToolStripMenuItem
-            // 
-            this.nameToolStripMenuItem.Name = "nameToolStripMenuItem";
-            this.nameToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.nameToolStripMenuItem.Text = "Name";
-            // 
-            // venueToolStripMenuItem
-            // 
-            this.venueToolStripMenuItem.Name = "venueToolStripMenuItem";
-            this.venueToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.venueToolStripMenuItem.Text = "Venue";
-            // 
             // reportTextBox
             // 
             this.reportTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
@@ -457,6 +255,13 @@ namespace Fine_Management_System.MainWindowItems
             this.shareBtn.Size = new System.Drawing.Size(92, 34);
             this.shareBtn.TabIndex = 0;
             // 
+            // fineReceipt1
+            // 
+            this.fineReceipt1.Location = new System.Drawing.Point(18, 121);
+            this.fineReceipt1.Name = "fineReceipt1";
+            this.fineReceipt1.Size = new System.Drawing.Size(895, 481);
+            this.fineReceipt1.TabIndex = 16;
+            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,13 +272,8 @@ namespace Fine_Management_System.MainWindowItems
             this.reportPanel.ResumeLayout(false);
             this.reportPanel.PerformLayout();
             this.rptNav.ResumeLayout(false);
-            this.rptNav.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -484,13 +284,6 @@ namespace Fine_Management_System.MainWindowItems
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel rptSearchIcon;
         private System.Windows.Forms.Panel rptNav;
-        private System.Windows.Forms.Button rptffRight;
-        private System.Windows.Forms.Button rptfRight;
-        private System.Windows.Forms.Label rptNoPg;
-        private System.Windows.Forms.Label labelOf;
-        private System.Windows.Forms.MaskedTextBox rptPgNo;
-        private System.Windows.Forms.Button rptfLeft;
-        private System.Windows.Forms.Button rptffLeft;
         private System.Windows.Forms.Panel dpIcon2;
         private System.Windows.Forms.Panel dpIcon1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
@@ -499,23 +292,11 @@ namespace Fine_Management_System.MainWindowItems
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TextBox rptSearch;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportToPDFToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportAsJpgToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem filterByToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dateToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem amountToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nameToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem venueToolStripMenuItem;
         private System.Windows.Forms.RichTextBox reportTextBox;
         private System.Windows.Forms.Panel saveAsPdfBtn;
         private System.Windows.Forms.Panel shareBtn;
         private System.Windows.Forms.Button gobtn;
         private ReportItems.FineReceipt fineReceipt1;
+        private System.Windows.Forms.ComboBox list;
     }
 }
