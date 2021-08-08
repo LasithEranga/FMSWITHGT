@@ -1,7 +1,7 @@
 ﻿
 namespace Fine_Management_System.Popup
 {
-    partial class Form1
+    partial class UpdateOfficer
     {
         /// <summary>
         /// Required designer variable.
@@ -29,15 +29,15 @@ namespace Fine_Management_System.Popup
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateOfficer));
             this.line = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.address = new System.Windows.Forms.RichTextBox();
+            this.policeId = new System.Windows.Forms.MaskedTextBox();
+            this.post = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.addUsrBtn = new System.Windows.Forms.Button();
             this.clearAllBtn = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
@@ -50,6 +50,7 @@ namespace Fine_Management_System.Popup
             this.lName = new System.Windows.Forms.TextBox();
             this.fName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -67,7 +68,7 @@ namespace Fine_Management_System.Popup
             this.line.Location = new System.Drawing.Point(8, 53);
             this.line.Name = "line";
             this.line.Size = new System.Drawing.Size(472, 5);
-            this.line.TabIndex = 1;
+            this.line.TabIndex = 3;
             // 
             // label1
             // 
@@ -76,19 +77,18 @@ namespace Fine_Management_System.Popup
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(10, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(327, 39);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Update User Details";
+            this.label1.Size = new System.Drawing.Size(357, 39);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Update Officer Details";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.policeId);
+            this.panel2.Controls.Add(this.post);
+            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.addUsrBtn);
             this.panel2.Controls.Add(this.clearAllBtn);
             this.panel2.Controls.Add(this.backBtn);
@@ -101,6 +101,7 @@ namespace Fine_Management_System.Popup
             this.panel2.Controls.Add(this.lName);
             this.panel2.Controls.Add(this.fName);
             this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
@@ -111,54 +112,6 @@ namespace Fine_Management_System.Popup
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(474, 406);
             this.panel2.TabIndex = 15;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox2.Location = new System.Drawing.Point(278, 241);
-            this.textBox2.MaxLength = 12;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(177, 25);
-            this.textBox2.TabIndex = 32;
-            this.textBox2.WordWrap = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(275, 220);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(90, 15);
-            this.label12.TabIndex = 31;
-            this.label12.Text = "Vehicle Number";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox1.Location = new System.Drawing.Point(278, 166);
-            this.textBox1.MaxLength = 12;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 25);
-            this.textBox1.TabIndex = 30;
-            this.textBox1.WordWrap = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(275, 145);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 15);
-            this.label8.TabIndex = 29;
-            this.label8.Text = "Licence Number";
             // 
             // panel1
             // 
@@ -182,6 +135,41 @@ namespace Fine_Management_System.Popup
             this.address.TabIndex = 0;
             this.address.Text = "";
             // 
+            // policeId
+            // 
+            this.policeId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.policeId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.policeId.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.policeId.ForeColor = System.Drawing.SystemColors.Control;
+            this.policeId.Location = new System.Drawing.Point(278, 148);
+            this.policeId.Mask = "00000";
+            this.policeId.Name = "policeId";
+            this.policeId.Size = new System.Drawing.Size(114, 25);
+            this.policeId.TabIndex = 8;
+            // 
+            // post
+            // 
+            this.post.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.post.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.post.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.post.ForeColor = System.Drawing.SystemColors.Control;
+            this.post.Location = new System.Drawing.Point(278, 202);
+            this.post.Name = "post";
+            this.post.Size = new System.Drawing.Size(114, 25);
+            this.post.TabIndex = 9;
+            this.post.WordWrap = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.Control;
+            this.label12.Location = new System.Drawing.Point(275, 181);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(31, 15);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Post";
+            // 
             // addUsrBtn
             // 
             this.addUsrBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(198)))), ((int)(((byte)(143)))));
@@ -189,11 +177,11 @@ namespace Fine_Management_System.Popup
             this.addUsrBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addUsrBtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addUsrBtn.ForeColor = System.Drawing.Color.White;
-            this.addUsrBtn.Location = new System.Drawing.Point(368, 364);
+            this.addUsrBtn.Location = new System.Drawing.Point(377, 364);
             this.addUsrBtn.Name = "addUsrBtn";
             this.addUsrBtn.Size = new System.Drawing.Size(87, 30);
             this.addUsrBtn.TabIndex = 11;
-            this.addUsrBtn.Text = "Update ";
+            this.addUsrBtn.Text = "Update";
             this.addUsrBtn.UseVisualStyleBackColor = false;
             // 
             // clearAllBtn
@@ -203,7 +191,7 @@ namespace Fine_Management_System.Popup
             this.clearAllBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearAllBtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearAllBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.clearAllBtn.Location = new System.Drawing.Point(193, 364);
+            this.clearAllBtn.Location = new System.Drawing.Point(200, 364);
             this.clearAllBtn.Name = "clearAllBtn";
             this.clearAllBtn.Size = new System.Drawing.Size(87, 30);
             this.clearAllBtn.TabIndex = 13;
@@ -338,6 +326,17 @@ namespace Fine_Management_System.Popup
             this.label9.TabIndex = 7;
             this.label9.Text = "Permanent Address";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.Control;
+            this.label8.Location = new System.Drawing.Point(275, 127);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 15);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Police ID Number";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -404,7 +403,7 @@ namespace Fine_Management_System.Popup
             this.label2.TabIndex = 0;
             this.label2.Text = "First Name";
             // 
-            // Form1
+            // UpdateOfficer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -413,9 +412,10 @@ namespace Fine_Management_System.Popup
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.line);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form1";
-            this.Text = "Update new user";
+            this.Name = "UpdateOfficer";
+            this.Text = "Update Officer";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -431,6 +431,9 @@ namespace Fine_Management_System.Popup
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RichTextBox address;
+        private System.Windows.Forms.MaskedTextBox policeId;
+        private System.Windows.Forms.TextBox post;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button addUsrBtn;
         private System.Windows.Forms.Button clearAllBtn;
         private System.Windows.Forms.Button backBtn;
@@ -443,15 +446,12 @@ namespace Fine_Management_System.Popup
         private System.Windows.Forms.TextBox lName;
         private System.Windows.Forms.TextBox fName;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label8;
     }
 }

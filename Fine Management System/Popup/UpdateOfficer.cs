@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Fine_Management_System.Popup
 {
-    public partial class Form1 : Form
+    public partial class UpdateOfficer : Form
     {
-        public Form1()
+        public UpdateOfficer()
         {
             InitializeComponent();
         }
-
-       
     }
 }

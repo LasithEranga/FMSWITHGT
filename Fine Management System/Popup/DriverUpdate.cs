@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Fine_Management_System.Popup
 {
-    public partial class Form2 : Form
+    public partial class DriverUpdate : Form
     {
-        public Form2()
+        public DriverUpdate()
         {
             InitializeComponent();
         }
+
+       
     }
 }

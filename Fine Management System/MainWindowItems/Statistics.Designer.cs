@@ -30,9 +30,9 @@ namespace Fine_Management_System.MainWindowItems
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartPanel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.loading = new System.Windows.Forms.Label();
@@ -59,7 +59,6 @@ namespace Fine_Management_System.MainWindowItems
             this.chartToLabel = new System.Windows.Forms.Label();
             this.chartFromLabel = new System.Windows.Forms.Label();
             this.chartBackground = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.statLegendLabel = new System.Windows.Forms.Label();
             this.casesLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -179,21 +178,21 @@ namespace Fine_Management_System.MainWindowItems
             // revenueToolStripMenuItem
             // 
             this.revenueToolStripMenuItem.Name = "revenueToolStripMenuItem";
-            this.revenueToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.revenueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.revenueToolStripMenuItem.Text = "&Revenue";
             this.revenueToolStripMenuItem.Click += new System.EventHandler(this.revenueToolStripMenuItem_Click);
             // 
             // noCasesToolStripMenuItem
             // 
             this.noCasesToolStripMenuItem.Name = "noCasesToolStripMenuItem";
-            this.noCasesToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.noCasesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.noCasesToolStripMenuItem.Text = "&No_Cases";
             this.noCasesToolStripMenuItem.Click += new System.EventHandler(this.NoCasesToolStripMenuItem_Click);
             // 
             // vehicleTypeToolStripMenuItem
             // 
             this.vehicleTypeToolStripMenuItem.Name = "vehicleTypeToolStripMenuItem";
-            this.vehicleTypeToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.vehicleTypeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vehicleTypeToolStripMenuItem.Text = "&Vehicle Type";
             this.vehicleTypeToolStripMenuItem.Click += new System.EventHandler(this.vehicleTypeToolStripMenuItem_Click);
             // 
@@ -204,20 +203,24 @@ namespace Fine_Management_System.MainWindowItems
             this.barGraphToolStripMenuItem});
             this.chartTypeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.chartTypeToolStripMenuItem.Name = "chartTypeToolStripMenuItem";
-            this.chartTypeToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.chartTypeToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.chartTypeToolStripMenuItem.Text = "&Chart Type";
+            this.chartTypeToolStripMenuItem.DropDownClosed += new System.EventHandler(this.DropDownClosed);
+            this.chartTypeToolStripMenuItem.Click += new System.EventHandler(this.chartTypeToolStripMenuItem_Click);
             // 
             // lineChartToolStripMenuItem
             // 
             this.lineChartToolStripMenuItem.Name = "lineChartToolStripMenuItem";
-            this.lineChartToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.lineChartToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.lineChartToolStripMenuItem.Text = "&Line Chart";
+            this.lineChartToolStripMenuItem.Click += new System.EventHandler(this.lineChartToolStripMenuItem_Click);
             // 
             // barGraphToolStripMenuItem
             // 
             this.barGraphToolStripMenuItem.Name = "barGraphToolStripMenuItem";
-            this.barGraphToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.barGraphToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.barGraphToolStripMenuItem.Text = "&Bar Graph";
+            this.barGraphToolStripMenuItem.Click += new System.EventHandler(this.barGraphToolStripMenuItem_Click);
             // 
             // goBtn
             // 
@@ -319,7 +322,6 @@ namespace Fine_Management_System.MainWindowItems
             // chartBackground
             // 
             this.chartBackground.BackgroundImage = global::Fine_Management_System.Properties.Resources.chartBack;
-            this.chartBackground.Controls.Add(this.textBox1);
             this.chartBackground.Controls.Add(this.statLegendLabel);
             this.chartBackground.Controls.Add(this.casesLabel);
             this.chartBackground.Controls.Add(this.panel2);
@@ -328,13 +330,6 @@ namespace Fine_Management_System.MainWindowItems
             this.chartBackground.Name = "chartBackground";
             this.chartBackground.Size = new System.Drawing.Size(864, 469);
             this.chartBackground.TabIndex = 12;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(521, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 15;
             // 
             // statLegendLabel
             // 
@@ -373,40 +368,40 @@ namespace Fine_Management_System.MainWindowItems
             this.chartPanelChart.BackImageTransparentColor = System.Drawing.Color.White;
             this.chartPanelChart.BackSecondaryColor = System.Drawing.Color.White;
             this.chartPanelChart.BorderlineColor = System.Drawing.Color.Black;
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX2.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX2.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.White;
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea1.BorderColor = System.Drawing.Color.White;
-            chartArea1.Name = "ChartArea1";
-            this.chartPanelChart.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            legend1.Enabled = false;
-            legend1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            legend1.Name = "Legend1";
-            this.chartPanelChart.Legends.Add(legend1);
+            chartArea6.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea6.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea6.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea6.AxisX.TitleForeColor = System.Drawing.Color.White;
+            chartArea6.AxisX2.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea6.AxisX2.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea6.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea6.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea6.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea6.AxisY.MinorGrid.LineColor = System.Drawing.Color.White;
+            chartArea6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            chartArea6.BorderColor = System.Drawing.Color.White;
+            chartArea6.Name = "ChartArea1";
+            this.chartPanelChart.ChartAreas.Add(chartArea6);
+            legend6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            legend6.Enabled = false;
+            legend6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            legend6.Name = "Legend1";
+            this.chartPanelChart.Legends.Add(legend6);
             this.chartPanelChart.Location = new System.Drawing.Point(10, 37);
             this.chartPanelChart.Name = "chartPanelChart";
             this.chartPanelChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartPanelChart.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(72)))))};
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Color = System.Drawing.Color.Lime;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.MarkerBorderColor = System.Drawing.Color.White;
-            series1.MarkerSize = 10;
-            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series1.Name = "Series1";
-            this.chartPanelChart.Series.Add(series1);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Color = System.Drawing.Color.Lime;
+            series6.LabelForeColor = System.Drawing.Color.White;
+            series6.Legend = "Legend1";
+            series6.MarkerBorderColor = System.Drawing.Color.White;
+            series6.MarkerSize = 10;
+            series6.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series6.Name = "Series1";
+            this.chartPanelChart.Series.Add(series6);
             this.chartPanelChart.Size = new System.Drawing.Size(807, 383);
             this.chartPanelChart.TabIndex = 8;
             this.chartPanelChart.Text = "chartNew";
@@ -465,7 +460,6 @@ namespace Fine_Management_System.MainWindowItems
         private System.Windows.Forms.Label casesLabel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartPanelChart;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label loading;
         private System.Windows.Forms.ToolTip toolTip4;
     }

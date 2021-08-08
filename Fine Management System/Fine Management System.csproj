@@ -172,23 +172,23 @@
       <DependentUpon>Users.cs</DependentUpon>
     </Compile>
     <Compile Include="MD5Hashing.cs" />
-    <Compile Include="Popup\Form1.cs">
+    <Compile Include="Popup\DriverUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Popup\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Popup\DriverUpdate.Designer.cs">
+      <DependentUpon>DriverUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Popup\Form2.cs">
+    <Compile Include="Popup\UpdateOfficer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Popup\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Popup\UpdateOfficer.Designer.cs">
+      <DependentUpon>UpdateOfficer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Popup\Form3.cs">
+    <Compile Include="Popup\ShareEmail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Popup\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Popup\ShareEmail.Designer.cs">
+      <DependentUpon>ShareEmail.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -252,14 +252,14 @@
     <EmbeddedResource Include="MainWindowItems\Users.resx">
       <DependentUpon>Users.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Popup\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Popup\DriverUpdate.resx">
+      <DependentUpon>DriverUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Popup\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Popup\UpdateOfficer.resx">
+      <DependentUpon>UpdateOfficer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Popup\Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Popup\ShareEmail.resx">
+      <DependentUpon>ShareEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
