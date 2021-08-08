@@ -29,7 +29,9 @@ namespace Fine_Management_System.MainWindowItems
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.reportPanel = new System.Windows.Forms.Panel();
+            this.fineReceipt1 = new Fine_Management_System.ReportItems.FineReceipt();
             this.gobtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.rptSearchIcon = new System.Windows.Forms.Panel();
@@ -46,7 +48,7 @@ namespace Fine_Management_System.MainWindowItems
             this.reportTextBox = new System.Windows.Forms.RichTextBox();
             this.saveAsPdfBtn = new System.Windows.Forms.Panel();
             this.shareBtn = new System.Windows.Forms.Panel();
-            this.fineReceipt1 = new Fine_Management_System.ReportItems.FineReceipt();
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.reportPanel.SuspendLayout();
             this.rptNav.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -75,6 +77,13 @@ namespace Fine_Management_System.MainWindowItems
             this.reportPanel.Size = new System.Drawing.Size(927, 624);
             this.reportPanel.TabIndex = 5;
             // 
+            // fineReceipt1
+            // 
+            this.fineReceipt1.Location = new System.Drawing.Point(18, 121);
+            this.fineReceipt1.Name = "fineReceipt1";
+            this.fineReceipt1.Size = new System.Drawing.Size(895, 481);
+            this.fineReceipt1.TabIndex = 16;
+            // 
             // gobtn
             // 
             this.gobtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(198)))), ((int)(((byte)(143)))));
@@ -88,6 +97,7 @@ namespace Fine_Management_System.MainWindowItems
             this.gobtn.Text = "Go";
             this.gobtn.UseVisualStyleBackColor = false;
             this.gobtn.Click += new System.EventHandler(this.GoBtnClick);
+            this.gobtn.MouseHover += new System.EventHandler(this.go_tip);
             // 
             // label1
             // 
@@ -245,6 +255,7 @@ namespace Fine_Management_System.MainWindowItems
             this.saveAsPdfBtn.TabIndex = 1;
             this.saveAsPdfBtn.Click += new System.EventHandler(this.SaveAsPdf);
             this.saveAsPdfBtn.Paint += new System.Windows.Forms.PaintEventHandler(this.saveAsPdfBtn_Paint);
+            this.saveAsPdfBtn.MouseHover += new System.EventHandler(this.saveas_tip);
             // 
             // shareBtn
             // 
@@ -254,13 +265,7 @@ namespace Fine_Management_System.MainWindowItems
             this.shareBtn.Name = "shareBtn";
             this.shareBtn.Size = new System.Drawing.Size(92, 34);
             this.shareBtn.TabIndex = 0;
-            // 
-            // fineReceipt1
-            // 
-            this.fineReceipt1.Location = new System.Drawing.Point(18, 121);
-            this.fineReceipt1.Name = "fineReceipt1";
-            this.fineReceipt1.Size = new System.Drawing.Size(895, 481);
-            this.fineReceipt1.TabIndex = 16;
+            this.shareBtn.MouseHover += new System.EventHandler(this.share_tip);
             // 
             // Report
             // 
@@ -298,5 +303,6 @@ namespace Fine_Management_System.MainWindowItems
         private System.Windows.Forms.Button gobtn;
         private ReportItems.FineReceipt fineReceipt1;
         private System.Windows.Forms.ComboBox list;
+        private System.Windows.Forms.ToolTip toolTip3;
     }
 }
