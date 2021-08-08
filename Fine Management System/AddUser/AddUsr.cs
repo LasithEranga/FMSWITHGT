@@ -24,7 +24,7 @@ namespace Fine_Management_System.AddUser
         private void addUsrBtn_Click(object sender, EventArgs e)
         {
             GetPhoneNo();
-            if (ValidateText(fName.Text, "first name") && ValidateText(lName.Text, "last name") && ValidateText(fullName.Text, "full name")&& ValidatePhoneNo() && ValidateText(post.Text, "police post") && ValidateAddress())
+            if (ValidateText(fName.Text, "first name") && ValidateText(lName.Text, "last name") && ValidateText(fullName.Text, "full name")&& ValidatePhoneNo() && ValidateText(post.Text, "police post") && ValidateAddress() && Validate_Email() && Validate_NIC())
             {
                 try
                 {

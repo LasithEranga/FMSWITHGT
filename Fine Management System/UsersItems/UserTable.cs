@@ -35,7 +35,7 @@ namespace Fine_Management_System.UsersItems
             }
             catch (Exception)
             {
-                new Error_messages.InputError("DB", "sdjkbf");
+                new Error_messages.InputError("Database Error", "Cannot connet to database");
             }
             
         }

@@ -20,9 +20,9 @@ namespace Fine_Management_System.ReportItems
         bool DBConnectionHealth = true;
         public FineReceipt()
         {
+            InitializeComponent();
             try
             {
-                InitializeComponent();
                 showReceipt.Hide();
                 buttonBack.Hide();
                 string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
@@ -59,10 +59,10 @@ namespace Fine_Management_System.ReportItems
                         {
                             File.Delete(sfd.FileName);
                         }
-                        catch (IOException ex)
+                        catch (IOException)
                         {
                             fileError = true;
-                            MessageBox.Show("It wasn't possible to write the data to the disk." + ex.Message);
+                            new Aletrs.DataSaved("Cannot access the disk!").Show();
                         }
                     }
                     if (!fileError)
