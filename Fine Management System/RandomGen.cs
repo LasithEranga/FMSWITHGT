@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fine_Management_System
 {
-    class Class1
+    class RandomGen
     {
         static List<char> chars = new List<char>();
         

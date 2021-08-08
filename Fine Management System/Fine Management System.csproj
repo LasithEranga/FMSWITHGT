@@ -115,7 +115,7 @@
     <Compile Include="Aletrs\DataSaved.Designer.cs">
       <DependentUpon>DataSaved.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
+    <Compile Include="RandomGen.cs" />
     <Compile Include="DBConnection\DB.cs" />
     <Compile Include="Error messages\DBError.cs">
       <SubType>Form</SubType>
