@@ -30,17 +30,11 @@ namespace Fine_Management_System.MainWindowItems
         private void InitializeComponent()
         {
             this.reportPanel = new System.Windows.Forms.Panel();
-            this.fineReceipt1 = new Fine_Management_System.ReportItems.FineReceipt();
             this.gobtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.rptSearchIcon = new System.Windows.Forms.Panel();
             this.rptNav = new System.Windows.Forms.Panel();
             this.list = new System.Windows.Forms.ComboBox();
-            this.rptfRight = new System.Windows.Forms.Button();
-            this.rptNoPg = new System.Windows.Forms.Label();
-            this.labelOf = new System.Windows.Forms.Label();
-            this.rptPgNo = new System.Windows.Forms.MaskedTextBox();
-            this.rptfLeft = new System.Windows.Forms.Button();
             this.dpIcon2 = new System.Windows.Forms.Panel();
             this.dpIcon1 = new System.Windows.Forms.Panel();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -52,6 +46,7 @@ namespace Fine_Management_System.MainWindowItems
             this.reportTextBox = new System.Windows.Forms.RichTextBox();
             this.saveAsPdfBtn = new System.Windows.Forms.Panel();
             this.shareBtn = new System.Windows.Forms.Panel();
+            this.fineReceipt1 = new Fine_Management_System.ReportItems.FineReceipt();
             this.reportPanel.SuspendLayout();
             this.rptNav.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -79,13 +74,6 @@ namespace Fine_Management_System.MainWindowItems
             this.reportPanel.Name = "reportPanel";
             this.reportPanel.Size = new System.Drawing.Size(927, 624);
             this.reportPanel.TabIndex = 5;
-            // 
-            // fineReceipt1
-            // 
-            this.fineReceipt1.Location = new System.Drawing.Point(18, 121);
-            this.fineReceipt1.Name = "fineReceipt1";
-            this.fineReceipt1.Size = new System.Drawing.Size(895, 481);
-            this.fineReceipt1.TabIndex = 16;
             // 
             // gobtn
             // 
@@ -126,11 +114,6 @@ namespace Fine_Management_System.MainWindowItems
             // 
             this.rptNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.rptNav.Controls.Add(this.list);
-            this.rptNav.Controls.Add(this.rptfRight);
-            this.rptNav.Controls.Add(this.rptNoPg);
-            this.rptNav.Controls.Add(this.labelOf);
-            this.rptNav.Controls.Add(this.rptPgNo);
-            this.rptNav.Controls.Add(this.rptfLeft);
             this.rptNav.Location = new System.Drawing.Point(297, 1);
             this.rptNav.Name = "rptNav";
             this.rptNav.Size = new System.Drawing.Size(327, 36);
@@ -157,64 +140,6 @@ namespace Fine_Management_System.MainWindowItems
             this.list.Size = new System.Drawing.Size(121, 21);
             this.list.TabIndex = 6;
             this.list.SelectedIndexChanged += new System.EventHandler(this.IndexChanged);
-            // 
-            // rptfRight
-            // 
-            this.rptfRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.rptfRight.FlatAppearance.BorderSize = 0;
-            this.rptfRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rptfRight.ForeColor = System.Drawing.SystemColors.Control;
-            this.rptfRight.Location = new System.Drawing.Point(148, 6);
-            this.rptfRight.Name = "rptfRight";
-            this.rptfRight.Size = new System.Drawing.Size(30, 23);
-            this.rptfRight.TabIndex = 5;
-            this.rptfRight.Text = ">";
-            this.rptfRight.UseVisualStyleBackColor = false;
-            // 
-            // rptNoPg
-            // 
-            this.rptNoPg.AutoSize = true;
-            this.rptNoPg.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.rptNoPg.Location = new System.Drawing.Point(113, 12);
-            this.rptNoPg.Name = "rptNoPg";
-            this.rptNoPg.Size = new System.Drawing.Size(25, 13);
-            this.rptNoPg.TabIndex = 4;
-            this.rptNoPg.Text = "564";
-            // 
-            // labelOf
-            // 
-            this.labelOf.AutoSize = true;
-            this.labelOf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.labelOf.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelOf.Location = new System.Drawing.Point(90, 12);
-            this.labelOf.Name = "labelOf";
-            this.labelOf.Size = new System.Drawing.Size(16, 13);
-            this.labelOf.TabIndex = 3;
-            this.labelOf.Text = "of";
-            // 
-            // rptPgNo
-            // 
-            this.rptPgNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.rptPgNo.ForeColor = System.Drawing.SystemColors.Control;
-            this.rptPgNo.Location = new System.Drawing.Point(41, 7);
-            this.rptPgNo.Mask = "00000";
-            this.rptPgNo.Name = "rptPgNo";
-            this.rptPgNo.Size = new System.Drawing.Size(37, 20);
-            this.rptPgNo.TabIndex = 2;
-            this.rptPgNo.ValidatingType = typeof(int);
-            this.rptPgNo.Click += new System.EventHandler(this.RptInput);
-            // 
-            // rptfLeft
-            // 
-            this.rptfLeft.FlatAppearance.BorderSize = 0;
-            this.rptfLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rptfLeft.ForeColor = System.Drawing.SystemColors.Control;
-            this.rptfLeft.Location = new System.Drawing.Point(7, 5);
-            this.rptfLeft.Name = "rptfLeft";
-            this.rptfLeft.Size = new System.Drawing.Size(30, 23);
-            this.rptfLeft.TabIndex = 1;
-            this.rptfLeft.Text = "<";
-            this.rptfLeft.UseVisualStyleBackColor = true;
             // 
             // dpIcon2
             // 
@@ -330,6 +255,13 @@ namespace Fine_Management_System.MainWindowItems
             this.shareBtn.Size = new System.Drawing.Size(92, 34);
             this.shareBtn.TabIndex = 0;
             // 
+            // fineReceipt1
+            // 
+            this.fineReceipt1.Location = new System.Drawing.Point(18, 121);
+            this.fineReceipt1.Name = "fineReceipt1";
+            this.fineReceipt1.Size = new System.Drawing.Size(895, 481);
+            this.fineReceipt1.TabIndex = 16;
+            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,7 +272,6 @@ namespace Fine_Management_System.MainWindowItems
             this.reportPanel.ResumeLayout(false);
             this.reportPanel.PerformLayout();
             this.rptNav.ResumeLayout(false);
-            this.rptNav.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.ResumeLayout(false);
@@ -353,11 +284,6 @@ namespace Fine_Management_System.MainWindowItems
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel rptSearchIcon;
         private System.Windows.Forms.Panel rptNav;
-        private System.Windows.Forms.Button rptfRight;
-        private System.Windows.Forms.Label rptNoPg;
-        private System.Windows.Forms.Label labelOf;
-        private System.Windows.Forms.MaskedTextBox rptPgNo;
-        private System.Windows.Forms.Button rptfLeft;
         private System.Windows.Forms.Panel dpIcon2;
         private System.Windows.Forms.Panel dpIcon1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;

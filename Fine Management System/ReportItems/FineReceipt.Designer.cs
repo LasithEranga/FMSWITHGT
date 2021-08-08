@@ -69,7 +69,7 @@ namespace Fine_Management_System.ReportItems
             this.table.Size = new System.Drawing.Size(889, 475);
             this.table.TabIndex = 0;
             this.table.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.row_selected);
-            // 
+       // 
             // buttonBack
             // 
             this.buttonBack.BackColor = System.Drawing.Color.SteelBlue;

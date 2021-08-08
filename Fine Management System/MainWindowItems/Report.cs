@@ -22,13 +22,6 @@ namespace Fine_Management_System.MainWindowItems
             list.SelectedIndex = 0;
         }
 
-        private void RptInput(object sender, EventArgs e)
-        {
-            if (rptPgNo.Text == "")
-            {
-                rptPgNo.Select(rptPgNo.Text.Length, 0);
-            }
-        }
 
         private void Focus_Search(object sender, EventArgs e)
         {
@@ -89,6 +82,8 @@ namespace Fine_Management_System.MainWindowItems
                         //Expired
                         query = "SELECT `Ref_No`, `Date`, `Amount`, `vehicle`, `State`, `driver_nic` FROM fine_receipt WHERE Date <= CURDATE() - INTERVAL 2 WEEK AND State = 0";
                         fineReceipt1.FineReceiptWithQuery(query);
+                        fineReceipt1.UnselectAll();
+                        
                         break;
                     }
 
@@ -97,6 +92,8 @@ namespace Fine_Management_System.MainWindowItems
                         //Sued List
                         query = "SELECT `Ref_No`, `Date`, `Amount`, `vehicle`, `State`, `driver_nic` FROM fine_receipt WHERE State = 9 ";
                         fineReceipt1.FineReceiptWithQuery(query);
+                        fineReceipt1.UnselectAll();
+                        
                         break;
                     }
 
@@ -105,6 +102,8 @@ namespace Fine_Management_System.MainWindowItems
                         //Pending
                         query = "SELECT `Ref_No`, `Date`, `Amount`, `vehicle`, `State`, `driver_nic` FROM fine_receipt WHERE Date >= CURDATE() - INTERVAL 2 WEEK AND State = 0";
                         fineReceipt1.FineReceiptWithQuery(query);
+                        fineReceipt1.UnselectAll();
+                        
                         break;
                     }
 
@@ -113,6 +112,7 @@ namespace Fine_Management_System.MainWindowItems
                         //Paid
                         query = "SELECT `Ref_No`, `Date`, `Amount`, `vehicle`, `State`, `driver_nic` FROM fine_receipt WHERE State = 1 ";
                         fineReceipt1.FineReceiptWithQuery(query);
+                        fineReceipt1.UnselectAll();
                         break;
                     }
                 case 4:
@@ -120,6 +120,7 @@ namespace Fine_Management_System.MainWindowItems
                         //All Records
                         query = "SELECT `Ref_No`, `Date`, `Amount`, `vehicle`, `State`, `driver_nic` FROM fine_receipt WHERE 1 " ;
                         fineReceipt1.FineReceiptWithQuery(query);
+                        fineReceipt1.UnselectAll();
                         break;
                     }
             }
@@ -154,6 +155,7 @@ namespace Fine_Management_System.MainWindowItems
                             //Sued List
                             query = "SELECT `Ref_No`, `Date`, `Amount`, `vehicle`, `State`, `driver_nic` FROM fine_receipt WHERE State = 9 AND" + dateFilter;
                             fineReceipt1.FineReceiptWithQuery(query);
+                            fineReceipt1.UnselectAll();
                             break;
                         }
 
@@ -162,6 +164,8 @@ namespace Fine_Management_System.MainWindowItems
                             //Paid
                             query = "SELECT `Ref_No`, `Date`, `Amount`, `vehicle`, `State`, `driver_nic` FROM fine_receipt WHERE State = 1 AND" + dateFilter;
                             fineReceipt1.FineReceiptWithQuery(query);
+                            fineReceipt1.UnselectAll();
+                            
                             break;
                         }
                     case 4:
@@ -169,6 +173,8 @@ namespace Fine_Management_System.MainWindowItems
                             //All Records
                             query = "SELECT `Ref_No`, `Date`, `Amount`, `vehicle`, `State`, `driver_nic` FROM fine_receipt WHERE " + dateFilter;
                             fineReceipt1.FineReceiptWithQuery(query);
+                            fineReceipt1.UnselectAll();
+                            
                             break;
                         }
                 }
