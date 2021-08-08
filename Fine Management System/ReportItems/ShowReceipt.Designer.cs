@@ -48,6 +48,7 @@ namespace Fine_Management_System.ReportItems
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(787, 65);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // labelRef
             // 
@@ -59,6 +60,7 @@ namespace Fine_Management_System.ReportItems
             this.labelRef.Size = new System.Drawing.Size(144, 40);
             this.labelRef.TabIndex = 0;
             this.labelRef.Text = "Ref_No :";
+            this.labelRef.Click += new System.EventHandler(this.labelRef_Click);
             // 
             // labelDriverName
             // 
@@ -111,7 +113,7 @@ namespace Fine_Management_System.ReportItems
             this.table.Location = new System.Drawing.Point(34, 214);
             this.table.Name = "table";
             this.table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.table.Size = new System.Drawing.Size(787, 209);
+            this.table.Size = new System.Drawing.Size(819, 209);
             this.table.TabIndex = 5;
             // 
             // label6
@@ -138,7 +140,6 @@ namespace Fine_Management_System.ReportItems
             this.Controls.Add(this.panel1);
             this.Name = "ShowReceipt";
             this.Size = new System.Drawing.Size(895, 481);
-            this.Load += new System.EventHandler(this.ShowReceipt_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();

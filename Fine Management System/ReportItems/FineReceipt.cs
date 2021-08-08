@@ -20,12 +20,12 @@ namespace Fine_Management_System.ReportItems
         bool DBConnectionHealth = true;
         public FineReceipt()
         {
+            InitializeComponent();
             try
             {
-                InitializeComponent();
                 showReceipt.Hide();
                 buttonBack.Hide();
-                string connStr = "server=localhost;user=root;database=fmsdb;port=3306;password=;SSL Mode=None;";
+                string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
                 MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from fine_receipt", connStr);
                 DataTable dtbl = new DataTable();
                 sqlda.Fill(dtbl);
@@ -37,6 +37,8 @@ namespace Fine_Management_System.ReportItems
 
             
         }
+
+           
 
         public bool getState() {
             return DBConnectionHealth;
@@ -57,10 +59,10 @@ namespace Fine_Management_System.ReportItems
                         {
                             File.Delete(sfd.FileName);
                         }
-                        catch (IOException ex)
+                        catch (IOException)
                         {
                             fileError = true;
-                            MessageBox.Show("It wasn't possible to write the data to the disk." + ex.Message);
+                            new Aletrs.DataSaved("Cannot access the disk!").Show();
                         }
                     }
                     if (!fileError)
@@ -100,18 +102,18 @@ namespace Fine_Management_System.ReportItems
                                 stream.Close();
                             }
 
-                            MessageBox.Show("Data Exported Successfully !!!", "Info");
+                            new Aletrs.DataSaved("Data Exported Successfully !").Show();
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
-                            MessageBox.Show("Error :" + ex);
+                            new Aletrs.DataSaved("Something went wrong!").Show();
                         }
                     }
                 }
             }
             else
             {
-                MessageBox.Show("No Record To Export !!!", "Info");
+                new Aletrs.DataSaved("No Record To Export !").Show();
             }
         }
 

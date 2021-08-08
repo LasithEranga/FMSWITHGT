@@ -214,6 +214,7 @@ namespace Fine_Management_System
             this.minimizeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.minimizeBtn.TabIndex = 10;
             this.minimizeBtn.TabStop = false;
+            this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
             // 
             // usrImage
             // 

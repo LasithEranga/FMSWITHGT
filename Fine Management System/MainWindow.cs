@@ -94,5 +94,10 @@ namespace Fine_Management_System
         {
             this.Dispose();
         }
+
+        private void minimizeBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

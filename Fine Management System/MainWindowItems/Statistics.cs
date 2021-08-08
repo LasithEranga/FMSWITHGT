@@ -11,8 +11,10 @@ using System.Windows.Forms;
 
 namespace Fine_Management_System.MainWindowItems
 {
+
     public partial class Statistics : UserControl
     {
+       
         private string query = "SELECT SUM(amount) as yaxis, DATE_FORMAT(date,'%Y-%m-%d') as xaxis FROM payment";
         private int selection = 0;
         private string viewBy = "DATE_FORMAT(date,'%d')";
@@ -20,15 +22,19 @@ namespace Fine_Management_System.MainWindowItems
         public Statistics()
         {
             InitializeComponent();
+            loading.Hide();
             FillChart(query +" where date >= '" + dtpicker1.Text + "' OR date < '" + dtpicker2.Text + "';", "xaxis", "yaxis");
         }
 
         private void GoBtnClick(object sender, EventArgs e)
         {
             dtpicker1.Format = DateTimePickerFormat.Custom;
-            dtpicker1.CustomFormat = "d-M-yyyy";
+            dtpicker1.CustomFormat = "yyyy-MM-dd";
             dtpicker2.Format = DateTimePickerFormat.Custom;
-            dtpicker2.CustomFormat = "d-M-yyyy";
+            dtpicker2.CustomFormat = "yyyy-MM-dd";
+            //loading
+            loading.Text = "Loading....";
+            loading.Show();
             switch (selection)
             {
                 case 0:
@@ -46,8 +52,8 @@ namespace Fine_Management_System.MainWindowItems
 
 
             }
-
-
+            //loading hide
+            loading.Hide();
         }
 
         private void NoCasesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,20 +83,27 @@ namespace Fine_Management_System.MainWindowItems
                 textBox1.Text = query;
                 if (Convert.ToBoolean(MainWindow.DBConnectionHelath))
                 {
-                    dr = DBConnection.db.Read(query);
+                    dr = DBConnection.DB.Read(query);
                     chartPanelChart.Series["Series1"].Points.Clear();
                     while (dr.Read())
                     {
-
-                        
                         chartPanelChart.Series["Series1"].Points.AddXY(dr.GetString(x), dr.GetString(y));
                     }
+                    dr.Close();
                 }
 
             }
             catch (MySqlException)
             {
                 MainWindow.DBConnectionHelath = false;
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                
             }
         }
 

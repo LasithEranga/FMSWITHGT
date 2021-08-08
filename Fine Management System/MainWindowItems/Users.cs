@@ -64,5 +64,11 @@ namespace Fine_Management_System.MainWindowItems
             table.UserTableAllUser();
             
         }
+
+        private void addNewBtn_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
     }
 }

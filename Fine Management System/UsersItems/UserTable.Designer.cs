@@ -63,8 +63,9 @@ namespace Fine_Management_System.UsersItems
             this.table.Location = new System.Drawing.Point(3, 3);
             this.table.Name = "table";
             this.table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.table.Size = new System.Drawing.Size(900, 360);
+            this.table.Size = new System.Drawing.Size(900, 397);
             this.table.TabIndex = 0;
+            this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
             // 
             // UserTable
             // 
@@ -72,7 +73,7 @@ namespace Fine_Management_System.UsersItems
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.table);
             this.Name = "UserTable";
-            this.Size = new System.Drawing.Size(906, 366);
+            this.Size = new System.Drawing.Size(906, 441);
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
             this.ResumeLayout(false);
 
