@@ -71,12 +71,16 @@ namespace Fine_Management_System.ReportItems
             // 
             // buttonBack
             // 
+            this.buttonBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonBack.FlatAppearance.BorderSize = 0;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.ForeColor = System.Drawing.Color.Snow;
             this.buttonBack.Location = new System.Drawing.Point(776, 434);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(75, 23);
             this.buttonBack.TabIndex = 2;
             this.buttonBack.Text = "Back";
-            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.button1_Click);
             // 
             // showReceipt

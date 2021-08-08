@@ -31,7 +31,7 @@ namespace Fine_Management_System.MainWindowItems
         {
             this.reportPanel = new System.Windows.Forms.Panel();
             this.fineReceipt1 = new Fine_Management_System.ReportItems.FineReceipt();
-            this.button1 = new System.Windows.Forms.Button();
+            this.gobtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.rptSearchIcon = new System.Windows.Forms.Panel();
             this.rptNav = new System.Windows.Forms.Panel();
@@ -77,7 +77,7 @@ namespace Fine_Management_System.MainWindowItems
             // 
             this.reportPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.reportPanel.Controls.Add(this.fineReceipt1);
-            this.reportPanel.Controls.Add(this.button1);
+            this.reportPanel.Controls.Add(this.gobtn);
             this.reportPanel.Controls.Add(this.label1);
             this.reportPanel.Controls.Add(this.rptSearchIcon);
             this.reportPanel.Controls.Add(this.rptNav);
@@ -104,14 +104,18 @@ namespace Fine_Management_System.MainWindowItems
             this.fineReceipt1.Size = new System.Drawing.Size(895, 481);
             this.fineReceipt1.TabIndex = 16;
             // 
-            // button1
+            // gobtn
             // 
-            this.button1.Location = new System.Drawing.Point(558, 67);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 35);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Go";
-            this.button1.UseVisualStyleBackColor = true;
+            this.gobtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(198)))), ((int)(((byte)(143)))));
+            this.gobtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.gobtn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gobtn.ForeColor = System.Drawing.Color.White;
+            this.gobtn.Location = new System.Drawing.Point(585, 67);
+            this.gobtn.Name = "gobtn";
+            this.gobtn.Size = new System.Drawing.Size(93, 35);
+            this.gobtn.TabIndex = 15;
+            this.gobtn.Text = "Go";
+            this.gobtn.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -511,7 +515,7 @@ namespace Fine_Management_System.MainWindowItems
         private System.Windows.Forms.RichTextBox reportTextBox;
         private System.Windows.Forms.Panel saveAsPdfBtn;
         private System.Windows.Forms.Panel shareBtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button gobtn;
         private ReportItems.FineReceipt fineReceipt1;
     }
 }

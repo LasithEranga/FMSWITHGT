@@ -60,7 +60,7 @@ namespace Fine_Management_System.UsersItems
 
         private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            MessageBox.Show("Clecked!");
         }
     }
 }
