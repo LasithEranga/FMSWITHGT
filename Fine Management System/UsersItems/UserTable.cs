@@ -22,7 +22,7 @@ namespace Fine_Management_System.UsersItems
         {
             try
             {
-                string connStr = "server=localhost;user=root;database=fmsdb;port=3306;password=;SSL Mode=None;";
+                string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
                 MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from driver WHERE 1", connStr);
                 DataTable dtbl = new DataTable();
                 sqlda.Fill(dtbl);
@@ -35,14 +35,36 @@ namespace Fine_Management_System.UsersItems
             }
             catch (Exception)
             {
-                new Error_messages.InputError("DB", "sdjkbf");
+                new Error_messages.InputError("Database Error", "Cannot connet to database");
             }
             
         }
 
+        public void UserTableWithFilter(string query)
+        {
+            try
+            {
+                string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
+                MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from driver WHERE 1", connStr);
+                DataTable dtbl = new DataTable();
+                sqlda.Fill(dtbl);
+                MySqlDataAdapter sqlda1 = new MySqlDataAdapter(query, connStr);
+                DataTable dtbl1 = new DataTable();
+                sqlda1.Fill(dtbl1);
+                dtbl.Merge(dtbl1);
+
+                table.DataSource = dtbl;
+            }
+            catch (Exception)
+            {
+                new Error_messages.InputError("Database Error", "Cannot connet to database");
+            }
+
+        }
+
         public void UserTableDriver()
         {
-            string connStr = "server=localhost;user=root;database=fmsdb;port=3306;password=;SSL Mode=None;";
+            string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
             MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from driver WHERE 1", connStr);
             DataTable dtbl = new DataTable();
             sqlda.Fill(dtbl);
@@ -51,7 +73,7 @@ namespace Fine_Management_System.UsersItems
 
         public void UserTableOfficer()
         {
-            string connStr = "server=localhost;user=root;database=fmsdb;port=3306;password=;SSL Mode=None;";
+            string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
             MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from traffic_police_officer", connStr);
             DataTable dtbl = new DataTable();
             sqlda.Fill(dtbl);

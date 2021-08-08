@@ -62,7 +62,7 @@ namespace Fine_Management_System.MainWindowItems
             this.backBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.backBtn.Location = new System.Drawing.Point(820, 577);
+            this.backBtn.Location = new System.Drawing.Point(832, 583);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(83, 29);
             this.backBtn.TabIndex = 16;
