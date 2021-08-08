@@ -113,7 +113,7 @@ namespace Fine_Management_System.ReportItems
             this.table.Location = new System.Drawing.Point(34, 214);
             this.table.Name = "table";
             this.table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.table.Size = new System.Drawing.Size(787, 209);
+            this.table.Size = new System.Drawing.Size(819, 209);
             this.table.TabIndex = 5;
             // 
             // label6
