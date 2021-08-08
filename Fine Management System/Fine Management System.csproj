@@ -97,11 +97,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aletrs\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aletrs\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddUser\AddUsr.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddUser\AddUsr.Designer.cs">
       <DependentUpon>AddUsr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aletrs\DataSaved.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aletrs\DataSaved.Designer.cs">
+      <DependentUpon>DataSaved.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnection\DB.cs" />
     <Compile Include="Error messages\DBError.cs">
@@ -185,8 +197,14 @@
     <Compile Include="UsersItems\UserTable.Designer.cs">
       <DependentUpon>UserTable.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Aletrs\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddUser\AddUsr.resx">
       <DependentUpon>AddUsr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aletrs\DataSaved.resx">
+      <DependentUpon>DataSaved.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Error messages\DBError.resx">
       <DependentUpon>DBError.cs</DependentUpon>
@@ -257,6 +275,8 @@
     <Content Include="MainWindowAssests\report.png" />
     <Content Include="MainWindowAssests\settings.png" />
     <Content Include="MainWindowAssests\users.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\more-info-icon-29.jpg" />
     <None Include="Resources\warning.png" />
     <None Include="Resources\settings_new.png" />
     <None Include="Resources\report_new.png" />

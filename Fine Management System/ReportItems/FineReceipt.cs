@@ -102,18 +102,18 @@ namespace Fine_Management_System.ReportItems
                                 stream.Close();
                             }
 
-                            MessageBox.Show("Data Exported Successfully !!!", "Info");
+                            new Aletrs.DataSaved("Data Exported Successfully !").Show();
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
-                            MessageBox.Show("Error :" + ex);
+                            new Aletrs.DataSaved("Something went wrong!").Show();
                         }
                     }
                 }
             }
             else
             {
-                MessageBox.Show("No Record To Export !!!", "Info");
+                new Aletrs.DataSaved("No Record To Export !").Show();
             }
         }
 
