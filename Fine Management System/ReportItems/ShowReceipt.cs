@@ -13,32 +13,19 @@ namespace Fine_Management_System.ReportItems
 {
     public partial class ShowReceipt : UserControl
     {
+        private MySqlConnection conn = null;
+        private MySqlCommand cmd = null;
+        private string query;
+       
         public ShowReceipt()
         {
-            try
-            {
                 InitializeComponent();
-                string connStr = "server=localhost;user=root;database=fmsdb;port=3306;password=;SSL Mode=None;";
-                MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from fine_receipt", connStr);
-                DataTable dtbl = new DataTable();
-                sqlda.Fill(dtbl);
-
-                table.DataSource = dtbl;
-            }
-            catch (Exception)
-            {
-                new Error_messages.InputError("sdn","sjkdbf");
-            }
         }
 
-
-        private void ShowReceipt_Load(object sender, EventArgs e)
-        {
-
-        }
 
         public void setData(string id) {
-            string connStr = "server=localhost;user=root;database=fmsdb;port=3306;password=;SSL Mode=None;";
+            conn = DBConnection.DB.Conn();
+            string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
             MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from fine_receipt WHERE Ref_No = " + id, connStr);
             labelRef.Text = "Ref No: 0" +  id;
             SetDriverName(id);
@@ -47,17 +34,20 @@ namespace Fine_Management_System.ReportItems
             DataTable dtbl = new DataTable();
             sqlda.Fill(dtbl);
             table.DataSource = dtbl;
+            conn.Close();
         }
 
 
         private void SetDriverName(string id) {
 
-            string query = "SELECT * FROM driver WHERE nic = (SELECT driver_nic FROM fine_receipt WHERE Ref_No = " +id + ") ";
-            MySqlDataReader dr = DBConnection.db.Read(query);
+            query = "SELECT * FROM driver WHERE nic = (SELECT driver_nic FROM fine_receipt WHERE Ref_No = " +id + ") ";
+            cmd = new MySqlCommand(query, conn);
+            MySqlDataReader dr = cmd.ExecuteReader();
             try
             {
                 dr.Read();
                 labelDriverName.Text ="Driver Name: "+ dr.GetString("fname") + " "+ dr.GetString("lname");
+                dr.Close();
             }
             catch (Exception nl)
             {
@@ -67,13 +57,15 @@ namespace Fine_Management_System.ReportItems
         private void SetDateAmount(string id)
         {
 
-            string query = "SELECT Date,Amount FROM fine_receipt WHERE Ref_No = " + id;
-            MySqlDataReader dr = DBConnection.db.Read(query);
+            query = "SELECT Date,Amount FROM fine_receipt WHERE Ref_No = " + id;
+            cmd = new MySqlCommand(query, conn);
+            MySqlDataReader dr = cmd.ExecuteReader();
             try
             {
                 dr.Read();
                 labelDate.Text = "Date : " + dr.GetString("Date");
                 labelFineAmount.Text = "Fine Amount: Rs: " + dr.GetString("Amount") + ".00";
+                dr.Close();
             }
             catch (Exception nl)
             {
@@ -83,12 +75,14 @@ namespace Fine_Management_System.ReportItems
 
         private void SetOfficerName(string id)
         {
-            string query = "SELECT * FROM traffic_police_officer WHERE police_id = (SELECT officer_id FROM fine_receipt WHERE Ref_No = " + id + ") ";
-            MySqlDataReader dr = DBConnection.db.Read(query);
+            query = "SELECT * FROM traffic_police_officer WHERE police_id = (SELECT officer_id FROM fine_receipt WHERE Ref_No = " + id + ") ";
+            cmd = new MySqlCommand(query, conn);
+            MySqlDataReader dr = cmd.ExecuteReader();
             try
             {
                 dr.Read();
                 labelPoliceOfficer.Text = "Officer : " + dr.GetString("fname") +" "+ dr.GetString("lname");
+                dr.Close();
             }
             catch (Exception nl)
             {
@@ -96,6 +90,15 @@ namespace Fine_Management_System.ReportItems
             }
         }
 
+        private void labelRef_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 

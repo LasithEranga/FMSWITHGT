@@ -29,9 +29,9 @@ namespace Fine_Management_System.MainWindowItems
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartPanel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.menuStripPanel = new System.Windows.Forms.Panel();
@@ -47,7 +47,6 @@ namespace Fine_Management_System.MainWindowItems
             this.chartTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lineChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pieChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goBtn = new System.Windows.Forms.Panel();
             this.labelChartsTitle = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -58,10 +57,12 @@ namespace Fine_Management_System.MainWindowItems
             this.chartToLabel = new System.Windows.Forms.Label();
             this.chartFromLabel = new System.Windows.Forms.Label();
             this.chartBackground = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.statLegendLabel = new System.Windows.Forms.Label();
             this.casesLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.chartPanelChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.loading = new System.Windows.Forms.Label();
             this.chartPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.menuStripPanel.SuspendLayout();
@@ -83,6 +84,7 @@ namespace Fine_Management_System.MainWindowItems
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.loading);
             this.panel5.Controls.Add(this.menuStripPanel);
             this.panel5.Controls.Add(this.goBtn);
             this.panel5.Controls.Add(this.labelChartsTitle);
@@ -135,18 +137,21 @@ namespace Fine_Management_System.MainWindowItems
             this.dayToolStripMenuItem.Name = "dayToolStripMenuItem";
             this.dayToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.dayToolStripMenuItem.Text = "&Day";
+            this.dayToolStripMenuItem.Click += new System.EventHandler(this.dayToolStripMenuItem_Click);
             // 
             // monthToolStripMenuItem
             // 
             this.monthToolStripMenuItem.Name = "monthToolStripMenuItem";
             this.monthToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.monthToolStripMenuItem.Text = "&Month";
+            this.monthToolStripMenuItem.Click += new System.EventHandler(this.monthToolStripMenuItem_Click);
             // 
             // yearToolStripMenuItem
             // 
             this.yearToolStripMenuItem.Name = "yearToolStripMenuItem";
             this.yearToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.yearToolStripMenuItem.Text = "&Year";
+            this.yearToolStripMenuItem.Click += new System.EventHandler(this.yearToolStripMenuItem_Click);
             // 
             // categoryToolStripMenuItem
             // 
@@ -185,8 +190,7 @@ namespace Fine_Management_System.MainWindowItems
             // 
             this.chartTypeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lineChartToolStripMenuItem,
-            this.barGraphToolStripMenuItem,
-            this.pieChartToolStripMenuItem});
+            this.barGraphToolStripMenuItem});
             this.chartTypeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.chartTypeToolStripMenuItem.Name = "chartTypeToolStripMenuItem";
             this.chartTypeToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
@@ -203,12 +207,6 @@ namespace Fine_Management_System.MainWindowItems
             this.barGraphToolStripMenuItem.Name = "barGraphToolStripMenuItem";
             this.barGraphToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.barGraphToolStripMenuItem.Text = "&Bar Graph";
-            // 
-            // pieChartToolStripMenuItem
-            // 
-            this.pieChartToolStripMenuItem.Name = "pieChartToolStripMenuItem";
-            this.pieChartToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
-            this.pieChartToolStripMenuItem.Text = "&Pie Chart";
             // 
             // goBtn
             // 
@@ -309,6 +307,7 @@ namespace Fine_Management_System.MainWindowItems
             // chartBackground
             // 
             this.chartBackground.BackgroundImage = global::Fine_Management_System.Properties.Resources.chartBack;
+            this.chartBackground.Controls.Add(this.textBox1);
             this.chartBackground.Controls.Add(this.statLegendLabel);
             this.chartBackground.Controls.Add(this.casesLabel);
             this.chartBackground.Controls.Add(this.panel2);
@@ -317,6 +316,13 @@ namespace Fine_Management_System.MainWindowItems
             this.chartBackground.Name = "chartBackground";
             this.chartBackground.Size = new System.Drawing.Size(864, 469);
             this.chartBackground.TabIndex = 12;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(521, 11);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 15;
             // 
             // statLegendLabel
             // 
@@ -355,43 +361,52 @@ namespace Fine_Management_System.MainWindowItems
             this.chartPanelChart.BackImageTransparentColor = System.Drawing.Color.White;
             this.chartPanelChart.BackSecondaryColor = System.Drawing.Color.White;
             this.chartPanelChart.BorderlineColor = System.Drawing.Color.Black;
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX2.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX2.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.White;
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            chartArea1.BorderColor = System.Drawing.Color.White;
-            chartArea1.Name = "ChartArea1";
-            this.chartPanelChart.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            legend1.Enabled = false;
-            legend1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            legend1.Name = "Legend1";
-            this.chartPanelChart.Legends.Add(legend1);
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisX.TitleForeColor = System.Drawing.Color.White;
+            chartArea2.AxisX2.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisX2.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisY.MinorGrid.LineColor = System.Drawing.Color.White;
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            chartArea2.BorderColor = System.Drawing.Color.White;
+            chartArea2.Name = "ChartArea1";
+            this.chartPanelChart.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            legend2.Enabled = false;
+            legend2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            legend2.Name = "Legend1";
+            this.chartPanelChart.Legends.Add(legend2);
             this.chartPanelChart.Location = new System.Drawing.Point(10, 37);
             this.chartPanelChart.Name = "chartPanelChart";
             this.chartPanelChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartPanelChart.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(218)))), ((int)(((byte)(72)))))};
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Color = System.Drawing.Color.Lime;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.MarkerBorderColor = System.Drawing.Color.White;
-            series1.MarkerSize = 10;
-            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series1.Name = "Series1";
-            this.chartPanelChart.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.Lime;
+            series2.LabelForeColor = System.Drawing.Color.White;
+            series2.Legend = "Legend1";
+            series2.MarkerBorderColor = System.Drawing.Color.White;
+            series2.MarkerSize = 10;
+            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series2.Name = "Series1";
+            this.chartPanelChart.Series.Add(series2);
             this.chartPanelChart.Size = new System.Drawing.Size(807, 383);
             this.chartPanelChart.TabIndex = 8;
             this.chartPanelChart.Text = "chartNew";
+            // 
+            // loading
+            // 
+            this.loading.AutoSize = true;
+            this.loading.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.loading.Location = new System.Drawing.Point(645, 46);
+            this.loading.Name = "loading";
+            this.loading.Size = new System.Drawing.Size(0, 13);
+            this.loading.TabIndex = 18;
             // 
             // Statistics
             // 
@@ -433,7 +448,6 @@ namespace Fine_Management_System.MainWindowItems
         private System.Windows.Forms.ToolStripMenuItem chartTypeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lineChartToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem barGraphToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pieChartToolStripMenuItem;
         private System.Windows.Forms.Panel goBtn;
         private System.Windows.Forms.Label labelChartsTitle;
         private System.Windows.Forms.Panel panel3;
@@ -448,5 +462,7 @@ namespace Fine_Management_System.MainWindowItems
         private System.Windows.Forms.Label casesLabel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartPanelChart;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label loading;
     }
 }

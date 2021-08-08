@@ -1,5 +1,6 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace Fine_Management_System.MainWindowItems
 {
     public partial class Report : UserControl
     {
+        
         public Report()
         {
             InitializeComponent();
@@ -32,18 +34,13 @@ namespace Fine_Management_System.MainWindowItems
             if (rptSearch.Text == "Search Here")
             {
                 rptSearch.Clear();
-            }
+            } 
         }
 
         SaveFileDialog fileSave = new SaveFileDialog();
 
         private void SaveAsPdf(object sender, EventArgs e)
         {
-            fileSave.Filter = "PdfFiles(*.pdf)|*.pdf";
-            if (fileSave.ShowDialog() == DialogResult.OK)
-            {
-                reportTextBox.SaveFile(fileSave.FileName);
-            }
             fineReceipt1.Save();
         }
 
@@ -52,9 +49,29 @@ namespace Fine_Management_System.MainWindowItems
 
         }
 
-        private void reportPanel_Paint(object sender, PaintEventArgs e)
-        {
 
+
+
+        private void rptSearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                MySqlDataReader dr = null;
+                dr = DBConnection.DB.Read("SELECT Ref_No FROM `fine_receipt` WHERE Ref_No LIKE '" + rptSearch.Text + "%' ");
+                AutoCompleteStringCollection Collection = new AutoCompleteStringCollection();
+                while (dr.Read())
+                {
+                    //MessageBox.Show(dr.GetString("Ref_No"));
+                    Collection.Add(dr.GetString("Ref_No"));
+                }
+                rptSearch.AutoCompleteCustomSource = Collection;
+            }
+            catch (Exception)
+            {
+
+            }
+           
         }
+
     }
 }

@@ -223,6 +223,7 @@ namespace Fine_Management_System.MainWindowItems
             this.addNewBtn.Size = new System.Drawing.Size(145, 38);
             this.addNewBtn.TabIndex = 3;
             this.addNewBtn.Click += new System.EventHandler(this.addUsrBtnClick);
+            this.addNewBtn.Paint += new System.Windows.Forms.PaintEventHandler(this.addNewBtn_Paint);
             // 
             // filterBtn
             // 
@@ -333,7 +334,7 @@ namespace Fine_Management_System.MainWindowItems
             // 
             this.table.Location = new System.Drawing.Point(12, 247);
             this.table.Name = "table";
-            this.table.Size = new System.Drawing.Size(909, 366);
+            this.table.Size = new System.Drawing.Size(909, 319);
             this.table.TabIndex = 4;
             // 
             // Users

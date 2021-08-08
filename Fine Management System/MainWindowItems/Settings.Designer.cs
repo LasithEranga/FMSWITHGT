@@ -30,13 +30,13 @@ namespace Fine_Management_System.MainWindowItems
         private void InitializeComponent()
         {
             this.settingsPanel = new System.Windows.Forms.Panel();
+            this.backBtn = new System.Windows.Forms.Button();
             this.labelSettingsTitle = new System.Windows.Forms.Label();
             this.help = new System.Windows.Forms.Panel();
             this.theme = new System.Windows.Forms.Panel();
             this.notification = new System.Windows.Forms.Panel();
             this.language = new System.Windows.Forms.Panel();
             this.user = new System.Windows.Forms.Panel();
-            this.backBtn = new System.Windows.Forms.Button();
             this.usersPanel = new Fine_Management_System.MainWindowItems.Users();
             this.settingsPanel.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +56,19 @@ namespace Fine_Management_System.MainWindowItems
             this.settingsPanel.Name = "settingsPanel";
             this.settingsPanel.Size = new System.Drawing.Size(927, 624);
             this.settingsPanel.TabIndex = 8;
+            // 
+            // backBtn
+            // 
+            this.backBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.backBtn.Location = new System.Drawing.Point(820, 577);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(83, 29);
+            this.backBtn.TabIndex = 16;
+            this.backBtn.Text = "Back";
+            this.backBtn.UseVisualStyleBackColor = false;
+            this.backBtn.Click += new System.EventHandler(this.BackBtnClick);
             // 
             // labelSettingsTitle
             // 
@@ -113,16 +126,6 @@ namespace Fine_Management_System.MainWindowItems
             this.user.Size = new System.Drawing.Size(212, 170);
             this.user.TabIndex = 0;
             this.user.Click += new System.EventHandler(this.userClick);
-            // 
-            // backBtn
-            // 
-            this.backBtn.Location = new System.Drawing.Point(799, 571);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(75, 23);
-            this.backBtn.TabIndex = 16;
-            this.backBtn.Text = "Back";
-            this.backBtn.UseVisualStyleBackColor = true;
-            this.backBtn.Click += new System.EventHandler(this.BackBtnClick);
             // 
             // usersPanel
             // 
