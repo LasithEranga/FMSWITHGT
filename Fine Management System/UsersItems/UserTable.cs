@@ -30,7 +30,6 @@ namespace Fine_Management_System.UsersItems
                 DataTable dtbl1 = new DataTable();
                 sqlda1.Fill(dtbl1);
                 dtbl.Merge(dtbl1);
-
                 table.DataSource = dtbl;
             }
             catch (Exception)
