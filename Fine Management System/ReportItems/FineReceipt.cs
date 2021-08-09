@@ -10,6 +10,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -30,6 +31,7 @@ namespace Fine_Management_System.ReportItems
                 DataTable dtbl = new DataTable();
                 sqlda.Fill(dtbl);
                 table.DataSource = dtbl;
+                
             }
             catch (MySqlException) {
                 MainWindow.DBConnectionHelath = false;
@@ -38,7 +40,24 @@ namespace Fine_Management_System.ReportItems
             
         }
 
-           
+        public void FineReceiptWithQuery(string query)
+        {
+            try
+            {
+                string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
+                MySqlDataAdapter sqlda = new MySqlDataAdapter(query, connStr);
+                DataTable dtbl = new DataTable();
+                sqlda.Fill(dtbl);
+                table.DataSource = dtbl;
+            }
+            catch (MySqlException)
+            {
+                MainWindow.DBConnectionHelath = false;
+            }
+
+
+        }
+
 
         public bool getState() {
             return DBConnectionHealth;
@@ -134,6 +153,67 @@ namespace Fine_Management_System.ReportItems
             table.Show();
             buttonBack.Hide();
             showReceipt.Hide();
+        }
+
+        public int GetRowNum(String searchValue) {
+            int rowIndex = -1;
+            foreach (DataGridViewRow row in table.Rows)
+            {
+                if (row.Cells[0].Value.ToString().Equals(searchValue))
+                {
+                    rowIndex = row.Index;
+                    break;
+                    
+                }
+            }
+            return rowIndex;
+        }
+
+
+        public void SelectRow(int row)
+        {
+            table.Rows[row].Selected = true;
+        }
+        public void UnselectAll()
+        {
+            table.ClearSelection();
+        }
+
+        public string GetMax() {
+            try
+            {
+                var MaxID = table.RowCount;
+                return MaxID.ToString();
+            }
+            catch (Exception)
+            {
+                return "0";
+            }
+
+            
+        }
+
+        public void SetById()
+        {
+
+            int rowindex = table.CurrentRow.Index;
+            DataGridViewRow selectedRow = table.Rows[rowindex];
+            string cellValue = Convert.ToString(selectedRow.Cells["Ref_No"].Value);
+            table.Hide();
+            buttonBack.Show();
+            showReceipt.setData(cellValue);
+            showReceipt.SetBounds(0, 0, 895, 481);
+            showReceipt.Show();
+
+        }
+
+        public void SetSearch() {
+            
+        }
+
+        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -115,6 +115,13 @@
     <Compile Include="Aletrs\DataSaved.Designer.cs">
       <DependentUpon>DataSaved.cs</DependentUpon>
     </Compile>
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RandomGen.cs" />
     <Compile Include="DBConnection\DB.cs" />
     <Compile Include="Error messages\DBError.cs">
       <SubType>Form</SubType>
@@ -171,17 +178,23 @@
       <DependentUpon>Users.cs</DependentUpon>
     </Compile>
     <Compile Include="MD5Hashing.cs" />
-    <Compile Include="Popup\Form1.cs">
+    <Compile Include="Popup\DriverUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Popup\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Popup\DriverUpdate.Designer.cs">
+      <DependentUpon>DriverUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Popup\Form2.cs">
+    <Compile Include="Popup\UpdateOfficer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Popup\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Popup\UpdateOfficer.Designer.cs">
+      <DependentUpon>UpdateOfficer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\ShareEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\ShareEmail.Designer.cs">
+      <DependentUpon>ShareEmail.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -209,6 +222,7 @@
     <Compile Include="UsersItems\UserTable.Designer.cs">
       <DependentUpon>UserTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validations\Validate.cs" />
     <EmbeddedResource Include="Aletrs\About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Error messages\InputError.resx">
       <DependentUpon>InputError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindowItems\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -245,11 +262,14 @@
     <EmbeddedResource Include="MainWindowItems\Users.resx">
       <DependentUpon>Users.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Popup\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Popup\DriverUpdate.resx">
+      <DependentUpon>DriverUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Popup\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Popup\UpdateOfficer.resx">
+      <DependentUpon>UpdateOfficer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\ShareEmail.resx">
+      <DependentUpon>ShareEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -293,6 +313,7 @@
     <Content Include="MainWindowAssests\report.png" />
     <Content Include="MainWindowAssests\settings.png" />
     <Content Include="MainWindowAssests\users.png" />
+    <None Include="Resources\loading.gif" />
     <None Include="Resources\info.png" />
     <None Include="Resources\more-info-icon-29.jpg" />
     <None Include="Resources\warning.png" />

@@ -44,7 +44,7 @@ namespace Fine_Management_System.ReportItems
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(10);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -60,6 +60,7 @@ namespace Fine_Management_System.ReportItems
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.table.DefaultCellStyle = dataGridViewCellStyle2;
+            this.table.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.table.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.table.Location = new System.Drawing.Point(3, 3);
             this.table.Name = "table";
@@ -67,6 +68,7 @@ namespace Fine_Management_System.ReportItems
             this.table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.table.Size = new System.Drawing.Size(889, 475);
             this.table.TabIndex = 0;
+            this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
             this.table.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.row_selected);
             // 
             // buttonBack

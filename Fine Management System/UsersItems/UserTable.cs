@@ -26,11 +26,10 @@ namespace Fine_Management_System.UsersItems
                 MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from driver WHERE 1", connStr);
                 DataTable dtbl = new DataTable();
                 sqlda.Fill(dtbl);
-                MySqlDataAdapter sqlda1 = new MySqlDataAdapter("Select * from traffic_police_officer WHERE 1", connStr);
+                MySqlDataAdapter sqlda1 = new MySqlDataAdapter("Select `police_id` as Police ID, `fname`, `lname`, `full_name`, `email`, `nic`, `contact_no`, `post`, `address` from traffic_police_officer WHERE 1", connStr);
                 DataTable dtbl1 = new DataTable();
                 sqlda1.Fill(dtbl1);
                 dtbl.Merge(dtbl1);
-
                 table.DataSource = dtbl;
             }
             catch (Exception)
@@ -74,7 +73,7 @@ namespace Fine_Management_System.UsersItems
         public void UserTableOfficer()
         {
             string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
-            MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from traffic_police_officer", connStr);
+            MySqlDataAdapter sqlda = new MySqlDataAdapter("Select `police_id`, `fname`, `lname`, `full_name`, `email`, `nic`, `contact_no`, `post`, `address` from traffic_police_officer", connStr);
             DataTable dtbl = new DataTable();
             sqlda.Fill(dtbl);
             table.DataSource = dtbl;
@@ -83,6 +82,29 @@ namespace Fine_Management_System.UsersItems
         private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             MessageBox.Show("Clecked!");
+        }
+
+        private void RowHeaderClicked(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            switch (MainWindowItems.Users.GetActive())
+            {
+                case 1:
+                    {//officers
+                        int rowindex = table.CurrentRow.Index;
+                        DataGridViewRow selectedRow = table.Rows[rowindex];
+                        string cellValue = Convert.ToString(selectedRow.Cells["police_id"].Value);
+                        new Popup.UpdateOfficer(cellValue).Show();
+                        break;
+                    }
+                case 2:
+                    {//driver
+                        int rowindex = table.CurrentRow.Index;
+                        DataGridViewRow selectedRow = table.Rows[rowindex];
+                        string cellValue = Convert.ToString(selectedRow.Cells["nic"].Value);
+                        new Popup.DriverUpdate(cellValue).Show();
+                        break;
+                    }
+            }
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Fine_Management_System
 
         private void closeBtnClick(object sender, EventArgs e)
         {
-            this.Dispose();
+            Application.Exit();
         }
 
         private void MainWindow_Load(object sender, EventArgs e)
@@ -98,6 +98,31 @@ namespace Fine_Management_System
         private void minimizeBtn_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Tooltip_hover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Home", homeBtn);
+        }
+
+        private void chart_tip(object sender, EventArgs e)
+        {
+            toolTip1.Show("Statistics", chartBtn);
+        }
+
+        private void report_tip(object sender, EventArgs e)
+        {
+            toolTip1.Show("Report", reportBtn);
+        }
+
+        private void setting_tip(object sender, EventArgs e)
+        {
+            toolTip1.Show("Settings", settingsBtn);
+        }
+
+        private void logout_tip(object sender, EventArgs e)
+        {
+            toolTip1.Show("Logout", logoutBtn);
         }
     }
 }
