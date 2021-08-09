@@ -128,7 +128,7 @@ namespace Fine_Management_System.Validations
             if (text.Length > 0)
             {
 
-                Regex rgx = new Regex(@"^[a-zA-Z0-9\s,]+$");
+                Regex rgx = new Regex(@"^[a-zA-Z\s,]+$");
                 if (rgx.IsMatch(text))
                 {
                     return true;
