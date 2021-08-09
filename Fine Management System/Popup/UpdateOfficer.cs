@@ -60,17 +60,17 @@ namespace Fine_Management_System.Popup
         {
             if (Validations.Validate.ValidateText(fName.Text, "first name") && Validations.Validate.ValidateText(lName.Text, "last name") && Validations.Validate.ValidateText(fullName.Text, "full name") && Validations.Validate.ValidatePhoneNo(contactNo.Text) && Validations.Validate.ValidateAddress(address.Text) && Validations.Validate.Validate_Email(emailAddress.Text) && Validations.Validate.Validate_NIC(nicNo.Text) && Validations.Validate.ValidatePoliceId(policeId.Text) && Validations.Validate.ValidateText(post.Text, "police post"))
             {
-                query = "UPDATE `traffic_police_officer` SET `fname`='" + fName.Text + "',`lname`='" + lName.Text + "',`full_name`='" + fullName.Text + "',`email`='" + emailAddress.Text + "',`nic`='" + nicNo.Text + "',`contact_no`='" + contactNo.Text + "',`post`='" + post.Text + "',`address`='" + address.Text + "';";
+                query = "UPDATE `traffic_police_officer` SET `fname`='" + fName.Text + "',`lname`='" + lName.Text + "',`full_name`='" + fullName.Text + "',`email`='" + emailAddress.Text + "',`nic`='" + nicNo.Text + "',`contact_no`='" + contactNo.Text + "',`post`='" + post.Text + "',`address`='" + address.Text + "' WHERE police_id ='"+policeId.Text+"';";
                 try
                 {
                     cmd = new MySqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
                     new Aletrs.DataSaved("Officer details updated!").Show();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show(ex.Message);
-                    //new Error_messages.InputError("Database error", "Sorry..we could not update details").Show();
+                    
+                    new Error_messages.InputError("Database error", "Sorry..we could not update details").Show();
 
                 }
             }

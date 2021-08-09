@@ -158,5 +158,10 @@ namespace Fine_Management_System.MainWindowItems
         {
             chartTypeToolStripMenuItem.ForeColor = Color.White;
         }
+
+        private void MouseHoverCT(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

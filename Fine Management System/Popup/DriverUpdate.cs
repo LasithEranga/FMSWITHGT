@@ -57,7 +57,7 @@ namespace Fine_Management_System.Popup
         {
             if (Validations.Validate.ValidateText(fName.Text, "first name") && Validations.Validate.ValidateText(lName.Text, "last name") && Validations.Validate.ValidateText(fullName.Text, "full name") && Validations.Validate.ValidatePhoneNo(contactNo.Text) && Validations.Validate.ValidateAddress(address.Text) && Validations.Validate.Validate_Email(emailAddress.Text) && Validations.Validate.Validate_NIC(nicNo.Text) && Validations.Validate.ValidateLicense(license.Text) && Validations.Validate.ValidateVehicleNo(vehicleNo.Text))
             {
-                query = "UPDATE `driver` SET `fname`='"+fName.Text+"',`lname`='"+lName.Text+"',`full_name`='"+fullName.Text+"',`email`='"+emailAddress.Text+"',`contact_no`='"+contactNo.Text+"',`address`='"+address.Text+"',`license_no`='"+license.Text+"',`vehicle_no`='"+vehicleNo.Text+"';";
+                query = "UPDATE `driver` SET `fname`='"+fName.Text+"',`lname`='"+lName.Text+"',`full_name`='"+fullName.Text+"',`email`='"+emailAddress.Text+"',`contact_no`='"+contactNo.Text+"',`address`='"+address.Text+"',`license_no`='"+license.Text+"',`vehicle_no`='"+vehicleNo.Text+"' WHERE nic = '"+nicNo.Text+"';";
                 try
                 {
                     cmd = new MySqlCommand(query, conn);

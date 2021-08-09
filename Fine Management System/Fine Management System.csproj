@@ -115,6 +115,12 @@
     <Compile Include="Aletrs\DataSaved.Designer.cs">
       <DependentUpon>DataSaved.cs</DependentUpon>
     </Compile>
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
     <Compile Include="RandomGen.cs" />
     <Compile Include="DBConnection\DB.cs" />
     <Compile Include="Error messages\DBError.cs">
@@ -232,6 +238,9 @@
     <EmbeddedResource Include="Error messages\InputError.resx">
       <DependentUpon>InputError.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindowItems\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -304,6 +313,7 @@
     <Content Include="MainWindowAssests\report.png" />
     <Content Include="MainWindowAssests\settings.png" />
     <Content Include="MainWindowAssests\users.png" />
+    <None Include="Resources\loading.gif" />
     <None Include="Resources\info.png" />
     <None Include="Resources\more-info-icon-29.jpg" />
     <None Include="Resources\warning.png" />
