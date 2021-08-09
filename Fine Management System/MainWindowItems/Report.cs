@@ -77,7 +77,7 @@ namespace Fine_Management_System.MainWindowItems
                 case 0:
                     {
                         //Expired
-                        query = "SELECT `Ref_No`, `Date`, `Amount`, `driver_nic` FROM fine_receipt WHERE Date <= CURDATE() - INTERVAL 2 WEEK AND State = 0";
+                        query = "SELECT `Ref_No` as Reference_Number, `Date`, `Amount` as Fine_Amount, `driver_nic` as Driver_NIC  FROM fine_receipt WHERE Date <= CURDATE() - INTERVAL 2 WEEK AND State = 0";
                         fineReceipt1.FineReceiptWithQuery(query);
                         fineReceipt1.UnselectAll();
                         
@@ -87,7 +87,7 @@ namespace Fine_Management_System.MainWindowItems
                 case 1:
                     {
                         //Sued List
-                        query = "SELECT `Ref_No`, `Date`, `Amount`, `driver_nic` FROM fine_receipt WHERE State = 9 ";
+                        query = "SELECT `Ref_No` as Reference_Number, `Date`, `Amount` as Fine_Amount, `driver_nic` as Driver_NIC FROM fine_receipt WHERE State = 9 ";
                         fineReceipt1.FineReceiptWithQuery(query);
                         fineReceipt1.UnselectAll();
                         
@@ -97,7 +97,7 @@ namespace Fine_Management_System.MainWindowItems
                 case 2:
                     {
                         //Pending
-                        query = "SELECT `Ref_No`, `Date`, `Amount`, `driver_nic` FROM fine_receipt WHERE Date >= CURDATE() - INTERVAL 2 WEEK AND State = 0";
+                        query = "SELECT `Ref_No` as Reference_Number, `Date`, `Amount` as Fine_Amount, `driver_nic` as Driver_NIC FROM fine_receipt WHERE Date >= CURDATE() - INTERVAL 2 WEEK AND State = 0";
                         fineReceipt1.FineReceiptWithQuery(query);
                         fineReceipt1.UnselectAll();
                         
@@ -107,7 +107,7 @@ namespace Fine_Management_System.MainWindowItems
                 case 3:
                     {
                         //Paid
-                        query = "SELECT `Ref_No`, `Date`, `Amount`, `driver_nic` FROM fine_receipt WHERE State = 1 ";
+                        query = "SELECT `Ref_No` as Reference_Number, `Date`, `Amount` as Fine_Amount, `driver_nic` as Driver_NIC FROM fine_receipt WHERE State = 1 ";
                         fineReceipt1.FineReceiptWithQuery(query);
                         fineReceipt1.UnselectAll();
                         break;
@@ -115,7 +115,7 @@ namespace Fine_Management_System.MainWindowItems
                 case 4:
                     {
                         //All Records
-                        query = "SELECT `Ref_No`, `Date`, `Amount`, `driver_nic` FROM fine_receipt WHERE 1 " ;
+                        query = "SELECT `Ref_No` as Reference_Number, `Date`, `Amount` as Fine_Amount, `driver_nic` as Driver_NIC FROM fine_receipt WHERE 1 ";
                         fineReceipt1.FineReceiptWithQuery(query);
                         fineReceipt1.UnselectAll();
                         break;
@@ -150,7 +150,7 @@ namespace Fine_Management_System.MainWindowItems
                     case 1:
                         {
                             //Sued List
-                            query = "SELECT `Ref_No`, `Date`, `Amount`, `driver_nic` FROM fine_receipt WHERE State = 9 AND" + dateFilter;
+                            query = "SELECT `Ref_No` as Reference Number, `Date`, `Amount` as Fine Amount, `driver_nic` as Driver NIC FROM fine_receipt WHERE State = 9 AND" + dateFilter;
                             fineReceipt1.FineReceiptWithQuery(query);
                             fineReceipt1.UnselectAll();
                             break;
@@ -159,7 +159,7 @@ namespace Fine_Management_System.MainWindowItems
                     case 3:
                         {
                             //Paid
-                            query = "SELECT `Ref_No`, `Date`, `Amount`, `driver_nic` FROM fine_receipt WHERE State = 1 AND" + dateFilter;
+                            query = "SELECT `Ref_No` as Reference Number, `Date`, `Amount` as Fine Amount, `driver_nic` as Driver NIC FROM fine_receipt WHERE State = 1 AND" + dateFilter;
                             fineReceipt1.FineReceiptWithQuery(query);
                             fineReceipt1.UnselectAll();
                             
@@ -168,7 +168,7 @@ namespace Fine_Management_System.MainWindowItems
                     case 4:
                         {
                             //All Records
-                            query = "SELECT `Ref_No`, `Date`, `Amount`, `driver_nic` FROM fine_receipt WHERE " + dateFilter;
+                            query = "SELECT `Ref_No` as Reference Number, `Date`, `Amount` as Fine Amount, `driver_nic` as Driver NIC FROM fine_receipt WHERE " + dateFilter;
                             fineReceipt1.FineReceiptWithQuery(query);
                             fineReceipt1.UnselectAll();
                             
@@ -210,8 +210,7 @@ namespace Fine_Management_System.MainWindowItems
         {
             if (e.KeyChar == (char)13)
             {
-                MessageBox.Show("hel");
-                fineReceipt1.Select(rptSearch.Text);
+                //fineReceipt1.Select(rptSearch.Text);
             }
             
         }
