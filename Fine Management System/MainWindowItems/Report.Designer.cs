@@ -265,6 +265,7 @@ namespace Fine_Management_System.MainWindowItems
             this.shareBtn.Name = "shareBtn";
             this.shareBtn.Size = new System.Drawing.Size(92, 34);
             this.shareBtn.TabIndex = 0;
+            this.shareBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ShareClicked);
             this.shareBtn.MouseHover += new System.EventHandler(this.share_tip);
             // 
             // Report

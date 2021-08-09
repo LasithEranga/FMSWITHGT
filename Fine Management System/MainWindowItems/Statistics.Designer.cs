@@ -49,22 +49,21 @@ namespace Fine_Management_System.MainWindowItems
             this.chartTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lineChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.goBtn = new System.Windows.Forms.Panel();
             this.labelChartsTitle = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.chartCalenderIcon1 = new System.Windows.Forms.Panel();
             this.dtpicker1 = new System.Windows.Forms.DateTimePicker();
-            this.chartCalenderIcon2 = new System.Windows.Forms.Panel();
             this.dtpicker2 = new System.Windows.Forms.DateTimePicker();
             this.chartToLabel = new System.Windows.Forms.Label();
             this.chartFromLabel = new System.Windows.Forms.Label();
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
+            this.goBtn = new System.Windows.Forms.Panel();
+            this.chartCalenderIcon1 = new System.Windows.Forms.Panel();
+            this.chartCalenderIcon2 = new System.Windows.Forms.Panel();
             this.chartBackground = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.statLegendLabel = new System.Windows.Forms.Label();
             this.casesLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.chartPanelChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
             this.chartPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.menuStripPanel.SuspendLayout();
@@ -179,21 +178,21 @@ namespace Fine_Management_System.MainWindowItems
             // revenueToolStripMenuItem
             // 
             this.revenueToolStripMenuItem.Name = "revenueToolStripMenuItem";
-            this.revenueToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.revenueToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.revenueToolStripMenuItem.Text = "&Revenue";
             this.revenueToolStripMenuItem.Click += new System.EventHandler(this.revenueToolStripMenuItem_Click);
             // 
             // noCasesToolStripMenuItem
             // 
             this.noCasesToolStripMenuItem.Name = "noCasesToolStripMenuItem";
-            this.noCasesToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.noCasesToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.noCasesToolStripMenuItem.Text = "&No_Cases";
             this.noCasesToolStripMenuItem.Click += new System.EventHandler(this.NoCasesToolStripMenuItem_Click);
             // 
             // vehicleTypeToolStripMenuItem
             // 
             this.vehicleTypeToolStripMenuItem.Name = "vehicleTypeToolStripMenuItem";
-            this.vehicleTypeToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.vehicleTypeToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.vehicleTypeToolStripMenuItem.Text = "&Vehicle Type";
             this.vehicleTypeToolStripMenuItem.Click += new System.EventHandler(this.vehicleTypeToolStripMenuItem_Click);
             // 
@@ -204,32 +203,25 @@ namespace Fine_Management_System.MainWindowItems
             this.barGraphToolStripMenuItem});
             this.chartTypeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.chartTypeToolStripMenuItem.Name = "chartTypeToolStripMenuItem";
-            this.chartTypeToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.chartTypeToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.chartTypeToolStripMenuItem.Text = "&Chart Type";
+            this.chartTypeToolStripMenuItem.DropDownClosed += new System.EventHandler(this.DropDownClosed);
+            this.chartTypeToolStripMenuItem.Click += new System.EventHandler(this.chartTypeToolStripMenuItem_Click);
+            this.chartTypeToolStripMenuItem.MouseHover += new System.EventHandler(this.MouseHoverCT);
             // 
             // lineChartToolStripMenuItem
             // 
             this.lineChartToolStripMenuItem.Name = "lineChartToolStripMenuItem";
-            this.lineChartToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.lineChartToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.lineChartToolStripMenuItem.Text = "&Line Chart";
+            this.lineChartToolStripMenuItem.Click += new System.EventHandler(this.lineChartToolStripMenuItem_Click);
             // 
             // barGraphToolStripMenuItem
             // 
             this.barGraphToolStripMenuItem.Name = "barGraphToolStripMenuItem";
-            this.barGraphToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.barGraphToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.barGraphToolStripMenuItem.Text = "&Bar Graph";
-            // 
-            // goBtn
-            // 
-            this.goBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.Group_31;
-            this.goBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.goBtn.Location = new System.Drawing.Point(733, 35);
-            this.goBtn.Name = "goBtn";
-            this.goBtn.Size = new System.Drawing.Size(128, 39);
-            this.goBtn.TabIndex = 7;
-            this.goBtn.Click += new System.EventHandler(this.GoBtnClick);
-            this.goBtn.Paint += new System.Windows.Forms.PaintEventHandler(this.goBtn_Paint);
-            this.goBtn.MouseHover += new System.EventHandler(this.go_tip);
+            this.barGraphToolStripMenuItem.Click += new System.EventHandler(this.barGraphToolStripMenuItem_Click);
             // 
             // labelChartsTitle
             // 
@@ -256,15 +248,6 @@ namespace Fine_Management_System.MainWindowItems
             this.panel3.Size = new System.Drawing.Size(465, 40);
             this.panel3.TabIndex = 16;
             // 
-            // chartCalenderIcon1
-            // 
-            this.chartCalenderIcon1.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
-            this.chartCalenderIcon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.chartCalenderIcon1.Location = new System.Drawing.Point(180, 3);
-            this.chartCalenderIcon1.Name = "chartCalenderIcon1";
-            this.chartCalenderIcon1.Size = new System.Drawing.Size(26, 26);
-            this.chartCalenderIcon1.TabIndex = 10;
-            // 
             // dtpicker1
             // 
             this.dtpicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -274,15 +257,6 @@ namespace Fine_Management_System.MainWindowItems
             this.dtpicker1.Name = "dtpicker1";
             this.dtpicker1.Size = new System.Drawing.Size(76, 20);
             this.dtpicker1.TabIndex = 2;
-            // 
-            // chartCalenderIcon2
-            // 
-            this.chartCalenderIcon2.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
-            this.chartCalenderIcon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.chartCalenderIcon2.Location = new System.Drawing.Point(405, 3);
-            this.chartCalenderIcon2.Name = "chartCalenderIcon2";
-            this.chartCalenderIcon2.Size = new System.Drawing.Size(26, 26);
-            this.chartCalenderIcon2.TabIndex = 11;
             // 
             // dtpicker2
             // 
@@ -316,10 +290,39 @@ namespace Fine_Management_System.MainWindowItems
             this.chartFromLabel.TabIndex = 0;
             this.chartFromLabel.Text = "FROM:";
             // 
+            // goBtn
+            // 
+            this.goBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.Group_31;
+            this.goBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.goBtn.Location = new System.Drawing.Point(733, 35);
+            this.goBtn.Name = "goBtn";
+            this.goBtn.Size = new System.Drawing.Size(128, 39);
+            this.goBtn.TabIndex = 7;
+            this.goBtn.Click += new System.EventHandler(this.GoBtnClick);
+            this.goBtn.Paint += new System.Windows.Forms.PaintEventHandler(this.goBtn_Paint);
+            this.goBtn.MouseHover += new System.EventHandler(this.go_tip);
+            // 
+            // chartCalenderIcon1
+            // 
+            this.chartCalenderIcon1.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
+            this.chartCalenderIcon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.chartCalenderIcon1.Location = new System.Drawing.Point(180, 3);
+            this.chartCalenderIcon1.Name = "chartCalenderIcon1";
+            this.chartCalenderIcon1.Size = new System.Drawing.Size(26, 26);
+            this.chartCalenderIcon1.TabIndex = 10;
+            // 
+            // chartCalenderIcon2
+            // 
+            this.chartCalenderIcon2.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
+            this.chartCalenderIcon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.chartCalenderIcon2.Location = new System.Drawing.Point(405, 3);
+            this.chartCalenderIcon2.Name = "chartCalenderIcon2";
+            this.chartCalenderIcon2.Size = new System.Drawing.Size(26, 26);
+            this.chartCalenderIcon2.TabIndex = 11;
+            // 
             // chartBackground
             // 
             this.chartBackground.BackgroundImage = global::Fine_Management_System.Properties.Resources.chartBack;
-            this.chartBackground.Controls.Add(this.textBox1);
             this.chartBackground.Controls.Add(this.statLegendLabel);
             this.chartBackground.Controls.Add(this.casesLabel);
             this.chartBackground.Controls.Add(this.panel2);
@@ -328,13 +331,6 @@ namespace Fine_Management_System.MainWindowItems
             this.chartBackground.Name = "chartBackground";
             this.chartBackground.Size = new System.Drawing.Size(864, 469);
             this.chartBackground.TabIndex = 12;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(521, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 15;
             // 
             // statLegendLabel
             // 
@@ -465,7 +461,6 @@ namespace Fine_Management_System.MainWindowItems
         private System.Windows.Forms.Label casesLabel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartPanelChart;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label loading;
         private System.Windows.Forms.ToolTip toolTip4;
     }

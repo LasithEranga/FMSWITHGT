@@ -1,7 +1,7 @@
 ﻿
 namespace Fine_Management_System.Popup
 {
-    partial class Form2
+    partial class UpdateOfficer
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace Fine_Management_System.Popup
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateOfficer));
             this.line = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -42,7 +43,6 @@ namespace Fine_Management_System.Popup
             this.backBtn = new System.Windows.Forms.Button();
             this.nicNo = new System.Windows.Forms.TextBox();
             this.emailAddress = new System.Windows.Forms.TextBox();
-            this.contactNo = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dateTimePickerAddUsr = new System.Windows.Forms.DateTimePicker();
             this.fullName = new System.Windows.Forms.TextBox();
@@ -56,6 +56,7 @@ namespace Fine_Management_System.Popup
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.contactNo = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -64,10 +65,9 @@ namespace Fine_Management_System.Popup
             // 
             this.line.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.line.ForeColor = System.Drawing.Color.Coral;
-            this.line.Location = new System.Drawing.Point(11, 65);
-            this.line.Margin = new System.Windows.Forms.Padding(4);
+            this.line.Location = new System.Drawing.Point(8, 53);
             this.line.Name = "line";
-            this.line.Size = new System.Drawing.Size(629, 6);
+            this.line.Size = new System.Drawing.Size(472, 5);
             this.line.TabIndex = 3;
             // 
             // label1
@@ -75,17 +75,17 @@ namespace Fine_Management_System.Popup
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(13, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(10, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(414, 52);
+            this.label1.Size = new System.Drawing.Size(357, 39);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Update User Details";
+            this.label1.Text = "Update Officer Details";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.contactNo);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.policeId);
             this.panel2.Controls.Add(this.post);
@@ -95,7 +95,6 @@ namespace Fine_Management_System.Popup
             this.panel2.Controls.Add(this.backBtn);
             this.panel2.Controls.Add(this.nicNo);
             this.panel2.Controls.Add(this.emailAddress);
-            this.panel2.Controls.Add(this.contactNo);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.dateTimePickerAddUsr);
             this.panel2.Controls.Add(this.fullName);
@@ -109,20 +108,18 @@ namespace Fine_Management_System.Popup
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(11, 88);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(8, 72);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(631, 499);
+            this.panel2.Size = new System.Drawing.Size(474, 406);
             this.panel2.TabIndex = 15;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.address);
-            this.panel1.Location = new System.Drawing.Point(28, 319);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(21, 259);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(281, 94);
+            this.panel1.Size = new System.Drawing.Size(211, 77);
             this.panel1.TabIndex = 5;
             // 
             // address
@@ -131,11 +128,10 @@ namespace Fine_Management_System.Popup
             this.address.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.address.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.address.ForeColor = System.Drawing.SystemColors.Control;
-            this.address.Location = new System.Drawing.Point(-3, -1);
-            this.address.Margin = new System.Windows.Forms.Padding(4);
+            this.address.Location = new System.Drawing.Point(-2, -1);
             this.address.MaxLength = 200;
             this.address.Name = "address";
-            this.address.Size = new System.Drawing.Size(277, 95);
+            this.address.Size = new System.Drawing.Size(208, 77);
             this.address.TabIndex = 0;
             this.address.Text = "";
             // 
@@ -143,13 +139,14 @@ namespace Fine_Management_System.Popup
             // 
             this.policeId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.policeId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.policeId.Enabled = false;
             this.policeId.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.policeId.ForeColor = System.Drawing.SystemColors.Control;
-            this.policeId.Location = new System.Drawing.Point(371, 182);
-            this.policeId.Margin = new System.Windows.Forms.Padding(4);
+            this.policeId.Location = new System.Drawing.Point(278, 148);
             this.policeId.Mask = "00000";
             this.policeId.Name = "policeId";
-            this.policeId.Size = new System.Drawing.Size(151, 29);
+            this.policeId.ReadOnly = true;
+            this.policeId.Size = new System.Drawing.Size(114, 25);
             this.policeId.TabIndex = 8;
             // 
             // post
@@ -158,10 +155,9 @@ namespace Fine_Management_System.Popup
             this.post.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.post.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.post.ForeColor = System.Drawing.SystemColors.Control;
-            this.post.Location = new System.Drawing.Point(371, 249);
-            this.post.Margin = new System.Windows.Forms.Padding(4);
+            this.post.Location = new System.Drawing.Point(278, 202);
             this.post.Name = "post";
-            this.post.Size = new System.Drawing.Size(151, 29);
+            this.post.Size = new System.Drawing.Size(114, 25);
             this.post.TabIndex = 9;
             this.post.WordWrap = false;
             // 
@@ -170,10 +166,9 @@ namespace Fine_Management_System.Popup
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(367, 223);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(275, 181);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 19);
+            this.label12.Size = new System.Drawing.Size(31, 15);
             this.label12.TabIndex = 23;
             this.label12.Text = "Post";
             // 
@@ -184,13 +179,13 @@ namespace Fine_Management_System.Popup
             this.addUsrBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addUsrBtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addUsrBtn.ForeColor = System.Drawing.Color.White;
-            this.addUsrBtn.Location = new System.Drawing.Point(503, 448);
-            this.addUsrBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.addUsrBtn.Location = new System.Drawing.Point(377, 364);
             this.addUsrBtn.Name = "addUsrBtn";
-            this.addUsrBtn.Size = new System.Drawing.Size(116, 37);
+            this.addUsrBtn.Size = new System.Drawing.Size(87, 30);
             this.addUsrBtn.TabIndex = 11;
             this.addUsrBtn.Text = "Update";
             this.addUsrBtn.UseVisualStyleBackColor = false;
+            this.addUsrBtn.Click += new System.EventHandler(this.addUsrBtn_Click);
             // 
             // clearAllBtn
             // 
@@ -199,10 +194,9 @@ namespace Fine_Management_System.Popup
             this.clearAllBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearAllBtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearAllBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.clearAllBtn.Location = new System.Drawing.Point(267, 448);
-            this.clearAllBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.clearAllBtn.Location = new System.Drawing.Point(200, 364);
             this.clearAllBtn.Name = "clearAllBtn";
-            this.clearAllBtn.Size = new System.Drawing.Size(116, 37);
+            this.clearAllBtn.Size = new System.Drawing.Size(87, 30);
             this.clearAllBtn.TabIndex = 13;
             this.clearAllBtn.Text = "Clear All";
             this.clearAllBtn.UseVisualStyleBackColor = false;
@@ -214,10 +208,9 @@ namespace Fine_Management_System.Popup
             this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.backBtn.Location = new System.Drawing.Point(27, 448);
-            this.backBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.backBtn.Location = new System.Drawing.Point(20, 364);
             this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(100, 37);
+            this.backBtn.Size = new System.Drawing.Size(75, 30);
             this.backBtn.TabIndex = 12;
             this.backBtn.Text = "Back";
             this.backBtn.UseVisualStyleBackColor = false;
@@ -228,11 +221,10 @@ namespace Fine_Management_System.Popup
             this.nicNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nicNo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nicNo.ForeColor = System.Drawing.SystemColors.Control;
-            this.nicNo.Location = new System.Drawing.Point(371, 116);
-            this.nicNo.Margin = new System.Windows.Forms.Padding(4);
+            this.nicNo.Location = new System.Drawing.Point(278, 94);
             this.nicNo.MaxLength = 12;
             this.nicNo.Name = "nicNo";
-            this.nicNo.Size = new System.Drawing.Size(235, 29);
+            this.nicNo.Size = new System.Drawing.Size(177, 25);
             this.nicNo.TabIndex = 7;
             this.nicNo.WordWrap = false;
             // 
@@ -242,37 +234,21 @@ namespace Fine_Management_System.Popup
             this.emailAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.emailAddress.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailAddress.ForeColor = System.Drawing.SystemColors.Control;
-            this.emailAddress.Location = new System.Drawing.Point(371, 47);
-            this.emailAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.emailAddress.Location = new System.Drawing.Point(278, 38);
             this.emailAddress.MaxLength = 50;
             this.emailAddress.Name = "emailAddress";
-            this.emailAddress.Size = new System.Drawing.Size(235, 29);
+            this.emailAddress.Size = new System.Drawing.Size(177, 25);
             this.emailAddress.TabIndex = 6;
             this.emailAddress.WordWrap = false;
-            // 
-            // contactNo
-            // 
-            this.contactNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.contactNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contactNo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactNo.ForeColor = System.Drawing.SystemColors.Control;
-            this.contactNo.Location = new System.Drawing.Point(27, 182);
-            this.contactNo.Margin = new System.Windows.Forms.Padding(4);
-            this.contactNo.Mask = "(+\\94) 00 - 000 - 0000";
-            this.contactNo.Name = "contactNo";
-            this.contactNo.Size = new System.Drawing.Size(281, 29);
-            this.contactNo.TabIndex = 3;
-            this.contactNo.ValidatingType = typeof(System.DateTime);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.Control;
-            this.label11.Location = new System.Drawing.Point(24, 156);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(18, 127);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(121, 19);
+            this.label11.Size = new System.Drawing.Size(94, 15);
             this.label11.TabIndex = 15;
             this.label11.Text = "Contact Number";
             // 
@@ -284,11 +260,10 @@ namespace Fine_Management_System.Popup
             this.dateTimePickerAddUsr.CalendarTitleBackColor = System.Drawing.Color.AntiqueWhite;
             this.dateTimePickerAddUsr.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Fine_Management_System.Properties.Settings.Default, "bgBlack", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.dateTimePickerAddUsr.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerAddUsr.Location = new System.Drawing.Point(27, 249);
-            this.dateTimePickerAddUsr.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerAddUsr.Location = new System.Drawing.Point(20, 202);
             this.dateTimePickerAddUsr.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerAddUsr.Name = "dateTimePickerAddUsr";
-            this.dateTimePickerAddUsr.Size = new System.Drawing.Size(280, 29);
+            this.dateTimePickerAddUsr.Size = new System.Drawing.Size(211, 25);
             this.dateTimePickerAddUsr.TabIndex = 4;
             // 
             // fullName
@@ -297,11 +272,10 @@ namespace Fine_Management_System.Popup
             this.fullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fullName.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fullName.ForeColor = System.Drawing.SystemColors.Control;
-            this.fullName.Location = new System.Drawing.Point(27, 116);
-            this.fullName.Margin = new System.Windows.Forms.Padding(4);
+            this.fullName.Location = new System.Drawing.Point(20, 94);
             this.fullName.MaxLength = 200;
             this.fullName.Name = "fullName";
-            this.fullName.Size = new System.Drawing.Size(281, 29);
+            this.fullName.Size = new System.Drawing.Size(211, 25);
             this.fullName.TabIndex = 2;
             this.fullName.WordWrap = false;
             // 
@@ -311,11 +285,10 @@ namespace Fine_Management_System.Popup
             this.lName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lName.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lName.ForeColor = System.Drawing.SystemColors.Control;
-            this.lName.Location = new System.Drawing.Point(175, 47);
-            this.lName.Margin = new System.Windows.Forms.Padding(4);
+            this.lName.Location = new System.Drawing.Point(131, 38);
             this.lName.MaxLength = 100;
             this.lName.Name = "lName";
-            this.lName.Size = new System.Drawing.Size(133, 29);
+            this.lName.Size = new System.Drawing.Size(100, 25);
             this.lName.TabIndex = 1;
             this.lName.WordWrap = false;
             // 
@@ -325,11 +298,10 @@ namespace Fine_Management_System.Popup
             this.fName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fName.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fName.ForeColor = System.Drawing.SystemColors.Control;
-            this.fName.Location = new System.Drawing.Point(25, 47);
-            this.fName.Margin = new System.Windows.Forms.Padding(4);
+            this.fName.Location = new System.Drawing.Point(19, 38);
             this.fName.MaxLength = 100;
             this.fName.Name = "fName";
-            this.fName.Size = new System.Drawing.Size(133, 29);
+            this.fName.Size = new System.Drawing.Size(100, 25);
             this.fName.TabIndex = 0;
             this.fName.WordWrap = false;
             // 
@@ -338,10 +310,9 @@ namespace Fine_Management_System.Popup
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(24, 290);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(18, 236);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(140, 19);
+            this.label9.Size = new System.Drawing.Size(111, 15);
             this.label9.TabIndex = 7;
             this.label9.Text = "Permanent Address";
             // 
@@ -350,10 +321,9 @@ namespace Fine_Management_System.Popup
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(367, 156);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(275, 127);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(134, 19);
+            this.label8.Size = new System.Drawing.Size(100, 15);
             this.label8.TabIndex = 6;
             this.label8.Text = "Police ID Number";
             // 
@@ -362,10 +332,9 @@ namespace Fine_Management_System.Popup
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(367, 90);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(275, 73);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 19);
+            this.label7.Size = new System.Drawing.Size(73, 15);
             this.label7.TabIndex = 5;
             this.label7.Text = "NIC Number";
             // 
@@ -374,10 +343,9 @@ namespace Fine_Management_System.Popup
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(367, 21);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(275, 17);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 19);
+            this.label6.Size = new System.Drawing.Size(83, 15);
             this.label6.TabIndex = 4;
             this.label6.Text = "Email Address";
             // 
@@ -386,10 +354,9 @@ namespace Fine_Management_System.Popup
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(24, 223);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(18, 181);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 19);
+            this.label5.Size = new System.Drawing.Size(75, 15);
             this.label5.TabIndex = 3;
             this.label5.Text = "Date of Birth";
             // 
@@ -398,10 +365,9 @@ namespace Fine_Management_System.Popup
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(24, 90);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(18, 73);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 19);
+            this.label4.Size = new System.Drawing.Size(60, 15);
             this.label4.TabIndex = 2;
             this.label4.Text = "Full Name";
             // 
@@ -410,10 +376,9 @@ namespace Fine_Management_System.Popup
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(172, 21);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(129, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 19);
+            this.label3.Size = new System.Drawing.Size(63, 15);
             this.label3.TabIndex = 1;
             this.label3.Text = "Last Name";
             // 
@@ -422,24 +387,39 @@ namespace Fine_Management_System.Popup
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(24, 21);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(18, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 19);
+            this.label2.Size = new System.Drawing.Size(64, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "First Name";
             // 
-            // Form2
+            // contactNo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.contactNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.contactNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.contactNo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactNo.ForeColor = System.Drawing.SystemColors.Control;
+            this.contactNo.Location = new System.Drawing.Point(21, 148);
+            this.contactNo.MaxLength = 200;
+            this.contactNo.Name = "contactNo";
+            this.contactNo.Size = new System.Drawing.Size(211, 25);
+            this.contactNo.TabIndex = 24;
+            this.contactNo.WordWrap = false;
+            // 
+            // UpdateOfficer
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.ClientSize = new System.Drawing.Size(664, 610);
+            this.ClientSize = new System.Drawing.Size(498, 496);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.line);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "UpdateOfficer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Update Officer";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -463,7 +443,6 @@ namespace Fine_Management_System.Popup
         private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.TextBox nicNo;
         private System.Windows.Forms.TextBox emailAddress;
-        private System.Windows.Forms.MaskedTextBox contactNo;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dateTimePickerAddUsr;
         private System.Windows.Forms.TextBox fullName;
@@ -477,5 +456,6 @@ namespace Fine_Management_System.Popup
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox contactNo;
     }
 }

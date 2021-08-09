@@ -19,12 +19,16 @@ namespace Fine_Management_System.MainWindowItems
         private int selection = 0;
         private string viewBy = "DATE_FORMAT(date,'%d')";
         private string group = " Group by Date(date)";
+
+
         public Statistics()
         {
             InitializeComponent();
             loading.Hide();
-            FillChart(query +" where date >= '" + dtpicker1.Text + "' OR date < '" + dtpicker2.Text + "';", "xaxis", "yaxis");
+            chartPanelChart.Series[0].Color = Color.FromArgb(137, 207, 240);
+            
         }
+
 
         private void GoBtnClick(object sender, EventArgs e)
         {
@@ -34,7 +38,7 @@ namespace Fine_Management_System.MainWindowItems
             dtpicker2.CustomFormat = "yyyy-MM-dd";
             //loading
             loading.Text = "Loading....";
-            loading.Show();
+            
             switch (selection)
             {
                 case 0:
@@ -52,8 +56,7 @@ namespace Fine_Management_System.MainWindowItems
 
 
             }
-            //loading hide
-            loading.Hide();
+            
         }
 
         private void NoCasesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -80,7 +83,7 @@ namespace Fine_Management_System.MainWindowItems
             MySqlDataReader dr = null;
             try
             {
-                textBox1.Text = query;
+                loading.Show();
                 if (Convert.ToBoolean(MainWindow.DBConnectionHelath))
                 {
                     dr = DBConnection.DB.Read(query);
@@ -91,7 +94,7 @@ namespace Fine_Management_System.MainWindowItems
                     }
                     dr.Close();
                 }
-
+                loading.Hide();
             }
             catch (MySqlException)
             {
@@ -133,6 +136,32 @@ namespace Fine_Management_System.MainWindowItems
         private void go_tip(object sender, EventArgs e)
         {
             toolTip4.Show("Go", goBtn);
+        }
+
+        private void lineChartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            chartPanelChart.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+        }
+
+        private void barGraphToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            chartPanelChart.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            
+        }
+
+        private void chartTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            chartTypeToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void DropDownClosed(object sender, EventArgs e)
+        {
+            chartTypeToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void MouseHoverCT(object sender, EventArgs e)
+        {
+           
         }
     }
 }

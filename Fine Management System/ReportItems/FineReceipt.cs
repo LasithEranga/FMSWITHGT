@@ -211,5 +211,9 @@ namespace Fine_Management_System.ReportItems
             
         }
 
+        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

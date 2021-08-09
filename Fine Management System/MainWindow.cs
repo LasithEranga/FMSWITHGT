@@ -21,7 +21,7 @@ namespace Fine_Management_System
 
         private void closeBtnClick(object sender, EventArgs e)
         {
-            this.Dispose();
+            Application.Exit();
         }
 
         private void MainWindow_Load(object sender, EventArgs e)

@@ -1,7 +1,7 @@
 ﻿
 namespace Fine_Management_System.Popup
 {
-    partial class Form1
+    partial class DriverUpdate
     {
         /// <summary>
         /// Required designer variable.
@@ -32,9 +32,9 @@ namespace Fine_Management_System.Popup
             this.line = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.vehicleNo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.license = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.address = new System.Windows.Forms.RichTextBox();
@@ -43,7 +43,6 @@ namespace Fine_Management_System.Popup
             this.backBtn = new System.Windows.Forms.Button();
             this.nicNo = new System.Windows.Forms.TextBox();
             this.emailAddress = new System.Windows.Forms.TextBox();
-            this.contactNo = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dateTimePickerAddUsr = new System.Windows.Forms.DateTimePicker();
             this.fullName = new System.Windows.Forms.TextBox();
@@ -56,6 +55,7 @@ namespace Fine_Management_System.Popup
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.contactNo = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -84,9 +84,10 @@ namespace Fine_Management_System.Popup
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.contactNo);
+            this.panel2.Controls.Add(this.vehicleNo);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.license);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.addUsrBtn);
@@ -94,7 +95,6 @@ namespace Fine_Management_System.Popup
             this.panel2.Controls.Add(this.backBtn);
             this.panel2.Controls.Add(this.nicNo);
             this.panel2.Controls.Add(this.emailAddress);
-            this.panel2.Controls.Add(this.contactNo);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.dateTimePickerAddUsr);
             this.panel2.Controls.Add(this.fullName);
@@ -112,18 +112,18 @@ namespace Fine_Management_System.Popup
             this.panel2.Size = new System.Drawing.Size(474, 406);
             this.panel2.TabIndex = 15;
             // 
-            // textBox2
+            // vehicleNo
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox2.Location = new System.Drawing.Point(278, 241);
-            this.textBox2.MaxLength = 12;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(177, 25);
-            this.textBox2.TabIndex = 32;
-            this.textBox2.WordWrap = false;
+            this.vehicleNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.vehicleNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.vehicleNo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vehicleNo.ForeColor = System.Drawing.SystemColors.Control;
+            this.vehicleNo.Location = new System.Drawing.Point(278, 241);
+            this.vehicleNo.MaxLength = 12;
+            this.vehicleNo.Name = "vehicleNo";
+            this.vehicleNo.Size = new System.Drawing.Size(177, 25);
+            this.vehicleNo.TabIndex = 32;
+            this.vehicleNo.WordWrap = false;
             // 
             // label12
             // 
@@ -136,18 +136,18 @@ namespace Fine_Management_System.Popup
             this.label12.TabIndex = 31;
             this.label12.Text = "Vehicle Number";
             // 
-            // textBox1
+            // license
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox1.Location = new System.Drawing.Point(278, 166);
-            this.textBox1.MaxLength = 12;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 25);
-            this.textBox1.TabIndex = 30;
-            this.textBox1.WordWrap = false;
+            this.license.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.license.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.license.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.license.ForeColor = System.Drawing.SystemColors.Control;
+            this.license.Location = new System.Drawing.Point(278, 166);
+            this.license.MaxLength = 12;
+            this.license.Name = "license";
+            this.license.Size = new System.Drawing.Size(177, 25);
+            this.license.TabIndex = 30;
+            this.license.WordWrap = false;
             // 
             // label8
             // 
@@ -158,7 +158,7 @@ namespace Fine_Management_System.Popup
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(93, 15);
             this.label8.TabIndex = 29;
-            this.label8.Text = "Licence Number";
+            this.label8.Text = "License Number";
             // 
             // panel1
             // 
@@ -195,6 +195,7 @@ namespace Fine_Management_System.Popup
             this.addUsrBtn.TabIndex = 11;
             this.addUsrBtn.Text = "Update ";
             this.addUsrBtn.UseVisualStyleBackColor = false;
+            this.addUsrBtn.Click += new System.EventHandler(this.addUsrBtn_Click);
             // 
             // clearAllBtn
             // 
@@ -228,11 +229,13 @@ namespace Fine_Management_System.Popup
             // 
             this.nicNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.nicNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nicNo.Enabled = false;
             this.nicNo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nicNo.ForeColor = System.Drawing.SystemColors.Control;
             this.nicNo.Location = new System.Drawing.Point(278, 94);
             this.nicNo.MaxLength = 12;
             this.nicNo.Name = "nicNo";
+            this.nicNo.ReadOnly = true;
             this.nicNo.Size = new System.Drawing.Size(177, 25);
             this.nicNo.TabIndex = 7;
             this.nicNo.WordWrap = false;
@@ -249,19 +252,6 @@ namespace Fine_Management_System.Popup
             this.emailAddress.Size = new System.Drawing.Size(177, 25);
             this.emailAddress.TabIndex = 6;
             this.emailAddress.WordWrap = false;
-            // 
-            // contactNo
-            // 
-            this.contactNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.contactNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contactNo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactNo.ForeColor = System.Drawing.SystemColors.Control;
-            this.contactNo.Location = new System.Drawing.Point(20, 148);
-            this.contactNo.Mask = "(+\\94) 00 - 000 - 0000";
-            this.contactNo.Name = "contactNo";
-            this.contactNo.Size = new System.Drawing.Size(211, 25);
-            this.contactNo.TabIndex = 3;
-            this.contactNo.ValidatingType = typeof(System.DateTime);
             // 
             // label11
             // 
@@ -404,7 +394,20 @@ namespace Fine_Management_System.Popup
             this.label2.TabIndex = 0;
             this.label2.Text = "First Name";
             // 
-            // Form1
+            // contactNo
+            // 
+            this.contactNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.contactNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.contactNo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactNo.ForeColor = System.Drawing.SystemColors.Control;
+            this.contactNo.Location = new System.Drawing.Point(21, 153);
+            this.contactNo.MaxLength = 200;
+            this.contactNo.Name = "contactNo";
+            this.contactNo.Size = new System.Drawing.Size(211, 25);
+            this.contactNo.TabIndex = 33;
+            this.contactNo.WordWrap = false;
+            // 
+            // DriverUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -413,9 +416,10 @@ namespace Fine_Management_System.Popup
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.line);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form1";
-            this.Text = "Update new user";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "DriverUpdate";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Update User";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -436,7 +440,6 @@ namespace Fine_Management_System.Popup
         private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.TextBox nicNo;
         private System.Windows.Forms.TextBox emailAddress;
-        private System.Windows.Forms.MaskedTextBox contactNo;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dateTimePickerAddUsr;
         private System.Windows.Forms.TextBox fullName;
@@ -449,9 +452,10 @@ namespace Fine_Management_System.Popup
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox vehicleNo;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox license;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox contactNo;
     }
 }
