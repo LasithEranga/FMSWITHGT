@@ -130,9 +130,6 @@
   <data name="chart_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chart_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Home_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Home_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="chartBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chartBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -147,6 +144,9 @@
   </data>
   <data name="Home_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Search panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="settings_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,11 +166,11 @@
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Home_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Group 21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Group 21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,17 +178,11 @@
   <data name="warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Apply button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Apply button1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="applyBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\applyBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="calendar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calendar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="filter button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filter button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,14 +193,17 @@
   <data name="notification" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\notification.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="home_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="settings_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home_gray1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_gray1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,11 +211,17 @@
   <data name="logout_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="homeBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\homeBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\theme.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ADD NEW" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ADD NEW.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chart_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chart_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,20 +235,23 @@
   <data name="calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="homeBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\homeBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ADD NEW" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ADD NEW.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Apply button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Apply button1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Group 21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Group 21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Home_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Home_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chart_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chart_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settings_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="more-info-icon-29" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\more-info-icon-29.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Filter panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Filter panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -283,10 +289,7 @@
   <data name="filterBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filterBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="more-info-icon-29" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\more-info-icon-29.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
