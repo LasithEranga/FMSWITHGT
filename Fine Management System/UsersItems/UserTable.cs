@@ -83,5 +83,28 @@ namespace Fine_Management_System.UsersItems
         {
             MessageBox.Show("Clecked!");
         }
+
+        private void RowHeaderClicked(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            switch (MainWindowItems.Users.GetActive())
+            {
+                case 1:
+                    {//officers
+                        int rowindex = table.CurrentRow.Index;
+                        DataGridViewRow selectedRow = table.Rows[rowindex];
+                        string cellValue = Convert.ToString(selectedRow.Cells["police_id"].Value);
+                        new Popup.UpdateOfficer(cellValue).Show();
+                        break;
+                    }
+                case 2:
+                    {//driver
+                        int rowindex = table.CurrentRow.Index;
+                        DataGridViewRow selectedRow = table.Rows[rowindex];
+                        string cellValue = Convert.ToString(selectedRow.Cells["nic"].Value);
+                        new Popup.DriverUpdate(cellValue).Show();
+                        break;
+                    }
+            }
+        }
     }
 }

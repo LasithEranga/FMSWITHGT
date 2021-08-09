@@ -66,6 +66,7 @@ namespace Fine_Management_System.UsersItems
             this.table.Size = new System.Drawing.Size(900, 397);
             this.table.TabIndex = 0;
             this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
+            this.table.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.RowHeaderClicked);
             // 
             // UserTable
             // 

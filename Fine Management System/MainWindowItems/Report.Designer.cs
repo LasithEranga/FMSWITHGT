@@ -31,7 +31,6 @@ namespace Fine_Management_System.MainWindowItems
         {
             this.components = new System.ComponentModel.Container();
             this.reportPanel = new System.Windows.Forms.Panel();
-            this.fineReceipt1 = new Fine_Management_System.ReportItems.FineReceipt();
             this.gobtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.rptSearchIcon = new System.Windows.Forms.Panel();
@@ -49,6 +48,7 @@ namespace Fine_Management_System.MainWindowItems
             this.saveAsPdfBtn = new System.Windows.Forms.Panel();
             this.shareBtn = new System.Windows.Forms.Panel();
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.fineReceipt1 = new Fine_Management_System.ReportItems.FineReceipt();
             this.reportPanel.SuspendLayout();
             this.rptNav.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -76,13 +76,6 @@ namespace Fine_Management_System.MainWindowItems
             this.reportPanel.Name = "reportPanel";
             this.reportPanel.Size = new System.Drawing.Size(927, 624);
             this.reportPanel.TabIndex = 5;
-            // 
-            // fineReceipt1
-            // 
-            this.fineReceipt1.Location = new System.Drawing.Point(18, 121);
-            this.fineReceipt1.Name = "fineReceipt1";
-            this.fineReceipt1.Size = new System.Drawing.Size(895, 481);
-            this.fineReceipt1.TabIndex = 16;
             // 
             // gobtn
             // 
@@ -233,6 +226,8 @@ namespace Fine_Management_System.MainWindowItems
             this.rptSearch.Text = "Search Here";
             this.rptSearch.TextChanged += new System.EventHandler(this.rptSearch_TextChanged);
             this.rptSearch.Enter += new System.EventHandler(this.Focus_Search);
+            this.rptSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterPressed);
+            this.rptSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EnterPress);
             // 
             // reportTextBox
             // 
@@ -265,7 +260,15 @@ namespace Fine_Management_System.MainWindowItems
             this.shareBtn.Name = "shareBtn";
             this.shareBtn.Size = new System.Drawing.Size(92, 34);
             this.shareBtn.TabIndex = 0;
+            this.shareBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ShareClicked);
             this.shareBtn.MouseHover += new System.EventHandler(this.share_tip);
+            // 
+            // fineReceipt1
+            // 
+            this.fineReceipt1.Location = new System.Drawing.Point(18, 121);
+            this.fineReceipt1.Name = "fineReceipt1";
+            this.fineReceipt1.Size = new System.Drawing.Size(895, 481);
+            this.fineReceipt1.TabIndex = 16;
             // 
             // Report
             // 

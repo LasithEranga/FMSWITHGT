@@ -12,12 +12,18 @@ namespace Fine_Management_System.MainWindowItems
 {
     public partial class Users : UserControl
     {
+        private static int active = 0; //all users
         public Users()
         {
             InitializeComponent();
             table.UserTableAllUser();
             SwapLines(allUsersLine);
             
+        }
+
+        public static int GetActive()
+        {
+            return active;
         }
 
         private void addUsrBtnClick(object sender, EventArgs e)
@@ -48,18 +54,21 @@ namespace Fine_Management_System.MainWindowItems
 
         private void labelOfficers_Click(object sender, EventArgs e)
         {
+            active = 1;
             SwapLines(officersLine);
             table.UserTableOfficer();
         }
 
         private void labelDrivers_Click(object sender, EventArgs e)
         {
+            active = 2;
             SwapLines(driversLine);
             table.UserTableDriver();
         }
 
         private void labelAllusrs_Click(object sender, EventArgs e)
         {
+            active = 0;
             SwapLines(allUsersLine);
             table.UserTableAllUser();
             

@@ -27,7 +27,7 @@ namespace Fine_Management_System.ReportItems
                 showReceipt.Hide();
                 buttonBack.Hide();
                 string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
-                MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from fine_receipt", connStr);
+                MySqlDataAdapter sqlda = new MySqlDataAdapter("SELECT `Ref_No` as Reference_Number, `Date`, `Amount` as Fine_Amount, `driver_nic` as Driver_NIC FROM fine_receipt", connStr);
                 DataTable dtbl = new DataTable();
                 sqlda.Fill(dtbl);
                 table.DataSource = dtbl;
@@ -207,9 +207,33 @@ namespace Fine_Management_System.ReportItems
 
         }
 
-        public void SetSearch() {
-            
+        public string[] GetList() {
+            string[] array= new string[table.Rows.Count];
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                array[i] = table.Rows[i].Cells[0].Value.ToString().Trim();
+            }
+            return array;
         }
 
+        public void Select(string key)
+        {
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                 if(table.Rows[i].Cells[0].Value.ToString().Trim() == key)
+                {
+                    SelectRow(i);
+                    break;
+                }
+            }
+            
+
+
+        }
+
+        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

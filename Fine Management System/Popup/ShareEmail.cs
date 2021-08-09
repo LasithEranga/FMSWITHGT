@@ -48,9 +48,9 @@ namespace Fine_Management_System.Popup
                 clientDetail.EnableSsl = true;
                 clientDetail.DeliveryMethod = SmtpDeliveryMethod.Network;
                 clientDetail.UseDefaultCredentials = false;
-                clientDetail.Credentials = new NetworkCredential(txtSenderEmail.Text.Trim(), txtSenderPassword.Text.Trim());
+                clientDetail.Credentials = new NetworkCredential("finexpayment@gmail.com", "Sinerugroup9");
                 MailMessage mailDetails = new MailMessage();
-                mailDetails.From = new MailAddress(txtSenderEmail.Text.Trim());
+                mailDetails.From = new MailAddress("finexpayment@gmail.com");
                 mailDetails.To.Add(txtRecipientEmail.Text.Trim());
                 mailDetails.Subject = txtSubject.Text.Trim();
                 mailDetails.Body = rtbBody.Text.Trim();
@@ -68,6 +68,11 @@ namespace Fine_Management_System.Popup
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void addUsrBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
