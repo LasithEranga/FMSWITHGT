@@ -197,5 +197,10 @@ namespace Fine_Management_System.MainWindowItems
         {
             toolTip3.Show("Save_as", saveAsPdfBtn);
         }
+
+        private void ShareClicked(object sender, MouseEventArgs e)
+        {
+            new Popup.shareMail().Show();
+        }
     }
 }

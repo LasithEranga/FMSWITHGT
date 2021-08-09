@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Fine_Management_System.Popup
+namespace Fine_Management_System.Rules
 {
-    public partial class Form2 : Form
+    public partial class Rules : Form
     {
-        public Form2()
+        public Rules()
         {
             InitializeComponent();
         }

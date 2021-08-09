@@ -24,44 +24,51 @@ namespace Fine_Management_System.AddUser
 
         private void addUsrBtn_Click(object sender, EventArgs e)
         {
-            GetPhoneNo();
+            string passowrd = RandomGen.password();
             if (ValidateText(fName.Text, "first name") && ValidateText(lName.Text, "last name") && ValidateText(fullName.Text, "full name")&& ValidatePhoneNo() && ValidateText(post.Text, "police post") && ValidateAddress() && Validate_Email() && Validate_NIC())
             {
                 try
                 {
-                    string query = "INSERT INTO `traffic_police_officer`(`police_id`, `fname`, `lname`, `full_name`, `email`, `nic`, `contact_no`, `post`, `address`) VALUES (" + policeId.Text + ",'" + fName.Text + "','" + lName.Text + "','" + fullName.Text + "','" + emailAddress.Text + "','" + nicNo.Text + "','" + GetPhoneNo() + "','" + post.Text + "','" + address.Text + "')";
+                    string query = "INSERT INTO `traffic_police_officer`(`police_id`, `fname`, `lname`, `full_name`, `email`, `nic`, `contact_no`, `post`, `address`,`password`) VALUES (" + policeId.Text + ",'" + fName.Text + "','" + lName.Text + "','" + fullName.Text + "','" + emailAddress.Text + "','" + nicNo.Text + "','" + GetPhoneNo() + "','" + post.Text + "','" + address.Text + "','"+MD5Hashing.Encryption(passowrd)+"')";
                     DBConnection.DB.Write(query);
+                    try
+                    {
+                        SmtpClient clientDetail = new SmtpClient();
+                        clientDetail.Host = "smtp.gmail.com";
+                        clientDetail.Port = 587;
+                        clientDetail.EnableSsl = true;
+                        clientDetail.DeliveryMethod = SmtpDeliveryMethod.Network;
+                        clientDetail.UseDefaultCredentials = false;
+                        clientDetail.Credentials = new NetworkCredential("finexpayment@gmail.com", "Sinerugroup9");
+                        MailMessage mailDetails = new MailMessage();
+                        mailDetails.From = new MailAddress("finexpayment@gmail.com");
+                        mailDetails.To.Add(emailAddress.Text);
+                        mailDetails.Subject = "Account Password";
+                        mailDetails.Body = passowrd;
+
+                        clientDetail.Send(mailDetails);
+                        new Aletrs.DataSaved("Your mail has been sent").Show();
+                    }
+                    catch (Exception ex)
+                    {
+                        new Aletrs.DataSaved("Could't send the email").Show();
+                        MessageBox.Show(ex.Message);
+                    }
                     new Aletrs.DataSaved("User Details Saved!").Show();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
+                    if(ex.Message.Contains("Duplicate entry"))
+                    {
+                        new Aletrs.DataSaved("Police ID already exists").Show();
+
+                    }
 
                 }
                 
 
             }
-                try
-                {
-                    SmtpClient clientDetail = new SmtpClient();
-                    clientDetail.Host = "smtp.gmail.com";
-                    clientDetail.Port = 587;
-                    clientDetail.EnableSsl = true;
-                    clientDetail.DeliveryMethod = SmtpDeliveryMethod.Network;
-                    clientDetail.UseDefaultCredentials = false;
-                    clientDetail.Credentials = new NetworkCredential("finexpayment@gmail.com", "Sinerugroup9");
-                    MailMessage mailDetails = new MailMessage();
-                    mailDetails.From = new MailAddress("finexpayment@gmail.com");
-                    mailDetails.To.Add(emailAddress.Text);
-                    mailDetails.Subject = "Account Password";
-                    mailDetails.Body = RandomGen.password();
-
-                    clientDetail.Send(mailDetails);
-                    MessageBox.Show("Your mail has been sent");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                
 
         }
 
@@ -199,6 +206,19 @@ namespace Fine_Management_System.AddUser
             }
             
        
+        }
+        private static bool ValidatePoliceId(string id)
+        {
+            Regex rgx = new Regex(@"^\d{5}$");
+            if (rgx.IsMatch(id))
+            {
+                return true;
+            }
+            else
+            {
+                new Error_messages.InputError("Invalid Phone Number", "Please check the phone no").Show();
+                return false;
+            }
         }
 
 
