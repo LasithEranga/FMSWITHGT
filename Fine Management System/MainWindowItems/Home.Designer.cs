@@ -80,6 +80,12 @@ namespace Fine_Management_System
             this.homeItem1 = new System.Windows.Forms.Panel();
             this.totalCasesText = new System.Windows.Forms.Label();
             this.labelTotalCases = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.homePanel.SuspendLayout();
             this.homeItem8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartThisMonth)).BeginInit();
@@ -128,6 +134,8 @@ namespace Fine_Management_System
             // 
             this.homeItem8.BackgroundImage = global::Fine_Management_System.Properties.Resources.Home_8;
             this.homeItem8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.homeItem8.Controls.Add(this.label7);
+            this.homeItem8.Controls.Add(this.label6);
             this.homeItem8.Controls.Add(this.labelThisMonthIncome);
             this.homeItem8.Controls.Add(this.chartThisMonth);
             this.homeItem8.Location = new System.Drawing.Point(627, 443);
@@ -141,7 +149,7 @@ namespace Fine_Management_System
             this.labelThisMonthIncome.BackColor = System.Drawing.Color.Transparent;
             this.labelThisMonthIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelThisMonthIncome.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelThisMonthIncome.Location = new System.Drawing.Point(25, 5);
+            this.labelThisMonthIncome.Location = new System.Drawing.Point(78, 5);
             this.labelThisMonthIncome.Name = "labelThisMonthIncome";
             this.labelThisMonthIncome.Size = new System.Drawing.Size(144, 20);
             this.labelThisMonthIncome.TabIndex = 9;
@@ -341,6 +349,8 @@ namespace Fine_Management_System
             // 
             this.homeItem6.BackgroundImage = global::Fine_Management_System.Properties.Resources.Home_6;
             this.homeItem6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.homeItem6.Controls.Add(this.label5);
+            this.homeItem6.Controls.Add(this.label4);
             this.homeItem6.Controls.Add(this.legendNoOfCases2);
             this.homeItem6.Controls.Add(this.labelMonthlyCases);
             this.homeItem6.Controls.Add(this.legendColor2);
@@ -469,6 +479,8 @@ namespace Fine_Management_System
             // 
             this.homeItem4.BackgroundImage = global::Fine_Management_System.Properties.Resources.Home_4;
             this.homeItem4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.homeItem4.Controls.Add(this.label3);
+            this.homeItem4.Controls.Add(this.label1);
             this.homeItem4.Controls.Add(this.legendNoOfCases1);
             this.homeItem4.Controls.Add(this.legendColor1);
             this.homeItem4.Controls.Add(this.labelWeeklyCases);
@@ -660,6 +672,66 @@ namespace Fine_Management_System
             this.labelTotalCases.TabIndex = 3;
             this.labelTotalCases.Text = "65465";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(12, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "No of Cases";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(243, 180);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Week";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(10, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "No of Cases";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(139, 145);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Month";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(13, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Income";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(116, 145);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Day";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -734,5 +806,11 @@ namespace Fine_Management_System
         private System.Windows.Forms.Label date2;
         private System.Windows.Forms.Label value1;
         private System.Windows.Forms.Label date1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
     }
 }
