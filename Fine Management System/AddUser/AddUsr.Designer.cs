@@ -31,11 +31,8 @@ namespace Fine_Management_System.AddUser
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddUsr));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.usrImage = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.address = new System.Windows.Forms.RichTextBox();
-            this.uploadBtn = new System.Windows.Forms.Button();
             this.policeId = new System.Windows.Forms.MaskedTextBox();
             this.post = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -50,7 +47,6 @@ namespace Fine_Management_System.AddUser
             this.fullName = new System.Windows.Forms.TextBox();
             this.lName = new System.Windows.Forms.TextBox();
             this.fName = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,8 +58,6 @@ namespace Fine_Management_System.AddUser
             this.label1 = new System.Windows.Forms.Label();
             this.line = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usrImage)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,9 +65,7 @@ namespace Fine_Management_System.AddUser
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.uploadBtn);
             this.panel2.Controls.Add(this.policeId);
             this.panel2.Controls.Add(this.post);
             this.panel2.Controls.Add(this.label12);
@@ -88,7 +80,6 @@ namespace Fine_Management_System.AddUser
             this.panel2.Controls.Add(this.fullName);
             this.panel2.Controls.Add(this.lName);
             this.panel2.Controls.Add(this.fName);
-            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
@@ -99,27 +90,8 @@ namespace Fine_Management_System.AddUser
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(12, 78);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(603, 406);
+            this.panel2.Size = new System.Drawing.Size(503, 406);
             this.panel2.TabIndex = 14;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.usrImage);
-            this.panel3.Location = new System.Drawing.Point(480, 38);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(103, 83);
-            this.panel3.TabIndex = 28;
-            // 
-            // usrImage
-            // 
-            this.usrImage.Location = new System.Drawing.Point(-1, -1);
-            this.usrImage.Name = "usrImage";
-            this.usrImage.Size = new System.Drawing.Size(103, 83);
-            this.usrImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.usrImage.TabIndex = 9;
-            this.usrImage.TabStop = false;
-            this.usrImage.Click += new System.EventHandler(this.usrImage_Click);
             // 
             // panel1
             // 
@@ -142,21 +114,6 @@ namespace Fine_Management_System.AddUser
             this.address.Size = new System.Drawing.Size(208, 77);
             this.address.TabIndex = 0;
             this.address.Text = "";
-            // 
-            // uploadBtn
-            // 
-            this.uploadBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(127)))), ((int)(((byte)(244)))));
-            this.uploadBtn.FlatAppearance.BorderSize = 0;
-            this.uploadBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uploadBtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.uploadBtn.Location = new System.Drawing.Point(480, 145);
-            this.uploadBtn.Name = "uploadBtn";
-            this.uploadBtn.Size = new System.Drawing.Size(103, 28);
-            this.uploadBtn.TabIndex = 10;
-            this.uploadBtn.Text = "Upload";
-            this.uploadBtn.UseVisualStyleBackColor = false;
-            this.uploadBtn.Click += new System.EventHandler(this.uploadBtn_Click);
             // 
             // policeId
             // 
@@ -201,7 +158,7 @@ namespace Fine_Management_System.AddUser
             this.addUsrBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addUsrBtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addUsrBtn.ForeColor = System.Drawing.Color.White;
-            this.addUsrBtn.Location = new System.Drawing.Point(496, 364);
+            this.addUsrBtn.Location = new System.Drawing.Point(385, 364);
             this.addUsrBtn.Name = "addUsrBtn";
             this.addUsrBtn.Size = new System.Drawing.Size(87, 30);
             this.addUsrBtn.TabIndex = 11;
@@ -216,7 +173,7 @@ namespace Fine_Management_System.AddUser
             this.clearAllBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearAllBtn.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearAllBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.clearAllBtn.Location = new System.Drawing.Point(278, 364);
+            this.clearAllBtn.Location = new System.Drawing.Point(191, 364);
             this.clearAllBtn.Name = "clearAllBtn";
             this.clearAllBtn.Size = new System.Drawing.Size(87, 30);
             this.clearAllBtn.TabIndex = 13;
@@ -343,17 +300,6 @@ namespace Fine_Management_System.AddUser
             this.fName.TabIndex = 0;
             this.fName.WordWrap = false;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(477, 17);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 15);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "User Image";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -467,7 +413,7 @@ namespace Fine_Management_System.AddUser
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.ClientSize = new System.Drawing.Size(627, 496);
+            this.ClientSize = new System.Drawing.Size(527, 496);
             this.Controls.Add(this.line);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
@@ -479,8 +425,6 @@ namespace Fine_Management_System.AddUser
             this.Load += new System.EventHandler(this.AddUsr_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.usrImage)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -505,8 +449,6 @@ namespace Fine_Management_System.AddUser
         private System.Windows.Forms.TextBox fullName;
         private System.Windows.Forms.TextBox lName;
         private System.Windows.Forms.TextBox fName;
-        private System.Windows.Forms.PictureBox usrImage;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox post;
         private System.Windows.Forms.Label label12;
@@ -516,8 +458,6 @@ namespace Fine_Management_System.AddUser
         private System.Windows.Forms.TextBox nicNo;
         private System.Windows.Forms.TextBox emailAddress;
         private System.Windows.Forms.MaskedTextBox policeId;
-        private System.Windows.Forms.Button uploadBtn;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
     }
 }
