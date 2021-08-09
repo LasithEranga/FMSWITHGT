@@ -25,6 +25,13 @@ namespace Fine_Management_System.MainWindowItems
         {
             InitializeComponent();
             loading.Hide();
+            dtpicker1.Format = DateTimePickerFormat.Custom;
+            dtpicker1.CustomFormat = "yyyy-MM-dd";
+            dtpicker2.Format = DateTimePickerFormat.Custom;
+            dtpicker2.CustomFormat = "yyyy-MM-dd";
+            dtpicker1.Value = DateTime.Today.AddDays(-14);
+            loading.Text = "Loading....";
+
             chartPanelChart.Series[0].Color = Color.FromArgb(137, 207, 240);
             
         }
@@ -32,12 +39,9 @@ namespace Fine_Management_System.MainWindowItems
 
         private void GoBtnClick(object sender, EventArgs e)
         {
-            dtpicker1.Format = DateTimePickerFormat.Custom;
-            dtpicker1.CustomFormat = "yyyy-MM-dd";
-            dtpicker2.Format = DateTimePickerFormat.Custom;
-            dtpicker2.CustomFormat = "yyyy-MM-dd";
+            
             //loading
-            loading.Text = "Loading....";
+            
             
             switch (selection)
             {
@@ -46,7 +50,7 @@ namespace Fine_Management_System.MainWindowItems
                     FillChart(query + " where date >= '" + dtpicker1.Text + "' OR date < '" + dtpicker2.Text+"' " + group, "xaxis", "yaxis");
                     break;
                 case 1:
-                    query = "SELECT SUM(amount) as yaxis, MONTHNAME(date) as xaxis FROM payment ";
+                    query = "SELECT COUNT(Ref_No) as yaxis, " + viewBy + " as xaxis FROM fine_receipt ";
                     FillChart(query + " where date >= '" + dtpicker1.Text + "' OR date < '" + dtpicker2.Text + "' " + group, "xaxis", "yaxis");
                     break;
                 case 2:
@@ -62,24 +66,27 @@ namespace Fine_Management_System.MainWindowItems
         private void NoCasesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             selection = 1;
-            FillChart(query + " where date >= '" + dtpicker1.Text + "' OR date < '" + dtpicker2.Text + "' "+group, "xaxis", "yaxis");
-        }
-
-        private void vehicleTypeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            selection = 2;
+            yaxis.Text = "No of Cases";
+            statLegendLabel.Text = "No of Cases";
+            casesLabel.Text = "No of Cases";
+            query = "SELECT COUNT(Ref_No) as yaxis, " + viewBy + " as xaxis FROM fine_receipt ";
             FillChart(query + " where date >= '" + dtpicker1.Text + "' OR date < '" + dtpicker2.Text + "' "+group, "xaxis", "yaxis");
         }
 
         private void revenueToolStripMenuItem_Click(object sender, EventArgs e)
         {
             selection = 0;
+            yaxis.Text = "Amount(Rs)";
+            casesLabel.Text = "Amount";
+            statLegendLabel.Text = "Revenue";
+            query = "SELECT SUM(amount) as yaxis, " + viewBy + " as xaxis FROM payment ";
             FillChart(query + " where date >= '" + dtpicker1.Text + "' OR date < '" + dtpicker2.Text + "' "+group, "xaxis", "yaxis");
         }
 
         private void FillChart(string query, string x, string y)
         {
-           
+
+            
             MySqlDataReader dr = null;
             try
             {
@@ -118,19 +125,25 @@ namespace Fine_Management_System.MainWindowItems
         private void dayToolStripMenuItem_Click(object sender, EventArgs e)
         {
             viewBy = "DATE_FORMAT(date,'%d')";
+            xaxis.Text = "Date";
             group = " Group by Date(date)";
+            LoadChart();
         }
 
         private void monthToolStripMenuItem_Click(object sender, EventArgs e)
         {
             viewBy = "MONTHNAME(date)";
+            xaxis.Text = "Month";
             group = " Group by Month(date)";
+            LoadChart();
         }
 
         private void yearToolStripMenuItem_Click(object sender, EventArgs e)
         {
             viewBy = "YEAR(date)";
+            xaxis.Text = "Year";
             group = " Group by Year(date)";
+            LoadChart();
         }
 
         private void go_tip(object sender, EventArgs e)
@@ -159,9 +172,49 @@ namespace Fine_Management_System.MainWindowItems
             chartTypeToolStripMenuItem.ForeColor = Color.White;
         }
 
-        private void MouseHoverCT(object sender, EventArgs e)
+
+
+
+
+        private void ViewClick(object sender, EventArgs e)
         {
-           
+            sortByToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void ViewByDropdownCLosed(object sender, EventArgs e)
+        {
+            sortByToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void CatClick(object sender, EventArgs e)
+        {
+            categoryToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void CatDropdownClosed(object sender, EventArgs e)
+        {
+            categoryToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void LoadChart() {
+
+            switch (selection)
+            {
+                case 0:
+                    query = "SELECT SUM(amount) as yaxis, " + viewBy + " as xaxis FROM payment ";
+                    FillChart(query + " where date >= '" + dtpicker1.Text + "' OR date < '" + dtpicker2.Text + "' " + group, "xaxis", "yaxis");
+                    break;
+                case 1:
+                    query = "SELECT COUNT(Ref_No) as yaxis, " + viewBy + " as xaxis FROM fine_receipt ";
+                    FillChart(query + " where date >= '" + dtpicker1.Text + "' OR date < '" + dtpicker2.Text + "' " + group, "xaxis", "yaxis");
+                    break;
+                case 2:
+                    query = "SELECT SUM(amount) as yaxis, YEAR(date) as xaxis FROM payment ";
+                    FillChart(query + " where date >= '" + dtpicker1.Text + "' OR date < '" + dtpicker2.Text + "' " + group, "xaxis", "yaxis");
+                    break;
+
+
+            }
         }
     }
 }
