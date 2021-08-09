@@ -49,21 +49,21 @@ namespace Fine_Management_System.MainWindowItems
             this.chartTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lineChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goBtn = new System.Windows.Forms.Panel();
             this.labelChartsTitle = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.chartCalenderIcon1 = new System.Windows.Forms.Panel();
             this.dtpicker1 = new System.Windows.Forms.DateTimePicker();
+            this.chartCalenderIcon2 = new System.Windows.Forms.Panel();
             this.dtpicker2 = new System.Windows.Forms.DateTimePicker();
             this.chartToLabel = new System.Windows.Forms.Label();
             this.chartFromLabel = new System.Windows.Forms.Label();
-            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
-            this.goBtn = new System.Windows.Forms.Panel();
-            this.chartCalenderIcon1 = new System.Windows.Forms.Panel();
-            this.chartCalenderIcon2 = new System.Windows.Forms.Panel();
             this.chartBackground = new System.Windows.Forms.Panel();
             this.statLegendLabel = new System.Windows.Forms.Label();
             this.casesLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.chartPanelChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
             this.chartPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.menuStripPanel.SuspendLayout();
@@ -79,8 +79,9 @@ namespace Fine_Management_System.MainWindowItems
             this.chartPanel.Controls.Add(this.panel5);
             this.chartPanel.Controls.Add(this.chartBackground);
             this.chartPanel.Location = new System.Drawing.Point(0, 0);
+            this.chartPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartPanel.Name = "chartPanel";
-            this.chartPanel.Size = new System.Drawing.Size(927, 624);
+            this.chartPanel.Size = new System.Drawing.Size(1236, 768);
             this.chartPanel.TabIndex = 10;
             // 
             // panel5
@@ -90,27 +91,30 @@ namespace Fine_Management_System.MainWindowItems
             this.panel5.Controls.Add(this.goBtn);
             this.panel5.Controls.Add(this.labelChartsTitle);
             this.panel5.Controls.Add(this.panel3);
-            this.panel5.Location = new System.Drawing.Point(28, 4);
+            this.panel5.Location = new System.Drawing.Point(37, 5);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(864, 77);
+            this.panel5.Size = new System.Drawing.Size(1152, 95);
             this.panel5.TabIndex = 17;
             // 
             // loading
             // 
             this.loading.AutoSize = true;
             this.loading.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.loading.Location = new System.Drawing.Point(645, 46);
+            this.loading.Location = new System.Drawing.Point(860, 57);
+            this.loading.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.loading.Name = "loading";
-            this.loading.Size = new System.Drawing.Size(0, 13);
+            this.loading.Size = new System.Drawing.Size(0, 17);
             this.loading.TabIndex = 18;
             // 
             // menuStripPanel
             // 
             this.menuStripPanel.BackColor = System.Drawing.Color.Black;
             this.menuStripPanel.Controls.Add(this.menuStrip2);
-            this.menuStripPanel.Location = new System.Drawing.Point(141, 3);
+            this.menuStripPanel.Location = new System.Drawing.Point(188, 4);
+            this.menuStripPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.menuStripPanel.Name = "menuStripPanel";
-            this.menuStripPanel.Size = new System.Drawing.Size(327, 25);
+            this.menuStripPanel.Size = new System.Drawing.Size(436, 31);
             this.menuStripPanel.TabIndex = 17;
             // 
             // menuStrip2
@@ -123,9 +127,9 @@ namespace Fine_Management_System.MainWindowItems
             this.chartTypeToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip2.Size = new System.Drawing.Size(327, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(436, 28);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -138,28 +142,28 @@ namespace Fine_Management_System.MainWindowItems
             this.sortByToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.sortByToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.sortByToolStripMenuItem.Name = "sortByToolStripMenuItem";
-            this.sortByToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.sortByToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.sortByToolStripMenuItem.Text = "&Sort by";
             // 
             // dayToolStripMenuItem
             // 
             this.dayToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.dayToolStripMenuItem.Name = "dayToolStripMenuItem";
-            this.dayToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.dayToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.dayToolStripMenuItem.Text = "&Day";
             this.dayToolStripMenuItem.Click += new System.EventHandler(this.dayToolStripMenuItem_Click);
             // 
             // monthToolStripMenuItem
             // 
             this.monthToolStripMenuItem.Name = "monthToolStripMenuItem";
-            this.monthToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.monthToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.monthToolStripMenuItem.Text = "&Month";
             this.monthToolStripMenuItem.Click += new System.EventHandler(this.monthToolStripMenuItem_Click);
             // 
             // yearToolStripMenuItem
             // 
             this.yearToolStripMenuItem.Name = "yearToolStripMenuItem";
-            this.yearToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.yearToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.yearToolStripMenuItem.Text = "&Year";
             this.yearToolStripMenuItem.Click += new System.EventHandler(this.yearToolStripMenuItem_Click);
             // 
@@ -172,27 +176,27 @@ namespace Fine_Management_System.MainWindowItems
             this.vehicleTypeToolStripMenuItem});
             this.categoryToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.categoryToolStripMenuItem.Name = "categoryToolStripMenuItem";
-            this.categoryToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.categoryToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
             this.categoryToolStripMenuItem.Text = "&Category";
             // 
             // revenueToolStripMenuItem
             // 
             this.revenueToolStripMenuItem.Name = "revenueToolStripMenuItem";
-            this.revenueToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.revenueToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.revenueToolStripMenuItem.Text = "&Revenue";
             this.revenueToolStripMenuItem.Click += new System.EventHandler(this.revenueToolStripMenuItem_Click);
             // 
             // noCasesToolStripMenuItem
             // 
             this.noCasesToolStripMenuItem.Name = "noCasesToolStripMenuItem";
-            this.noCasesToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.noCasesToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.noCasesToolStripMenuItem.Text = "&No_Cases";
             this.noCasesToolStripMenuItem.Click += new System.EventHandler(this.NoCasesToolStripMenuItem_Click);
             // 
             // vehicleTypeToolStripMenuItem
             // 
             this.vehicleTypeToolStripMenuItem.Name = "vehicleTypeToolStripMenuItem";
-            this.vehicleTypeToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.vehicleTypeToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.vehicleTypeToolStripMenuItem.Text = "&Vehicle Type";
             this.vehicleTypeToolStripMenuItem.Click += new System.EventHandler(this.vehicleTypeToolStripMenuItem_Click);
             // 
@@ -203,7 +207,7 @@ namespace Fine_Management_System.MainWindowItems
             this.barGraphToolStripMenuItem});
             this.chartTypeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.chartTypeToolStripMenuItem.Name = "chartTypeToolStripMenuItem";
-            this.chartTypeToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.chartTypeToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
             this.chartTypeToolStripMenuItem.Text = "&Chart Type";
             this.chartTypeToolStripMenuItem.DropDownClosed += new System.EventHandler(this.DropDownClosed);
             this.chartTypeToolStripMenuItem.Click += new System.EventHandler(this.chartTypeToolStripMenuItem_Click);
@@ -212,25 +216,39 @@ namespace Fine_Management_System.MainWindowItems
             // lineChartToolStripMenuItem
             // 
             this.lineChartToolStripMenuItem.Name = "lineChartToolStripMenuItem";
-            this.lineChartToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lineChartToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.lineChartToolStripMenuItem.Text = "&Line Chart";
             this.lineChartToolStripMenuItem.Click += new System.EventHandler(this.lineChartToolStripMenuItem_Click);
             // 
             // barGraphToolStripMenuItem
             // 
             this.barGraphToolStripMenuItem.Name = "barGraphToolStripMenuItem";
-            this.barGraphToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.barGraphToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.barGraphToolStripMenuItem.Text = "&Bar Graph";
             this.barGraphToolStripMenuItem.Click += new System.EventHandler(this.barGraphToolStripMenuItem_Click);
+            // 
+            // goBtn
+            // 
+            this.goBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.Group_31;
+            this.goBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.goBtn.Location = new System.Drawing.Point(977, 43);
+            this.goBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.goBtn.Name = "goBtn";
+            this.goBtn.Size = new System.Drawing.Size(171, 48);
+            this.goBtn.TabIndex = 7;
+            this.goBtn.Click += new System.EventHandler(this.GoBtnClick);
+            this.goBtn.Paint += new System.Windows.Forms.PaintEventHandler(this.goBtn_Paint);
+            this.goBtn.MouseHover += new System.EventHandler(this.go_tip);
             // 
             // labelChartsTitle
             // 
             this.labelChartsTitle.AutoSize = true;
             this.labelChartsTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelChartsTitle.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelChartsTitle.Location = new System.Drawing.Point(3, 3);
+            this.labelChartsTitle.Location = new System.Drawing.Point(4, 4);
+            this.labelChartsTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelChartsTitle.Name = "labelChartsTitle";
-            this.labelChartsTitle.Size = new System.Drawing.Size(132, 25);
+            this.labelChartsTitle.Size = new System.Drawing.Size(173, 31);
             this.labelChartsTitle.TabIndex = 13;
             this.labelChartsTitle.Text = "STATISTICS";
             // 
@@ -243,29 +261,52 @@ namespace Fine_Management_System.MainWindowItems
             this.panel3.Controls.Add(this.dtpicker2);
             this.panel3.Controls.Add(this.chartToLabel);
             this.panel3.Controls.Add(this.chartFromLabel);
-            this.panel3.Location = new System.Drawing.Point(3, 34);
+            this.panel3.Location = new System.Drawing.Point(4, 42);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(465, 40);
+            this.panel3.Size = new System.Drawing.Size(619, 49);
             this.panel3.TabIndex = 16;
+            // 
+            // chartCalenderIcon1
+            // 
+            this.chartCalenderIcon1.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
+            this.chartCalenderIcon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.chartCalenderIcon1.Location = new System.Drawing.Point(240, 4);
+            this.chartCalenderIcon1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartCalenderIcon1.Name = "chartCalenderIcon1";
+            this.chartCalenderIcon1.Size = new System.Drawing.Size(35, 32);
+            this.chartCalenderIcon1.TabIndex = 10;
             // 
             // dtpicker1
             // 
             this.dtpicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpicker1.Location = new System.Drawing.Point(80, 8);
+            this.dtpicker1.Location = new System.Drawing.Point(107, 10);
+            this.dtpicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpicker1.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.dtpicker1.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             this.dtpicker1.Name = "dtpicker1";
-            this.dtpicker1.Size = new System.Drawing.Size(76, 20);
+            this.dtpicker1.Size = new System.Drawing.Size(100, 22);
             this.dtpicker1.TabIndex = 2;
+            // 
+            // chartCalenderIcon2
+            // 
+            this.chartCalenderIcon2.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
+            this.chartCalenderIcon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.chartCalenderIcon2.Location = new System.Drawing.Point(540, 4);
+            this.chartCalenderIcon2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartCalenderIcon2.Name = "chartCalenderIcon2";
+            this.chartCalenderIcon2.Size = new System.Drawing.Size(35, 32);
+            this.chartCalenderIcon2.TabIndex = 11;
             // 
             // dtpicker2
             // 
             this.dtpicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpicker2.Location = new System.Drawing.Point(309, 7);
+            this.dtpicker2.Location = new System.Drawing.Point(412, 9);
+            this.dtpicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpicker2.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.dtpicker2.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             this.dtpicker2.Name = "dtpicker2";
-            this.dtpicker2.Size = new System.Drawing.Size(76, 20);
+            this.dtpicker2.Size = new System.Drawing.Size(100, 22);
             this.dtpicker2.TabIndex = 4;
             // 
             // chartToLabel
@@ -273,9 +314,10 @@ namespace Fine_Management_System.MainWindowItems
             this.chartToLabel.AutoSize = true;
             this.chartToLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chartToLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.chartToLabel.Location = new System.Drawing.Point(262, 6);
+            this.chartToLabel.Location = new System.Drawing.Point(349, 7);
+            this.chartToLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.chartToLabel.Name = "chartToLabel";
-            this.chartToLabel.Size = new System.Drawing.Size(37, 20);
+            this.chartToLabel.Size = new System.Drawing.Size(50, 25);
             this.chartToLabel.TabIndex = 1;
             this.chartToLabel.Text = "TO:";
             // 
@@ -284,41 +326,12 @@ namespace Fine_Management_System.MainWindowItems
             this.chartFromLabel.AutoSize = true;
             this.chartFromLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chartFromLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.chartFromLabel.Location = new System.Drawing.Point(7, 9);
+            this.chartFromLabel.Location = new System.Drawing.Point(9, 11);
+            this.chartFromLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.chartFromLabel.Name = "chartFromLabel";
-            this.chartFromLabel.Size = new System.Drawing.Size(65, 20);
+            this.chartFromLabel.Size = new System.Drawing.Size(81, 25);
             this.chartFromLabel.TabIndex = 0;
             this.chartFromLabel.Text = "FROM:";
-            // 
-            // goBtn
-            // 
-            this.goBtn.BackgroundImage = global::Fine_Management_System.Properties.Resources.Group_31;
-            this.goBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.goBtn.Location = new System.Drawing.Point(733, 35);
-            this.goBtn.Name = "goBtn";
-            this.goBtn.Size = new System.Drawing.Size(128, 39);
-            this.goBtn.TabIndex = 7;
-            this.goBtn.Click += new System.EventHandler(this.GoBtnClick);
-            this.goBtn.Paint += new System.Windows.Forms.PaintEventHandler(this.goBtn_Paint);
-            this.goBtn.MouseHover += new System.EventHandler(this.go_tip);
-            // 
-            // chartCalenderIcon1
-            // 
-            this.chartCalenderIcon1.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
-            this.chartCalenderIcon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.chartCalenderIcon1.Location = new System.Drawing.Point(180, 3);
-            this.chartCalenderIcon1.Name = "chartCalenderIcon1";
-            this.chartCalenderIcon1.Size = new System.Drawing.Size(26, 26);
-            this.chartCalenderIcon1.TabIndex = 10;
-            // 
-            // chartCalenderIcon2
-            // 
-            this.chartCalenderIcon2.BackgroundImage = global::Fine_Management_System.Properties.Resources.calander;
-            this.chartCalenderIcon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.chartCalenderIcon2.Location = new System.Drawing.Point(405, 3);
-            this.chartCalenderIcon2.Name = "chartCalenderIcon2";
-            this.chartCalenderIcon2.Size = new System.Drawing.Size(26, 26);
-            this.chartCalenderIcon2.TabIndex = 11;
             // 
             // chartBackground
             // 
@@ -327,9 +340,10 @@ namespace Fine_Management_System.MainWindowItems
             this.chartBackground.Controls.Add(this.casesLabel);
             this.chartBackground.Controls.Add(this.panel2);
             this.chartBackground.Controls.Add(this.chartPanelChart);
-            this.chartBackground.Location = new System.Drawing.Point(28, 103);
+            this.chartBackground.Location = new System.Drawing.Point(37, 127);
+            this.chartBackground.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartBackground.Name = "chartBackground";
-            this.chartBackground.Size = new System.Drawing.Size(864, 469);
+            this.chartBackground.Size = new System.Drawing.Size(1152, 577);
             this.chartBackground.TabIndex = 12;
             // 
             // statLegendLabel
@@ -337,9 +351,10 @@ namespace Fine_Management_System.MainWindowItems
             this.statLegendLabel.AutoSize = true;
             this.statLegendLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statLegendLabel.ForeColor = System.Drawing.Color.White;
-            this.statLegendLabel.Location = new System.Drawing.Point(411, 18);
+            this.statLegendLabel.Location = new System.Drawing.Point(548, 22);
+            this.statLegendLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.statLegendLabel.Name = "statLegendLabel";
-            this.statLegendLabel.Size = new System.Drawing.Size(73, 20);
+            this.statLegendLabel.Size = new System.Drawing.Size(90, 25);
             this.statLegendLabel.TabIndex = 14;
             this.statLegendLabel.Text = "Revenue";
             // 
@@ -347,18 +362,20 @@ namespace Fine_Management_System.MainWindowItems
             // 
             this.casesLabel.AutoSize = true;
             this.casesLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.casesLabel.Location = new System.Drawing.Point(782, 18);
+            this.casesLabel.Location = new System.Drawing.Point(1043, 22);
+            this.casesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.casesLabel.Name = "casesLabel";
-            this.casesLabel.Size = new System.Drawing.Size(43, 13);
+            this.casesLabel.Size = new System.Drawing.Size(56, 17);
             this.casesLabel.TabIndex = 10;
             this.casesLabel.Text = "Amount";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Lime;
-            this.panel2.Location = new System.Drawing.Point(737, 23);
+            this.panel2.Location = new System.Drawing.Point(983, 28);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(43, 5);
+            this.panel2.Size = new System.Drawing.Size(57, 6);
             this.panel2.TabIndex = 9;
             // 
             // chartPanelChart
@@ -388,7 +405,8 @@ namespace Fine_Management_System.MainWindowItems
             legend1.ForeColor = System.Drawing.Color.WhiteSmoke;
             legend1.Name = "Legend1";
             this.chartPanelChart.Legends.Add(legend1);
-            this.chartPanelChart.Location = new System.Drawing.Point(10, 37);
+            this.chartPanelChart.Location = new System.Drawing.Point(13, 46);
+            this.chartPanelChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartPanelChart.Name = "chartPanelChart";
             this.chartPanelChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartPanelChart.PaletteCustomColors = new System.Drawing.Color[] {
@@ -403,17 +421,18 @@ namespace Fine_Management_System.MainWindowItems
             series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
             series1.Name = "Series1";
             this.chartPanelChart.Series.Add(series1);
-            this.chartPanelChart.Size = new System.Drawing.Size(807, 383);
+            this.chartPanelChart.Size = new System.Drawing.Size(1076, 471);
             this.chartPanelChart.TabIndex = 8;
             this.chartPanelChart.Text = "chartNew";
             // 
             // Statistics
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.chartPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Statistics";
-            this.Size = new System.Drawing.Size(930, 627);
+            this.Size = new System.Drawing.Size(1240, 772);
             this.chartPanel.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
