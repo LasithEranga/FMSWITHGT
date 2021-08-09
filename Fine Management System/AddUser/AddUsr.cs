@@ -200,6 +200,19 @@ namespace Fine_Management_System.AddUser
             
        
         }
+        private static bool ValidatePoliceId(string id)
+        {
+            Regex rgx = new Regex(@"^\d{5}$");
+            if (rgx.IsMatch(id))
+            {
+                return true;
+            }
+            else
+            {
+                new Error_messages.InputError("Invalid Phone Number", "Please check the phone no").Show();
+                return false;
+            }
+        }
 
 
 

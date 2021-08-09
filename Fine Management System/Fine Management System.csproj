@@ -216,6 +216,7 @@
     <Compile Include="UsersItems\UserTable.Designer.cs">
       <DependentUpon>UserTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validations\Validate.cs" />
     <EmbeddedResource Include="Aletrs\About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>

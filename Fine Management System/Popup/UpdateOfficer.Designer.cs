@@ -43,7 +43,6 @@ namespace Fine_Management_System.Popup
             this.backBtn = new System.Windows.Forms.Button();
             this.nicNo = new System.Windows.Forms.TextBox();
             this.emailAddress = new System.Windows.Forms.TextBox();
-            this.contactNo = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dateTimePickerAddUsr = new System.Windows.Forms.DateTimePicker();
             this.fullName = new System.Windows.Forms.TextBox();
@@ -57,6 +56,7 @@ namespace Fine_Management_System.Popup
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.contactNo = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +85,7 @@ namespace Fine_Management_System.Popup
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.contactNo);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.policeId);
             this.panel2.Controls.Add(this.post);
@@ -94,7 +95,6 @@ namespace Fine_Management_System.Popup
             this.panel2.Controls.Add(this.backBtn);
             this.panel2.Controls.Add(this.nicNo);
             this.panel2.Controls.Add(this.emailAddress);
-            this.panel2.Controls.Add(this.contactNo);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.dateTimePickerAddUsr);
             this.panel2.Controls.Add(this.fullName);
@@ -139,11 +139,13 @@ namespace Fine_Management_System.Popup
             // 
             this.policeId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.policeId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.policeId.Enabled = false;
             this.policeId.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.policeId.ForeColor = System.Drawing.SystemColors.Control;
             this.policeId.Location = new System.Drawing.Point(278, 148);
             this.policeId.Mask = "00000";
             this.policeId.Name = "policeId";
+            this.policeId.ReadOnly = true;
             this.policeId.Size = new System.Drawing.Size(114, 25);
             this.policeId.TabIndex = 8;
             // 
@@ -183,6 +185,7 @@ namespace Fine_Management_System.Popup
             this.addUsrBtn.TabIndex = 11;
             this.addUsrBtn.Text = "Update";
             this.addUsrBtn.UseVisualStyleBackColor = false;
+            this.addUsrBtn.Click += new System.EventHandler(this.addUsrBtn_Click);
             // 
             // clearAllBtn
             // 
@@ -237,19 +240,6 @@ namespace Fine_Management_System.Popup
             this.emailAddress.Size = new System.Drawing.Size(177, 25);
             this.emailAddress.TabIndex = 6;
             this.emailAddress.WordWrap = false;
-            // 
-            // contactNo
-            // 
-            this.contactNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.contactNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contactNo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactNo.ForeColor = System.Drawing.SystemColors.Control;
-            this.contactNo.Location = new System.Drawing.Point(20, 148);
-            this.contactNo.Mask = "(+\\94) 00 - 000 - 0000";
-            this.contactNo.Name = "contactNo";
-            this.contactNo.Size = new System.Drawing.Size(211, 25);
-            this.contactNo.TabIndex = 3;
-            this.contactNo.ValidatingType = typeof(System.DateTime);
             // 
             // label11
             // 
@@ -403,6 +393,19 @@ namespace Fine_Management_System.Popup
             this.label2.TabIndex = 0;
             this.label2.Text = "First Name";
             // 
+            // contactNo
+            // 
+            this.contactNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.contactNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.contactNo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactNo.ForeColor = System.Drawing.SystemColors.Control;
+            this.contactNo.Location = new System.Drawing.Point(21, 148);
+            this.contactNo.MaxLength = 200;
+            this.contactNo.Name = "contactNo";
+            this.contactNo.Size = new System.Drawing.Size(211, 25);
+            this.contactNo.TabIndex = 24;
+            this.contactNo.WordWrap = false;
+            // 
             // UpdateOfficer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,8 +416,9 @@ namespace Fine_Management_System.Popup
             this.Controls.Add(this.line);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UpdateOfficer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Officer";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -439,7 +443,6 @@ namespace Fine_Management_System.Popup
         private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.TextBox nicNo;
         private System.Windows.Forms.TextBox emailAddress;
-        private System.Windows.Forms.MaskedTextBox contactNo;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dateTimePickerAddUsr;
         private System.Windows.Forms.TextBox fullName;
@@ -453,5 +456,6 @@ namespace Fine_Management_System.Popup
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox contactNo;
     }
 }
