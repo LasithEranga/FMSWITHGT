@@ -29,15 +29,17 @@ namespace Fine_Management_System.MainWindowItems
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.settingsPanel = new System.Windows.Forms.Panel();
             this.backBtn = new System.Windows.Forms.Button();
+            this.usersPanel = new Fine_Management_System.MainWindowItems.Users();
             this.labelSettingsTitle = new System.Windows.Forms.Label();
             this.help = new System.Windows.Forms.Panel();
             this.theme = new System.Windows.Forms.Panel();
             this.notification = new System.Windows.Forms.Panel();
             this.language = new System.Windows.Forms.Panel();
             this.user = new System.Windows.Forms.Panel();
-            this.usersPanel = new Fine_Management_System.MainWindowItems.Users();
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.settingsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +72,13 @@ namespace Fine_Management_System.MainWindowItems
             this.backBtn.UseVisualStyleBackColor = false;
             this.backBtn.Click += new System.EventHandler(this.BackBtnClick);
             // 
+            // usersPanel
+            // 
+            this.usersPanel.Location = new System.Drawing.Point(55, 499);
+            this.usersPanel.Name = "usersPanel";
+            this.usersPanel.Size = new System.Drawing.Size(311, 79);
+            this.usersPanel.TabIndex = 15;
+            // 
             // labelSettingsTitle
             // 
             this.labelSettingsTitle.AutoSize = true;
@@ -89,6 +98,7 @@ namespace Fine_Management_System.MainWindowItems
             this.help.Name = "help";
             this.help.Size = new System.Drawing.Size(212, 170);
             this.help.TabIndex = 4;
+            this.help.MouseHover += new System.EventHandler(this.help_tip);
             // 
             // theme
             // 
@@ -107,6 +117,7 @@ namespace Fine_Management_System.MainWindowItems
             this.notification.Name = "notification";
             this.notification.Size = new System.Drawing.Size(212, 170);
             this.notification.TabIndex = 2;
+            this.notification.MouseHover += new System.EventHandler(this.notification_tip);
             // 
             // language
             // 
@@ -116,6 +127,7 @@ namespace Fine_Management_System.MainWindowItems
             this.language.Name = "language";
             this.language.Size = new System.Drawing.Size(212, 170);
             this.language.TabIndex = 1;
+            this.language.MouseHover += new System.EventHandler(this.language_tip);
             // 
             // user
             // 
@@ -126,13 +138,7 @@ namespace Fine_Management_System.MainWindowItems
             this.user.Size = new System.Drawing.Size(212, 170);
             this.user.TabIndex = 0;
             this.user.Click += new System.EventHandler(this.userClick);
-            // 
-            // usersPanel
-            // 
-            this.usersPanel.Location = new System.Drawing.Point(55, 499);
-            this.usersPanel.Name = "usersPanel";
-            this.usersPanel.Size = new System.Drawing.Size(311, 79);
-            this.usersPanel.TabIndex = 15;
+            this.user.MouseHover += new System.EventHandler(this.user_tip);
             // 
             // Settings
             // 
@@ -158,5 +164,6 @@ namespace Fine_Management_System.MainWindowItems
         private System.Windows.Forms.Panel user;
         private Users usersPanel;
         private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }
