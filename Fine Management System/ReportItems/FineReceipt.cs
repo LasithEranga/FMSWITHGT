@@ -207,8 +207,28 @@ namespace Fine_Management_System.ReportItems
 
         }
 
-        public void SetSearch() {
+        public string[] GetList() {
+            string[] array= new string[table.Rows.Count];
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                array[i] = table.Rows[i].Cells[0].Value.ToString().Trim();
+            }
+            return array;
+        }
+
+        public void Select(string key)
+        {
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                 if(table.Rows[i].Cells[0].Value.ToString().Trim() == key)
+                {
+                    SelectRow(i);
+                    break;
+                }
+            }
             
+
+
         }
 
         private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)

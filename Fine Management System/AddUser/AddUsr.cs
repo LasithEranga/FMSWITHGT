@@ -95,29 +95,11 @@ namespace Fine_Management_System.AddUser
             post.Clear();
             policeId.Clear();
             dateTimePickerAddUsr.ResetText();
-            usrImage.Image = null;
-            uploadBtn.Text = "Upload";
+            
 
         }
 
-        OpenFileDialog file = new OpenFileDialog();
         
-        private void uploadBtn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                file.Filter = "ImageFiles(*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png";
-                file.ShowDialog();
-                usrImage.Image = new Bitmap(file.FileName);
-                uploadBtn.Text = "Change";
-            }
-            catch (Exception)
-            {
-                new Error_messages.InputError("Image Not Selected", "Please choose an image").Show();
-
-            }
-
-        }
 
         private void PoliceIDClick(object sender, EventArgs e)
         {

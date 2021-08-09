@@ -213,22 +213,24 @@ namespace Fine_Management_System
                     {
                         cmd = new MySqlCommand(query, conn);
                         dr = cmd.ExecuteReader();
-                    dr.Read();
-                        labelTodayIncome.Text = "Rs:" + dr.GetString("sum") + ".00";
-                    dr.Close();
-                }
+                        if (dr.Read())
+                        {
+                            labelTodayIncome.Text = "Rs:" + dr.GetFloat("sum").ToString();
+                        }
+                        
+                        dr.Close();
+                    }
                     catch (MySqlException)
                     {
-
+                        labelTodayIncome.Text = "Rs: 0.00";
                         MainWindow.DBConnectionHelath = false;
-                }
+                    }
                     catch (Exception)
                     {
 
                     }
                     finally
                     {
-                        labelTodayIncome.Text = "Rs: 0.00";
                         dr.Close();
                     }
                 } 
