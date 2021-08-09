@@ -140,7 +140,7 @@ namespace Fine_Management_System.ReportItems
         {
             int rowindex = table.CurrentRow.Index;
             DataGridViewRow selectedRow = table.Rows[rowindex];
-            string cellValue = Convert.ToString(selectedRow.Cells["Ref_No"].Value);
+            string cellValue = Convert.ToString(selectedRow.Cells["Reference_Number"].Value);
             table.Hide();
             buttonBack.Show();
             showReceipt.setData(cellValue);
@@ -198,7 +198,7 @@ namespace Fine_Management_System.ReportItems
 
             int rowindex = table.CurrentRow.Index;
             DataGridViewRow selectedRow = table.Rows[rowindex];
-            string cellValue = Convert.ToString(selectedRow.Cells["Ref_No"].Value);
+            string cellValue = Convert.ToString(selectedRow.Cells["Reference_Number"].Value);
             table.Hide();
             buttonBack.Show();
             showReceipt.setData(cellValue);

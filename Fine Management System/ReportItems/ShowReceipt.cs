@@ -73,7 +73,7 @@ namespace Fine_Management_System.ReportItems
                 MySqlDataReader dr = cmd.ExecuteReader();
                 dr.Read();
                 labelDate.Text = "Date : " + dr.GetString("Date");
-                labelFineAmount.Text = "Fine Amount: Rs: " + dr.GetString("Amount") + ".00";
+                labelFineAmount.Text = "Fine Amount: Rs: " + dr.GetString("Amount");
                 dr.Close();
             }
             catch (Exception ex)
