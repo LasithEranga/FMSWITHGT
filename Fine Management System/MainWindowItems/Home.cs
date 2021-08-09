@@ -14,12 +14,13 @@ namespace Fine_Management_System
 {
     public partial class Home : UserControl
     {
-        private MySqlConnection conn = DBConnection.DB.Conn();
+        private MySqlConnection conn;
         private MySqlCommand cmd = null;
         private string query;
         public Home()
         {
             InitializeComponent();
+            conn = DBConnection.DB.Conn();
             MainWindow.DBConnectionHelath = true;
             WeeklyChart();
             MonthlyChart();
@@ -29,11 +30,29 @@ namespace Fine_Management_System
             setIncome();
             SetCasesByDate();
             SetThisMonthChart();
-            
             conn.Close();
         }
 
-       
+        private Timer timer1;
+        public void InitTimer()
+        {
+            timer1 = new Timer();
+            timer1.Tick += new EventHandler(timer1_Tick);
+            timer1.Interval = 5000; // in miliseconds
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            GenGraph();
+        }
+
+        private void GenGraph()
+        {
+            
+        }
+
+
 
         private void WeeklyChart() {
             if (Convert.ToBoolean(MainWindow.DBConnectionHelath ))
@@ -213,22 +232,24 @@ namespace Fine_Management_System
                     {
                         cmd = new MySqlCommand(query, conn);
                         dr = cmd.ExecuteReader();
-                    dr.Read();
-                        labelTodayIncome.Text = "Rs:" + dr.GetString("sum") + ".00";
-                    dr.Close();
-                }
+                        if (dr.Read())
+                        {
+                            labelTodayIncome.Text = "Rs:" + dr.GetFloat("sum").ToString();
+                        }
+                        
+                        dr.Close();
+                    }
                     catch (MySqlException)
                     {
-
+                        labelTodayIncome.Text = "Rs: 0.00";
                         MainWindow.DBConnectionHelath = false;
-                }
+                    }
                     catch (Exception)
                     {
 
                     }
                     finally
                     {
-                        labelTodayIncome.Text = "Rs: 0.00";
                         dr.Close();
                     }
                 } 
@@ -306,6 +327,7 @@ namespace Fine_Management_System
         {
 
         }
+
     }
     }
 
