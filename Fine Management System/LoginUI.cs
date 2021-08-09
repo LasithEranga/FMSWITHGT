@@ -26,23 +26,24 @@ namespace Fine_Management_System
             {
                 //check password with MD5 encryption 
                 MySqlDataReader dr = null;
-                dr = DBConnection.DB.Read("SELECT user_name FROM user WHERE password = " + MD5Hashing.Encryption(password.Text) + " AND user_name = '" + usrName.Text + "';");
-                dr.Read();
-                if (dr.GetString("user_name").Equals(usrName.Text))
+                if(Validations.Validate.ValidateText(usrName.Text,"username"))
                 {
-                    MainWindow logged = new MainWindow();
-                    //textFields will be cleared after verification of the the password 
-                    usrName.Clear();
-                    password.Clear();
-                    logged.Show();
-                }
-                else
-                {
+                    dr = DBConnection.DB.Read("SELECT user_name FROM user WHERE password = " + MD5Hashing.Encryption(password.Text) + " AND user_name = '" + usrName.Text + "';");
+                    dr.Read();
+                    if (dr.GetString("user_name").Equals(usrName.Text))
+                    {
+                        MainWindow logged = new MainWindow();
+                        //textFields will be cleared after verification of the the password 
+                        usrName.Clear();
+                        password.Clear();
+                        logged.Show();
+                    }
+                    else
+                    {
 
-                    new Error_messages.InputError("Login Failed!", "Username or Password is incorrect").Show();
+                        new Error_messages.InputError("Login Failed!", "Username or Password is incorrect").Show();
+                    }
                 }
-                
-                
             }
             catch (NullReferenceException)
             {

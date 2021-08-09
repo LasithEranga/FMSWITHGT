@@ -23,10 +23,10 @@ namespace Fine_Management_System.UsersItems
             try
             {
                 string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
-                MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from driver WHERE 1", connStr);
+                MySqlDataAdapter sqlda = new MySqlDataAdapter("SELECT `nic` as NIC, `fname` as First_Name, `lname` as Last_Name, `full_name` as Full_Name, `email` as Email, `contact_no` as Contact_No, `address` as Address, `license_no` as License_No, `vehicle_no` as vehicle_No FROM `driver`", connStr);
                 DataTable dtbl = new DataTable();
                 sqlda.Fill(dtbl);
-                MySqlDataAdapter sqlda1 = new MySqlDataAdapter("Select `police_id` as Police ID, `fname`, `lname`, `full_name`, `email`, `nic`, `contact_no`, `post`, `address` from traffic_police_officer WHERE 1", connStr);
+                MySqlDataAdapter sqlda1 = new MySqlDataAdapter("SELECT `police_id` as Police_ID, `fname` as Fisrt_Name, `lname` as Last_Name, `full_name` as Full_Name, `email` as Email, `nic` as NIC, `contact_no` as Contact_No, `post` as Post, `address` as Address FROM `traffic_police_officer` WHERE 1", connStr);
                 DataTable dtbl1 = new DataTable();
                 sqlda1.Fill(dtbl1);
                 dtbl.Merge(dtbl1);
@@ -44,7 +44,7 @@ namespace Fine_Management_System.UsersItems
             try
             {
                 string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
-                MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from driver WHERE 1", connStr);
+                MySqlDataAdapter sqlda = new MySqlDataAdapter("SELECT `nic` as NIC, `fname` as First_Name, `lname` as Last_Name, `full_name` as Full_Name, `email` as Email, `contact_no` as Contact_No, `address` as Address, `license_no` as License_No, `vehicle_no` as vehicle_No FROM `driver`", connStr);
                 DataTable dtbl = new DataTable();
                 sqlda.Fill(dtbl);
                 MySqlDataAdapter sqlda1 = new MySqlDataAdapter(query, connStr);
@@ -64,7 +64,7 @@ namespace Fine_Management_System.UsersItems
         public void UserTableDriver()
         {
             string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
-            MySqlDataAdapter sqlda = new MySqlDataAdapter("Select * from driver WHERE 1", connStr);
+            MySqlDataAdapter sqlda = new MySqlDataAdapter("SELECT `nic` as NIC, `fname` as First_Name, `lname` as Last_Name, `full_name` as Full_Name, `email` as Email, `contact_no` as Contact_No, `address` as Address, `license_no` as License_No, `vehicle_no` as vehicle_No FROM `driver`", connStr);
             DataTable dtbl = new DataTable();
             sqlda.Fill(dtbl);
             table.DataSource = dtbl;
@@ -73,7 +73,7 @@ namespace Fine_Management_System.UsersItems
         public void UserTableOfficer()
         {
             string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
-            MySqlDataAdapter sqlda = new MySqlDataAdapter("Select `police_id`, `fname`, `lname`, `full_name`, `email`, `nic`, `contact_no`, `post`, `address` from traffic_police_officer", connStr);
+            MySqlDataAdapter sqlda = new MySqlDataAdapter("SELECT `police_id` as Police_ID, `fname` as Fisrt_Name, `lname` as Last_Name, `full_name` as Full_Name, `email` as Email, `nic` as NIC, `contact_no` as Contact_No, `post` as Post, `address` as Address FROM `traffic_police_officer` WHERE 1", connStr);
             DataTable dtbl = new DataTable();
             sqlda.Fill(dtbl);
             table.DataSource = dtbl;
@@ -92,7 +92,7 @@ namespace Fine_Management_System.UsersItems
                     {//officers
                         int rowindex = table.CurrentRow.Index;
                         DataGridViewRow selectedRow = table.Rows[rowindex];
-                        string cellValue = Convert.ToString(selectedRow.Cells["police_id"].Value);
+                        string cellValue = Convert.ToString(selectedRow.Cells["Police_ID"].Value);
                         new Popup.UpdateOfficer(cellValue).Show();
                         break;
                     }
@@ -100,7 +100,7 @@ namespace Fine_Management_System.UsersItems
                     {//driver
                         int rowindex = table.CurrentRow.Index;
                         DataGridViewRow selectedRow = table.Rows[rowindex];
-                        string cellValue = Convert.ToString(selectedRow.Cells["nic"].Value);
+                        string cellValue = Convert.ToString(selectedRow.Cells["NIC"].Value);
                         new Popup.DriverUpdate(cellValue).Show();
                         break;
                     }
