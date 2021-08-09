@@ -25,7 +25,7 @@ namespace Fine_Management_System.AddUser
         private void addUsrBtn_Click(object sender, EventArgs e)
         {
             string passowrd = RandomGen.password();
-            if (ValidateText(fName.Text, "first name") && ValidateText(lName.Text, "last name") && ValidateText(fullName.Text, "full name")&& ValidatePhoneNo() && ValidateText(post.Text, "police post") && ValidateAddress() && Validate_Email() && Validate_NIC())
+            if (ValidateText(fName.Text, "first name") && ValidateText(lName.Text, "last name") && ValidateText(fullName.Text, "full name")&& ValidatePhoneNo() && ValidateText(post.Text, "police post") && ValidateAddress() && Validate_Email() && Validate_NIC() && Validations.Validate.ValidatePoliceId(policeId.Text))
             {
                 try
                 {
@@ -44,7 +44,7 @@ namespace Fine_Management_System.AddUser
                         mailDetails.From = new MailAddress("finexpayment@gmail.com");
                         mailDetails.To.Add(emailAddress.Text);
                         mailDetails.Subject = "Account Password";
-                        mailDetails.Body = passowrd;
+                        mailDetails.Body ="User name is: "+fName.Text+" Your password is: "+ passowrd;
 
                         clientDetail.Send(mailDetails);
                         new Aletrs.DataSaved("Your mail has been sent").Show();
@@ -159,7 +159,7 @@ namespace Fine_Management_System.AddUser
                 }
                 else
                 {
-                    new Error_messages.InputError("Invalid ID", "Please check ID Number").Show();
+                    new Error_messages.InputError("Invalid NIC", "Please check NIC Number").Show();
                     return false;
                 }
 
@@ -175,7 +175,7 @@ namespace Fine_Management_System.AddUser
                 }
                 else
                 {
-                    new Error_messages.InputError("Invalid ID", "Please check ID Number").Show();
+                    new Error_messages.InputError("Invalid NIC", "Please check NIC Number").Show();
                     return false;
                 }
                 
@@ -183,7 +183,7 @@ namespace Fine_Management_System.AddUser
             else
             {
                 //empty
-                new Error_messages.InputError("Invalid ID", "Please check ID Number").Show();
+                new Error_messages.InputError("Invalid NIC", "Please check NIC Number").Show();
                 return false;
             }
             
@@ -210,7 +210,7 @@ namespace Fine_Management_System.AddUser
             if (text.Length > 0)
             {
                 
-                Regex rgx = new Regex(@"^[a-zA-Z0-9\s,]+$");
+                Regex rgx = new Regex(@"^[a-zA-Z\s,]+$");
                 if (rgx.IsMatch(text))
                 {
                     return true;
